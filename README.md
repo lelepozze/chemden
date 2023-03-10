@@ -20,6 +20,11 @@ Also, this is a list of notes that I want to remake
 - [ ] Chimica Inorganica 1
 - [ ] Industria Chimica
 
+In the future, I want to create some guides/books to teach LaTeX and Python, but, before that, I need to learn those topics.
+For now, I leave a list to make sure that I will not forget in the future.
+- [ ] TeX & LaTeX
+- [ ] Python
+
 ## LaTeX Resources
 I'm also uploading my LaTeX files for repeat my work, if is necessary.
 
