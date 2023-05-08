@@ -10,7 +10,7 @@ For now I complete one course, the remaining are below
 - [ ] Chimica Fisica 1
 - [ ] Chimica Farmaceutica
 - [ ] Fisica
-- [ ] Chimica Organica 3
+- [x] Chimica Organica 3 (partial)
 
 Also, this is a list of notes that I want to remake
 - [ ] Chimica degli Alimenti
