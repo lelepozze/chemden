@@ -1,0 +1,42 @@
+\begin{fullpaper}
+
+%%% uncomment these lines for the bibliography
+\chapterpicture{header_12}
+\nocite{*}
+\chapter*{Bibliografia}
+\addcontentsline{toc}{chapter}{Bibliografia}
+\markboth{BIBLIOGRAFIA}{BIBLIOGRAFIA}
+\printbibliography[heading=none]
+
+\cleardoublepage
+
+\chapterpicture{header_13}
+
+\printindex
+
+\cleardoublepage
+
+\begingroup
+\pdfbookmark[0]{Note}{Note}
+\NoteAFineLibro
+\endgroup
+
+
+\cleardoublepage
+\thispagestyle{empty}
+\includegraphics{empty}
+\clearpage
+\vspace*{18cm}
+\begingroup
+\phantomsection
+\thispagestyle{empty}
+\pdfbookmark[0]{Colophon}{Colophon}
+\setlength{\parindent}{6pt} % Spazio di rientro per la prima riga
+\setlength{\parskip}{3pt} % Spazio tra un paragrafo e l'altro
+\colophon
+\endgroup
+
+
+
+
+\end{fullpaper}

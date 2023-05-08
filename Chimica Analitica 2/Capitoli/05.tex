@@ -1,0 +1,497 @@
+\chapterpicture{header_07}
+\chapter{Spettrometria di massa}
+La spettroscopia di massa è una tecnica di indagine strutturale basata sulla ionizzazione di una molecola e della successiva frantumazione, in ioni di massa diversa;
+è una tecnica distruttiva.
+
+Una delle molecole è ionizzata per espulsione di un elettrone e il catione radicalico che si forma si frammenta formando altre molecole e/o radicali neutri (che lo strumento non rileva).
+\[
+M + e^- \rightarrow M^+\cdot + 2e^- \quad M^{+\cdot} \text{ione molecolare}
+\]
+
+Lo ione molecolare non è stabile e può frammentare formando ioni frammento.
+Lo ione molecolare e i suoi frammenti possono avere carica positiva, negativa o neutra.
+Lo strumento viene di conseguenza predisposto per analizzare cariche positive o negative
+
+\fullpicture{05_002}{Esempio di uno spettro di massa}{}
+
+L'esperimento di spettrometria di massa consiste nella ionizzazione di molecole (in fase gas) e nelle successive separazioni degli ioni, con la relativa rivelazione e determinazione quantitativa/qualitativa.
+in realtà, per gli ioni, non è possibile conoscere la struttura con questo metodo, ma è riconoscibile la formula bruta.
+Il risultato dell'esperimento è uno spettro di massa, che rappresenta l'abbondanza relativa degli ioni
+
+Per normalizzare lo spettro, si prende il picco più elevato e si assegna il valore 100.
+Gli altri picchi verranno rapportati a questo
+
+Si vede che l'intensità del picco molecolare è inferiore a quella di un frammento;
+è stato utilizzato quindi un metodo con frammentazione abbastanza spinta.
+
+
+Questa tecnica consente di misurare le masse molecolari (sia nominali che esatte) e di ottenere dei profili di frammentazione specifici per ogni componente.
+L'energia fornita per frammentare rispecchia la forza dei legami delle varie porzioni della molecola.
+Cambiando l'energia, cambia il profilo di frammentazione, quindi, per avere delle misure riproducibili, è necessario mantenere costanti le energie di ionizzazione.
+
+Il valore di un qualsiasi ione rappresentato nello spettro è la sua massa media, se il potere risolutivo dello spettrometro è basso.
+Se nello spettro, la massa contiene dei decimali, si può determinare la sua vera massa (o massa esatta).
+Questo serve per escludere se un composto è formato da un aggregato di atomi o da un atomo, la cui massa è simile (ad esempio CH$_2^+$ e N$^+$)
+In uno strumento con più risoluzione, si vede che i picchi minori vicini ai picchi maggiori sono dovuti alla diversa composizione isotopica dei frammenti.
+
+\section{Strumentazione}
+Lo schema a blocchi è raffigurato nell'immagine \ref{fig:schemablocchi}.
+È necessario applicare un vuoto spinto (10$^{-5}$ – 10$^{-6}$ torr) per evitare che il campione non venga ionizzato per impatto con i gas atmosferici.
+
+\fullpicturelab{05_001}{Schema a blocchi di uno spettrometro di massa}{}{schemablocchi}
+
+In campione può essere introdotto nella camera di ionizzazione sia allo stato solido, sia allo stato liquido, che allo stato gassoso.
+Per lo stato liquido e solido, è necessario che il campione venga vaporizzato e che venga ionizzato (in fase vapore)
+La quantità di prodotto necessario è dell'ordine dei microgrammi/nanogrammi.
+
+L'introduzione del campione può avvenire all'uscita di altri metodi di separazione come la cromatografia, ecco quindi che se vengono accoppiati rivelatori massa con tecniche cromatografiche allora si parla di GC-MS, HPLC-MS ecc...
+Queste tecniche di analisi sono molto utili per discriminare miscele di composti e la cromatografia permette la purificazione delle soluzioni e accoppiando la massa si può dedurre quali sono le sostanze anche se sono sovrapposte.
+È possibile lavorare in TIC (Total Ion Counting) in cui si rileva la somma di tutte le intensità derivanti dai frammenti ionici oppure si può lavorare in SIM (Single Ion Monitoring) in cui si memorizzano passo passo i vari spettri di massa e si seleziona una sola massa in modo da avere una buona probabilità che la massa sia specifica e per rimuovere il rumore.
+In modalità SIM il limite di rivelabilità è più basso e risulta un unico picco somma ad esempio di due picchi, si trova la massa in letteratura e si ricavano i picchi separandoli.
+Lo spettro di massa determina da cosa è costituita la molecola, mentre lo spettro NMR determina la struttura. Inoltre, la massa riesce a leggere concentrazioni dell'ordine dei ppm, mentre l’NMR arriva fino ai ppb.
+
+Il campione viene ionizzato in una camera di ionizzazione, nella quale un fascio di elettroni ionizza la specie chimica. La ionizzazione varia con la tecnica utilizzata.
+Gli elettroni vengono emessi da un filamento caldo e vengono focalizzati nella parte centrale della camera, che contiene il campione.
+Le molecole non ionizzate sono allontanate da una pompa a vuoto, mentre quelle ionizzate sono accelerate e convogliate verso l'analizzatore.
+
+Il sistema di ionizzazione svolge un ruolo essenziale, perché da esso dipende la quantità e la natura degli ioni.
+Le tecniche di ionizzazione si distinguono in
+\begin{itemize}
+\item \textit{Tecniche hard}: operano ad alta energia e portano ad una frammentazione spinta
+\item \textit{Tecniche soft}: operano a bassa energia e producono un numero minore di ioni
+\end{itemize}
+
+\section{Sorgenti di ioni}
+In base al tipo di sorgente, la ionizzazione primaria è realizzata in modi differenti.
+Le tecniche più utilizzate sono:
+\begin{itemize}
+\item Impatto elettronico (E.I.)
+\item Ionizzazione chimica (C.I.)
+\item Ionizzazione mediante electrospray (E.S.I.)
+\end{itemize}
+
+Nelle prime due tecniche, il campione deve essere in forma di vapore.
+
+\subsection{Impatto elettronico}
+L'impatto elettronico è la tecnica più comune di ionizzazione.
+Un filamento di tungsteno emette elettroni ad alta energia (circa 70 eV), che vengono accelerati verso il catodo.
+Per impatto, gli elettroni trasferiscono la loro energia alla molecola bersaglio, provocando l'espulsione di un elettrone con formazione di un radicale catione.
+
+\halfpicture{05_003}{Camera di impatto elettronico}{}
+
+Questa tecnica è una tecnica hard; si possono avere frammentazioni estese che lasciano poco o nulla dello ione molecolare.
+La frammentazione quindi dà informazioni sui componenti della molacela, ma non può determinare la loro posizione.
+
+L'impatto elettronico va bene per ionizzare composti piccoli (< 800 Da), volatili e termicamente stabili.
+È possibile interfacciare uno ionizzatore ad impatto elettronico con una portata uscente da una colonna GC.
+
+In condizioni normali, il rapporto tra cationi e anioni è di 10$^4$ a 1.
+Questo avviene a causa dell'alta velocità di ionizzazione rispetto al moto dei nuclei, per il principio di Frank-Condon e l'approssimazione di Born-Oppenheimer.
+
+
+\subsection{Ionizzazione chimica}
+Nella ionizzazione chimica, si utilizza un gas, che viene messo all'interno della camera di ionizzazione, con una pressione da 60 a 200 Pa.
+La ionizzazione primaria avviene per impatto elettronico, tuttavia le molecole ionizzate sono quelle del gas.
+In seguito, il gas trasferisce l'energia acquisita alla molecola bersaglio.
+In questo modo, l'energia che arriva alla molecola è molto più bassa.
+
+
+Gli spettri contengono, oltre allo ione molecolare, anche degli adotti con altre specie, in particolare quelle che sono state utilizzate come ionizzatori primari.
+Gli spettri ricavati con quest'ionizzazione contengono anche gli ioni del gas utilizzato.
+
+Questa tecnica è una tecnica di ionizzazione soft; quindi si generano più ioni molecolari.
+Si ottengono meno informazioni sui componenti della molecola, ma più informazioni sul peso molecolare di questa.
+
+Questo metodo di ionizzazione può essere interfacciato con dei sistemi cromatografici, come l'HPLC.
+
+\subsection{Interfaccia electrospray}
+L'ESI appartiene alla famiglia delle interfacce di ionizzazione a pressione atmosferica (API), dove la vera e propria formazione di ioni si verifica al di fuori del sistema di vuoto dello spettrometro.
+La tecnica inizialmente utilizza un $\beta$-emettitore, ovvero il $^{63}$Ni.
+
+\marginpicture{05_022}{Processo di formazione degli ioni nell'ESI}{}
+
+Il funzionamento prevede il passaggio di un flusso di liquido (1 - 40 mL) all'interno di un ago ipodermico mantenuto ad un potenziale elevato.
+Il liquido viene espulso dall'ago e la repulsione coulombiana provoca la dispersione del liquido in gocce cariche.
+Il nebulizzato è diretto contro l'elettrodo posto all'interno dell'analizzatore di massa.
+Il solvente, evapora velocemente, quindi le goccioline tendono a diventare più piccole;
+questo processo continua fino a quando il campo elettrico sulla loro superficie raggiunge un volume sufficiente per rilasciare gli ioni direttamente nel gas circostante.
+Gli ioni attraverso lenti elettrostatiche vengono direzionati verso i coni di campionamento e di skimming ed entrano nell'analizzatore di massa.
+
+Una tecnica analoga all'ESI è la APCI (Air Pressure Chemical Ionization) dove avviene una scarica corona che ionizza le molecole in fase aeriforme;
+le molecole che non rispondono bene all'ESI vengono trattate con l'ACPI
+Questo metodo viene generalmente accoppiato all’HPLC e le gocce nebulizzate si riducono di volume fino a disgregarsi e a caricarsi.
+
+L'ESI è una tecnica di ionizzazione soft; le successive ionizzazioni avvengono all'interno dello strumento.
+Inoltre, questa tecnica produce degli ioni molecolari con adotti, in particolare con H$^+$ o NH$_4^+$.
+
+\subsection{Ionizzazione laser assistita dalla matrice}
+La tecnica FAB consiste nello sparare atomi pesanti (Ar, Xe) su una matrice dispersa di glicerina.
+La tecnica MALDI si utilizza ad esempio su sostanze organiche come le proteine contenute in una matrice di H$_2$O.
+
+Attraverso utilizzo di un fascio laser si eccita la matrice (se H$_2$O diventa H$_3$O$^+$) e l'acqua protona le proteine e le ionizza.
+Questa tecnica utilizza l'acqua per trasferire il protone alle molecole target.
+
+\section{Analizzatori}
+Gli analizzatori più diffusi sono:
+\begin{itemize}
+\item Analizzatore magnetico
+\item Analizzatore a doppia focalizzazione
+\item Analizzatore a tempo di volo
+\item Analizzatore a quadrupolo
+\item Analizzatore a trappola ionica
+\item Orbitrap
+\end{itemize}
+In seguito saranno discussi questi analizzatori
+
+\paragraph{Analizzatore magnetico}
+L'analizzatore magnetico è formato da un tubo lungo circa un metro, piegato con un raggio di curvatura r' ed è immerso in un campo magnetico B.
+Se la massa non è carica, non risente dell'azione del campo magnetico e va schiantarsi.
+
+\halfpicture{05_005}{Analizzatore magnetico}{}
+
+L'energia cinetica dello ione è
+\[
+zV = \frac{1}{2} mv^2
+\]
+
+La forza esercitata dal campo magnetico sulla carica in movimento è 
+\[
+zvB = \frac{mv^2}{r}
+\]
+
+Da cui deriva
+\[
+\frac{m}{z} = \frac{B^2r^2}{2v}
+\]
+
+Una massa, appena entra dentro il campo magnetico, comincia a deviare.
+Le masse pesanti vengono deviate poco, tanto da non colpire il detector.
+Le masse leggere vengono deviate troppo e quindi non colpiscono il detector.
+Solo le masse selezionate dal campo magnetico vengono deviate con la giusta intensità e quindi possono essere rivelate
+
+\paragraph{Analizzatore a doppia focalizzazione}
+Questo analizzatore migliora la risoluzione del analizzatore magnetico aggiungendo prima dell'analizzatore magnetico un analizzatore elettrostatico, con il quale viene ulteriormente focalizzato il percorso degli ionica
+
+\halfpicture{05_006}{Analizzatore a doppia focalizzazione}{}
+
+L'equazione risultante è identica alla prima
+\[
+\frac{m}{z} = \frac{B^2r^2}{2v}
+\]
+
+In alcuni sistemi, come l'orbitrap, ci sono più selettori magnetici messi in serie.
+Questo analizzatore non è molto efficiente, tuttavia rende l'idea che più sistemi di rivelazione possano essere messi in serie.
+
+\paragraph{Analizzatore a tempo di volo}
+Questo tipo di analizzatore è molto accurato; la risoluzione può essere quindi molto elevata.
+Questo analizzatore separa gli ioni in virtù del principio del tempo da essi impiegato per percorrere una distanza nota.
+
+\halfpicture{05_007}{Analizzatore a tempo di volo}{}
+
+Gli ioni con diverso m/z ma con uguale energia cinetica impiegano tempi differenti per percorrere una certa distanza.
+Da
+\[
+zV = \frac{1}{2} mv^2
+\]
+
+Si ottiene la velocità $v$
+\[
+v = \sqrt{\frac{2zV}{m}}
+\]
+
+La velocità può essere scomposta in spazio e tempo. La distanza percorsa da uno ione è $L = v \cdot t$.
+Si ha quindi
+\[
+L = \sqrt{\frac{2zV}{m}} \cdot t \rightarrow t = \sqrt{\frac{2zV}{m}} \cdot L
+\]
+
+La misura del tempo di volo permette di trovare il rapporto carica/massa
+Gli ioni di identica energia, ma con massa diversa richiedono tempi di percorrenza diversi.
+Gli ioni più pensanti raggiungono dopo il rivelatore, mentre quelli più leggeri lo raggiungono prima.
+
+Lo ione, all'interno dell'analizzatore, ha un andamento parabolico; questo serve per aumentare il tempo di volo e quindi aumentare l'accuratezza
+
+\subsection{Analizzatori a quadrupolo}
+Questo analizzatore è abbastanza comune. Non fornisce la massima sensibilità, tuttavia può essere accoppiato con molte altre tecniche.
+Un analizzatore a quadrupolo è composto da quattro barre elettrodiche parallele.
+Le barre opposte sono collegate elettricamente tra loro, quindi una coppia è collegata al polo positivo, mentre l'altra al polo negativo.
+
+\halfpicture{05_008}{Analizzatore a quadrupolo}{}
+
+Ad ogni coppia di barre, è applicato un potenziale variabile alternato a radiofrequenza, sfalsato di 180 \degree e un potenziale variabile.
+Quindi sulla barra sono applicati due potenziali differenti.
+
+Un campo quadrupolare è un campo elettrico con dipendenza lineare dalle coordinate spaziali $x,y,z$; si può esprimere questa caratteristica tramite l'equazione
+\[
+E = E_0 (\alpha x + \beta y + \gamma z)
+\]
+dove $\alpha, \beta, \gamma$ sono costanti. Tramite particolari accorgimenti, è possibile avere il campo elettrico che presenta delle linee di equipotenziale iperboliche
+
+Le due correnti alternate sono sfalsate di 180 \degree. L'azione filtrante è ottenuta applicando i due campi elettrici contemporaneamente, come in figura \ref{fig:sfas}
+
+\marginpicturelab{05_009}{Sfasamento delle correnti nel quadrupolo}{}{sfas}
+
+Nel quadrupolo, un catione sarà attratto dalla barra negativa, però prima che si schianti il potenziale può essere invertito, e quindi lo ione cambierà direzione.
+Questo effetto permette di deviare gli ioni con diverso m/z, quindi solo gli ioni di massa corretta entreranno nel rivelatore.
+
+L'ampiezza delle oscillazione dello ione dipenderà dalla frequenza $\nu$ del potenziale applicato e dalla massa degli ioni.
+Se l'oscillatore è stabile in entrambe le direzioni, lo ione arriva al rivelatore.
+Gli ioni instabili andranno a schiantarsi sugli elettrodi.
+
+\halfpicture{05_010}{Azione dei campi elettrici nei due piani del quadrupolo}{}
+
+L'azione filtrante del campo è ottenuta dall'applicazione di diversi valori di $U$ (campo elettrico continuo) e di $V$ (campo elettrico alternato).
+La risoluzione di un quadrupolo dipende dal rapporto fra i potenziali $u$ e $V$ ed è massimo quando il valore è inferiore a 6.
+La scansione dei potenziali $U$ e $V$ parte da zero e arrivo fino ad un valore massimo, aumentando simultaneamente sia $U$ che $V$, mantenendo il rapporto costante.
+Dato che la quantità di moto degli ioni (di uguale energia) è direttamente proporzionale alla radice della massa, è più difficile deviare uno ione più pesante rispetto a uno più leggero.
+
+Se lo ione è pesante o la frequenza del potenziale è elevata, lo ione non risentirà dell'effetto del campo alternato, ma solo del campo continuo,
+quindi tenderà a rimanere all'interno delle barre.
+Se invece uno ione è leggero o la frequenza del campo è bassa, lo ione colliderà con le barre e verrà eliminato.
+La coppia di barre positiva forma quindi un filtro passa-alto per gli ioni che viaggiano nel piano x-z.
+Un filtro passa-alto consente solo agli ioni con un m/z più elevato di una certa soglia di passare.
+
+Considerando adesso la coppia di barre negative (nel piano y-z), si vede che in assenza del potenziale alternato, tutti gli ioni positivi tenderebbero a essere trascinati verso le barre, dove verrebbero eliminati.
+Tuttavia, per gli ioni più leggeri, questo moto può essere compensato durante l'escursione positiva del potenziale in corrente alternata.
+Le barre poste nel pianto y-z si comportano quindi da filtro passa-basso.
+
+Affinché uno ione arrivi al rivelatore, deve rimanere stabile in entrambi i piani.
+Quindi dovrà essere sufficientemente leggero da uno essere eliminato dal filtro passa-basso, ma dovrà essere anche sufficientemente pesante da non essere eliminato dal filtro passa-basso.
+Queste condizioni di stabilità reciproca descrivono un filtro passa-banda
+
+\halfpicture{05_011}{Azione passa-alto e passa-basso del quadrupolo}{Si può vedere come la loro sovrapposizione crei un filtro passa-banda}
+
+L'ampiezza del filtro passa-banda dipende dai potenziali AC-DC applicati agli elettrodi.
+Si può dimostrare che la massa corrispondente al centro della regione di stabilità dipende dal valore di entrambi i potenziali.
+L'ampiezza determina la risoluzione dell'analizzatore.
+
+La traiettoria di un qualsiasi ione in funzione delle sue coordinate iniziali è descritta completamente da tre equazioni differenziali.
+La soluzione di una delle tre è banale, e indica che la posizione e la velocità lungo l'asse z non è influenzata dal potenziale degli elettrodi.
+L'uso di elettrodi di selezione iperbolica porta a equazioni che non contengono termini misti nelle derivate e quindi il moto è indipendente lungo ciascuno dei tre assi.
+
+Le forze lungo X e Y sono dovute al campo elettrico. Le due equazioni differenziali sono
+\[
+F_x m \: \frac{d^2 x}{dt^2} = - z_E \frac{\partial \Phi}{\partial x} \qquad F_y m \: \frac{d^2 y}{dt^2} = - z_E \frac{\partial \Phi}{\partial y}
+\]
+
+Operando una delle sostituzioni, e sapendo che $\Phi$ è una funzione di $\Phi_0$, si ottengono delle equazioni di moto, note come \emph{equazioni di Paul}, che sono
+\[
+\frac{d^2 x}{dt^2} + \frac{2 z_e}{m r_0^2} (U - V \cos ( \omega t) x = 0 \qquad \frac{d^2 y}{dt^2} + \frac{2 z_e}{m r_0^2} (U - V \cos ( \omega t) y = 0 
+\]
+
+Le traiettorie degli ioni sono stabili stabili se e solo se i valori di $x$ e $y$ non sono uguali a $r_0$.
+Per conoscere il valore di $x$ e $y$ in funzione del tempo, è necessario integrare le equazioni di Paul.
+Queste equazioni non sono state risolte direttamente, ma con l'utilizzo di altre equazioni, che prendono il nome di \emph{equazioni di Mathieu}, che vengono usate per descrivere la propagazione di onde nelle membrane.
+\[
+\frac{d^2 u}{d \xi^2} + (a_u - 2q_u \cos (2\xi))u = 0
+\]
+
+Si possono ricondurre le equazioni di Mathieu a quelle di Paul per un semplice cambio di variabili.
+le integrazioni delle equazioni esprimono una relazione tra le coordinate dello ione e il tempo.
+Se, sia $x$ che $y$ mantengono un valore inferiore a $r_0$, lo ione risuonerà all'interno del quadrupolo senza schiantarsi sull'elettrodo.
+
+\marginpicture{05_012}{Stabilità degli ioni nel quadrupolo}{}
+
+La natura del moto degli ioni in un campo quadrupolare non dipende dalle condizioni iniziali, ma dai valori di $a$ e $q$.
+Per un quadrupolo, $r_0$ e $\omega$ sono costanti; le variabili sono $U$ e $V$.
+È possibile esprimere le posizioni $x$ e $y$ di uno ione in funzione di $U$ e $V$ e quindi è possibile stabilire questi valori per un dato m/z.
+
+\marginpicturelab{05_013}{Zone di stabilità}{}{stab}
+
+È possibile quindi determinare le aree di stabilità.
+Nei grafici in figura \ref{fig:stab} si vede che escono fuori quattro aree; l'area A è la più utilizzata dagli spettrometri di massa.
+
+In un diagramma $U$ vs $V$, riarrangiando le equazioni di $a_u$ e $q_u$, si ottiene
+\[
+U = a_u \frac{m}{z} \frac{a^2 r_0^2}{8e} \qquad V = q_i \frac{m}{z} \frac{\omega^2 r_0^2}{4 e}
+\]
+Si vede quindi che all'aumentare del rapporto m/z, le aree di stabilità aumentano, in modo proporzionale.
+
+\halfpicturelab{05_014}{Grafico di stabilità di uno ione}{La retta è la risoluzione dello strumento}{stabpicchi}
+
+Nella figura \ref{fig:stabpicchi}, si vede che l'area del triangolo A cresce con l'aumentare di $V$ vs $U$.
+Ogni triangolo rappresenta una area di stabilità, mentre le rette rappresentano la scansione effettuata; maggiore è la pendenza della retta e maggiore è la risoluzione.
+Se le aree si sovrappongono, significa che non si è in grado di distinguere una massa dall'altra.
+La retta è anche detta \emph{linea della scansione di massa}; i punti della regione di stabilità intersecanti questa retta determinano la banda passante dello spettrometro.
+
+\halfpicture{05_015}{Pendenza della retta in funzione della risoluzione dello strumento}{}
+
+I quadrupoli operano a valori di $a$ e $q$ tali che il loro rapporto sia semplice.
+Questa condizione si verifica quando il potenziale continuo è una frazione del potenziale alternato.
+
+Per quanto si cerchi di rendere la retta più pendente, l'analisi con il quadrupolo non riuscirà mai ad essere un analisi ad alta risoluzione.
+
+
+\paragraph{Trappola ionica}
+Partendo da un quadrupolo, si vede che una rotazione lungo l'asse z produce un solido particolare.
+la geometria ottenuta definisce la trappola ionica; è un sistema di tre elettrodi che è configurato in modo che i due elettrodi terminali siano collegati insieme e messi a terra.
+I potenziali ac-rf e dc sono applicati all'elettrodo toroidale.
+
+\halfpicture{05_016}{Geometria di una trappola ionica}{}
+
+Come per gli analizzatori quadrupolari, gli ioni all'interno del campo elettrico potranno avere traiettorie simili o instabili.
+Applicando all'elettrodo anulare un voltaggio ac-rf di appropriato valore e frequenza, gli ioni di un certo valore m/z possono essere intrappolati.
+
+La registrazione dello spettro di massa viene effettuata variando l'ampiezza della tensione applicata, in modo tale che gli ioni con m/z sempre più elevato siano via via destabilizzati, fino ad estrarli dalla trappola attraverso i fori di un elettrodo terminale.
+
+\subsection{Orbitrap}
+L'orbitrap è l'ultimo stadio tecnologico per efficienza di un analizzatore di massa.
+L'orbitrap è un analizzatore di massa costituito da una particolare trappola ionica, che intrappola gli ioni unicamente per mezzo di un campo elettrostatico non omogeneo
+È formato da tre elettrodi: l'elettrodo interno è a forma di fuso, una coppia di elettrodi esterni a forma di botte mantenuti isolati da un anello di ceramica.
+
+\marginpicture{05_017}{Orbitrap}{}
+
+Gli ioni che vengono iniettati all'interno da un orifizio nell'anello di ceramica, si muovono in spirali attorno all'elettrodo centrale.
+Il movimento degli ioni si assesta in traiettorie a spirale indotte dal campo elettrostatico generato applicando una differenza di potenziale tra i due elettrodi.
+La misura di m/z dei diversi ioni presenti nella trappola avviene utilizzando la trasformata di Fourier.
+
+La traiettoria a spirale ha due componenti, uno radiale (lungo r) e uno assiale (lungo z). Si può dimostrare che la frequenza di oscillazione assiale è data da:
+\[
+\omega_z = \sqrt{\biggl(\frac{e}{m/z}\biggr) \cdot k}
+\]
+dove $k$ è una costante che ingloba tutte le caratteristiche del campo elettrostatico.
+
+Nell'orbitrap sono possibili tre parametri di frequenza diversi
+\begin{align*}
+& \omega_q = \frac{\omega_z}{\sqrt{2}} \cdot \sqrt{\biggl(\frac{R_m}{R}\biggr)^2 - 1} \quad \text{Frequenza di rotazione}\\
+& \omega_r = \omega_z \cdot \sqrt{\biggl(\frac{R_m}{R}\biggr)^2 - 2} \quad \text{Frequenza di oscillazioni radiali} \\
+& \omega_z = \sqrt{\frac{k}{m/z}} \quad \text{Frequenza di oscillazioni assiali} \\
+\end{align*}
+
+Gli elettrodi sono fatto in modo tale da produrre una distribuzione del potenziale quadro-logaritmica
+\[
+U_{(r,z)} = \frac{k}{r} \biggl(z^2 - \frac{r^2}{2}\biggr) + \frac{k}{2} R_m^2 \cdot \ln \biggl(\frac{r}{R_m}\biggr) + C
+\]
+
+Questa distribuzione potenziale è rappresentata da una curva tridimensionale, con la sella corrispondente a $r = R_m$.
+Le linee equipotenziali su questa figura rivelano la forma degli elettrodi.
+Questo potenziale elettrostatico non ha un minimo e quindi uno ione che parte da una condizione statica rotolerebbe inevitabilmente o verso l'asse $r = 0$ o verso $r \to \infty$.
+
+Per ioni in movimento, questo potenziale si combina con il potenziale centrifugo dato dalla quantità di moto iniziale degli ioni:
+\[
+U_{eff} (r,z) = U (r,z) + E_0 \cdot \biggl(\frac{r_0^2}{r^2}\biggr)
+\]
+Ciò si traduce in un drastico cambiamento della distribuzione del potenziale: compare un minimo tra r$ = 0$ e $r = R_m$ e gli ioni possono ora essere intrappolati nel fossato, che ha una parete molto ripido sul lato dei raggi
+corti.
+
+Allo stesso tempo, la distribuzione del potenziale lungo l'asse z rimane quadratica e totalmente non influenzata dal potenziale centrifugo
+
+Quando gli ioni iniziano il loro movimento con l'energia e il raggio corretti, si formano traiettorie stabili che
+combinano tre moti ciclici:
+\begin{itemize}
+\item Uno rotatorio attorno all'elettrodo centrale con una frequenza di rotazione $\omega_\Phi$
+\item Uno radiale con frequenza $\omega_r$, tra i raggi massimo e minimo all'interno del fosso
+\item Oscillazioni assiali lungo l'elettrodo centrale con una frequenza $\omega_z$.
+\end{itemize}
+
+Anche se la traiettoria assume la forma di una spirale complicata, il movimento assiale rimane completamente indipendente dal movimento rotatorio.
+
+In pratica, è preferibile che il movimento a spirale sia il più vicino possibile al circolare perché questo riduce l'influenza delle anomalie di campo.
+Per fornire una traiettoria circolare, la velocità tangenziale degli ioni deve essere regolata a un valore tale che la forza centrifuga compensi la forza creata dal campo elettrico radiale.
+Ciò corrisponde al movimento nella parte inferiore del fosso.
+
+\halfpicture{05_018}{Sella di potenziale}{}
+
+Le frequenze rotazionali e radiali mostrano dipendenza dal raggio iniziale R.
+La frequenza assiale è indipendente dalle velocità iniziali e dalle coordinate degli ioni.
+Pertanto, solo la frequenza assiale può essere utilizzata per la determinazione dei rapporti massa carica, m/z .
+
+L'intensità del campo assiale è zero nel piano equatoriale della trappola, ma aumenta uniformemente in direzioni opposte lungo l'asse z, man mano che i due elettrodi coassiali si avvicinano progressivamente.
+
+Ciò significa che il campo elettrico assiale dirige gli ioni verso l'equatore della trappola con una forza proporzionale alla proiezione del campo elettrico sull'asse z.
+Accelera gli ioni verso l'equatore (il punto 0 sull'asse z), quindi gli ioni oltrepassano l'equatore (punto di forza=0) lungo l'asse z e successivamente decelerano mentre continuano verso l'estremità opposta della trappola, utilizzando la velocità assiale precedentemente acquisita nell'attraversare il gradiente di campo elettrico dal punto di partenza
+all'equatore.
+
+\marginpicture{05_019}{Frequenze di rotazione dell'orbitrap}{}
+
+Dopo aver 'esaurito' la loro velocità assiale, gli ioni si fermano e quindi vengono accelerati di nuovo verso l'equatore della trappola dal campo elettrico simmetrico lungo l'asse z.
+In questo modo, gli ioni oscillano naturalmente lungo l'asse z.
+È questa proprietà del campo elettrico che causa l'oscillazione armonica dipendente dalla massa degli ioni lungo l'asse z.
+
+Il movimento a spirale è stabile solo se l'intensità del campo radiale è forte.
+La rotazione attorno all'elettrodo è stabile per $\omega_\Phi > 0 $.
+
+Questo analizzatore non richiede un rivelatore di ioni.
+Le frequenze di oscillazione assiale possono essere rilevate direttamente misurando la corrente 'immagine' sugli elettrodi esterni dell'orbitrap
+
+Poiché la corrente immagine viene amplificata ed elaborata esattamente allo stesso modo di FT-ICR (Analizzatore a risonanza ionica ciclotronica a trasformata di Fourier), la sensibilità e rapporti S/N sono simili a quelli in FT-ICR.
+
+\halfpicture{05_020}{Trasformata di Fourier per l'orbitrap}{}
+
+In particolare la dipendenza dalla radice quadrata originata dalla natura elettrostatica del campo provoca un calo molto più lento del potere risolutivo osservato per ioni di valore m/z crescente.
+Di conseguenza, l'analizzatore orbitrap può fornire un potere risolutivo maggiore dell'FT-ICR, per la stessa durata del transiente, al di sopra di un particolare m/z, tipicamente , sopra m/z 500 1000.
+
+\subsection{Analizzatori a triplo quadrupolo}
+Un problema dell'analizzatore a quadrupolo è la sua bassa sensibilità; questo ostacolo può essere superato aggiungendo più quadrupoli in serie.
+Solitamente si utilizzano tre quadrupoli:
+\begin{itemize}
+\item Il primo quadrupolo effettua la selezione degli ioni aventi un opportuno rapporto m/z
+\item Il secondo quadrupolo è una camera di collisione ad elio
+\item Il terzo quadrupolo funge da vero e proprio analizzatore
+\end{itemize}
+
+Le modalità operative di questi analizzatori sono quattro:
+\begin{enumerate}
+\item Scansione dello ione prodotto
+\item Scansione dello ione precursore
+\item Scansione di perdita neutra
+\item Monitoraggio di reazione selezionata
+\end{enumerate}
+
+\subparagraph{Scansione dello ione prodotto}
+Il primo quadrupolo seleziona una massa singola e non fa scansioni.
+La camera di collisione consente la frammentazione della massa selezionata.
+Il terzo quadrupolo invece analizza i frammenti prodotti nella frammentazione.
+
+Con questa tecnica, si può analizzare una massa fissa e ricostruire i frammenti e quindi si possono fare delle ipotesi strutturali del composto
+
+\subparagraph{Scansione dello ione precursore}
+Il primo quadrupolo fa una scansione, mentre l'ultimo fa una selezione.
+Questa modalità permette di individuare singole classi di molecole (strutturalmente simili).
+La tecnica è particolarmente utili per matrici sporche o per identificare una classe di composto.
+
+\subparagraph{Scansione di perdita neutra}
+Entrambi i quadrupoli lavorano in scansione, però tra i due è mantenuta una differenza prefissata di m/z.
+In questa modalità, è possibile individuare classi di molecole che hanno una parte strutturale in comune (un frammento)
+
+\subparagraph{Monitoraggio di reazione selezionata}
+L'ultima modalità serve per fare un analisi quantitativa a concentrazione molto bassa.
+I due quadrupoli lavorano entrambi in selezione; il primo seleziona uno ione, mentre il secondo un frammento.
+Si determina la massa specifica del frammento
+
+
+\subsection{Proprietà degli analizzatori}
+La proprietà più importante degli analizzatori è la risoluzione.
+La risoluzione è definita come
+\[
+R = \frac{m_1}{m_2 - m_1} = \frac{m}{\Delta m}
+\]
+I picchi della massa non sono 'delta di Dirac', ma sono simili ad una gaussiana.
+Questo perché c'è il rumore di fondo e dell'incertezza sulla misura.
+
+\halfpicture{05_004}{Differenza dello spettro di massa con uno strumento a bassa e a alta risoluzione}{}
+
+Alcuni criteri per risoluzioni più specifiche derivano dal considerare le ampiezze delle righe.
+In particolare, ci si basa sulla FWHM, che definisce $\Delta m$ come l'ampiezza del picco a metà altezza.
+
+Alcuni strumenti sono in grado di risolvere picchi allargati e possono evidenziare dei segnali, ritenuti singoli.
+Uno strumento a alta risoluzione riesce a separare i segnali di tre composti che sono nominalmente isobarici.
+L'orbitrap, che è un analizzatore ad alta risoluzione, ha una risoluzione di R = 50\,000; la differenza tra le masse distinguibili (con m = 249) è di 0.0050 u.m.a.
+
+
+
+\section{Rivelazione}
+Per rivelare gli ioni nella spettrometria di massa si usano gli \emph{elettromoltiplicatori}, che sono strumenti simili ai fotomoltiplicatori.
+Al posto dell'impatto del fotone, si vede l'impatto di uno ione; poiché l'impatto è molto più potente.
+Nell'area dove lo ione colpisce, si mette un elemento chiamato \emph{fosforo}, che ha il compito di liberare un fotone quando è colpita da uno ione.
+Il fotone, in seguito, subisce lo stesso processo di fotomoltiplicazione a cascata che avviene nei tubi fotomoltiplicatori.
+
+\halfpicture{05_021}{Elettromoltiplicatore}{}
+
+Se un campione è molto concentrato, il fosforo va in saturazione di emissione, quindi si opera utilizzando la modalità impulsata.
+Questa modalità permette di campionare solo una parte del segnale sul fosforo, in modo tale da far emettere solo una piccola quantità di luce a questo.
+Negli strumenti dual-mode, le due modalità, ovvero a conteggio di impulsi e analogica, si attivano in modo automatico.
+
+
+
+

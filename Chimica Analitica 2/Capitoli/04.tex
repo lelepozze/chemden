@@ -1,0 +1,702 @@
+\chapterpicture{header_06}
+\chapter{Tecniche spettroscopiche}
+Le tecniche spettroscopiche si basano sull'interazione radiazione elettromagnetica-materia. Esse possono essere:
+\begin{itemize}
+\item \textit{Tecniche atomiche}: tecniche che prevedono l'analisi di atomi. Il campione deve essere trattato per produrre elementi
+\item \textit{Tecniche molecolari}: tecniche che analizzano la molecola. La molecola, in questo caso, va preservata
+\end{itemize}
+
+\marginpicture{04_001}{Radiazione elettromagnetica}{}
+
+Secondo la meccanica quantistica, le onde elettromagnetiche hanno un comportamento sia corpuscolare che ondulatorio. In questa trattazione, le onde elettromagnetiche verranno
+considerate corpuscolari, in quanto si adattano meglio al al mondo microscopico
+
+Le tre caratteristiche principali delle onde elettromagnetiche sono la lunghezza d'onda ($\lambda$), la frequenza ($\nu$) e l'ampiezza ($A$).
+Una grandezza derivata è il numero d'onda, che si esprime in cm$^{-1}$.
+
+La natura corpuscolare descrive la luce come un flusso di particelle, ovvero di fotoni. L'energia di un fotone dipende dalla frequenza e da $h$, ovvero la costante di Plank.
+\[
+E = h \cdot \nu
+\]
+
+Il modello corpuscolare può essere applicato a tutte le componenti della materia, sia atomi che molecole. Si possono quindi descrivere gli orbitali come funzioni d'onda.
+I contributi dell'energia totale di un atomo sono molteplici:
+\[
+E_{tot} = E_{nuclei} + E_{elettroni} + E_{vibrazionale} + E_{rotazionale} + E_{traslazionale} 
+\]
+
+\paragraph{Energia traslazionale}
+L'energia traslazionale è dovuta al movimento dell'atomo stesso. Quest'energia non è quantizzata, in quanto lo spazio in cui si muove la molecola è enorme rispetto alle sue dimensioni.
+Questo comporta, di fatto, che i livelli quantici esistono,  ma sono così vicini tra loro che generano un continuo
+
+\paragraph{Energia rotazionale}
+L'energia rotazionale è associata alla rotazione delle molecole attorno un asse; può essere quantificabile ed è quantizzata, in quanto la rotazione è confrontabile con le dimensioni della molecola
+
+\paragraph{Energia vibrazionale}
+L'energia vibrazionale è dovuta a vibrazioni degli atomi, sia assiali che equatoriali. L'atomo singolo non può vibrare, ma una molecola può dare movimenti di stretching o bending.
+Quest'energia è utilizzata nella spettroscopia IR e trova applicazione nell'identificazione dei gruppi funzionali, quindi è preferibile quando si deve effettuare un analisi qualitativa.
+
+\halfpicture{04_002}{Livelli vibrazionali di uno stato elettronico}{}
+
+\paragraph{Energia degli elettroni}
+Quest'energia è più elevata rispetto alle altre, in quanto si è in grado di spostare elettroni da un orbitale all'altro. Inoltre, si può passare da un livello vibrazionale all'altro, per il principio di Frank-Condon.
+In questa spettroscopia (UV-Vis) si possono iniziare a dare informazioni quantitative.
+
+\section{Spettroscopia UV-Vis}
+Nella spettroscopia di assorbimento, si ha l'assorbimento d un fotone, con livelli di energia pari alla differenzia di energia dei due livelli energetici.
+
+\marginpicture{04_003}{Spettro della luce visibile}{}
+
+Solitamente, per le molecole organiche, si hanno i seguenti livelli di energia, per le varie transizioni
+\begin{itemize}
+\item Transizione $\sigma \to \sigma^\ast$ 110 - 135 nm
+\item Transizioni $\pi \to \pi^\ast$ e $n \to \sigma^\ast$ 180 - 255 nm
+\item Transizione $n \to \pi^\ast$ > 285 nm
+\end{itemize}
+
+L'esperimento di assorbimento atomico è composto da una sorgente, un campione e un rivelatore. Si vede che $I_0$ è la luce iniziale, mentre $I$ è la luce dopo aver attraversato il campione.
+Possibilmente, la luce che investe il campione deve essere monocromatica, ovvero con una singola lunghezza d'onda
+
+La legge che regola questo fenomeno è la \emph{legge di Lambert-Beer}.
+\[
+A = \epsilon \cdot b \cdot C
+\]
+dove $\epsilon$ è il coefficiente di estinzione molare, $b$ è il cammino ottico, $C$ è la concentrazione dell'analita nel campione e $A$ è l'assorbanza.
+
+Sia dato un volume di materia, con lunghezza $b$ e area laterale $S$. Se si irradia una luce, con potenza $P_0$, all'interno del volume di materia, si otterrà una potenza $P$.
+La potenza $P_0$ si dissipa per assorbimento, diffusione (scattering) e riflessione. Questi contributi sono sottrattivi e sono diversi dall'assorbimento.
+
+\marginpicture{04_005}{Fenomeni di assorbimento, diffusione e riflessione}{}
+
+\halfpicture{04_004}{Luce che attraversa una cella}{}
+
+La diminuzione di potenza infinitesimale è
+\[
+-\frac{dP}{P} = \frac{\alpha}{S} dn
+\]
+dove $dn$ è la variazione infinitesima delle molecole, $S$ è la superficie e $\alpha$ è il coefficiente di proporzionalità e può essere assimilato alla possibilità che un fotone venga assorbito dalla molecola.
+Si integra questa legge
+\[
+-\int_{P_0}^P \frac{dP}{P} = \int_0^n \frac{\alpha}{S} dn \rightarrow -\int_{P_0}^P \frac{dP}{P} = \frac{\alpha}{S} \int_0^n dn  \rightarrow \ln \biggl(\frac{P_0}{P}\biggr) = \frac{\alpha}{S} \cdot n
+\]
+
+Si converte il logaritmo naturale in logaritmo decimale
+\[
+\ln \biggl(\frac{P_0}{P}\biggr) = \frac{\alpha}{S} \cdot n \rightarrow 2.303 \cdot \log \biggl(\frac{P_0}{P}\biggr) = \frac{\alpha}{S} \cdot n
+\]
+
+Si converte la superficie $S$ in volume $V$ e cammino ottico $b$
+\[
+2.303 \cdot \log \biggl(\frac{P_0}{P}\biggr) = \alpha n \cdot \frac{b}{V}
+\]
+
+Si converte il numero di particelle in funzione del numero di Avogadro $N_A$ e numero di moli
+\[
+2.303 \cdot \log \biggl(\frac{P_0}{P}\biggr) = \frac{\alpha b}{V} \cdot \text{mol} \cdot N_A
+\]
+
+Si trasforma il volume da cm$^3$ a dm$^3$, quindi si moltiplica per 1000.
+\[
+2.303 \cdot \log \biggl(\frac{P_0}{P}\biggr) = \alpha b N_A \cdot \text{mol} \cdot \frac{1}{V \cdot 1000}
+\]
+
+Riarrangiando, si ottiene
+\[
+\log \biggl(\frac{P_0}{P}\biggr) = \frac{\alpha}{V} \cdot \frac{n N_A b}{2.303 \cdot 1000}
+\]
+
+Raggruppando un po' di termini
+\begin{align*}
+& A = \log \biggl(\frac{P_0}{P}\biggr) = \log \biggl(\frac{1}{T}\biggr)\\
+& \epsilon = \frac{\alpha N_A}{2.303 \cdot 1000}\\
+& C = \frac{\text{mol}}{V} = M\\
+\end{align*}
+
+Si ottene la legge di Lambert-Beer
+\[
+A = \epsilon \cdot b \cdot C
+\]
+
+La legge di Lambert-Beer è la linearizzazione di un logaritmo decimale, quindi forma una retta. Apparentemente, l'assorbanza sembra lineare, ma non lo è.
+Il processo vero e proprio è un esponenziale negativo
+\[
+P = P_0 \cdot 10^{-\epsilon b C} \quad T = \frac{P_0}{P} = 10^{-\epsilon b C}
+\]
+Se la concentrazione è molto elevata. l'intensità va praticamente subito a zero.
+
+\marginpicture{04_006}{Attenuazione della luce, secondo la legge di Lambert-Beer}{}
+
+Affinché la legge di Lambert-Beer sia valida, è necessario che:
+\begin{itemize}
+\item Ci sia un fascio di luce monocromatico
+\item Il solvente non deve assorbire la luce
+\item Non ci siano reazioni chimiche. Questo non è necessario, però è più difficile interpretare i risultati.
+\end{itemize}
+
+La legge di Lambert-Beer viene utilizzata per quantificare una sostanza. Il grafico ottenuto viene detto \emph{spettro di assorbimento}.
+Da questo grafico, si può ricavare la lunghezza d'onda migliore per determinare l'analita incognito. Si prende la lunghezza d'onda con il massimo assorbimento $\lambda_{max}$.
+
+Lo spettro di assorbimento prevede che ci sia una banda.
+Questo perché sono presenti dei livelli rotazionali e vibrazionali per un dato stato elettronico e questo crea un continuo di transizioni possibili.
+
+La quantificazione di una sostanza si può fare quando si ottiene $\lambda_{max}$; questo consente di avere una pendenza elevata nella retta della legge di Lambert-Beer.
+Si ricordi che più alta è la pendenza della retta di calibrazione e più sensibile è la misura.
+
+Per ottenere la retta di calibrazione, si trova l'assorbanza di alcune soluzioni a titolo noto e si costruisce la retta per punti. L'andamento è lineare
+
+La legge di Lambert-Beer è valida solo in un intervallo, infatti al crescere della concentrazione, si verificano notevoli deviazioni dalla linearità.
+Questo avviene perché, come visto prima, il processo di assorbimento non è un processo lineare.
+Se non c'è variazione di assorbanza, allora non è possibile determinare cambiamenti di concentrazione.
+Il dominio di questa retta è molto limitato; si possono misurare assorbanze da 10$^{-2}$ A fino a 1.5 A (e fino a 4 A con strumenti di ultima generazione)
+
+Oltre alle cause intrinseche della misura, vi sono anche delle cause chimico-fisiche.
+L'alta concentrazione, oltre a non permettere di analizzare la soluzione, può causare la formazione di aggregati di molecole, che alterano lo spettro di assorbimento.
+Inoltre, sempre a causa dell'alta concentrazione, si possono formare equilibri chimici a carico delle specie di analita.
+
+L'assorbanza dipende anche dal coefficiente di estinzione molare $\epsilon (\lambda)$. Un valore ottimale di $\epsilon (\lambda)$ è 10$^4$, in quanto per una concentrazione $10{^-4}$ e un cammino ottico di 1 cm, l'assorbanza è pari a 1.
+
+\section{Strumentazione}
+
+Gli spettrofotometri UV-Vis possono essere a singolo o a doppio raggio.
+Uno strumento a singolo raggio presenta una sorgente, un monocromatore, il campione e il rivelatore. L'elemento disperdente del monocromatore può essere un prisma o un reticolo
+La lunghezza d'onda della luce non potrà mai essere monocromatica, tuttavia il monocromatore può scomporre la luce in un intervallo di lunghezze d'onda estremamente ristretto.
+La trasmittanza si determina poiché la potenza emessa dalla lampada è nota.
+
+\halfpicture{04_007}{Spettrofotometro a doppio raggio}{}
+
+Nello strumento a doppio raggio, a differenza di quello a singolo raggio, la luce viene divisa in due. Un raggio va nella cella del campione, mentre l'altro va verso una cella contenente il riferimento.
+Il riferimento solitamente è il solvente senza il campione. In questo modo, la differenza di assorbanza è l'assorbanza del campione senza quella del solvente.
+Nello strumento a singolo raggio, viene prima misurato il bianco, ovvero il solvente senza l'analita e poi viene sottratto dai campioni
+
+\subsection{Sorgenti}
+Le sorgenti utilizzate sono:
+\begin{itemize}
+\item \textit{Lampada al deuterio}: questa lampada emette da 160 nm a 380 nm; è quindi una sorgente UV. La lampada combina due atomi di deuterio per formare deuterio molecolare.
+La formazione del legame libera energia.
+\item \textit{Lampada al tungsteno}: questa lampada emette da 350 nm a 2200 nm; è quindi una sorgente Vis.
+\item \textit{Lampada a xeno}: è la lampada più utilizzata in quanto emette tra 180 nm e  800 nm. Inoltre presenta una stabilità di intensità rispetto alla lunghezza d'onda
+\end{itemize}
+
+Una buona sorgente emette energia in modo costante nel tempo e emette, idealmente, la stessa energia per tutte le lunghezze d'onda.
+Ci possono essere delle variazioni di intensità dovute a:
+\begin{itemize}
+\item Sublimazione dei materiali dei filamenti
+\item Alimentazione non costante nel tempo
+\item Periodo di preriscaldamento insufficiente
+\end{itemize}
+
+\subsection{Monocromatore}
+Ci sono tre tipi di monocromatore: a filtro, a prisma, e a reticolo di diffrazione.
+A differenza dei filtri, i prismi e i reticoli possono selezionare le lunghezze d'onda della luce in modo continuo
+
+\paragraph{Filtro semplice}
+I filtri trasmettono solo solo un range di lunghezze d'onda, sopra/sotto un certo valore.
+La selezione della lunghezza d'onda perciò sarà scarsa, ma per ovviare a questo si possono mettere più filtri in serie.
+La banda passante sarà dai 30 ai 250 nm e la trasmittanza dell'ordine del 5 - 30 \%
+
+\paragraph{Filtri a interferenza}
+Il filtro a interferenza è formato da una serie di materiali deposti in serie.
+Uno strato dielettrico è racchiuso tra due strati di pellicola metallica semitrasparente, a loro volta racchiusi in di lamine di vetro.
+La luce passa attraverso lo strato metallico e viene deviata in modo tale da entrare e uscire continuamente dallo strato dielettrico.
+
+\marginpicture{04_008}{Filtro a interferenza}{}
+
+L'interferenza si crea tra i raggi riflessi, e serve per far passare solo una specifica lunghezza d'onda.
+La lunghezza d'onda massima è
+\[
+\lambda_{max} = \frac{2 d n}{N}
+\]
+dove $n$ è l'indice di rifrazione del materiale, $d$ è la distanza percorsa dalla luce all'interno del tubo e $N$ è il numero di volte che la luce viene riflessa.
+
+La distanza percorsa dalla luce può essere espressa come:
+\[
+d = \frac{2t}{\cos \theta} = n \lambda'
+\]
+dove $\lambda'$ è la lunghezza d'onda della radiazione del materiale dielettrico
+
+Per $\theta$ molto piccolo, $\cos \theta \to 1$, quindi
+\[
+d = 2t = n \lambda'
+\]
+
+Quindi la lunghezza d'onda trasmessa è
+\[
+\lambda = \frac{2 t n d}{n}
+\]
+
+Esistono anche dei selettori di lunghezza d'onda angolari , che vengono chiamati filtri a cuneo
+
+
+\paragraph{Prismi}
+Il prisma riesce a scomporre la luce nelle sue componenti a causa del fenomeno chiamato \emph{dispersione}.
+Il potere dispersivo del prisma è dipendente dalla lunghezza d'onda.
+Il materiale di cui è composto il prisma è solitamente vetro (per la luce visibile) o quarzo (per l'UV).
+
+Come accennato prima, la dispersione è dipendente dalla lunghezza d'onda; quindi non è lineare.
+Il potere dispersivo del mezzo ottico ($\omega$) viene calcolato come
+\[
+\omega = \frac{\delta_F - \delta_C}{\delta_D}
+\]
+La differenza al numeratore indica l'ampiezza dell'angolo di dispersione totale della luce, mentre $\delta_D$ indica la dispersione media.
+
+\halfpicture{04_010}{Scomposizione della luce con un prisma}{}
+
+In ambito ottico, si preferisce esprimere il potere dispersivo con numero di Abbe, che è il reciproco del potere dispersivo
+\[
+\nu = \frac{1}{\omega} = \frac{n_D - 1}{n_F - n_C}
+\]
+dove $n_D$, $n_F$ e $n_C$ sono gli indici di rifrazione, rispettivamente, medio, massimo e minimo.
+
+\subsubsection{Reticoli}
+I reticoli sono costruiti con una superficie opportunamente scanalata con rette parallele ed equidistanti e ricoperte da un materiale riflettente.
+
+\halfpicture{04_011}{Funzionamento di un reticolo a diffrazione}{}
+
+Il reticolo funziona per il principio fisico della diffrazione.
+Il raggio più a sinistra percorre più strada rispetto al raggio al centro, che tuttavia vengono rifratti con lo stesso angolo.
+La differenza di percorso dei due raggi è
+\[
+\Delta = CD - AB
+\]
+
+Se $\Delta$ è multiplo della lunghezza d'onda del raggio, si creerà una differenza costruttiva, altrimenti sarà distruttiva
+\[
+CD = d \cdot \sin i
+\]
+\[
+AB = - d \sin r
+\]
+Il segno meno indica che la diffrazione avviene con angolo opposto.
+
+Se si è in presenza di interferenza costruttiva
+\[
+n \lambda = CD - AB \quad \text{con n intero}
+\]
+
+Sostituendo, si ottiene
+\[
+n \lambda = d \cdot (\sin i + \sin r)
+\]
+
+Con accorgimenti ottici, è possibile far passare la radiazione con $n = 1$, ottenendo quindi una radiazione monocromatica.
+
+La dispersione del reticolo è la capacità di separare le lunghezze d'onda in modo opportuno. Ci sono due tipi di dispersione, ovvero quella angolare e quella lineare
+La dispersione angolare è 
+\[
+D_a = \frac{dr}{d\lambda}
+\]
+Questa dispersione è la variazione dell'angolo in funzione della variazione di lunghezza d'onda
+
+Mentre la dispersione lineare è
+\[
+D_l = \frac{dy}{d\lambda}
+\]
+Questa dispersione indica la variazione della distanza del piano focale rispetto alla variazione della lunghezza d'onda.
+
+Si passare da una all'altra per mezzo della distanza focale $F$
+\[
+D = \frac{dy}{d\lambda} = F \cdot \frac{dr}{d\lambda}
+\]
+Si può anche utilizzare il suo reciproco $D^{-1}$
+\[
+D^{-1} = \frac{d\lambda}{dy} = \frac{1}{F} \frac{d\lambda}{dr}
+\]
+
+La dispersione angolare può essere ottenuta differenziando rispetto a $r$
+\[
+n \lambda = d (\sin i + \sin r) \longrightarrow n d\lambda = d \cos r dr
+\]
+
+Allora $D_a$ e $D^{-1}$ sono 
+\[
+D_a = \frac{dr}{d\lambda} = \frac{n}{d \cos r} \qquad D^{-1} = \frac{d \lambda}{dy} = \frac{d \cos r}{n F} 
+\]
+ 
+La dispersione angolare aumenta al diminuire della distanza tra le scanalature ($d$), inoltre per piccoli angoli $\cos r \to 1$, quindi $D^{-1}$ diventa
+\[
+D^{-1} \approx \frac{d}{n F} 
+\]
+
+Si può dire che la dispersione di un reticolo è costante, o quasi, con la lunghezza d'onda della luce.
+Quindi, per un dato piano focale, le lunghezze d'onda si distribuiranno uniformemente.
+
+Il potere risolutivo dei monocromatori è
+\[
+R = \frac{\lambda}{\Delta \lambda}
+\]
+
+Nel monocromatore sono presenti anche delle fenditure per selezionare meglio la lunghezza d'onda.
+Più la luce si avvicina a essere monocromatica, più la situazione tende all'idealità, secondo la legge di Lambert-Beer
+
+\subsection{Rivelatori}
+Il primo dispositivo visto è il fotomoltiplicatore, che è costituito da una serie di diodi che sfruttano l'effetto fotoelettrico.
+Si verifica un effetto a cascata, in quanto l'elettrone eccitato dalla luce va a colpire un secondo elettrodo, che a sua volta libera elettroni.
+L'effetto a cascata può essere così grande da arrivare a un milione di volte
+
+\marginpicture{04_012}{Funzionamento di un tubo fotomoltiplicatore}{}
+
+Un altro rivelatore è l'array di diodi, che analizza tutte le lunghezze d'onda contemporaneamente.
+La luce comunque deve essere scomposta dal monocromatore.
+Ogni zona fotosensibile viene quindi colpita con una lunghezza d'onda diversa.
+Con questo rivelatore, lo spettro viene raccolto molto velocemente e per questo viene molto utilizzato in cromatografia, dove il campione è flussato.
+
+\halfpicture{04_013}{Funzionamento di un array di diodi}{}
+
+\section{Fluorescenza}
+Quando un oggetto assorbe una radiazione elettromagnetica, si eccita. Per diseccitarsi, può liberare calore, oppure può emettere un fotone. Questo fenomeno si chiama \emph{emissione}.
+La lunghezza d'onda del fotone emesso cambia, in quanto gli stati energetici coinvolti cambiano.
+Le molecole fluorescenti sono molecole che possiedono un'elevata coniugazione $\pi$, e sono quindi strutture planari.
+L'emissione presenta dei parametri:
+\begin{itemize}
+\item \textit{Spostamento di Stokes}: le energie di emissione sono generalmente più basse rispetto a quelle di assorbimento
+\item \textit{Regole di Kasha}: la lunghezza di eccitazione non non cambia
+\item \textit{Regola dell'immagine speculare}: lo spettro di emissione è speculare a quello di eccitazione
+\end{itemize}
+
+L'emissione di dipende dalla concentrazione di analita, dall'efficienza di assorbimento della radiazione e dalla resa quantica di fluorescenza.
+Quest'ultima può essere espressa come
+\[
+\Phi = \frac{\text{fotoni}_{emessi}}{\text{fotoni}_{assorbiti}}
+\]
+
+L'emissione permette di determinare concentrazioni più basse rispetto all'assorbimento e permette inoltre di riconoscere le molecole sulla base dello spettro di fluorescenza
+
+\halfpicture{04_014}{Differenza tra l'assorbimento e l'emissione}{}
+
+\subsection{Strumentazione}
+La strumentazione per la fluorescenza è differente da quella dell'assorbimento. In figura \ref{fig:sbemissione} è rappresentato lo schema a blocchi per uno strumento di emissione.
+Si noti come sono presenti due monocromatori, uno di eccitazione e uno di emissione; il monocromatore di emissione è posto a 90 \degree da quello di eccitazione.
+
+\fullpicturelab{04_015}{Schema di uno strumento che lavora in emissione}{}{sbemissione}
+
+Si noti come la cella del campione diventi una sorgente addizionale e può essere descritta come una sorgente puntiforme che emette in tutte le direzioni.
+
+\section{Spettroscopia atomica}
+Nella spettroscopia atomica, l'analita è presente come atomo isolato, non come molecola; i salti di energia saranno molto diversi.
+Lo spettro ricavato dalla spettroscopia atomica presenta delle righe, dette \emph{righe di assorbimento}. Le righe sono più sottili rispetto alle bande.
+
+\halfpicture{04_016}{Righe di emissione}{}
+
+Gli spettri di emissione presentano delle righe, dette \emph{righe di emissione}. Questo avviene perché un atomo più emettere solo poche radiazioni, se eccitato.
+Quindi, si vede che le righe atomiche sono specifiche per un atomo; è possibile utilizzarle per quantificarlo, tramite la legge di Lambert-Beer.
+
+La larghezza della riga è data dalla probabilità del processo di emissione (o di assorbimento).
+La probabilità che la transizione avvenga è
+\[
+\int_{-\infty}^{+\infty} g(\nu) d\nu = 1 \quad \text{con} \quad g(\nu) \: \text{normalizzata}
+\]
+Un fotone di energia $h \nu$ potrà stimolare l'emissione di un fotone di energia compresa tra $h \nu$ e $h (\nu + d\nu)$.
+
+Ci sono tre parametri che influenzano la larghezza della riga:
+\begin{itemize}
+\item Effetto della pressione
+\item Effetto Doppler
+\item Principio di indeterminazione di Heisenberg
+\end{itemize}
+
+Solitamente, per valutare l'allargamento della banda, si guarda la FWHM, ovvero la larghezza a metà altezza.
+Si vede quindi che la FWHM è determinata da tre componenti:
+\[
+FWHM = FWHM_{Heisemberg} + FWHM_{Pressione} + FWHM_{Doppler}
+\]
+Questi effetti fanno si che le righe siano larghe tipicamente 10$^-3$ nm.
+\paragraph{Pressione}
+Se un atomo emette fotoni e viene urtato da un altro atomo, produce fotoni con frequenza differente; avviene quindi un allargamento della banda spettrale.
+L'allargamento della banda aumenta anche all'aumentare della temperatura, in quando, come per la pressione, aumenta il numero di urti.
+Questo allargamento viene anche definito 'allargamento di Lorentz'
+
+\paragraph{Effetto Doppler}
+Se gli atomi sono in movimento quanto emettono, producono un emissione che risente dell'effetto Doppler.
+Si vede che sono possibili due fenomeni:
+\begin{itemize}
+\item Redshift: si ha uno spostamento della frequenza verso frequenze più basse
+\item Blueshift: si ha uno spostamento della frequenza verso frequenze più alte
+\end{itemize}
+
+\marginpicture{04_017}{Effetto Doppler}{}
+
+L'effetto Doppler mostra che la frequenza assume la forma
+\[
+\nu' = \nu \cdot \biggl(1 \pm \frac{v(x)}{c}\biggr)
+\]
+L'ultima parte del fattore correttivo è dovuto alla velocità effettiva rispetto a quella della luce
+
+\paragraph{Principio di indeterminazione di Heisenberg}
+L'unica temperatura dove il sistema è statico è 0 K. Questo effettivamente causa un allargamento trascurabile del picco.
+Il principio di indeterminazione è
+\[
+\Delta \nu \cdot \Delta t > 1
+\]
+
+A seconda di che interazione il vapore atomico subisce, si possono avere diverse tecniche spettroscopiche:
+\begin{itemize}
+\item \textit{Assorbimento atomico}: il vapore viene irraggiato con una radiazione monocromatica che può essere assorbita sono da atomi di un determinato elemento
+\item \textit{Emissione atomica}: il vapore atomico viene eccitato; il surplus di energia viene quindi emesso sottoforma di radiazione luminosa, che è specifica dell'elemento
+\end{itemize}
+
+Le tecniche associate sono descritte nella tabella \ref{tab:spettratomica}
+
+\begin{table}
+\begin{tabular}{lccc}
+Atomizzazione & Temperatura (\degree C)& Tecnica & Abbreviazione\\
+Fiamma & 1\,700 - 3\,150 & A,E,F & AAS, AES e AFS\\
+Elettrotermica & 1\,200 - 3\,000 & A,F & ET-AAS e ET-AES\\ 
+Plasma ad accoppiamento induttivo & 6\,000 - 8\,000 & E,F & ICP e ICP-OES\\
+Plasma a DC & 6\,000 - 10\,000 & E & DCP\\
+Arco elettrico & 4\,000 - 5\,000 & E & \\
+Scintilla & 4\,000 (?) & E  &\\
+\caption[Varie tipologie di spettroscopia atomica]{Si noti che A sta per assorbimento, E per emissione e F per fluorescenza}
+\label{tab:spettratomica}
+\end{tabular}
+\end{table}
+
+\section{Spettrofotometria di assorbimento atomico}
+Il campione è portato allo stato di nuvola atomica tramite riscaldamento. La nuvola atomica viene irradiata con luce, che viene emessa da una sorgente luminosa opportuna.
+La riga emessa dalla lampada viene assorbita sono dagli atomi interessati.
+L'assorbimento fornisce una risposta quantitativa (tramite la legge di Lambert-Beer), ma anche qualitativa (in base alla lunghezza d'onda dell'assorbimento)
+
+\halfpicturelab{04_018}{Schema a blocchi di un assorbimento atomico}{}{AAblocchi}
+
+Lo strumento deve essere in grado di atomizzare un elemento in specie neutre, non cariche, altrimenti i livelli energetici cambiano ed è necessario commisurare l'assorbimento all'emissione della lampada.
+Le energie delle transizioni atomiche sono molto basse e se si impiegasse una lampada continua non sarebbe possibile vedere i picchi in quanto l'atomo è in grado di assorbire solamente una minima parte di quella energia.
+Ecco quindi che la lampada non deve essere una sorgente continua come nel caso della spettrofotometria UV-Vis, ma deve essere una sorgente non continua che emette le specifiche lunghezze d'onda richieste da quell'elemento, rendendo il rapporto $P/P_0$ misurabile.
+
+Lo schema a blocchi dello strumento è rappresentato in figura \ref{fig:AAblocchi}.
+Si nota che il monocromatore è posto dopo il campione, in quanto la fiamma può emettere altre lunghezze d'onda.
+Questo schema è presente anche nell'ET-AAS, dove cambia il sistema di atomizzazione.
+
+\halfpicture{04_019}{Differenza tra uno strumento a singolo raggio e a doppio raggio}{}
+
+Come per lo spettrofotometro, lo strumento può essere a singolo raggio o a doppio raggio.
+Nell'assorbimento atomico, lo strumento a singolo raggio può possedere una lampada continua, o una lampada a impulsi.
+Lo strumento a impulsi permette di avere segnali più stabili e quindi più attendibili.
+Nello strumento a doppio raggio, la luce viene divisa da un chopper, che fornisce anche un segnale a impulsi.
+Il chopper è un disco con il 50 \% della superficie riflettente e l'altro 50 \% della superficie trasparente.
+
+\subsection{Lampada a catodo cavo}
+Si tratta di lampade speciali contenenti l'elemento da analizzare al catodo e un anodo di tungsteno; queste lampade emettono lo spettro a righe di un elemento specifico.
+Sono riempite di un gas a bassissima pressione (tipicamente Ar) e la finestra cilindrica di uscita del fascio è in quarzo.
+Si utilizza argon piuttosto che azoto, in quanto possiede alta energia di ionizzazione tale da eccitare tutti gli elementi che compongono il catodo.
+
+Il meccanismo di emissione parte dalla ionizzazione dell'argon
+\[
+Ar \rightleftharpoons Ar^+ + e^-
+\]
+
+L'argon ionizzato migra (accelerando) verso il catodo, si schianta e assorbe elettroni per tornare neutro
+\[
+Ar^+ + e^- \rightleftharpoons Ar
+\]
+Nel processo viene liberata energia, sottoforma di calore.
+
+\halfpicture{04_020}{Lampada a catodo cavo}{}
+
+L'impatto consente di liberare gli atomi di cui è formato il catodo e quindi si forma una nuvola metallica. Questo processo si chiama sputtering.
+Grazie al calore prodotto dall'impatto, gli atomi della nuvola metallica si eccitano e formano $M^\ast$.
+L'atomo eccitato quindi ritorna allo stato fondamentale, emettendo una radiazione luminosa caratteristica dell'elemento di cui il catodo è fatto.
+
+Le lampade a catodo cavo possono essere mono-elemento o multi-elemento, risultando queste ultime più pratiche, ma devono contenere elementi che non sovrappongono i propri spettri, che comunque i casi di
+sovrapposizione degli spettri sono rarissimi nella tavola periodica.
+L'assorbimento atomico permette di analizzare singolarmente gli elementi e vale ancora la Legge di Lambert-Beer.
+
+Si vede che le righe di emissione della lampada a catodo cavo sono più sottili rispetto alle righe di assorbimento, in quanto nell'assorbimento si è in presenza degli effetti descritti prima, che causano l'allargamento della banda.
+
+\halfpicture{04_021}{Dimostrazione del fenomeno dell'autoassorbimento}{}
+
+La lampada a catodo cavo può presentare fenomeni di autoassorbimento.
+La nuvola di atomi eccitati emette luce, tuttavia non è detto che tutti gli atomi della nube siano eccitati.
+A volte gli atomi non eccitati assorbono la luce che viene emessa dalla nube.
+Questo porta ad una perdita di emissione e comporta che le righe di emissione non siano più regolari, ma presentino degli avvallamenti.
+
+\subsection{Atomizzatori}
+Esistono tipi diversi di atomizzatori, ma il più diffuso è la fiamma lamellare.
+
+\paragraph{Atomizzatore a fiamma lamellare}
+Il cammino ottico è posto grande (solitamente 10 cm) per aumentare l’assorbanza e diminuire la concentrazione minima analizzabile.
+La fiamma è solitamente alimentata con una miscela di acetilene e aria e sviluppa circa 2200 \degree C, ma possiede regioni a temperatura diversa.
+La fiamma agisce in più fasi:
+\begin{itemize}
+\item Permette l'evaporazione istantanea del solvente.
+\item Eliminazione di H$_2$O di coordinazione con formazione del composto anidro.
+\item Zona redox di scambio tra catione e anione che compongono il sale con formazione dei corrispettivi atomi.
+\item Possibilità di formazione di ioni.
+\end{itemize}
+
+Il flusso luminoso della lampada a catodo cavo oltrepassa la fiamma, dove avviene l'atomizzazione e il fenomeno di assorbimento e come rivelatore si utilizza un fotomoltiplicatore.
+Normalmente una riga di emissione è più stretta di una di assorbimento per il fatto che la lampada e la fiamma sono in ambienti diversi e la fiamma produce più elevate agitazioni termiche.
+
+\paragraph{Atomizzatore termo-elettrico}
+Si pone una goccia di campione sulla piattaforma di L’Vov dal foro e il cilindro di grafite è circondato da spire che lo scaldano con un cambiamento di temperatura molto veloce con temperatura controllabile.
+È possibile effettuare anche delle scansioni di temperatura e durante il funzionamento diventa incandescente al calor bianco risultando dannoso per gli occhi se osservato direttamente.
+
+\marginpicture{04_022}{Atomizzatore termo-elettronico}{}
+
+Questo sistema d atomizzazione presenta il vantaggio di produrre un segnale singolo per poco tempo, diversamente dalla fiamma che produce un segnale continuo per molto tempo.
+È inoltre più sensibile in quanto il campione subisce una concentrazione producendo un segnale più grande e possedendo un più basso limite di rivelabilità, diversamente dalla fiamma, che diluisce il campione.
+Tuttavia, presenta lo svantaggio di produrre segnali meno riproducibili.
+
+\paragraph{Atomizzatore a vapori freddi}
+Si utilizza per concentrazioni di analita bassissime e permette di aumentare l'efficienza di trasformazione da ionico ad atomico tramite l'impiego ad esempio del mercurio:
+\[
+Hg^{2+} + Sn^{2+} \rightleftharpoons Hg + Sn^{4+} 
+\]
+La soluzione viene strippata con N$_2$ e Hg (volatile) e passa all'interno di una cella a cammino ottico elevato e vengono così ottimizzati tutti i parametri come la diminuzione del rumore, l'atomizzazione aumentata,
+l'aumento del cammino ottico, eliminazione dell'emissione della fiamma, eliminazione del rumore termico...
+
+Un altro metodo impiega idruri volatili, come ad esempio per As e Sb a basse concentrazioni.
+Questi elementi si trovano prevalentemente sotto forma di anioni e vengono convertiti in idruri formando arsina (AsH$_3$) e stibina (AbH$_3$) utilizzando NaBH$_4$ come donatore di idruro.
+In fase gas H$^-$ cede l'elettrone all'arsenico (o dell'antimonio) trasformandoli nella forma atomica.
+Questa tecnica permette di abbassare i limiti di rivelabilità.
+
+\subsection{Interferenze}
+
+Nell'assorbimento atomico c'è il problema delle interferenze, che possono essere di due tipi:
+\begin{itemize}
+\item Interferenze chimiche
+\item Interferenze spettrali
+\end{itemize}
+
+Le interferenze chimiche sono dovute alla formazione di composti refrattari, come nel caso del Ca$^{2+}$ in presenza di PO$_4^{3-}$ con formazione di fosfato di calcio, che resiste alla decomposizione.
+Questo problema può essere risolto impiegando ad esempio il plasma.
+Le interferenze spettrali possono essere dovute alla presenza di righe di assorbimento di atomi diversi dall'analita; questo problema viene risolto cambiando riga.
+
+\halfpicture{04_023}{Utilizzo di una lampada al deuterio per minimizzare il rumore di fondo	}{}
+
+Un altra interferenza spettrale è dovuta alla presenza di specie radicaliche o molecolari, che producono un aumento del rumore di fondo.
+In questo caso, il problema viene risolto utilizzando una lampada al deuterio, la cui radiazione passa alternativamente a quella del catodo cavo.
+Date entrambe le radiazioni, è possibile fare il rapporto tra la lampada al deuterio e la lampada a catodo cavo.
+È quindi possibile correggere il rumore di fondo, in quando la lampada al deuterio e la lampada a catodo cavo, in presenza di un assorbimento aspecifico, assorbono allo stesso modo; le intensità diminuiscono allo stesso modo.
+Il rumore di fondo può essere, in questo modo, azzerato.
+I correttori al deuterio compensano fino a 0.6 unità di assorbanza dal fondo; nei casi in cui tale compensazione non è sufficiente, si ricorre a metodi di correzione più sofisticati
+
+
+\section{Spettrofotometria di emissione atomica}
+L'emissione atomica sfrutta l'eccitazione termica, in quanto il rilassamento produce fotoni.
+Lo schema dello strumento è rappresentato in figura \ref{fig:AES}.
+È importante considerare la temperatura di lavoro, poiché questa fa variare sensibilmente il rapporto tra atomi allo stato eccitato e allo stato fondamentale.
+
+\halfpicturelab{04_024}{Schema di uno strumento di emissione atomica}{}{AES}
+
+L'equazione che regola il rapporto tra lo stato eccitato e fondamentale é:
+\[
+\frac{N_j}{N_0} = \frac{P_j}{P_0} \cdot e^{-\dfrac{E_j}{K_B T}}
+\]
+dove $P_j$ e $P_0$ sono parametri statistici che dipendono dal numero degli stati presenti per ogni livello quantico.
+
+Ci sono due modi per eccitare gli atomi:
+\begin{itemize}
+\item Con la fiamma (1\,700 - 3\,150 \degree C); la tecnica prende il nome di F-AES
+\item Con il plasma (6\,000 - 8\,000 \degree C); la tecnica prende il nome di ICP-AES
+\end{itemize}
+
+ICP è l'acronimo di Inductively Coupled Plasma.
+Il plasma non è una fiamma, ma è uno stato della materia composto da gas ionizzati ad alta temperatura e il più utilizzato è il plasma di Argon.
+Il plasma è elettricamente neutro con una certa percentuale ($\approx$ 5\%) di ionizzazione.
+Esso viene confinato in una regione dello spazio tramite bobine a induzione elettromagnetica.
+
+\paragraph{Torcia al plasma}
+La torcia è fatta da tubi concentrici di quarzo; il gas (solitamente argon) fluisce a spirale all'interno, per mantenere la torcia stabile, e le bobine di induzione sono refrigerate ad acqua.
+Quando scocca la prima scintilla in presenza di un campo magnetico il plasma è in grado di auto-sostenersi a causa della ionizzazione dell'Argon.
+Il campo magnetico inoltre mantiene stabile e localizzato il plasma.
+
+\marginpicture{04_025}{Torcia al plasma}{}
+
+Lo spegnimento della torcia può avvenire per:
+\begin{itemize}
+\item Interruzione del campo magnetico
+\item Interruzione del flusso di Argon
+\item Introduzione del campione troppo brusca che causa una diminuzione della temperatura e per neutralizzazione troppo spinta di Ar$^+$ e elettroni.
+\end{itemize}
+Spesso si applica un campo magnetico dai 27 ai 40 MHz di frequenza.
+
+\halfpicture{04_026}{Zone di temperatura nella torcia al plasma}{}
+
+Il plasma non presenta né interferenze spettrali, né chimiche, perché qualsiasi materiale viene disgregato.
+Il plasma ha una forma toroidale; il campione entra al centro del toro e viene subito distribuito.
+Questo consente la nebulizzazione di liquidi, ma consente anche l'atomizzazione di solidi particellari o di gas.
+Avvengono tutti i processi visti nell'assorbimento atomico.
+
+L’analita viene introdotto sotto forma di aerosol e questo presenta scarse interferenze ed inoltre vista l'altissima energia in gioco sfrutta il fenomeno di emissione.
+Tipicamente i plasmi possono avere due tipi di rivelatori:
+\begin{itemize}
+\item \textit{Rivelatori ottici}: il plasma emette tutte le righe di tutti gli elementi del campione e questo permette l'analisi multi-elemento e si utilizzano dei fotomoltiplicatori.
+Il sistema prende quindi il nome di ICP-OES e sfrutta le proprietà ottiche degli elementi per discriminarli.
+\item \textit{Rivelatori di massa}: sfrutta il fatto che il plasma ionizza pesantemente gli atomi e si discriminano in base alle masse degli ioni prodotti, riuscendo a discriminare anche gli isotopi.
+Il sistema prende quindi il nome di ICP-MS.
+Possono essere presenti più spettrometri di massa in cui il primo solitamente toglie le interferenze.
+\end{itemize}
+
+\subsection{Accoppiamento ICP-MS}
+Nella maggior parte dei casi, è possibile analizzate tutti gli elementi della tavola periodica.
+Ci sono delle eccezioni, come i gas nobili più leggeri, l'azoto e il fosforo.
+Per azoto e fluoro, si utilizza l'ICP ottico in quanto lo spettrometro di massa rivela tipicamente cariche positive.
+
+\fullpicture{04_027}{Accoppiamento ICP-MS}{}
+
+Per utilizzare un ICP-MS, bisogna ottimizzare l'interfaccia dello spettrometro con il plasma.
+Si utilizza un accoppiamento particolare, formato da un cono di ingresso e uno skimmer (cono di uscita).
+Tra i due coni, c'è un sistema a vuoto, in quanto gli ioni necessitano di un vuoto spinto (10$^{10}$ bar) per poter essere analizzati senza interferenze.
+Quando il plasma entra dentro la zona di vuoto, diventa supersonico e questo consente alla parte centrale di entrare all'interno dello skimmer; la composizione rimane inalterata.
+Appena gli ioni entrano all'interno dello skimmer, vengono deflessi da lenti elettrostatiche, che consentono di analizzare solo le sostanze cariche.
+
+\halfpicture{04_028}{Cono di ingresso e cono di skimming}{}
+
+Solitamente, lo spettrometro di massa presenta dei quadrupoli per selezionare e analizzare gli ioni.
+Usualmente, la risoluzione si aggira intorno a 1 u.m.a., tuttavia è possibile avere risoluzioni più basse a discapito della sensibilità
+La risoluzione ridotta è uno svantaggio,in quanto i segnali possono ricevere delle interferenze da parte di altri ioni.
+Ogni elemento viene individuato attraverso il suo isotopo con meno interferenze poliatomiche.
+
+\halfpicture{04_029}{Lenti elettrostatiche}{}
+
+\paragraph{Specie isobare}
+Sono ad esempio degli isomeri strutturali di sostanze organiche e la loro massa è uguale, alla seconda cifra dopo la virgola, a quella dell’analita.
+Sono specie isobare ad esempio CO e C$_2$H$_2$ che possiedono entrambi 28 di massa molecolare, ma con cifre decimali diverse.
+Sono invece isobari veri isomeri conformazionali cis/trans che possiedono la stessa identica massa.
+
+Per ovviare alle interferenze isobariche si può utilizzare una cella di collisione multipolo, dove una miscela gassosa (solitamente elio) fluisce all'interno del quadrupolo.
+L'elio disgrega le interferenze molecolari, tramite trasferimento di energia da impatto.
+
+\paragraph{Quantificazione per diluizione isotopica}
+Questa tecnica è una tecnica di calibrazione che prevede che vengano variati i rapporti isotopici dell'analita nel campione, mediante aggiunte note dell'elemento di interesse, ma con composizione isotopica differente.
+Dato che in spettrometria di massa si può misurare l'abbondanza isotopica di ciascun isotopo, la quantità originale dell'analita può essere ricavabile dalla misura dei rapporti isotopici.
+Il calcolo più semplice è ottenuto aggiungendo un isotopo puro all'analita
+
+\section{Tecniche ifenate}
+Le tecniche ifenate sono formate dall'interfacciamento di un sistema separativo ad un sistema rivelativo (solitamente spettroscopico).
+Si sfruttano i vantaggi di entrambi i sistemi:
+\begin{itemize}
+\item \textit{Cromatografia}: produce frazioni pure di analita
+\item \textit{Spettroscopia}: fornisce informazioni su un componente puro
+\end{itemize}
+Le tecniche accoppiate più comuni sono GC-MS e LC-MS; altre tecniche meno diffuse, però utilizzate, sono GC-ICP-AES e LC-ICP-MS.
+
+L'accoppiamento GC-ICP-AES ha un interfacciamento più semplice degli altri accoppiamenti,in quanto non avviene l'accoppiamento con la massa.
+La colonna e l'interfaccia sono comunque termostatate, per evitare che gli analiti condensino dopo la colonna GC.
+Viene prodotto uno spettro di emissione per ogni analita
+
+\paragraph{Accoppiamento LC-ICP-MS}
+Questo accoppiamento è utilizzato per la determinazione di ioni metallici, complessi e specie metallo-organiche.
+La struttura è ottenuta sommando le componenti; inizialmente c'è una colonna cromatografica (per cromatografia liquida), successivamente c'è una torcia al plasma e infine è presente uno spettrometro di massa.
+
+Il vantaggio principale di  questa tecnica è la versatilità dell'HPLC.
+L'HPLC è uno strumento versatile, in quanto si può scegliere la strategia di separazione, con le tecniche viste precedentemente.
+La scelta dipende dal tipo di analita, tuttavia le più utilizzate sono la cromatografia liquida a fase inversa e la cromatografia ionica.
+Si noti anche che le due fasi, per la cromatografia liquida e l'ICP sono compatibili.
+
+La tecnica presenta anche degli svantaggi, infatti, non si possono analizzare soluzioni molto concentrate in quanto queste sono problematiche per le conseguenti incrostazioni
+che avvengono nel cono di skimming e per la difficoltà nel nebulizzarle.
+Le soluzioni analizzate devono essere poco concentrate.
+
+\paragraph{Accoppiamento GC-ICP-MS}
+Questo accoppiamento è un po' più complicato, però è anche più efficace dell'LC-ICP-MS.
+È necessario predisporre una linea di riscaldamento tra il gas-cromatografo e l'ICP, per evitare la condensazione delle sostanze in uscita.
+Si noti inoltre che è necessario addizionare del gas al flusso uscente dal gas-cromatografo, in quanto il gas-cromatografo lavora con un flusso di circa 1 mL/min, mentre l'ICP-MS lavora con un flusso di 1 L/min.
+
+\halfpicture{04_030}{Accoppiamento GC-ICP-MS}{}
+
+Questo sistema presenta tuttavia una maggior risoluzione, in quanto la gas-cromatografia è più efficiente della cromatografia liquida nel separare le sostanze.
+Inoltre, l'assenza di liquido permette al plasma di essere più secco e meno soggetto a interferenze e il problema delle incrostazioni non si presenta.
+
+Per collegare i due strumenti, si usa una linea, detta \emph{transfer line}, che è formata da due tubi di acciaio riscaldati.
+Il primo tubo contene un capillare di silice che trasporta il flusso tra i due strumenti.
+Il gas di mark-up viene riscaldato nel secondo tubo, e successivamente introdotto nel primo, in modo tale da fluire intorno al capillare di silice

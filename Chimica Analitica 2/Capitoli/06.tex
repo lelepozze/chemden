@@ -1,0 +1,814 @@
+\chapterpicture{header_08}
+\chapter{Elettrochimica}
+I requisiti richiesti ad una tecnica analitica sono:
+\begin{itemize}
+\item Alta sensibilità (pendenza della retta di calibrazione)
+\item Sufficiente precisione (ripetibilità) ed accuratezza
+\item Basso limite di rivelabilità
+\item Buona selettività (per un set di analiti, specifica se per 1 solo analita) e risoluzione
+\item Rapidità di analisi
+\item Ampio intervallo di applicazione
+\item Possibilità di analisi contemporanea di più analiti
+\item Semplice preparazione dei campioni
+\item Utilizzo di piccole quantità di campione
+\item Possibilità di automazione
+\item Permettere l'analisi in situ
+\item Basso costo
+\end{itemize}
+Le misure elettro-analitiche si dividono in: misure potenziometriche, misure amperometriche e misure conduttimetriche.
+
+\halfpicture{06_001}{Interfase dell'elettrodo}{}
+
+
+\paragraph{Modalità di misura}
+In una reazione redox, se avviene una reazione di ossidazione, deve avvenire anche la controparte riduzione, e questo vale per le misure potenziometriche e amperometriche.
+Per chiudere il sistema sono necessari 2 elettrodi in quanto i processi che avvengono sono anch'essi due.
+Al catodo avviene sempre la riduzione, mentre all'anodo avviene sempre l'ossidazione e invece il loro segno dipende dal tipo di pila:
+\begin{itemize}
+\item Pila passiva:  Catodo (+) – Anodo (-).
+\item Pila attiva: Catodo (-) – Anodo (+) con elettrolisi.
+\end{itemize}
+
+Sussistono sempre le seguenti relazioni:
+\[
+\Delta G = -nF \Delta E \quad \Delta G = \Delta G^0 + \sum RT \ln a_i \: \text{con} \: F = 96487 C \cdot mol^-1
+\]
+Le misure di potenziale $\Delta E$ devono essere svolte in condizioni di equilibrio, cioè in assenza di passaggio di corrente.
+
+
+
+\section{Misure potenziometriche}
+In queste tecniche, viene misurato il potenziale di equilibrio in condizioni di corrente nulla.
+Sono misure statistiche che riguardano interclasse elettrodo/soluzione.
+In pratica l'elettrodo vero e proprio è interclasse e si usa un elettrodo di riferimento e un conduttore per determinare la differenza di potenziale.
+Si possono ricavare informazioni sulla composizione determinando il potenziale
+\[
+\Delta E = (E_{ind} - E_{ref}) + E_j
+\]
+In cui $E_{ind}$ dipende dalla chimica del sistema, $E_{ref}$ è indipendente dalla soluzione di misura e $E_j$ è il potenziale di giunto ogni volta che si crea un'interfase.
+Ogni qualvolta due materiali diversi entrano in contatto si instaura una differenza di potenziale.
+$E_{ref}$ normalmente deriva da un elettrodo di seconda specie e il suo potenziale dovrebbe essere costante.
+Esistono varie tecniche per minimizzare $E_j$ o misurarlo.
+
+\paragraph{Potenziometro}
+Assicurano il non passaggio di corrente e in posizione a si esegue la calibrazione e in posizione b si esegue la misura.
+Si utilizza una Pila Weston a potenziale fisso:
+\[
+Cd(Hg), CdS_4 (s) | CdSO_4, Hg_2SO_4 \quad E_W (25 \degree C) = 1.0186 V
+\]
+
+\marginpicture{06_002}{Circuito potenziometrico}{}
+
+Nella pila Weston l'analita era originariamente $CdSO_4$ saturo; le versioni più recenti usano $CdSO_4$ insaturo per avere una variabilità minore di E con la temperatura.
+Le reazioni che avvengono sono
+\begin{align*}
+& \text{Anodo} \: Cd/Hg \rightarrow Cd^{2+} + 2e^- \quad E^0 = -0.4046 V\\
+& \text{Catodo} \: Hg_2SO_4 + 2e^- \rightarrow 2 Hg + SO_4^{2-} \quad E^0 = +0.7973 V\\
+\end{align*}
+
+La calibrazione segue:
+\[
+\frac{AM}{E_W} = \frac{AB}{E} \rightarrow E = W \cdot \frac{AB}{AM}
+\]
+
+La resistenza variabile (reostato) serve ad azzerare lo strumento e quando si switcha in posizione b si misura un passaggio di corrente e si azzera nuovamente.
+Dalla lettura della resistenza e dal potenziale della Pila Weston si ricava la differenza di potenziale.
+
+\paragraph{Voltmetri elettronici}
+I voltmetri elettronici sono dispositivi elettrici che usano degli amplificatori operazionali, ovvero conduttori a bassissima impedenza; in questo modo, la corrente passante è molto bassa.
+Attualmente sono i voltmetri più utilizzati.
+
+\marginpicture{06_003}{Voltmetro elettronico}{}
+
+\subsection{Elettrodi}
+Gli elettrodi utilizzati in potenziometria sono molti. Si possono distinguere in
+\begin{itemize}
+\item Elettrodi di misura
+\item Elettrodi di riferimento
+\end{itemize}
+
+\paragraph{Elettrodi di riferimento}
+Gli elettrodi di riferimento sono degli elettrodi che mantengono il potenziale ad un dato valore, e per questo sono utilizzati come riferimento.
+Gli elettrodi di riferimento più utilizzati sono: l' SHE, l'elettrodo ad Ag/AgCl e l'elettrodo a calomelano.
+
+\marginpicture{06_004}{Elettrodo di riferimento a Ag/AgCl}{}
+
+L'elettrodo SHE viene poco utilizzato per via delle difficoltà progettistiche.
+
+\paragraph{Elettrodi di misura}
+Gli elettrodi di misura sono molteplici e sono divisi in quattro categorie
+\begin{itemize}
+\item \textit{Elettrodi redox}: sono dei conduttori metallici che non partecipano alla reazione redox, ma fungono da serbatoi di elettroni (es. elettrodo di platino).
+\item \textit{Elettrodi di prima specie}: sono elettrodi in metallo, che tuttavia partecipano alla reazione (es. elettrodo di argento)
+\item \textit{Elettrodi di seconda specie}: sono elettrodi che contengono un metallo e un suo sale poco solubile (es. elettrodo ad Ag/AgCl)
+\item \textit{Elettrodi ionoselettivi}: sono elettrodi sensibili ad un particolare composto. Essi comprendono gli elettrodi ISFET.
+\end{itemize}
+
+\subsubsection{Elettrodi ionoselettivi}
+Gli elettrodi ionoselettivi vengono classificati in:
+\begin{itemize}
+\item Elettrodi a membrana cristallina (omogenea, eterogenea)
+\item Elettrodi a membrana non cristallina (in matrice rigida, in matrice non rigida, carrier mobile positivo, carrier mobile negativo, carrier neutro)
+\item ISFET
+\end{itemize}
+
+Gli elettrodi iono-selettivi normalmente rispondo alla seguente equazione:
+\[
+E = C + \frac{0.059}{z} \log \biggl[a_A + k_{pot}^{A,B} (a_B)^{\frac{z_A}{z_B}} + k_{pot}^{A,C} (a_C)^{\frac{z_A}{z_C}} + \dots \biggr]
+\]
+Con $K_{pot}^{A,B}$ come costante di selettività potenziometrica di A con B come interferente, moltiplicata per l'attività interfederale B.
+Gli elettrodi iono-selettivi non sono specifici e quindi possono rispondere anche ad altre specie e queste interferenze vengono considerate nell'equazione.
+Per il termine $a_A$ si assume che $K_{pot}=1$ mentre per gli altri termini deve essere $K_{pot}<1$ altrimenti significa che è più selettivo verso altre specie.
+
+Il problema che $K_{pot}^{A,B}$ non è costante, ma varia di poco con la concentrazione, e quindi $K_{pot}^{A,B}$ è funzione della concentrazione e non è facile da valutare.
+
+\paragraph{Elettrodo a vetro}
+Se non fosse presente la membrana i potenziali $E_1$ e $E_2$ sarebbero uguali se sono alla stessa concentrazione.
+La membrana orienta le cariche e si crea una ddp di giunzione e si legge una $\Delta E$.
+
+\marginpicture{06_015}{Elettrodo a vetro}{}
+
+Il potenziale letto è quindi determinato dalla membrana e la misura viene effettuata tra due riferimenti ed ecco quindi che gli elettrodi iono-selettivi sono basati sulla misura di una ddp tra due interfasi di una opportuna membrana sensibile all'analita.
+Vale l'equazione:
+\[
+E = C + \frac{0.059}{n} \log \biggl[a_{H_3O^+} + K_{pot}^{H_3O^+,Na^+} (a_{Na^+})^{\frac{1}{2}} \biggr]
+\]
+Quindi l'elettrodo a vetro possiede come interferente lo ione Na$^+$ e la sua $K_{pot}$ dovrebbe essere almeno 10 volte minore e la sua concentrazione dovrebbe essere la più piccola possibile.
+
+\marginpicture{06_005}{Interfase dell'elettrodo a vetro}{}
+
+A pH alcalini (pH > 10) si ha una grande concentrazione di ioni Na$^+$ e questo crea delle interferenze all'elettrodo.
+Per determinare $K_{pot}$ si fa variare $a_{H_3O^+}$ e si tiene costante $a_{Na^+}$ e si misura il potenziale della soluzione.
+Ad un certo punto E non varia più perché inizia ad essere stabilito dall'interferente.
+
+\halfpicture{06_006}{Errore alcalino e errore acido}{}
+
+A pH molto acidi (pH < 1), l'elettrodo commette un errore in quanto l'attività di $H_3O^+$ non è più lineare.
+
+\paragraph{Elettrodo a membrana cristallina omogenea}
+Presentano una membrana di LaF$_3$ (drogato con Sm o Eu) o AgCl o Ag$_2$S.
+La differenza tra elettrodi a membrana cristallina omogenea e eterogenea sta nella presenza di polveri incorporate nella membrana a matrice polimerica.
+
+\marginpicture{06_007}{Elettrodo a membrana cristallina omogenea}{}
+
+\paragraph{Elettrodo a membrana cristallina in matrice omogenea}
+Contengono uno scambiatore ionico liquido in solvente organico per realizzare un equilibrio tra fasi eterogenee con lo ione in esame.
+Possono essere a:
+\begin{itemize}
+\item Carrier mobile positivo: scambiano cationi
+\item Carrier mobile negativo: scambiano anioni 
+\item Carrier mobile neutro: scambiano molecole neutre, come complessanti
+\end{itemize}
+
+\marginpicture{06_008}{Elettrodo a membrana cristallina in matrice omogenea}{}
+
+Esistono anche elettrodi a diffusione gassosa per la determinazione di NH$_3$, H$_2$S, Cl$_2$ o CO$_2$ che sfruttano le proprietà acido/base di questi gas per arrivare a limiti di rivelabilità anche di 10$^{-8}$ M per l'acido solfidrico.
+
+\paragraph{ISFET}
+Il termine ISFET sta per Iono-Selective Field Effect Transistor.
+Sono unità ibride formate da una membrana ionoselettiva e da un transistor, che funge da preamplificatore.
+
+\marginpicture{06_009}{Elettrodo ISFET}{}
+
+Per la determinazione di:
+\begin{itemize}
+\item H$^+$ si usa la silice idrata,
+\item Cl$^-$ si usa AgCl
+\item I$^-$ e CN$^-$ si usa AgI e AgCN
+\item K$^+$ con Valinimicina.
+\end{itemize}
+
+Accoppia 2 semi-conduttori, uno di tipo n a lacune elettroniche (Si drogato con Ga) e uno di tipo p ad elettroni (Si drogato con P).
+
+\halfpicture{06_010}{Schema dei semiconduttoni nell'elettrodo ISFET}{}
+
+La membrana iono-selettiva (anche qualsiasi altro materiale) induce una modificazione della tendenza a far passare elettroni, con un conseguente orientamento delle cariche e questo provoca nei conduttori il passaggio di corrente.
+Se immerso nella soluzione, la specie, in ragione della propria $K_{eq}$ e della sua concentrazione, si antepone selettivamente sulla superficie della membrana e si induce così una variazione della ddp.
+
+\section{Misure amperometriche}
+Viene misurata la corrente prodotta da una reazione di ossidazione o riduzione provocate dall'applicazione di un determinato potenziale ad opportuni elettrodi.
+Si tratta di misure dinamiche che riguardano anch'esse l'interfase elettrodo/soluzione in cui avvengono le reazioni e se è possibile misurare la carica passata si parla di misure coulombimetriche.
+È una tecnica poco distruttiva in quanto si fa reagire solo una piccola parte della soluzione e con questa è possibile dedurre tutte le proprietà della soluzione intera.
+
+La natura delle misure amperometriche dipende da:
+\begin{itemize}
+\item Modalità di trasferimento di materia della specie elettro-attiva verso l'elettrodo.
+\item Polarizzazione dell'elettrodo.
+\end{itemize}
+
+Vengono effettuate con circuiti potenziostatici a 3 elettrodi:
+Elettrodo di lavoro (W), Elettrodo di riferimento (R) e contro-elettrodo (CE).
+
+\halfpicture{06_011}{Fasce di stabilità dell'acqua con diversi elettrodi}{}
+
+Il potenziale (E) richiesto per ottenere una corrente faradica di ossidazione o riduzione è applicato tra l'elettrodo W e l'elettrodo R e normalmente la corrente (i) ottenuta dal processo redox è proporzionale alla concentrazione delle specie in soluzione e si misura tra il W e il CE.
+L'operazionale dopo W amplifica il segnale, mentre l'operazionale dopo C contiene dei condensatori.
+Se in W avviene una reazione, in C deve avvenire la reazione opposta.
+I potenziali sono limitati dalle fasce di stabilità dei solventi.
+
+Le fasce di stabilità si modificano con diversi elettrodi.
+Ad esempio, con il platino, la riduzione dell'H$^+$ ad H$_2$ segue pressoché l'andamento teorico, e questo è anche il motivo per il quale nella riduzione di H$^+$ si utilizza questo metallo.
+L'ossidazione dell'ossigeno con formazione di bolle di O$_2$ sul Pt non segue l'andamento teorico in quanto sussiste una sovratensione all'ossidazione.
+Le sovratensioni rendono possibili esplorazioni di potenziali che sarebbero proibiti utilizzando solo H$_2$O.
+Nel caso dell'Argento si ossida prima dell'acqua perché possiede $E^0_{Ag^+/Ag}$ di + 0.800 V.
+
+\halfpicturelab{06_012}{Circuito equivalente}{}{circequiv}
+
+Se l'ossidazione avviene con trasferimento di elettroni dall'analita all'elettrodo ed esso funge solo da scarico di elettroni si utilizza l'elettrodo di carbone vetroso (GC) e talvolta materiali come il platino o loro possono essere ossidati in presenza di complessi o ioni che diano precipitati e l'elettrodo di misura viene coinvolto nella reazione e lentamente si consuma.
+L'interfase elettrodo/soluzione è assimilabile ad un circuito costituito da una resistenza e un condensatore, chiamato circuito equivalente, vedi figura \ref{fig:circequiv}
+I dielettrici si comportano come un condensatore, ad esempio l'acqua contiene H$^+$ e OH$^-$.
+
+\subsection{Flusso di materia}
+Per capire l'amperometria, è necessario capire i flussi di materia che avvengono all'interno della cella.
+La materia possiede un potenziale chimico; se la materia è globalmente carica, possiede anche un potenziale elettrico.
+L'insieme dei due forma il \emph{potenziale elettrochimico}.
+\[
+\overline{\mu}(x) = \mu^0_i + RT \ln [a(x)] + z F \Phi (x)
+\]
+
+\marginpicture{06_013}{Punti R e S nella cella}{}
+
+Il componente i-esimo di materia presente nei punti R e S di una cella (nello spazio) può essere descritto dai seguenti potenziali chimici
+\begin{align*}
+& \overline{\mu_i} (R) = \mu^0_i \ln [a_i (R)] + z_i F \Phi (R)\\
+& \overline{\mu_i} (S) = \mu^0_i \ln [a_i (S)] + z_i F \Phi (S)\\
+\end{align*}
+
+Se siamo in condizioni di non equilibrio la materia si mette in movimento e può avvenire anche per sola azione del potenziale chimico.
+(manca il campo elettrico) o per sola azione del potenziale elettrico (manca il gradiente di concentrazione) e si dovrebbe anche tenere conto dell'agitazione meccanica
+eventualmente presente.
+Il movimento crea così un flusso di materia.
+La differenza di potenziale provoca un flusso di materia del componente i-esimo.
+Il flusso viene indicato con $J_i (x)$ e viene espresso dall'\emph{equazione di Teorell}.
+\[
+J_i (x) = -\frac{D_i}{RT} \cdot C_i (x) \cdot \frac{d \overline{\mu}}{dx}
+\]
+dove $D_i / RT$ è la mobilità, $D_i$ è il coefficiente di diffusione e $C_i (x)$ è la concentrazione.
+
+Rielaborando l'equazione di Teorell, si ottiene
+\[
+J_i (x) = - D_i \cdot \frac{dC_i (x)}{dx} - u_i \cdot C_i (x) \cdot \frac{d \Phi (x)}{dx}
+\]
+dove il primo termine descrive la \emph{prima legge di Fick}, che descrive la mobilità in funzione del potenziale chimico e il secondo termine descrive la mobilità di uno ione carico, che si muove per effetto del campo elettrico.
+
+Il termine $u_i$ descrive la mobilità ionica ed è pari a
+\[
+u_i = \frac{D_i z_i F}{RT} = \frac{D_i}{RT} \cdot z_i F
+\]
+Il termine $D_i / RT$ è definito mobilità.
+
+Quest'equazione descrive quindi il movimento di materia secondo il gradiente di concentrazione (diffusione) e secondo l'effetto di una campo magnetico (migrazione).
+Se si aggiunge un terzo termine, che descrive la convezione, si ottiene l'\emph{equazione di Nernst-Plank}
+\[
+J_i (x) = - D_i \cdot \frac{dC_i (x)}{dx} - u_i \cdot C_i (x) \cdot \frac{d \Phi (x)}{dx} + C_i (x) \cdot v (x)
+\]
+
+Quest'equazione serve perché, a differenza delle misure potenziometriche, le misure amperometriche misurano l'ossidazione o la riduzione con misure dinamiche, non statiche.
+L'equazione di Nernst-Plank non è in funzione del tempo, tuttavia la dipendenza del tempo è intrinsecamente presente nei termini $D_i (x)$ e $v (x)$.
+I contributi di diffusione e migrazione al flusso delle specie sono molto diversi, a seconda della posizione delle specie in soluzione.
+Nel bulk prevale la migrazione; non avvengono reazioni di ossidazione e riduzione e la corrente viene utilizzata per spostare gli ioni.
+Nell'interfase prevale la diffusione.
+
+La corrente dovuta alla specie i-esima è proporzionale al flusso, in funzione della carica e dell'area dell'elettrodo.
+Si possono quindi individuare i tre contributi alla corrente totale.
+\[
+i_{i_{tot}} = z_i \cdot F \cdot A \cdot J_i (x) = i_d + i_m + i_c 
+\]
+
+I tre contributi di corrente sono quindi:
+\begin{align*}
+& i_m = z_i F A u_i \cdot \frac{d \Phi (x)}{dx} \cdot C_i (x)\\
+& i_d = z_i F A D_i \cdot \frac{d C_i (x)}{dx}\\
+& i_c = z_i F A C_i (x) v (x)\\
+\end{align*}
+Conoscendo il valore del flusso, si può determinare quanta corrente è passata.
+
+
+\subsubsection{Migrazione}
+Si ipotizza il contributo di diffusione e convezione assenti.
+Allora il flusso è uguale a
+\[
+\frac{d \Phi (x)}{dx} = \frac{\Delta E}{l}
+\]
+dove $\Delta E$ è la variazione del campo elettrico e $l$ è la distanza tra i due elettrodi.
+
+Allora
+\[
+i_{tot} = \sum_i i_i = F A \frac{\Delta E}{l} \sum_i u_i C_i |z_i|
+\]
+
+A questa relazione si può applicare la legge di Ohm e si ottiene
+\[
+L_s = \frac{F A }{l} \sum_i |z_i| u_i C_i = \frac{A}{l} k
+\]
+dove $k$ è la conduttività e vale $F \sum_i |z_i| u_i C_i$
+
+Questo comporta che si possono fare misure di conducibilità con opportuni accorgimenti, come il campo alternato ed elettrodi molto grandi.
+
+Dal rapporto tra il contributo alla corrente delle specie i-esime e la corrente totale, si può trovare il numero di trasporto $t_i$
+\[
+t_i = \frac{i_i}{i_{tot}} = \frac{|z_i| u_i C_i}{\sum_k |z_k| \lambda_k C_k} = \frac{|z_i| \lambda_i C_i}{\sum_k |z_k| \lambda_k C_k}
+\]
+dove $\lambda_i = F \cdot u_i$ ed è la conducibilità equivalente
+
+La seconda conseguenza è che si può minimizzare il contributo alla migrazione della specie i-esima aggiungendo un elettrolita di supporto, che è inerte.
+In questo modo, la migrazione dipende solo dalla specie di supporto, in quanto è molto più concentrata e quindi la migrazione totali dipende solo da questa.
+
+\subsubsection{Diffusione}
+Il flusso di materia è proporzionale al gradiente di concentrazione e, trascurando i termini di migrazione e convezione, l'equazione di Nernst-Plank si riduce alla prima legge di Fick:
+\[
+J_i (x) = -D_i \cdot \frac{d C_i (x)}{dx}
+\]
+Combinando la prima legge di Fick con la legge della conservazione della massa, si ricava la seconda legge di Fick:
+\[
+\frac{d C (x,t)}{dt} = \frac{d J (x,t)}{dx} = D_i \frac{d^2 C (x,t)}{dx^2}
+\]
+
+Le due leggi di Fick sono alla base di tutte le tecniche elettroanalitiche all'interfase dinamico, le quali vengono definite dalle soluzioni di queste leggi, con opportune condizioni
+
+\subsection{Cronoamperometria}
+Dato un processo
+\[
+A + e^- \rightleftharpoons B
+\]
+se si polarizza un elettrodo con potenziale $E < E^0_{A,B}$, si realizza la riduzione della specie da A a B.
+Questa equazione non è all'equilibrio, ma è una \emph{reazione transiente}, ovvero che sta avvenendo ora.
+
+In condizioni di sola diffusione, con un potenziale di diffusione limite applicato ad un elettrodo, con un piano semi-infinito, si realizza un esperimento cronoamperometrico.
+Le condizioni di contorno sono:
+\begin{itemize}
+\item Al tempo $t_0=0$ si ha $C(x,0)=C^b$
+\item In corrispondenza di una distanza $x_0=0$ si ha $C(0,t)=0$
+\item  In corrispondenza di una distanza $x \to \infty$ si ha $C(\infty,t)=C^b$
+\end{itemize}
+
+\marginpicture{06_017}{Potenziale di riduzione limite}{}
+
+Il potenziale di diffusione limite è il potenziale alla quale una concentrazione nell'equazione di Nernst è nulla.
+Se si aumenta il potenziale, non cambia nulla e la concentrazione rimane zero.
+Questa condizione si verifica quando $E >> E^0$, per le ossidazioni, e quando $E << E^0$ per le riduzioni
+
+Applicando le condizioni di contorno alla seconda legge di Fick, si ha la seguente soluzione, detta \emph{equazione di Cottrell}:
+\[
+i = n F A \sqrt{\frac{D}{\pi t}} \cdot C^b
+\]
+L'equazione di Cottrell ha un andamento iperbolico in funzione del tempo.
+Il profilo dei gradienti di questa curva diminuisce nel tempo.
+
+\halfpicturelab{06_014}{Grafico concentrazione vs. tempo}{}{cottrell}
+
+Come si vede nell'immagine \ref{fig:cottrell},la concentrazione dell'analita all'interfase è zero e da una certa distanza in avanti, la concentrazione è pari a $C^b$.
+La derivata di questo grafico è il flusso $J$, quindi la corrente in un punto è rappresentata dall sua tangente.
+
+\marginpicture{06_016}{Elettrodo sferico}{}
+
+Nel caso di elettrodi sferici, l'equazione di Cottrell viene modificata, e prende il nome di \emph{equazione di Cottrell generale}  e si ottiene
+\[
+i = n F A C^b \biggl(\sqrt{\frac{1}{\pi D t}} + \frac{1}{r^0}\biggr)
+\]
+Se il raggio dell'elettrodo è molto grande, il termine $r^0$ può essere trascurato
+
+Tuttavia, se il tempo è lungo o l'elettrodo ha un raggio piccolo, il primo termine può essere trascurato e la corrente diventa stazionaria.
+In questo caso l'equazione diventa
+\[
+i = n F D 2 \pi r^0
+\]
+Se quindi il trasporto di materia diventa costante, anche la corrente lo è.
+
+Sono necessarie ulteriori condizioni per ottenere le tecniche amperometriche in flusso, per le tecniche a doppio step di potenziale e per le tecniche a onde quadre (SWA)
+
+\subsection{Scansioni di potenziale (CV e LSV)}
+Per le scansioni di potenziale, la seconda legge di Fick viene risolta con le seguenti condizioni di contorno
+\begin{align*}
+& C (x,0) = C^b	\
+& C (0,t) = 0\\
+& \frac{C_{ox} (0,t)}{C_{red} (0,t)} = e^{\frac{nF}{RT} \cdot (E_i - E^0)}\\
+\end{align*}
+L'ultima condizione di contorno indica che le concentrazioni vicino all'elettrodo sono regolate dalla legge di Nernst
+
+\halfpicture{06_018}{Scansioni di potenziale in CV e in LSV}{}
+
+Il potenziale E può essere visto come il potenziale della specie i-esima più un certo incremento
+\[
+E=E_i + vt
+\]
+In questo modo, l'energia potenziale dipende anche da un termine che comporta la scansione di potenziale.
+
+Da queste condizioni, si ottiene l'\emph{equazione di Randales-Sevcik}, ovvero
+\[
+i = n^{\frac{3}{2}} F A \sqrt{D \cdot v} C^b
+\]
+
+Se si esplicita la velocità, si ottiene
+\[
+i = n^{\frac{3}{2}} F A \sqrt{D \cdot \frac{E - E_i}{t}} C^b
+\]
+
+Ora sarà possibile calibrare l'elettrodo con soluzioni a $C^b$ diverse e la corrente aumenta in funzione di $t^{\frac{1}{2}}$
+I requisiti per un'analisi in LSV sono:
+\begin{itemize}
+\item Elettrodo stazionario e soluzione stazionaria, quindi assenza di convezione
+\item Polarizzazione lineare nel tempo ($v = dE / dt = \text{costante}$)
+\item La velocità di variazione del potenziale ($v = dE / dt$) varia da decine di mV/s a migliaia di V/s.
+\end{itemize}
+
+Applicando un potenziale nullo, la concentrazione di A rimane uguale, se invece si applica un potenziale, la concentrazione di A cambia secondo l'equazione di Nernst
+Nel grafico concentrazione su distanza, si vede che cambiando il potenziale redox, cambia anche la forma della curva.
+In particolare, si vede che cambia il punto di partenza della curva.
+Questo processo può continuare fino a che il punto di partenza non raggiunge lo zero; in questo caso si ha un andamento derivato dalla legge di Cottrell
+Aumentando ancora il potenziale, la corrente non può scendere sotto lo zero, tuttavia, si abbassa la pendenza della curva, ovvero cala la concentrazione per distanze un po' più elevate, come si vede nella figura \ref{fig:LSV}
+
+\halfpicturelab{06_019}{LSV}{}{LSV}
+
+Si può diagrammare la curva che viene fuori dall'equazione di Randales-Sevcik.
+Si vede che questa curva ha l'aspetto di una scansione di potenziale, per la prima parte.
+Aumentando ancora il potenziale, si vede che l'andamento diventa quello di Cottrell, dove l'andamento è dipendente solo dal tempo e non dal potenziale, come in figura \ref{fig:CV}
+
+\halfpicturelab{06_020}{CV}{}{CV}
+
+In queste condizioni, si determina il potenziale di picco, ovvero il potenziale massimo.
+Il potenziale di picco decresce secondo la seguente legge
+\[
+i = k \sqrt{\frac{1}{t}}
+\]
+
+Si noti che se $E_p - E_p / 2 = \frac{28.5 \text{mV}}{n}$, si può dire che il processo è \emph{incomplicato}, ovvero è una transizione monoelettronica che da A produce B e scambia un elettrone.
+Per i processi irreversibili, si vede che
+\[
+E_p - \frac{E_p}{2} = \frac{47.7 \text{mV}}{n \alpha} 
+\]
+dove $\alpha$ è il coefficiente di trasferimento elettronico.
+
+Per la CV (Ciclic Voltammetry), l'andata è uguale alla LSV mentre il ritorno è opposto.
+La curva gialla rappresenta l'andamento cottrelliano in riduzione.
+Si vede che
+\[
+E_p - \frac{E_p}{2} = \frac{59 \text{mV}}{n} 
+\]
+Si è in presenza di un processo monoelettronico incomplicato, ovvero senza altre reazioni chimiche o processi irreversibili.
+
+\subsection{Cinetica relativa all'elettrone}
+Finora i processi di riduzione e ossidazione sono stati pensati come infinitamente rapidi, però può accadere che la velocità di scansione sia troppo alta e la cinetica delle reazioni non ci stia dietro.
+\[
+Ox + n e^- \rightleftharpoons Red
+\]
+
+Ad esempio, se la scansione di potenziale avviene in tempi brevissimi, minori di quelli del trasferimento elettronico, il trasferimento stesso non avviene.
+Le reazioni quindi avvengono in un tempo finito e i trasferimenti elettronici sono descritti dall'\emph{equazione di Butler-Volmer}, che entra in gioco quando siamo in grado di gestire trasferimenti elettronici in tempi finiti:
+\[
+J (0,t) = k_{s,h} \cdot \biggl[C_0 (0,t) e^{- \alpha \frac{nF}{RT} (E- E^0)} - C_R (0,t) e^{(1-\alpha) \frac{nF}{RT} (E- E^0)} \biggr]
+\]
+Con $k_{s,h}$, che è la costante cinetica di trasferimento eterogeneo di carica.
+
+\halfpicture{06_021}{Grafico per la voltammetria ciclica, con diversi parametri $\Psi$}{}
+
+Si può definire un parametro adimensionale $\Psi$, che contiene sia la $k_{s,h}$ sia la velocità di scansione.
+\[
+\Psi = \frac{k_{s,h}}{\sqrt{\pi D_0 \cdot \dfrac{nF}{RT} v}}
+\]
+
+Più grande è $\Psi$ più reversibile è il sistema e prevale la costante di velocità, quindi si è in condizioni di Nernst.
+Se v è bassa il sistema tende ad essere nernstiano e non si vede la cinetica.
+Se invece v è confrontabile con i tempi di trasferimento elettronico è possibile studiarne la cinetica.
+Se v è troppo alto, non si ha trasferimento elettronico in quanto gli elettroni impiegano un tempo finito per trasferirsi.
+
+A questo punto si produce una curva di lavoro di aspetto logaritmico riportando in ordinata il $\Delta E_p$ e in ascissa $\log \Psi$.
+
+\halfpicture{06_022}{Curva di lavoro}{}
+
+\paragraph{Problema della corrente capacitativa}
+Nelle zone dove si realizzano le reazioni elettrochimiche transienti, si trova il doppio strato elettronico, che funge da condensatore.
+Quando si lavora in scansione di potenziale, il doppio strato si carica, quindi la corrente totale non è solo quella faradica, ma c'è anche un contributo di corrente capacitativa.
+\[
+i_{tot} = i_f + i_c
+\]
+
+La corrente capacitativa è definita come
+\[
+i_c = \frac{dq}{dt} = C_{dl} \cdot \frac{dE}{dt} = C_{dl} \cdot v
+\]
+dove $C_dl$ è la capacita del doppio strato.
+
+\marginpicture{06_023}{Contributo della corrente capacitiva}{}
+
+Si vede che la corrente capacitativa è proporzionale alla velocità di scansione, in modo lineare, mentre la corrente faradica è dipendente dalla velocità di scansione in modo iperbolico.
+Il contributo di $i_c$ è tanto maggiore quanto maggiore è la velocità di scansione.
+Quindi, si vede che più si aumenta la velocità, più prevale il contributo capacitativo rispetto a quello faradico.
+
+Questo problema è stato risolto introducendo gli ultra-micro-elettrodi (UME) poiché la diminuzione di dimensioni dell'elettrodo comporta la diminuzione della capacità del doppio strato.
+Un altra alternativa è l'utilizzo di tecniche ad impulsi.
+
+\subsection{Polarografia}
+La polarografia consiste nell'utilizzo di un elettrodo di mercurio gocciolante.
+Questo serve per diminuire il contributo capacitativo della corrente. \marginpicture{06_025}{Elettrodo di mercurio gocciolante}{}
+L'elettrodo viene lasciato gocciolare, e quindi si vede una continua variazione della corrente, in quanto la goccia cambia sempre di dimensione.
+
+\halfpicture{06_024}{Schema per l'esperimento di polarografia}{}
+
+Quando viene applicata una scansione di potenziale è possibile ottenere un grafico $i$ vs $E$.
+Il grafico serve per ottenere informazioni qualitative (dal potenziale di riduzione) e qualitative (dall'altezza della curva).
+
+\halfpicture{06_026}{Grafico polarografico}{}
+
+Si può anche costruire una curva di calibrazione mettendo in relazione $i$ e la concentrazione.
+
+\halfpicture{06_026}{Curva di calibrazione per la polarografia}{}
+
+La crescita della curva faradica, nel tempo di vita della goccia, cresce con una dipendenza temporale
+\[
+i_f = k \cdot t^{\frac{1}{6}}
+\]
+Invece la corrente capacitiva diminuisce con una dipendenza temporale diversa, ovvero
+\[
+i_c = k \cdot t^{-\frac{1}{3}}
+\]
+Quindi all'inizio c'è solo corrente capacitiva mentre, in seguito, si sviluppa la corrente faradica.
+
+\marginpicture{06_028}{Andamento della corrente faradica con il tempo}{}
+
+\halfpicture{06_030}{Polarogramma ottenuto}{Si noti che la curva va in stato stazionario}
+
+Il sistema va ad uno stato stazionario, al contrario di Cottrell.
+La polarografia è una tecnica dove è presente la convezione, e quindi non può svilupparsi un potenziale stabile all'elettrodo.
+Il gradiente deve sempre riformarsi e quindi si va ad uno stato stazionario.
+L'equazione che tiene conto di questi parametri è l'\emph{equazione di Ilovik}.
+\[
+i_{lim} = 7.06 \cdot 10^{-3} m^{2/3} \tau^{1/6} D^{1/2} C^b
+\]
+dove $m$ è la massa di mercurio, $\tau$ è il tempo di vita della goccia e $D$ è il coefficiente di diffusione.
+
+\halfpicture{06_029}{Andamento della corrente totale contro il tempo}{}
+
+La polarografia è una tecnica che presenta un limite di rivelabilità non troppo basso, ovvero 10$^{-5}$ M.
+Tuttavia è possibile migliorarla con ulteriori tecniche
+
+\paragraph{Taste polarography}
+In questa tecnica viene cambiato quando si campiona la corrente.
+Al posto di campionarla in continuo, si campiona la corrente appena prima che la goccia cada.
+Il potenziale viene però applicato anche quando cresce la goccia.
+
+\halfpicture{06_031}{Campionamento nella taste polarography}{}
+
+Il contro di questa tecnica è che il campionamento avviene in una soluzione depauperata di sostanze elettro-attive.
+Questo avviene perché la superficie della goccia cresce in modo sempre minore; il gradiente di concentrazione diminuisce di poco.
+
+\paragraph{Polarografia ad impulso normale}
+In questa tecnica, si effettuano degli impulsi di intensità sempre crescenti e la vita della goccia termina quando termina l'impulso.
+Il potenziale viene applicato sono dopo $i_{1/2}$; si è quindi in condizioni di diffusione limite.
+
+\halfpicture{06_032}{Impulsi nella polarografia ad impulso normale}{}
+
+Con questa tecnica, non si ha il problema della diminuzione del gradiente di concentrazione
+
+\paragraph{Polarografia a impulsi differenziale (DPP)}
+Questa tecnica è un ulteriore miglioramento rispetto alla polarografia a impulsi normale.
+La corrente di base aumenta di volta in volta, così come l'impulso aumenta di volta in volta.
+
+\halfpicture{06_033}{Corrente in funzione del tempo, nella polarografia a impulsi differenziale}{}
+
+In questa tecnica, il campionamento avviene due volte, uno poco prima dell'impulso e uno poco prima l'impulso finisca.
+Queste misure sono la derivata della curva voltammetrica; si ricerca il massimo di questa curva.
+
+\halfpicture{06_034}{Campionamento del segnale nella DPP}{}
+
+\paragraph{Voltammetria a onde quadre (SWV)}
+Un'altra tecnica è rappresentata dall'introduzione delle onde quadre, dove il potenziale è quindi impulsato ed è sempre crescente.
+
+\subsection{Stripping}
+Le tecniche voltammetriche di stripping permettono di aumentare la sensibilità delle metodiche polarografiche, in quanto prevedono uno strato preliminare di arricchimento dell'analita
+Lo stripping si differenzia in:
+\begin{itemize}
+\item Stripping anodico
+\item Stripping catodico
+\item Stripping catodico adsorbitivo
+\item Stripping potenziometrico
+\end{itemize}
+
+Le due fasi sono
+\begin{enumerate}
+\item Accumulo dell'analita sull'elettrodo, con meccanismi di elettrolisi, adsorbimento o precipitazione per un tempo definito
+\item Ridissoluzione dell'analita con diverse tecniche di scansione
+\end{enumerate}
+
+\marginpicture{06_035}{Processo di deposizione e di stripping}{}
+
+Si nota quindi che il segnale prodotto è proporzionale alla concentrazione di analita.
+La strumentazione non cambia; l'elettrodo lavorante può essere un HDME, un MFE o un UME
+
+\paragraph{HDME}
+La forma sferica dell'HDME consente di avere un basso rapporto are / volume.
+Questo tuttavia comporta avere una bassa efficienza di deposizione.
+
+Con questo elettrodo non si possono utilizzare velocità di agitazione elevate, sennò la goccia di mercurio si distacca.
+Questo è anche un altro motivo della sua bassa sensibilità
+
+\paragraph{MFE}
+L'MFE presenta un elevato rapporto area / volume; quindi si ha un'alta efficienza di deposizione e una scarsa diffusione.
+Con questo elettrodo, si possono utilizzare alte velocità di agitazione e ciò comporta una maggiore efficienza.
+Si ha quindi una maggiore risoluzione, in quanto il deposito di Hg è molto sottile; i metalli nell'amalgama vanno subito in soluzione, una volta riossidati.
+Con questo elettrodo, si può arrivare a un limite di rivelabilità di 10$^{-9}$
+
+Uno svantaggio dell'MFE è la scarsa riproducibilità rispetto all'HDME;
+la deposizione di Hg e il materiale dell'elettrodo producono delle differenze nella forma dei picchi.
+Si ha anche una maggiore tendenza alla saturazione, in quanto il film è molto sottile
+Inoltre, questo elettrodo è più sensibile ad interferenze da parte di tensioattivi i a variazioni nella composizione dell'elettrolita di supporto.
+
+\paragraph{Stripping anodico (ASV)}
+Viene effettuata una pre-elettrolisi delle specie (metalli), che si depositano sull'elettrodo quindi si esegue una scansione in ridissoluzione anodica.
+Il metallo ridotto si diffonde sul mercurio, anche se diffonde poco. Quando si inverte la polarità, il gradiente che passa da Hg alla soluzione è molto elevato.
+Sarà quindi molto elevato il segnale ottenuto
+
+Nel grafico si vede un picco; non si è in condizioni di Cottrell o di equilibrio.
+Ciò che è concentrato sull'elettrodo viene riossidato.
+i tempi di pre-concentrazione devono essere grandi, però c'è un limite dopo del quale il metallo diffonde all'interno del mercurio.
+
+\halfpicture{06_036}{Stripping anodico}{}
+
+Le condizioni operative generali sono:
+\begin{itemize}
+\item Uso di elettrolita di supporto.
+\item Deossigenazione della soluzione.
+\item Arricchimento dell'analita a potenziale controllato in condizioni idrodinamiche controllate per un tempo prestabilito (la ripetibilità è data dallo stretto controllo dei tempi e dell'agitazione).
+\item Si impone un periodo di riposo (5 15 s)
+\item Fase di stripping: LSV, DPP, SWV.
+\item Interpretazione qualitativa dal potenziale e quantitativa, attraverso la calibrazione.
+\end{itemize}
+
+Se lo stripping viene effettuato su una soluzione diversa dalla matrice, la procedura viene chiamata 'medium exchange'
+La deposizione viene effettuata ad un potenziale di 0.3 0.5 V minore dell'E dell'E$^0$ dell'elemento meno nobile.
+La concentrazione del metallo M nell'amalgama dopo un tempo t è data da:
+\[
+C_M = \frac{i_l \cdot t_d}{n F V_Hg}
+\]
+
+Con l'HDME, si ha un trasferimento elettronico veloce; in LSV si ha
+\[
+i_p = k_l \cdot \sqrt{n^3 D_a v} \cdot r C^0 \cdot t_d - k_2 D_a n t_d C_0
+\]
+
+Il potenziale di picco è dato da
+\[
+E_p = E_{1/2} - \frac{1.1 RT}{nF}
+\]
+
+Se si utilizza un MFE, la diffusione in amalgama è trascurabile; con l'LSV si ha
+\[
+i_p = \frac{n^2 F^2 v A d C_M}{2.7 RT}
+\]
+
+\paragraph{Stripping catodico (CSV)}
+Con questo metodo, non si determinano metalli, ma gli anioni (controioni) dei metalli.
+Questo metodo sfrutta la formazione di uno strato di un composto insolubile sull'elettrodo (di solito Hg);
+in seguito, il materiale dell'elettrodo, quindi Hg, viene poi ridotto nella fase di stripping.
+La reazione è
+\[
+2 Hg + 2 X^- \rightleftharpoons Hg_2X_2 + 2 e^-
+\]
+
+Questa tecnica è utile per la determinazione di composti insolubili con il mercurio
+
+\paragraph{Stripping catodico adsorbitivo (ACSV)}
+Si basa sulla pre-concentrazione dell'analita sull'elettrodo per adsorbimento, seguita dalla scansione del potenziale in senso catodico, con conseguente riduzione dell'analita stesso.
+La tecnica differisce dalla CSV perché lo stadio di arricchimento è di tipo non elettrochimico e l'analita non reagisce con il materiale dell'elettrodo.
+
+L'ACSV è applicabile prevalentemente ala determinazione di sostanze organiche che adsorbono facilmente su Hg, oppure di cationi inorganici, previa complessazione
+L'elettrodo più utilizzato è l'HDME, ma non mancano applicazioni con l'MFE e l'elettrodo a grafite
+Tuttavia, questi due elettrodi sono difficili da utilizzare in quanto è molto facile saturare l'elettrodo.
+
+Questa tecnica è soggetta ad interferenze dovute all'adsorbimento competitivo di altre sostanze, come i tensioattivi.
+Nel caso della determinazione dei metalli, si possono avere interferenze per la presenza di altri metalli che competono
+
+\paragraph{Stripping potenziometrico}
+La procedura dello stripping potenziometrico è analoga a quella dell'ASV.
+Lo stripping (ossidazione) avviene ad opera di un ossidante chimico, come O$_2$.
+
+\halfpicture{06_037}{Stripping potenziometrico}{}
+
+Il segnale analitico è il tempo di ridissoluzione, in quanto è proporzionale alla quantità di analita.
+Il salto di potenziale, invece, dà il dato qualitativo.
+
+In questa procedura, i composti si ossidano per equilibrio; il potenziale aumenta linearmente.
+
+\section{Conduttimetria}
+Viene misurata la resistenza della soluzione e riguarda il bulk della soluzione.
+In questo caso è coinvolto il movimento di due specie cariche, ovvero cationi e anioni.
+Sono determinate dalla corrente di migrazione.
+
+\paragraph{Coulombmetria}
+È possibile misurare la corrente o la carica passata con la prima legge di Faraday.
+\[
+q = \int_0^t i(t) dt
+\]
+
+\paragraph{Elettrodeposizione}
+È strettamente legata alla coulombmetria.
+È possibile depositare un metallo su un elettrodo, in condizioni di Cottrell e in convezione forzata.
+L'agitazione formata agevola e velocizza la reazione.
+La legge che governa l'elettrodeposizione è:
+\[
+i(t) = - n F \frac{dm (t)}{dt} = nFv \frac{d C(t)}{dt}
+\]
+Anche in questo caso il fenomeno che genera la corrente è quello diffusivo, ma ora il gradiente di C è fortemente condizionato dalla convezione.
+
+\marginpicture{06_038}{Processo di elettrodeposizione}{}
+
+Per un tempo $t_0$, tutto il metallo è in soluzione; più intensamente si agita la soluzione, più pendente è la curva ($C$ vs $\text{distanza}$), perché l'interfase è più vicina all'elettrodo.
+A differenza di Cottrell, la concentrazione cala in modo considerevole nel tempo; questo avviene perché l'apporto di materiale è così grande che la soluzione si depaupera.
+La pendenza, con l'andare del tempo, cala perché è sempre più difficile apportare del materiale all'elettrodo
+
+Per $t \to \infty$, la curva va a pendenza zero; è stato depositato tutto il materiale depositabile.
+
+\paragraph{Convezione controllata}
+Per controllare la convezione, si utilizza un elettrodo circolare rotante.
+Si vengono a creare dei moti fluidi con delle linee di flusso.
+
+Nel momento in cui si polarizza l'elettrodo, si crea uno strato di diffusione, con distanza $\delta$, ovvero si crea un buco di concentrazione.
+Tanto più velocemente si ruota l'elettrodo, tanto minore è $\delta$.
+
+In questo caso c'è un apporto di materiale dalla soluzione e quindi ci si aspetta una situazione analoga all'elettrodeposizione.
+Si crea uno stato stazionario, dove il materiale arriva alla stessa velocità.
+In queste condizioni, l'equazione di Nernst-Plank diventa
+\[
+\frac{dC}{dt} = D \cdot \frac{d^2 C}{dz^2} = \frac{0.51 \cdot \omega^{3/2} v^{1/2}}{D} \cdot z^2 \frac{dC}{dz}
+\]
+dove $\omega$ è la velocità di rotazione dell'elettrodo e $v$ è la velocità di scansione.
+
+In questo caso, la corrente è uguale a
+\[
+i = 0.62 n F A D^{2/3} v^{-1/6} \omega^{1/2} \cdot C^b
+\]
+Si vede quindi che la corrente è proporzionale a $C^b$, fissata la velocità di scansione e la velocità angolare.
+
+Le onde voltammetriche sono sigmoidali, in quanto la convezione consente di raggiungere un plateau.
+
+\halfpicture{06_039}{Andamento sigmoidale, in presenza di convezione}{}
+
+Gli elettrodi utilizzati sono l'RDE (Rotating Disk Electrode) e l'RRDE (Rotating Ring Disk Electrode).
+Il primo elettrodo è un disco rotante, mentre il secondo presenta un disco e anche un anello, che sono collegati in modo differente.
+È quindi possibile produrre una specie su un elettrodo (A) che, dopo aver incontrato l'altro elettrodo (B) subisce seconda reazione.
+
+\subsection{Cinetiche omogenee}
+Si studiano le reazioni in fase omogenea e in base al cambiamento delle curve voltammometriche è possibile fare una diagnosi sul processo, come ad esempio la formazione di intermedi collaterali reattivi in soluzione.
+Ad esempio, per un processo bi-elettronico:
+\begin{align*}
+& A + 2e^- \rightleftharpoons B\\
+& A + e^- \rightleftharpoons A^- + e^- \rightleftharpoons B\\
+\end{align*}
+I due elettroni possono trasferirsi in modo molto diverso tra di loro.
+Ci sono dei casi in cui E$^0_1$ e E$^0_2$ sono uguali e si vedono ugualmente due picchi vicini, in quanto per formare B, deve formarsi A$^-$ e quindi intercorre del tempo.
+
+\paragraph{Meccanismo elettrochimico-chimico (EC)}
+Se la costante cinetica è alta, la reazione si sposta verso destra e B scompare.
+
+\paragraph{Meccanismo elettrochimico-chimico-catalitico (EC cat.)}
+La reazione chimica inizia quando si inizia a formare B, che a sua volta si forma se c’è corrente.
+Il ritorno ad A provoca l'aumento della corrente in quanto è come se si aumentasse la sua concentrazione e A viene costantemente rigenerato e si ha sempre che la sua concentrazione è C$^b$.
+Se si opera una scansione molto veloce C non ha il tempo di reagire con B e la k catalitica si determina giocando appunto sulla velocità di scansione.
+Se k è piccola e la scansione è veloce, non si forma B.
+
+\paragraph{Meccanismo elettrochimico-chimico-elettrochimico (ECE)}
+Utilizzata ad esempio per studiare le dissociazioni acide.
+Il protone viene ridotto in base alla costante di dissociazione acida e se è alta (acido forte) si riesce a ridurlo.
+La corrente è quindi proporzionale alla costante di equilibrio e se la scansione è lenta: se l'acido è forte, immediatamente dissocia, se l'acido è debole si tende allo stato stazionario perché si consuma tanto quanto si forma.
+
+\subsection{Elettrochemoluminescenza (ECL)}
+È la produzione di luce a seguito della reazione in fase omogenea tra reagenti prodotti elettrochimicamente.
+
+I pre-requisiti di un reattivo per produrre luminescenza sono
+\begin{enumerate}
+\item Reversibilità elettrochimica, le due specie redox devono essere elettrochimicamente reversibili
+\item i potenziali di scarica devono essere accessibili
+\item Le specie prodotte nel processo redox devono essere stabili nel tempo (dell'esperimento)
+\item È meglio che l'emittente sia uno solo
+\item Lo stato eccitati di B, a minor energia, è meglio che non sia accessibile
+\item B non deve essere il quencher di $^1A^{\ast}$ o di $^3A^{\ast}$. Quindi B non deve assorbire la radiazione prodotta da A, nei suoi stati eccitati
+\item La redox di B deve essere reversibile, con $E^0$ accessibile per il solvente scelto.
+\end{enumerate}
+
+Si opera una voltammetria ciclica.
+Quando si fa la scansione di ossidazione, si vede che si forma un picco reversibile. Le due reazioni sono
+\[
+A \rightarrow A^{+ \cdot} + e^- \quad (A^{+ \cdot} + e^- \rightarrow A)
+\]
+
+Nella scansione di riduzione, invece, le due reazioni sono
+\[
+A + e^- \rightarrow A^{- \cdot} \quad A^{- \cdot} \rightarrow A + e^-
+\]
+
+Se l'esperimento viene fatto in modo molto rapido, con un doppio impulso, $A^{+ \cdot}$ e $A^{- \cdot}$ si possono incontrare nello strato di diffusione e reazione.
+Quando si incontrano, avviene la seguente reazione
+\[
+A^{- \cdot} + A^{+ \cdot} \rightarrow A + ^1A^{\ast} \quad \text{con} \quad k_{an}^s
+\]
+Il singoletto decade, formando radiazione visibile a velocità molto elevata
+\[
+^1A^{\ast} \rightarrow A + h \nu
+\]
+
+Si può studiare la velocità di reazione di annichilimento dei radicali, studiando quindi l'emissione ECL
+
+\paragraph{Luminolo}
+È un acido diprotico debole con $pK_a{_1}$ di 6 e $pK_{a_2}$ di 13.
+Funziona con la prima forma dissociata e reagisce con l'ossigeno producendo un perossido instabile.
+

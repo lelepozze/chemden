@@ -1,0 +1,1070 @@
+\chapterpicture{header_03}
+\chapter{Cromatografia}
+La cromatografia è una tecnica analitica che permette la separazione di molecole e/o ioni. Si basa sulla capacità di quante molecole possono essere trasportate in 
+due fasi immiscibili tra loro, nelle quali l'analita può ripartirsi. \footnote{Si ricordi che in cromatografia \textit{estrazione} = \textit{purificazione}; in parole povere separare vuol dire estrarre}
+
+Per la natura dinamica, non si può considerare questa situazione all'equilibrio, come nelle estrazioni con solvente, in quanto le fasi si muovono.
+Sono presenti due fasi:
+\begin{itemize}
+\item \emph{Fase mobile}: è la fase che scorre
+\item \emph{Fase stazionaria}: è la fase che rimane ferma
+\end{itemize}
+
+L'analita si ripartirà in base all'affinità differente per le due fasi.
+La natura delle fasi può essere differente, come visto nella tabella \ref{tab:cromatografie}.
+Le varie tipologie di cromatografie prendono il nome dalla fase mobile; si avranno quindi:
+
+\begin{itemize}
+\item \emph{GC} (Gas Cromatography), per la cromatografia che usa un gas come fase mobile
+\item \emph{LC} (Liquid Cromatography), per la cromatografia che usa un liquido come fase mobile
+\item \emph{SFC} (Supercritic Fluid Cromatography), per la cromatografia che usa un fluido supercritico come fase mobile
+\end{itemize}
+
+\begin{table}
+\begin{tabular}{cccc}
+ & Gas & Liquida & Supercritica\\
+Liquida & GLC & LLC & SFLC\\
+Solida & GSC & LSC & SFSC\\
+\end{tabular}
+\captionof{table}{Tipologie di cromatografie}
+\label{tab:cromatografie}
+\end{table}
+
+Le fasi stazionarie vengono usate in base all'affinità dell'analita da separare.
+Le fasi stazionarie possono essere carta, gel di silice, polimeri di sintesi, etc.
+La fase mobile può scorrere su quella stazionaria :
+\begin{itemize}
+\item Per gravità
+\item Per suzione
+\item Per pompaggio (GC), anche a pressioni elevate (HPLC)
+\end{itemize}
+
+\marginpicture{02_001}{Varie tipologie di cromatografia}{Lo schema non è completo}
+
+\section{Teoria dei piatti}
+
+Le separazioni cromatografiche hanno luogo a causa della migrazione differenziale delle specie.
+Se, statisticamente, un analita A sta più tempo nella fase mobile, si muoverà più velocemente di B, che passa più tempo nella fase stazionaria.
+Le curve che si ottengono sono teoricamente gaussiane; nella pratica, non è sempre così.
+
+\marginpicture{02_002}{Migrazione differenziale delle specie}{Le frecce nella figura non rappresentano l'equilibrio, ma lo scambio delle molecole tra le due fasi}
+
+\halfpicture{02_003}{Cromatogramma di due specie}{Da una miscela A+B, si passa ad una situazione dove A è puro e B è puro.
+Si nota come la prima gaussiana sia più stretta rispetto alla seconda}
+
+\subsection{Tempo di ritenzione}
+
+Il processo di ritenzione è dovuto all'equilibrio tra le due fasi, con una relativa costante di ritenzione
+\[
+A_m \rightleftharpoons A_s \qquad K_A = \frac{C_{A,s}}{C_{A,m}}
+\]
+La costante di ritenzione può essere rielaborata
+\[
+K_A = \frac{C_{A,s}}{C_{A,m}} = \frac{n_{A,s}}{V_s} \cdot \frac{V_m}{n_{A,m}} = \frac{n_{A,s}}{n_{A,m}} \cdot \frac{V_m}{V_s} = K_A' \cdot \Phi
+\]
+Dove $V_m$ è il volume della fase mobile (ovvero il volume della colonna) e $V_s$ è il volume della fase stazionaria, ovvero il volume dell'analita nella colonna.
+L'equazione è stata scomposta e i rapporti di volume e di moli sono stati raggruppati; sono stati introdotti due termini nuovi
+\begin{align*}
+& K_A' = K_A \cdot \frac{V_m}{V_s} = \frac{n_{A,s}}{n_{A,m}} \qquad \text{Fattore di capacità}\\
+& \Phi = \frac{V_m}{V_s} \qquad \text{Rapporto di fase}\\
+\end{align*}
+\marginpicture{02_004}{Cromatogramma con diversi tempi di ritenzione}{}
+Si introduce il coefficiente differenziale $u_A$, riferito ad A.$u_0$ è la velocità dell'eluente all'interno della colonna.
+Il coefficiente differenziale può descrivere la velocità di movimento di A all'interno della colonna
+\[
+u_A = u_0 \cdot \chi_{A,m}
+\]
+$\chi_{A,m}$ è la frazione molare di A, nella fase mobile; si può esplicitare ottenendo
+\[
+u_A = u_0 \cdot \frac{n_{A,m}}{n_{A,m} + n_{A,s}}
+\]
+Si può ottenere la velocità relativa di A, rielaborando l'equazione sopra
+\[
+\frac{u_A}{u_0 } = \frac{n_{A,m}}{n_{A,m} + n_{A,s}}
+\]
+La velocità dell'eluente è definita come
+\[
+u_0 = \frac{L}{t_0}
+\]
+dove $L$ è la lunghezza della colonna, mentre $t_0$ è il tempo di uscita del solvente dalla colonna.\par
+La velocità di A in colonna può anche essere espressa come
+\[
+u_A = \frac{L}{t_A}
+\]
+dove $t_A$ è il tempo di uscita di A dalla colonna
+
+Rielaborando le equazioni viste, si ottiene la seguente equazione
+\[
+t_A = t_0 \cdot (1 + K_A')
+\]
+che mette in relazione il tempo di ritenzione $t_A$ con il parametro termodinamico $K_A'$.\par
+$\Phi$ è costante in quanto la colonna non cambia, l'eluente è costante e anche la fase stazionaria è costante. Poiché $\Phi$ è costante, $K_A$ dipende solo da $K_A'$
+
+L'equazione del tempo di ritenzione può essere rielaborata ancora, per ottenere il significato di $K_A'$
+\[
+K_A' = \frac{t_A}{t_0} - 1
+\]
+Si può ricavare $K_A'$ per due specie tracciando retta su un grafico $K$ vs $t$ e si vede che $K_A'$ è lineare con il tempo
+
+Il tempo di ritenzione è determinato dalla lunghezza della colonna. Questo si vede se si esplicita $t_0$ nell'equazione del tempo di ritenzione
+\[
+t_A = t_0 \cdot (1 + K_A') \longrightarrow t_A = \frac{L}{u_0} \cdot (1 + K_A')
+\]
+
+Si può pensare che la colonna cromatografica sia composta da molti piatti teorici\footnote{Si ricordi che il piatto teorico è un'astrazione.
+Viene preso dai processi di distillazione}, con una determinata altezza $H$, detta \emph{altezza del piatto teorico}.
+La lunghezza può essere scomposta in $H$ e $N$, dove $N$ è il numero di piatti teorici
+\[
+t_A = \frac{H \cdot N}{u_0} \cdot (1 + K_A')
+\]
+Quindi si vede che tanto più grande è $u_0$, tanto più piccolo è $t_A$. Inoltre si evidenzia una dipendenza iperbolica di $u_0$, a parità di $H$ e $N$
+\fullpicture{02_005}{Dipendenza iperbolica di {$t_A$} da {$u_0$}}{}
+\subsection{Picchi gaussiani}
+La gaussiana è descritta dalla funzione
+\[
+f(t) = h \cdot e^{-\frac{(t-t_A)^2}{2\sigma^2_A}} \qquad \text{con} \qquad h = \frac{1}{\sigma \sqrt{2\pi}}
+\]
+dove $t$ è la variabile temporale (che viene messa in ascissa), mentre $t_A$ è il tempo di ritenzione di A e corrisponde al massimo della gaussiana
+
+\halfpicture{02_006}{Gaussiana normalizzata}{}
+
+La deviazione standard $\sigma$ è localizzata nel flesso della funzione, che si trova ad un altezza pari a 0.607.
+Per questa altezza, la gaussiana è larga 2$\sigma$.
+Ad un altezza pari alla metà dell'altezza massima ($h = 2.54$), si vede che l'ampiezza della gaussiana è pari a 2.54$\sigma$.
+Tracciando le tangenti nei flessi, si vede che l'incrocio delle tangenti con la curva produce un ampiezza totale pari a 4$\sigma$
+\subsubsection{Allargamento dei picchi}
+Per spiegare l'allargamento dei picchi, è necessario considerare due sostanze diverse, A e B, con diversi fattori di capacità
+\[
+K_A' = K_A \frac{V_s}{V_m} \qquad K_B' = K_B \frac{V_s}{V_m} 
+\]
+Tenendo conto della presenza di due analiti, si può definire il \emph{fattore di selettività}, detto $\alpha$
+\[
+\alpha = \frac{K_B'}{K_A'} = \frac{t_B - t_A}{t_A - t_0} \qquad \text{con} \qquad K_B > K_A
+\]
+la forma più o meno allargata della gaussiana dipende da quanto più è dispersa (più dispersa è e più è alta la deviazione standard), 
+ovvero da quanto più tempo resta in colonna. La deviazione standard può essere messa in relazione con il numero di piatti teorici
+\[
+N = \biggl(\frac{t_r}{\sigma}\biggr)^2
+\]
+dove $t_r$ è il tempo di ritenzione. Questo parametro prende il nome di \emph{efficienza cromatografica}
+
+Si possono ricavare delle equazioni più pratiche per esprimere la dipendenza di $N$ da $\sigma$, poiché la deviazione standard è un parametro difficile da gestire.
+Si preferisce lavorare con l'ampiezza
+\[
+N = \biggl(\frac{t_r}{\sigma}\biggr)^2 = N = \biggl(\frac{2.54 \cdot t_r}{w_{0.5}}\biggr)^2 = 5.54 \cdot N = \biggl(\frac{t_r}{w_{0.5}}\biggr)^2
+\]
+dove $w_{0.5}$ è l'ampiezza della gaussiana a metà distanza.
+
+Quindi si vede che l'analita si disperde nell'eluente e la concentrazione si abbassa. Il rivelatore posto a fine colonna rivelerà un segnale in funzione al tempo.
+Idealmente, per tempi brevissimi, si avrà una distribuzione rettangolare; poi con l'andare del tempo, la distribuzione si allargherà sempre di più.
+
+Anche se la distribuzione cambia, l'area sotto la curva, che rappresenta la quantità di analita uscente, sarà sempre uguale.
+
+La teoria dei piatti è un astrazione della realtà e si usa per spiegare il funzionamento delle colonne cromatografiche.
+	\footnote{Il limite di questa teoria è che l'equilibrio tra fase stazionaria e fase mobile non è mai raggiunto. 
+		Questa teoria però è utile per esprimere molti parametri, come l'efficienza}.
+In questa teoria, l'altezza teorica del piatto viene definita come
+\[
+H = \lim_{N \to \infty} \frac{L}{N}
+\]
+I piatti quindi vengono definiti come limite della lunghezza della colonna divisa per il numero dei piatti $N$, che tende a infinito.
+I piatti diventano sempre più piccoli, all'aumentare di $N$.\par
+Una molecola A, presente in concentrazione $C_{m,i}$ nella fase mobile, può interagire con la fase stazionaria, con il piatto precedente o quello successivo.
+
+\marginpicture{02_007}{Rappresentazione dei piatti equivalenti}{Si noti che {$C_{m,i}$} indica la concentrazione di analita nella fase mobile e nel piatto i-esimo, mentre {$C_{s,i}$} indica la concentrazione di analita nella fase stazionaria}
+
+Lo spostamento di un volume di eluente tra un piatto e l'altro comporta la seguente situazione
+\[
+\frac{dn_i}{dV} = C_{m,i-1} - C_{m,i} \longrightarrow dn_i = (C_{m,i-1} - C_{m,i}) \cdot dV
+\]
+Si correla quindi la variazione del numero di moli in funzione alla differenza di concentrazione tra i due piatti e la variazione di volume.
+
+Lo scambio di analita tra i due piatti comporta che sia presente una costante di scambio
+\[
+K = \frac{C_{s,i}}{C_{m,i}}
+\]
+Il bilancio di massa tra la fase mobile e quella stazionaria è
+\[
+n_i = C_{m,i} \cdot V_m + C_{s,i} \cdot V_s
+\]
+Queste due equazioni possono essere combinate per trovare l'espressione di $n_i$
+\[
+n_i = C_{m,i} \cdot V_m + K \cdot C_{m,i} \cdot V_s
+\]
+Si può quindi trovare il differenziale di $n_i$
+\[
+dn_i = V_m \cdot d C_{m,i} + V_s K \cdot d C_{m,i} = (V_m + K V_s) \cdot d C_{m,i}
+\]
+Si eguagliano i differenziali
+\[
+(V_m + K V_s) \cdot d C_{m,i} = (C_{m,i-1} - C_{m,i}) \cdot dV
+\]
+Si possono raggruppare i termini differenziali
+\[
+\frac{d C_{m,i}}{dV} = \frac{C_{m,i-1} - C_{m,i}}{V_m + K V_s}
+\]
+Il denominatore della frazione corrisponde al volume equivalente del piatto teorico; si rende adimensionale spostando il differenziale
+\[
+dv = \frac{dV}{V_m + K V_s}
+\]
+L'equazione differenziale si può quindi semplificare
+\[
+\frac{d C_{m,i}}{dv} = C_{m,i-1} - C_{m,i}
+\]
+Integrando quest'equazione, si ottiene l'\emph{equazione di Poisson}
+\[
+C_{m,N} = \frac{C_{m,0} \cdot v^N}{N!}
+\]
+Dove $N$ è l'ultimo piatto della colonna e $C_{m,0}$ è la concentrazione iniziale dell'analita (prima di passare in colonna)
+
+Dall'equazione di Poisson, si può arrivare a
+\[
+F_{N,v} = \frac{1}{\sqrt{2 \pi N}} \biggl(\frac{v}{N}\biggr)^N \cdot e^{N-v}
+\]
+Quest'equazione rappresenta il profilo del segnale sull'ultimo piatto ($N$) al variare di $v$. L'equazione ricorda una gaussiana
+
+\fullpicture{02_008}{{$F_{N,v}$} in funzione a {$N$}}{}
+
+Per un generico piatto, si ha
+\[
+F_{i,v} = \frac{1}{\sqrt{2 \pi i}} \cdot \biggl(\frac{v}{i}\biggr)^i \cdot e^{i-v}
+\]
+Quest'equazione fornisce:
+\begin{itemize}
+\item Le frazioni del piatto i-esimo, al variare di v
+\item Le frazioni intorno al piatto i-esimo
+\end{itemize}
+Si nota che il vertice della curva di distribuzione dipende da $\sqrt{i}$.
+Al progredire della distribuzione, coinvolgendo quindi più piatti, il picco si allarga e si abbassa, poiché aumenta i.
+
+Dall'equazione caratteristica di $F_{N,v}$, si possono ricavare la derivata prima e la derivata seconda. I due punti di flesso hanno come coordinate
+\[
+v_{flesso} = N \pm \sqrt{N}
+\]
+Si vede che se $N$ è grande, allora l'equazione di Poisson diventa una gaussiana, quindi $v_{flesso} = N \pm \sigma$.
+
+Con altri passaggi matematici, si attiva ad un ultima equazione
+\[
+N = 4 \cdot \biggl(\frac{V_R}{W}\biggr)^2 = 4 \cdot \biggl(\frac{t_R}{W_t}\biggr)^2 = \biggl(\frac{t_R}{\sigma}\biggr)^2
+\]
+Si vede quindi che $N$ dipende da $t_R$
+
+Si può rappresentare questa equazione su un cromatogramma artificiale, dove si vede che l'ampiezza della gaussiana cambia con il tempo di ritenzione, quindi la seconda gaussiana è più ampia rispetto alla prima.
+
+\halfpicture{02_009}{Cromatogramma con picchi a forma di gaussiana}{}
+
+Se i picchi sono parzialmente sovrapposti, si deve utilizzare uno strumento con una risoluzione cromatografica migliore per ottimizzare il cromatogramma, tuttavia, la migliore situazione si ottiene se si utilizzano due analiti molto diversi tra loro
+
+\section{Risoluzione cromatografica}
+Se i picchi di due sostanze sono parzialmente sovrapposti, i tempi di ritenzione sono simili e le due sostanze sono simili. Per migliorare la risoluzione, è necessario che i picchi si restringano e si alzino in modo tale da rimuovere la sovrapposizione parziale
+
+La \emph{risoluzione cromatografica} $R$ è definita sperimentalmente come
+\[
+R = \frac{t_B - t_A}{\dfrac{W_B- W_A}{2}} \qquad \text{ovvero} \qquad \frac{\text{differenza dei tempi di ritenzione}}{\text{media delle ampiezza alla base della gausssiana}} 
+\]
+
+\halfpicture{02_010}{Sovrapposizione parziale di due picchi}{}
+
+Dai tre parametri trovati in precedenza, ovvero $K_A'$, $N$ e $\alpha$, si può definire la risoluzione cromatografica, in modo teorico. Si può rielaborare la definizione per renderla più teorica
+\[
+R = \frac{t_B - t_A}{\dfrac{4\sigma_A - 4\sigma_A}{2}} \longrightarrow R = \frac{t_B - t_A}{2\sigma_B - 2\sigma_A}
+\]
+Per trovare $\sigma$, si può rielaborare $N$
+\[
+N = \biggl(\frac{t_r}{\sigma}\biggr) \longrightarrow \sigma = \frac{t_r}{\sqrt{N}}
+\]
+Sostituendo $\sigma$, si ottiene
+\[
+R = \frac{t_B - t_A}{2 \cdot \frac{t_A}{\sqrt{N_A} + \dfrac{t_B}{\sqrt{N_B}}}}
+\]
+Approssimando, si può dire che $N_A = N_B = N$.\footnote{Si può fare quest'approssimazione perché se i tempi di ritenzione sono simili, allora anche il numero di piatti sarà simile} L'equazione diventa
+\[
+R \approx \frac{\sqrt{N}}{2} \cdot \frac{t_B - t_A}{t_B + t_A}
+\]
+Sviluppando i tempi di ritenzione e rielaborando l'equazione, si ottiene
+\[
+R = \frac{\sqrt{N}}{2} \cdot \frac{\alpha - 1}{\alpha + 1} \cdot \frac{\overline{K'}}{\overline{K'} + 1}
+\]
+L'equazione risultante può essere vista come il prodotto di tre funzioni, ovvero il numero di piatti, il fattore di selettività e il fattore di capacità medio $\overline{k'}$. Partendo da un parametro sperimentale ottenuto dal cromatogramma, ovvero $R$, si è arrivati a definirlo in base tre parametri fondamentali.
+\subsection{Restringimento della banda}
+Come visto prima, la risoluzione cromatografica dipende da tre termini, ovvero $\overline{K'}$, $N$ e $\alpha$. Si vede quindi che:
+
+\begin{itemize}
+\item $N$ ha l'andamento di una radice quadrata. Per raddoppiare la risoluzione occorre quadruplicare la lunghezza della colonna. $N$ infatti è legato alla lunghezza della colonna
+\item Per $\overline{K'}$ si vede un andamento molto rapido all'inizio. Però per $\overline{K'} \to \infty$, $R$ tende a 1, quindi c'è poco margine per migliorare la risoluzione cromatografica modificando questo parametro
+\item Il termine $\alpha$ è il più indicato per aumentare la risoluzione, anche se presenta una pendenza minore rispetto a $\overline{K'}$. Tuttavia, anche per questo termine, se $\alpha \to \infty$, $R$ tende a 1, anche se meno velocemente rispetto a $\overline{K'}$
+\end{itemize}
+Il parametro $\alpha$ dipende dalla fase stazionaria e dalla fase mobile, quindi:
+\begin{itemize}
+\item Si può cambiare colonna, che corrisponde ad un cambio di fase stazionaria
+\item Si può cambiare l'eluente, ovvero la fase mobile
+\item Si può cambiare la temperatura in quanto $\alpha$ dipende dalla temperatura
+\end{itemize}
+Gli effetti delle variazioni dei parametri di $R$ si possono visualizzare nell'immagine \ref{fig:variazione cromatogramma}. Una variazione del fattore di capacità medio comporta una modifica del tempo in colonna.
+Se si aumenta $\overline{K'}$, i picchi si separano ma si allargano. Se invece si diminuisce $\overline{K'}$, i picchi si restringono ma iniziano a sovrapporsi di più e quindi non si possono più riconoscere i due contributi.
+
+\halfpicturelab{02_012}{Cambiamento nel cromatogramma in seguito alla variazione di un parametro di {$R$}}{}{variazione cromatogramma}
+
+
+
+Una variazione del numero di piatti $N$ fa risolvere meglio i picchi, non influendo sui tempi di ritenzione, tuttavia è molto difficile aumentare $N$, in particolare nell'HPLC.
+Un aumento del coefficiente di selettività $\alpha$ comporta una variazione dei tempi di ritenzione. 
+É possibile conservare il tempo di ritenzione di un picco, modificando selettivamente il tempo del secondo.
+I picchi rimangono come sono, però si spostano a tempi differenti
+
+\marginpicture{02_011}{Andamento dei termini per la risoluzione cromatografica}{}
+
+$\overline{K'}$ può essere messo in relazione con $\Delta H$ e $T$ tramite l'equazione di  van 't Hoff
+\[
+\overline{K'} = e^{-\dfrac{\Delta H}{RT}}
+\]
+Questo significa che la temperatura ha un effetto su $\overline{K'}$.
+In cromatografia liquida, il $\Delta H$ è piccolo, quindi la temperatura non ha un grosso effetto.
+In gas-cromatografia, invece, la temperatura diventa un fattore determinante.
+
+Si noti come i picchi, nella realtà, siano raramente gaussiani. Questo avviene poiché ci sono altri parametri che influenzano la forma.\par
+Uno di questi fattori è il \emph{fattore di scodatura}, definito come
+\[
+T = \frac{b}{a}
+\]
+Dove a e b sono le distanze dal centro della gaussiana, misurate al 10 \% dell'altezza del picco.
+La scodatura è dovuta alle deviazione dalla linearità delle isoterme di adsorbimento, tuttavia può essere dovuta anche al sovraccarico della colonna o alla mancanza di diti di ritenzione
+
+\fullpicture{02_013}{Rappresentazione del fenomeno della scodatura}{Si immagini di tracciare una linea al centro della gaussiana; i parametri \emph{a} e \emph{b} sono ottenuti misurando dal centro della gaussiana fino alla curva}
+
+\section{Teoria cinetica}
+L'allargamento della banda gaussiano può essere espresso in unità di deviazione standard, infatti più grande è $\sigma$, più la materia è dispersa e più il picco è allargato.
+
+In questa teoria, l'altezza del piatto teorico $H$ diventa
+\[
+H = \frac{\sigma^2}{L} 
+\]
+Si vede che, per un numero elevato di dati, $\sigma$ diventa $S$, ovvero la varianza. $\sigma$ può essere espressa anche in unità di tempo, quindi si può scrivere
+\[
+\sigma_t = \frac{\sigma}{v} = \sigma \cdot \frac{t_r}{L} 
+\]
+Dove $v$ è la velocità media lineare del solvente nella colonna
+
+La varianza totale $S^2_{tot}$ può essere scomposta in vari contributi
+\[
+S_{tot} = S_1^2 + S_2^2 + \dots + S_n^2 \qquad S^2_{tot} = \sum_{i=1}^n S_i^2
+\]
+I diversi contributi dell'allargamento della banda sono trattati in seguito. Essi sono quatto e sono dovuti a:
+\begin{itemize}
+\item Presenza di cammini multipli
+\item Diffusione longitudinale in fase mobile
+\item Trasferimento di massa in fase mobile e in fase mobile stagnante
+\item Trasferimento di massa in fase stazionaria
+\end{itemize}
+
+L'altezza del piatto teorico può essere scomposta nelle sue componenti
+\[
+H = \frac{\sigma^2_1}{L} + \frac{\sigma^2_2}{L} + \frac{\sigma^2_3}{L} + \frac{\sigma^2_4}{L}
+\]
+
+\paragraph{Cammini multipli}
+Nella colonna\footnote{Questi contributi sono importanti per una colonna impaccata, ovvero riempita con solido (tipicamente polvere).
+I percorsi della fase mobile sono differenti} sono presenti diversi cammini che la fase mobile percorre.
+In ogni caso la velocità media lineare è fissa, indipendentemente dal percorso della fase mobile
+
+Il primo contributo di varianza può essere espresso come
+\[
+\frac{\sigma^2_1}{L} = \gamma \cdot d_p
+\]
+dove $\gamma$ è una costante che dipende dall'irregolarità dell'impaccamento (solitamente varia tra 1 e 2) e $d_p$ è il diametro medio delle particelle di impaccamento.
+
+\marginpicture{02_014}{Allargamento della banda a causa dei cammini multipli}{}
+
+Questo primo contributo è indipendente dalla velocità del flusso poiché vengono solo considerate le possibilità di cammini multipli e non la velocità.
+Questo termine però è dipendente dalle dimensioni del materiale di impaccamento; è meglio utilizzare particelle piccole e di dimensioni uniformi, meglio se sferiche.
+
+\paragraph{Diffusione longitudinale} 
+La diffusione longitudinale viene definita come
+\[
+\frac{\sigma^2_2}{L} = \lambda \cdot \frac{D_m}{u}
+\]
+dove $\lambda$ è una costante adimensionale dipendente dall'impaccamento (fattore di ostruzione o di tortuosità) e solitamente è compreso tra 0.6 e 0.8, $D_m$ è il coefficiente di diffusione della molecola di analita in fase mobile e $u$ è la velocità lineare media dell'eluente
+
+\halfpicture{02_015}{Allargamento della banda in seguito alla diffusione longitudinale}{}
+
+Se il solvente fosse fermo, si vede un allargamento della banda, poiché il soluto si discioglie e di disperde nell'eluente
+
+\halfpicture{02_016}{Diffusione longitudinale}{}
+
+Questo fenomeno si verifica anche se la fase mobile è in movimento in quando la diffusione ha comunque luogo, tuttavia, tanto più tempo passa la fase mobile in colonna, tanto più la diffusione è intensa
+
+Questo contributo di varianza è inversamente proporzionale alla velocità media , in quanto tanto più è veloce il passaggio del soluto in colonna, tanto meno questo fenomeno è visibile
+
+\paragraph{Trasferimento di massa in fase mobile}
+
+Questo fattore è accomunato con il quarto fattore. È definito come
+\[
+\frac{\sigma^2_3}{L} = f_m (k') \cdot \frac{d^2 p}{D_m} \cdot u
+\]
+dove $f_m (k')$ è una funzione del fattore di capacità, $d^2 p$ è il diametro medio delle particelle, $D_m$ è il coefficiente di diffusione (nella fase mobile) e $u$ è la velocità lineare.
+
+Questo termine descrive il movimento di massa dalla fase stazionaria alla fase mobile
+
+\marginpicture{02_017}{Contributo dei cammini multipli e della diffusione in fase mobile stagnante}{}
+
+\paragraph{Trasferimento di massa in fase stazionaria}
+
+È definito come
+\[
+\frac{\sigma^2_4}{L} = f_s (k') \cdot \frac{d_f^2}{D_s} \cdot u
+\]
+dove $f_s (k')$ è una funzione del fattore di capacità, $d_f^2$ è lo spessore della fase stazionaria, $D_s$ è il coefficiente di diffusione di A nella fase stazionaria ($D_s \neq D_m$) e $u$ è la velocità lineare del flusso
+
+La fase stazionaria è costituita da un core interno solido, che viene derivatizzato all'esterno. Lo spessore della fase stazionaria è lo strato esterno.
+
+\fullpicturelab{02_018}{Trasferimento di massa all'interfase}{}{trasferimentofsfm}
+
+Il quarto fattore è rappresentato bene nell'immagine \ref{fig:trasferimentofsfm}. La fase stazionaria possiede una distribuzione gaussiana, così come la fase mobile che scorre da destra a sinistra.
+\begin{itemize}
+\item Nell'immagine \textit{a}, le due fasi sono in equilibrio
+\item Dal momento che la fase mobile scorre (\textit{b}), l'equilibrio cambia così come cambia la distribuzione gaussiana.
+\item Nell'immagine \textit{c}, le molecole della fase mobile tendono ad entrare nella fase stazionaria, e viceversa
+\item Le due fasi sono in equilibrio, ma la distribuzione aumenta e la banda si allarga
+\end{itemize}
+
+L'altezza del piatto teorico può essere scomposta nelle sue componenti
+\[
+H = \frac{\sigma^2_1}{L} + \frac{\sigma^2_2}{L} + \frac{\sigma^2_3}{L} + \frac{\sigma^2_4}{L}
+\]
+
+Sostituendo i contributi nell'altezza del piatto teorico, si ottiene
+\[
+H = \gamma \cdot d_p + \lambda \cdot \frac{D_m}{u} + f_m (k') \cdot \frac{d^2 p}{D_m} + f_s (k') \cdot \frac{d^2 f}{D_s} \cdot u \cdot u
+\]
+
+Si possono ottenere due equazioni a seconda di come vengono raggruppate le costanti. Se la costante $A$ non è influenzata dal flusso, si ottiene 
+\[
+H = \text{HETP} = A + \frac{B}{u} + (C_s + C_m)u \quad \text{per la GC}
+\]
+Se invece $A$ è influenzato dal flusso, l'equazione diventa
+\[
+H = \text{HETP} = \frac{A}{1 + \dfrac{E}{u}} + \frac{B}{u} + (C_s + C_m)u \quad \text{per la LC}
+\]
+
+L'equazione per la gas-cromatografia prende il nome di \emph{equazione di Van Deemter}
+
+\subsection{Equazione di Van Deemter}
+
+L'equazione di Van Deemter, come è stato visto prima è 
+\[
+H = \text{HETP} = A + \frac{B}{u} + (C_s + C_m)u 
+\]
+
+I termini dell'equazione di van Deemter possono essere scomposti in
+\begin{itemize}
+\item $A$, che ha un andamento costante con la velocità $u$
+\item $\frac{B}{u}$, che ha un andamento iperbolico con la velocità $u$
+\item $(C_s + C_m)u$, che ha un andamento lineare con la velocità $u$
+\end{itemize}
+
+\halfpicture{02_019}{Contributi nell'equazione di Van Deemter}{}
+
+La curva possiede un minimo che indica l'altezza minima del piatto teorico.
+Questo minimo corrisponde al numero maggiore di piatti e quindi è il punto dove l'efficienza della colonna è massima
+
+L'equazione di Van Deemter varia con il variare delle dimensioni delle particelle.
+Si vede che più piccole sono le particelle e più l'HETP è piccolo, in funzione al flusso.
+Questo significa che più piccole sono le particelle e più efficiente è la colonna
+
+\halfpicture{02_020}{Variazione dell'equazione di Van Deemter con le dimensioni delle particelle}{}
+
+Si ricordi che nell'equazione di Van Deemter sono presenti i coefficienti di diffusione, ovvero $D_s$ e $D_f$.
+I coefficienti di diffusione variano molto per liquidi e gas, come si vede nella tabella \ref{tab:diffusione}
+
+\begin{table}
+\begin{tabular}{lccc}
+ & Gas & Liquidi & Fluido supercritico\\
+$D$ (cm$^2$ s $-1$) & $10^{-1}$ & $10^{-5}$ & $10^{-3}$ - $10^{-4}$\\
+Densità (g cm$^-1$) & $10^{-3}$ & 1 & $0.2$ - $0.9$\\
+Viscosità & $10^{-4}$ & $10^{-2}$ & $10^{-1}$ - $10^{-2}$\\
+N di Raynolds & $10$ & $100$ & /\\
+\end{tabular}
+\captionof{table}{Variazione del coefficiente di diffusione}
+\label{tab:diffusione}
+\end{table}
+
+\fullpicture{02_021}{Equazione di Van Deemter per i gas e per i liquidi}{}
+
+Si può confrontare l'equazione di Van Deemter per i liquidi (HPLC) e per i gas (GC).
+Nel caso della cromatografia liquida, le velocità minime sono circa 0.1 cm$\cdot$s ed l'HETP minima è di 0.1 mm.
+Invece per la gas-cromatografia le velocità sono più alte e l'HETP minima è di 2-3 mm.
+Nella gas-cromatografia, la colonna utilizzata può essere una \emph{colonna capillare}.
+In questo caso, l'equazione di Van Deemter non possiede il termine $A$.
+\[
+H = \text{HETP} = \frac{B}{u} + (C_s + C_m)u
+\]
+
+I vari contributi sono esplicitati nell'equazione sottostante
+\[
+H = \text{HETP} = 2 \cdot \frac{D_m}{u} + f_m (k') \frac{r^2}{D_m} \cdot u
+ + f_s (k') \frac{d_f^2}{D_s} \cdot u
+\]
+dove $r$ è il raggio della colonna e va a sostituire il termine $d_p$
+
+Mancando il primo termine, l'HETP è più piccola.
+I cromatogrammi ottenuti con la colonna capillare sono estremamente stretti e alti, in quanto l'efficienza è molto elevata.
+L'equazione di Van Deemter cambia anche a seconda del gas che viene utilizzato, come si vede in figura \ref{fig:vandeemtergas}.
+
+\halfpicturelab{02_022}{Variazione dell'equazione di Van Deemter in funzione al gas}{}{vandeemtergas}
+
+L'analisi qualitativa si effettua tramite i tempi di ritenzione, che sono legati direttamente alla costante $k'$.
+Per questo tipo di analisi, è necessario possedere degli standard per il confronto.
+L'analisi quantitativa si realizza, invece, tramite le aree dei picchi, in quanto l'area è proporzionale alla quantità di materia uscente dalla colonna
+
+\section{Gas-cromatografia}
+La gas-cromatografia utilizza un gas come fase mobile.
+La fase stazionaria può essere un liquido o un solido.
+Le colonne utilizzate sono solitamente colonne capillari, ma possono essere anche utilizzate colonne impaccate.
+Le colonne capillari sono riempite di un polimero plastico che consente di piegarle
+
+\halfpicture{02_023}{Schema dello strumento}{}
+
+Lo schema a blocchi è esposto nella figura \ref{fig:gc}. 
+Il gas trascina il campione vaporizzato, ma non ha interazioni con la colonna e non solubilizza il vapore dell'analita.
+Pertanto viene definito un gas di trasporto, o carrier.
+
+\fullpicturelab{02_024}{Schema a blocchi di un gascromatografo}{}{gc}
+
+La colonna deve essere necessariamente termostatata, poiché in fase gas, gli effetti della temperatura sono più rilevanti. La pressione realizza flussi di decine di mL/min, per le colonne impaccate, mentre per le colonne capillari il flusso è solitamente dell'ordine di 1 mL/min
+
+Il sistema di iniezione è solitamente a siringa, però può essere utilizzata anche una valvola. Il campione può essere iniettato direttamente in colonna. Solitamente, è presente un dispositivo, detto split, che al momento dell'iniezione scarta parte del campione in quanto la colonna è molto sottile e può intasarsi. Lo split permette anche di iniettare un volume ben definito, nell'ordine di 0.01 $\mu L$
+
+Ci possono essere vari tipi di colonna, come è espresso nella tabella \ref{tab:colonnegc}. Come si vede, i piatti teorici per una colonna capillare sono molto più elevati rispetto ad una colonna impaccata.
+
+\begin{table}
+\begin{tabular}{lccc}
+& Capillari & Impaccate & Impaccate\\
+Diametro interno (mm) & $0.1$ - $0.3$ & $3$ & $6$\\
+Piatto per metro & $3\,000$ & $2\,500$ & $1\,000$\\
+Lunghezza massima (m) & $100$ & $20$ & $20$\\
+Piatti teorici & $3\,000\,000$ & $50\,000$ & $20\,000$\\
+\end{tabular}
+\captionof{table}{Tipologie di colonne per la GC}
+\label{tab:colonnegc}
+\end{table}
+
+La colonne impaccate per gas-cromatografia sono limitate alla separazione dei gas permanenti. In questo caso, la fase stazionaria è un solido granulare poroso. La colonna può essere formata da un tubo in acciaio o in vetro, di lunghezza compresa tra 1 e 6 metri.
+
+Per le colonne capillari, invece, la fase stazionaria è depositata in un film sottilissimo sulla parete interna di un capillare. Il diametro si aggira intorno a 0.1 mm ed è lungo da 15 a 100 metri. La fase stazionaria in una colonna capillare può essere liquida, liquida ma supportata su un solido o solida. Questo tipo di colonne è molto utilizzato sia per l'efficienza, sia per il possibile numero di piatti teorici, che è enorme.
+
+\halfpicture{02_025}{Performance per varie tipologie di colonna}{Si noti che la colonna capillare possiede molti più piatti teorici a parità di flusso}
+
+La scelta della colonna dipende dal tipo di molecola da separare. Secondo il principio 'il simile scioglie il simile', una colonna molto polare verrà utilizzata per separare componenti molto polari, mentre una colonna apolare verrà utilizzata per separare un composto apolare. La fase stazionaria può essere o meno legata: se la fase è legata sarà più stabile e presenterà un bleeding inferiore.\footnote{Bleeding: perdita di fase stazionaria causata dal flusso del gas o dall'alta temperatura} Le colonne capillari possono essere utilizzate fino ad una temperatura massima, che dipende danna natura della fase stazionaria.
+
+Nella gas-cromatografia, la temperatura deve essere accuratamente controllata. Inoltre è possibile utilizzare dei gradienti di temperatura, come nell'immagine \ref{fig:gradiente}
+
+\halfpicturelab{02_026}{Gradiente di temperatura}{}{gradiente}
+
+Se la corsa cromatografica viene effettuata in gradiente di temperatura, i picchi a tempi di ritenzione più alti vengono portati a tempi inferiori. Questo comporta una maggiore velocità di esecuzione dell'esperimento. Sia a livello quantitativo che qualitativo, il cromatogramma ottenuto è migliore, in quanto i picchi a tempi maggiori sono più dispersi rispetto ai picchi a tempi inferiori
+
+\section{Strumentazione}
+Di seguito sono elencati i componenti principali di un gascromatografo
+
+\subsection{Iniettore}
+L'iniettore serve per iniettare in colonna l'analita. Come si vede nell'immagine \ref{fig:iniettore}, la siringa viene immessa nella luce interna, che collega l'iniettore alla colonna. Una buona parte dell'analita viene scartata e una piccola parte va in colonna. Le giunzioni dell'iniettore devono essere minime, per eliminare i volumi morti in quanto ogni volume aggiunto farà allargare la banda.
+
+\marginpicturelab{02_027}{Schema di un iniettore}{}{iniettore}
+
+L'iniettore deve:
+\begin{itemize}
+\item Essere abbastanza piccolo
+\item Essere tarato
+\item Produrre iniezioni riproducibili
+\item Gassificare la soluzione iniettata
+\item Essere termostatato (solitamente a 250 C \degree)
+\end{itemize}
+
+Si utilizza l'eluizione a gradiente di temperatura in quanto le frazioni altobollenti che condensano in colonna possono condensare. La goccia di analita avrà un interazione con la fase stazionaria, ma subirà anche l'evaporazione, quindi la goccia si sposta come vapore, per poi ricondensare. Quando si ha un gradiente di temperatura si possono vaporizzare le sostanze più altobollenti in modo tale da farle uscire prima in colonna. Come conseguenza di ciò, le bande sono più strette e più alte
+
+\subsection{Rivelatori per gascromatografia}
+Il rivelatore è lo strumento dedito a rivelare ciò che esce dalla colonna. Ci sono diverse tipologie di rivelatori, poiché non tutti rivelano la stessa cosa.
+
+In generale, un buon rivelatore possiede le seguenti caratteristiche:
+\begin{itemize}
+\item Universalità: è una caratteristica molto difficile da trovare, però è una caratteristica desiderabile. Tuttavia, a volte, è desiderabile un rivelatore che selezioni classi di composti simili.
+\item Alta sensibilità: il segnale deve variare molto per piccole variazioni di concentrazione
+\item Stabilità alla riproducibilità: il segnale deve essere riproducibile
+\item La risposta deve essere lineare e deve mantenersi lineare per diversi ordini di grandezza.\footnote{Solitamente è preferibile lavorare con una funzione lineare per via della semplicità}
+\item La temperatura di esercizio deve avere un range tra la temperatura ambiente e 400 C \degree
+\item Il tempo di risposta deve essere breve, indipendentemente dal flusso
+\item Affidabilità e facilità d'uso
+\item Il fattore di risposta deve essere uniforme per tutti gli analiti. Come per la generalità, a volte, è desiderabile avere una risposta differente per determinati analiti
+\item Deve poter essere calibrato
+\item Deve essere non-distruttivo, preferibilmente
+\end{itemize}
+Nessun rivelatore possiede tutte queste caratteristiche, però alcuni rivelatori ne possiedono parecchie.
+
+I rivelatori per GC sono:
+\begin{itemize}
+\item A ionizzazione di fiamma (FID)
+\item A termo-conducibilità (TCD)
+\item A cattura elettronica (ECD)
+\item A spettrometria di massa
+\item Ad emissione atomica (AED)
+\item Ad emissione fotonica (NPD)
+\item A fotoionizzazione (PID)
+\item A fotometria di fiamma (FPD)
+\end{itemize}
+I primi quattro rivelatori sono molto utilizzati, gli altri sono in disuso. Il rivelare a spettrometria di massa verrà discusso nell'apposito capitolo
+
+Nella tabella \ref{tab:rivelarorigc} sono riassunte le proprietà dei rivelatori visti
+
+\begin{table}
+\begin{tabular}{lccccccc}
+Rivelatore & Selettività & Linearità & DL & $T_{max}$ C\degree\ & Gas & Distruttivo & Sensibile a\\
+TCD & Universale & 4 ordini & 10 ng & 450 & He &  & Concentrazione\\
+FID & Organici & 7 ordini & 0.5 ng & 400 & N$_2$, He & Si & Massa\\
+ECD & Elevata & 2-3 ordini & 0.1 pg & 225-350 & N$_2$, Ar & No & Concentrazione\\
+NDP & P & 4 ordini & 1 pg & 300 & N$_2$, He & Si & Massa\\
+ & N & 4 ordini & 10 pg & 300 & N$_2$, He & Si & Massa\\
+FPD & S & 3 ordini &  1 pg & 350 & N$_2$, He & Si & Concentrazione\\
+ & P & 4 ordini & 10 pg & 350 & N$_2$, He & Si & Concentrazione\\
+PID & Universale & 6 ordini & 5 ng & 300 & N$_2$, He &  & Concentrazione\\
+\caption{Tabella riassuntiva dei rivelatori per GC}
+\label{tab:rivelarorigc}
+\end{tabular}
+\end{table}
+
+\subsubsection{Rivelatore a ionizzazione di fiamma}
+
+\marginpicture{02_028}{Schema di un rivelatore a ionizzazione di fiamma}{}
+Il rivelatore a ionizzazione di fiamma brucia i composti uscenti dalla colonna cromatografica con una fiamma di $H_2/O_2$. Intorno alla fiamma c'è un cilindro che funge da collettore di elettroni.
+
+La fiamma non produce segnale in quanto la reazione di combustione dell'idrogeno è radicalica. In caso arrivino molecole organiche, l'ossigeno ossida il carbonio presente tramite la reazione. L'ugello fa da elettrodo
+\[
+CH + O_2 \rightarrow CO_2 + H_2O
+\]
+Questa reazione produce intermedi carbocationici ed elettroni, ovvero particelle cariche non nulle. Il sistema legge una corrente elettrica, che è legata a quanto carbonio viene ossidato. In questo modo è possibile rivelare quanta massa è uscita dalla colonna
+
+Le sostanze polialogenate producono un segnale poco visibile, in quanto il carbonio si trova già in uno stato di ossidazione elevato.
+
+\subsubsection{Rivelatore a termo-conducibilità}
+Questo rivelatore è ormai in disuso; è costituito da due resistenze sensibili alla temperatura. Le due resistenze sono disposte in un ponte di Wheatstone, che serve per determinare la resistenza incognita di un resistore. Lo zero viene fissato quando passa solo gas carrier, in quanto la differenza di temperatura è nulla.
+
+\fullpicture{02_029}{Schema di un rivelatore a termo-conducibilità}{}
+
+Nel momento in cui l'analita entra dentro il rivelatore, cambia la capacità termica e quindi cambia la resistenza di un resistore. Si può quindi misurare il cambio di resistenza con un voltmetro posto tra le due resistenze, in quanto, se cambia la resistenza, cambia anche la differenza di potenziale
+
+Con questo tipo di rivelatore,si può utilizzare come gas carrier, l'idrogeno o l'elio in quanto presentano una conducibilità specifica superiore rispetto a quella di altri gas. Il salto di conducibilità è maggiore. Questo rivelatore è universale.
+
+\subsubsection{Rivelatore a cattura elettronica}
+Questo rivelatore è complementare al FID, in quanto non vede gli idrocarburi, ma atomi molto elettronegativi; è quindi molto utilizzato per rivelare solventi clorurati/fluorurati. L'elettrodo collettore, al contrario del FID, è isolato dal resto del rivelatore.
+
+\marginpicture{02_030}{Schema di un rivelatore a cattura elettronica}{}
+
+La sorgente radioattiva è costituita da un isotopo del $^{63}Ni$ e dal trizio $^3H$, ed è supportata da una placca d'oro. Il $^{63}Ni$ decade tramite decadimento $\beta$ con formazione di elettroni con energia media pari a $67$ KeV. Può essere utilizzato fino a 350 C \degree , mentre il trizio è all'interno di un composto, il $TiT_4$.
+
+Utilizzando azoto come carrier, questo emette elettroni una volta colpito da un particella $\beta$
+\[
+N_2 + \beta^- \rightarrow N_2^+ + e^- + \beta^-
+\]
+Il catodo e l'elettrodo collettore segneranno un elevato passaggio di corrente, in quanto vengono emesse particelle cariche.
+
+Nel momento in cui l'analita entra, assorbirà un elettrone oppure andrà a legarsi a $N_2^+$ formando composti neutri
+\[
+X + e^- \rightarrow X^- \quad \text{oppure} \quad X + N_2^+ \rightarrow N_2X
+\]
+La prima reazione produce $X^-$ che andrà a scaricarsi al catodo, mentre la seconda produce $N_2X$ che non si scaricherà al catodo. In un caso gli elettroni vengono assorbiti, mentre nell'altro le cariche positive vengono controbilanciate da quelle negative, il che comporta una diminuzione di corrente. Il basso limite di rivelabilità consente di rivelare anche gli idrocarburi alogenati.
+
+Il picco che si vede nel cromatogramma è è dovuto alla rielaborazione del segnale, che viene invertito e a cui è stata sottratta la baseline. Il limite di rivelabilità basso è dovuto alla stabilità della baseline. Se il segnale diminuisce, il rumore di fondo diventa significativo, tuttavia, se è presente in piccole quantità, la misura è comunque bassa. La quantità minima rivelabile dipende dal rumore di fondo e non dalla sensibilità.
+
+\subsubsection{Rivelatore termoionico}
+
+Questo rivelatore è selettivo verso i composti organici che contengono azoto e fosforo. La risposta al fosforo è 10 volte maggiore rispetto a quella per l'azoto e 10$^3$ - 10$^5$ volte superiore a quella del carbonio. In confronto al FID, è 500 volte più sensibile rispetto alla stessa classe di sostanze; si usa in particolare per rivelare pesticidi azotati e fosfati
+
+\marginpicture{02_031}{Schema di un rivelatore termoionico}{}
+
+Viene utilizzata la stessa tipologia di fiamma del FID; non è tuttavia presente un collettore e al suo posto è presente un sensore termoionico. Il sensore contiene un cilindretto di $RbCl$ che, quando viene riscaldato a temperature elevate, produce un flusso di elettroni.
+
+Con questo elettrodo si possono rivelare sostanze contenenti azoto o fosforo, in quanto avviene la pirolisi che produce radicali, in particolare $CN\cdot$ e $PO\cdot$. Questi radicali, trovandosi in una zona ricca di elettroni, formano gli anioni $CN^-$ e $PO^-$ che andranno a schiantarsi sull'elettrodo collettore, producendo un segnale
+
+\subsubsection{Rivelatore ad emissione atomica}
+Questo rivelatore si basa sull'emissione atomica. Dalla colonna il carrier entra in un generatore di microonde, che alimenta il plasma.
+
+\marginpicture{02_037}{Schema di un rivelatore ad emissione atomica}{}
+
+Quando arrivano le molecole di analita (che dovono contenere eteroatomi) vengono eccitate ed ionizzate e iniziano ad emettere. Lo spettro di emissione viene correlato con la quantità di materia tramite la legge di Lambert-Beer.
+
+\subsubsection{Rivelatore a fotometria di fiamma}
+Questo rivelatore è adatto per analizzare zolfo e fosforo in composti organici. La fiamma produce specie che possono essere eccitate con la temperatura della fiamma. 
+
+\marginpicture{02_038}{Schema di un rivelatore a fotometria di fiamma}{}
+
+Tramite alcuni filtri, si possono selezionare e leggere le lunghezze d'onda desiderate e quindi determinare se zolfo o fosforo sono presenti
+
+\subsubsection{Rivelatore a fotoionizzazione}
+L'eluente viene irradiando con un fascio di raggi UV, che causano la ionizzazione delle molecole. Applicando una differenza di potenziale dove le molecole vengono ionizzate, si crea una corrente ionica che può essere misurata e messa in relazione con le sostanze uscenti dalla colonna
+
+\marginpicture{02_039}{Schema di un rivelatore a fotoionizzazione}{}
+
+\section{Cromatografia liquida}
+Ci sono due tipi di analisi (metodiche strumentali) utilizzate con la cromatografia liquida:
+\begin{itemize}
+\item \textit{Fase normale}: la polarità della fase mobile è minore rispetto alla fase stazionaria. Si usa solitamente per la cromatografia liquido-solido)
+\item \textit{Fase inversa}: la polarità della fase mobile è maggiore rispetto alla fase stazionaria. Si usa solitamente con la cromatografia liquido-liquido 
+\end{itemize}
+
+La cromatografia liquida in fase normale si chiama così perché è la prima ad essere stata realizzata. L'eluente è un solvente organico, mentre la fase stazionaria è un sale. Questa tipologia di cromatografia è poco utilizzata perché la fase mobile è un solvente organico, quindi è pericoloso per l'ambiente. Un altro motivo è che inevitabilmente tutti i soluti organici contengono una minima parte di acqua, il che comporta che questa si accumuli nella fase stazionaria poiché è molto affine; accumulandosi in colonna, la rovina. In questa modalità, più polari sono gli analiti e più aumentano i tempi di ritenzione, mentre più polare è la fase mobile e più diminuiscono i tempi di ritenzione. Si può variare la polarità dell'eluente per avere dei tempi di ritenzione accettabili.
+
+Gli analiti che possono essere separati con la cromatografia in fase normale sono:
+\begin{itemize}
+\item Idrocarburi fluorurati
+\item Idrocarburi saturi
+\item Olefine
+\item Idrocarburi aromatici
+\item Eteri
+\item Composti nitroderivati
+\item Esteri, chetoni e aldeidi
+\item Alcoli, ammine
+\item Ammidi
+\item Acidi carbossilici
+\end{itemize}
+
+La fase stazionaria è silice, in quanto è parecchio polare
+
+Con il passare degli anni, si sono visti gli inconvenienti di questa tecnica e quindi si è passati alla fase inversa. In questo tipo di cromatografia, la fase mobile è acqua miscelata ad un solvente organico, mentre la fase stazionaria è apolare. Solitamente si usa silice funzionalizzata con catene carboniose lunghe, come C-16 o C-18. La fase stazionaria è liquida, ma viene legata al solido. Si utilizza una reazione di silanizzazione, dove un clorosilano viene fatto reagire con la silice, per ottenere un silicone.
+
+\marginpicture{02_043}{Dipendenza di {$k'$} dal numero di carboni del'aldeide}{Nell'immagine sottostante, si evidenzia la dipendenza di {$k'$} dalla composizione della fase mobile}
+
+Il gruppo R può essere:
+\begin{itemize}
+\item $CH_3-$, $C_8H_{17}-$, $C_{18}H_{37}-$ per colonne apolari
+\item $C_6H_5$ per colonne debolmente polari
+\item $C_2H_4CN$, $C_2H_4OH$, $C_2H_4NH_2$ per colonne polari
+\end{itemize}
+
+Le colonne funzionano bene ad un range di pH, solitamente da 2 a 8. A pH < 2, i legami Si-O-Si della fase stazionaria immobilizzata si rompono e si perde la funzionalità della colonna. A pH > 8, la silice si solubilizza; è possibile ovviare a questo problema facendo reagire tutte le funzioni siliconiche (Si-OH) con del tetrametilclorosilano (Si(CH$_3$)$_3$ Cl).
+
+Esiste un supporto alternativo alla silice, ovvero il copolimero plastico stirene-divinil-benzene, che possiede in alto grado di cross-linking.
+
+\fullpicture{02_041}{Reazione di produzione del stirene-divinil-benzene}
+
+Il divinil-benzene causa il cross-linking e a seconda della percentuale dei due componenti, si può ottenere un polimero più o meno rigido. Il polimero ottenuto può essere a sua volta funzionalizzato con catene contenenti funzioni amminiche o ossidriliche terminali.
+
+La fase mobile può essere: THF, Acetonitrile, CH$_3$OH o H$_2$O (in ordine crescente di polarità). In una serie omologa, la ritenzione dipende dalla lipofilicità dell'analita.
+
+\halfpicture{02_042}{Ipotetico cromatogramma di una miscela di sei aldeidi}{}
+
+In particolare, si vede che nella serie delle aldeidi piccole (dalla formaldeide all'esanale), i tempi di ritenzione sono lineari. L'andamento di $k'$ è rettilineo (lineare) con l'allungamento della catena carboniosa
+\[
+\ln (k') = q + c\cdot n
+\]
+Se la fase mobile è una miscela di $H_2O$ e $CH_3OH$, si nota che all'aumentare della percentuale di metanolo la $k'$ diminuisce, ovvero avviene una diminuzione dei tempi di ritenzione. Se, invece, si diminuisce la polarità della fase stazionaria (funzionalizzandola con catene più lunghe), si vede che i tempi di ritenzione aumentano.
+
+\halfpicture{02_044}{Dipendenza di {$k'$} dalla fase stazionaria}{}
+
+Questo si può anche vedere per la serie benzene, toluene e fenolo; se si effettua la corsa cromatografica in una colonna apolare e con una fase mobile più ricca di $CH_3CN$, si vede che i composti escono prima; se invece la fase mobile è meno ricca di $CH_3CN$, i composti escono a tempi più lunghi. Il primo ad uscire è il fenolo poiché è il più polare, mentre l'ultimo ad uscire è il benzene (meno polare). Se si aumentasse la polarità della fase mobile, si vede che gli analiti rimangono più trattenuti dalla colonna e meno dalla fase mobile, quindi si verifica un aumento dei tempi
+
+\subsection{Cromatografia ad esclusione dimensionale}
+Questa cromatografia è di tipo liquido-solido e sfrutta la dimensione delle molecole da separare, che viene confrontata con la dimensione dei pori (della fase stazionaria). La fase stazionaria potrebbe essere stirene-divinil-benzene (come nella LC a fase inversa) ricorrendo al controllo della dimensione dei granuli per ottenere la dimensione desiderata. Questa cromatografia è anche detta a \emph{esclusione dimensionale}, poiché l'esclusione si basa sulla dimensione della molecola.
+
+\marginpicture{02_032}{Rappresentazione di una colonna ad esclusione dimensionale}{}
+
+In questa cromatografia è più comodo utilizzare come parametro il volume di diluizione, rispetto al tempo di ritenzione; si utilizza il flusso per ricavare il volume di diluizione dai tempi.
+\[
+F_{(flusso)} = \frac{V}{t} \rightarrow V = F \cdot t
+\]
+
+Si può definire $V_0$ come volume vuoto della colonna, mentre $V_p$ come il volume dei pori occupati dal soluto. Si può definire quindi $V_A$ come
+\[
+V_A = k \cdot V_p \quad \text{con} 0 \leq k \leq 1
+\]
+Se $k=0$ allora $V_A=0$, che significa che avviene un esclusione totale, in quanto le molecole sono più grandi del più grande dei pori. Le molecole escono con il volume morto della colonna. Se $k=1$, allora $V_A = V_p$, che significa che c'è una permeazione totale, in quanto le molecole sono più piccole dei più piccolo dei pori. Le molecole escono con il volume massimo della colonna
+
+\halfpicturelab{02_034}{Profili di esclusione dimensionale}{}{profilied}
+
+Il volume di separazione totale è $V_A = k_A \cdot V_p + V_0$. Il termine $k_A \cdot V_p$ indica il volume dei pori occupati dalle molecole. Il volume di ritenzione per una colonna è sempre compreso tra $V_0$ e $V_p$.
+
+Il volume esterno può essere percorso dalle molecole nel solvente, mentre il volume interno viene occupato dalle molecole che potenzialmente possono entrare nei granuli. Nella rappresentazione della colonna, si vede che una molecola della corretta misura entra dentro i pori e viene rallentata; una molecola più grande viaggia invece nel volume esterno. Le molecole più grandi del limite escono assieme, a prescindere dalla dimensione; analogamente, molecole più piccole escono tutte con il volume di permeazione totale.
+
+\halfpicturelab{02_035}{Profili di esclusione dimensionale con più colonne}{}{graficoescldim}
+
+Nel diagramma \ref{fig:esclusionedimensionale} sembra che i tempi di eluizione siano limitati agli estremi di $V_p$. È possibile vedere dei picchi fuori dall'intervallo, poiché è possibile che un analita abbia reagito in modo classico con la colonna. Per avere una pura esclusione, bisogna avere una fase stazionaria che non reagisca in alcun modo con gli analiti. Il tempo di ritenzione viene considerato non solo come funzione del peso molecolare, ma anche in funzione di $k'$, come nella cromatografia classica
+
+\halfpicturelab{02_033}{Diagramma $\ln PM$ vs $V$}{}{esclusionedimensionale}
+
+Ovviamente, per diverse colonne, si ottengono diversi profili, come visto nella figura \ref{fig:profilied}. È anche possibile accoppiare diversi colonne con porosità differente, in modo tale da avere un maggiore range di peso molecolare e quindi una esclusione migliore, come in figura \ref{fig:graficoescldim}.
+
+\marginpicture{02_046}{Granuli della colonna a esclusione dimensionale}
+
+\subsection{Cromatografia a coppa ionica}
+Nella cromatografia a fase inversa, è possibile separare gli analiti ionici, purché si realizzi una coppia ionica in soluzione tramite l'ausilio di componenti aggiuntivi nella fase mobile. Per l'accoppiamento di anioni, si utilizza il tetrabutilammonio ($(n-Bu)_4N^+$), per i cationi invece, si utilizza il perclorato ($ClO_4^-$), il tetrafenilborato o composti alchilsolfonati.
+
+\marginpicture{02_036}{Fase stazionaria funzionalizzata}{La fase stazionaria è stata funzionalizzata per interagire con i cationi}
+
+Se ci fosse dell'acido salicilico nella fase mobile, si instaura un equilibrio acido-base. Il gruppo carbossilico carico non sta bene nella fase stazionaria, che è apolare, e quindi uscirà presto dalla colonna. Se si aggiunge $(n-Bu)_4N^+$ alla fase mobile, si forma uno strato a metà tra le catene apolari della fase stazionaria, di fatto funzionalizzando con delle cariche positive. Queste cariche positive attraggono quelle negative e la coppia ionica che si forma aderisce bene alla fase stazionaria.
+
+Come visto prima, per i cationi in fase mobile, è possibile utilizzare dei composti alchilsolfonati, come il laurilsolfato. Questo composto satura i siti C-18, caricandoli negativamente. I cationi possono quindi interagire con la fase modificata formando una coppia ionica. Sia per cationi, che per anioni, si può formare una coppia ionica
+
+\section{Cromatografia ionica}
+Questa tecnica permette la separazione di ioni, molecole ionizzate o ionizzabili per interazione con un substrato a sua volta ionico (o meglio, ionizzabile). Per questa cromatografia si utilizzano delle resine a scambio ionico. Questa cromatografia non è entrata subito in uso, in quanto richiede un particolare tipo di rivelazione. Il suo uso ha permesso la separazione di specie altrimenti complicate da determinare, in particolare di sali di acidi forti, che quindi sono inerti.
+
+Preferibilmente, per i catoni si utilizzano altre tecniche, tuttavia per gli anioni è molto utilizzata. Per la determinazione, si utilizza la conducibilità, che tuttavia è una proprietà di tutta la massa analizzata.
+
+\marginpicture{02_045}{Funzionalizzazione della colonna analitica}{}
+
+In virtù del principio di elettroneutralità, per neutralizzare delle cariche, devono essere introdotte delle cariche di segno opposto. Questa tecnica è stata sviluppata dagli anni '40 in poi, ma è stata sfruttabile solo dal 1978 in poi. Questa tecnica è molto efficiente per l'analisi degli anioni, ossoanioni e cationi, molto difficili da determinare con altre metodologie.
+
+\marginpicture{02_047}{Variazione di conducibilità in presenza di acqua con sali}{}
+
+La rivelazione è un passaggio fondamentale ed è difficoltosa in quanto il bilancio di carica è costante e il numero di ioni in uscita è costante e questo non fa variare la conducibilità complessiva, in quanto la conducibilità equivalente degli ioni varia di poco.
+
+Le particelle delle resine a scambio ionico contengono un core solido (grande 5 - 15  $\mu$m) e sono caricate con delle micro-catene cariche positivamente (per la determinazione di anioni) o negativamente (per la determinazione di cationi). Una volta iniettato l'analita, questo scambia il controione con la resina, quindi c'è una costante che esprime quanto affine è lo ione con la resina.
+
+La differenza di conducibilità è insufficiente per poter determinare efficacemente i vari ioni, in virtù del fatto che le conducibilità equivalenti degli ioni sono diverse tra di loro, ma la quantità di sostanza è esigua.
+
+Come accennato la separazione avviene per scambio ionico:
+\[
+R-X^+E^- + Y^- \rightleftharpoons R-X^+Y^- + E^- 
+\]
+All'uscita della colonna per permettere la rivelazione mediante conducibilità, è stata accoppiata una seconda colonna caricata con ioni di carica opposta. Questa tecnica si chiama \emph{soppressione della conducibilità} della fase mobile (ad esempio NaOH):
+\[
+R-A^-H^+ + Na^+OH^- \rightleftharpoons R-X^-Na^+ + H_2O
+\]
+
+\marginpicture{02_049}{Colonna analitica e colonna di soppressione}{}
+
+Prima dell'utilizzo la colonna deve essere condizionata mediante passaggio di un flusso di fase mobile per saturare i siti ionici. Quando durante l'analisi si ha il passaggio di una sostanza nella fase mobile diversa da $OH^-$ durante la soppressione con $H^+$ esce $H^+X^-$ (l'acido coniugato) che invece aumenta la conducibilità dell'analita:
+\[
+R-A^-H^+ + Na^+ + X^- \rightleftharpoons R-A^-Na^+ + HX
+\]
+
+La conducibilità della fase mobile viene soppressa in quanto si produce acqua, mentre la conducibilità dell'analita viene aumentata per produzione dell'acido coniugato. Con la soppressione si riescono quindi a rivelare anioni di acidi coniugati più forti dell'acqua, ad esempio, $H_2S$ e fenolo daranno segnali bassi in quanto sono acidi molto deboli, mentre l'acido acetico e l'acido cloridrico si vedono bene.
+
+Se ad esempio si utilizza come fase mobile una miscela di bicarbonati/carbonati, la soppressione della fase mobile produrrà acido carbonico, quindi saranno rivelabili acidi coniugati più forti di esso.
+
+Le fasi stazionarie per la cromatografia ionica tecnologicamente molto complesse, infatti sono costituite da un supporto polimerico su cui viene depositato uno strato di sostanza che permette la modulazione della polarità.
+
+Per la Cromatografia Ionica a Fase Inversa il supporto è gel di silice (\ce{SiO2} polimerizzata) derivatizzato con lunghe catene alifatiche.
+Alcuni siti non devono essere derivatizzati e determinano un problema di separazione e questo viene risolto mediante 'incapsulamento' tramite reazione con
+silani a catena corta. I supporti di silice sono resistenti, rigidi, inerti con dimensioni medie di circa 5 $\mu$m.
+Per la derivazione si utilizzano silani o clorosilani.
+Nella Cromatografia Ionica si impiegano particelle di copolimeri Stirene-DVB reticolati a rigidità modulabile con diametro medio di 10 – 15 $\mu$m.
+
+Esistono alcuni tipi di colonne per IC composte sia da resine anioniche, sia da resine cationiche mescolate insieme. Le due particelle di resina a contatto salificano
+a vicenda e si crea un numero di siti di scambio molto alto, che aumenta l'efficienza. Le particelle di resina anionica presentano mediamente dimensioni di circa 1/10
+rispetto a quelle di resina cationica.
+
+Le dimensioni delle particelle non devono essere troppo piccole, altrimenti la pressione necessaria a spingere il liquido in
+colonna risulterebbe troppo alta e aumenterebbe in modo esponenziale. Ecco quindi che l'efficienza viene mantenuta ponendo particelle di grandi dimensioni con particelle
+di piccole dimensioni. 
+
+
+\marginpicture{02_049}{Aumento del segnale nel cromatogramma in seguito alla soppressione}{}
+
+A seconda del tipo di colonna cromatografica è possibile separare:
+\begin{itemize}
+\item Colonna anionica: permette la separazione di anioni
+\item Colonna cationica: permette la separazione di cationi
+\end{itemize}
+
+Il bilancio di carica totale è costante ed è pari a zero in quanto i siti attivi della resina sono costanti. Il numero di ioni uscenti (a parità di carica) è costante e l'analita rappresenta una minima parte rispetto alla fase mobile. 
+
+Esistono molti tipi di soppressori, i più importanti sono: 
+
+\paragraph{Soppressori chimici}
+
+Presentano l'inconveniente della saturazione dei siti anche della colonna di soppressione, ecco quindi che è stato necessario sviluppare un sistema di rigenerazione delle resine in continuo.
+
+\paragraph{Soppressori a fibra cava}
+
+I cationi della fase mobile (ad esempio $Na^+$) vengono scambiati anche dall'interno all'esterno e il flusso di $H_2SO_4$ all'esterno riscambia $Na^+$ con $H^+$ e la colonna di soppressione viene rigenerata in continuo. Le vibrazioni possono rompere il dispositivo vicino alla saldatura. 
+
+\marginpicture{02_050}{Soppressori}{Nell'immagine sopra, è rappresentato un soppressore a fibra cava, in quella inferiore un soppressore a micro-membrana}
+
+\paragraph{Soppressori a micro-membrana}
+
+Un acido forte, come l'acido solforico scorre in contro-corrente rispetto al flusso di eluente e permette la rigenerazione con dei fogli di resina di circa 50 $\mu$m di spessore.
+
+È possibile anche accoppiare un altro dispositivo che utilizza una rete di Platino e l'applicazione di una corrente elettrica che produce l'elettrolisi dell'acqua per produrre $H^+$ e $O_2$ e i protoni prodotti vengono utilizzati per la rigenerazione, mentre l'ossigeno esce sotto forma di micro-bolle.
+
+\marginpicture{02_051}{Soppressore a membrana}{Si noti che questo soppressore contiene anche un rigeneratore}
+
+A seconda del tipo di fase mobile utilizzata, che produce ad esempio acidi coniugati più forti dell'acqua, è possibile limitare il campo di analiti analizzabili, in grado di produrre acidi coniugati più forti dell'acido coniugato prodotto dalla soppressione. Se è presente nel sistema una qualche specie dotata di conducibilità minore il picco sarà minore del fondo.
+
+\marginpicture{02_053}{Tipologie di soppressori a membrana}{}
+
+Questa tecnica cromatografica è utilizzata per determinazioni di anioni come Cl$^-$, F$^-$, Br$^-$, NO$_3^-$, SO$_4^{2-}$, PO$_4^{3-}$, NO$_2^-$ e $S^{2-}$.Alcuni cationi possono essere determinati, come $NH_4^+$, Li$^+$, Na$^+$, K$^+$, Rb$^+$, Cs$^+$, Ca$^{2+}$ e $Mg^{2+}$. Con acidi e basi deboli possono esserci dei problemi nella calibrazione in quanto la solubilità varia con il pH. 
+
+\fullpicture{02_052}{Schema a blocchi un cromatografo IC}{}
+
+\paragraph{Cromatografia ad esclusione ionica (ICE)} 
+
+Questo tipo di cromatografia ricorda la cromatografia ad esclusione dimensionale. Si usano sempre delle resine funzionalizzate con composti organici solfonati, per la fase stazionaria.
+L'acqua fluisce come fase mobile insieme ad un acido e si orienta nelle vicinanze della fase stazionazia, creando uno strato ordinato di molecole d'acqua.
+L'ossigeno è quindi orientato verso l'esterno, mentre l'idrogeno verso l'interno
+
+\marginpicture{02_054}{Membrana di Donnan}{}
+
+Quando arrivano gli anioni, trovano questa barriera, detta \emph{membrana di Donnan}. Gli anioni quindi tendono ad essere respinti dalla parziale carica negativa dell'ossigeno.
+Gli acidi deboli riescono a passare, nella loro forma protonata, in quanto neutri.
+Si instaura quindi un equilibrio di uscita/entrata nella membrana e l'acido che possiede la $K_a$ più bassa si dispone meglio nelle membrane e si separano. 
+La separazione quindi avviene per differenza di $K_a$, per differenza di densità di carica e dimensione. 
+
+\paragraph{Cromatografia ionica in fase mobile}
+Combinando una colonna cromatografica a fase inversa con un eluente in grado di formare coppie ioniche, e accoppiato ad un rivelatore a conducibilità soppressa, si ottiene la tecnica dell MPIC
+Nella colonna a fase inversa, la fase stazionaria è apolare (C-18), con dei gruppi solfonati alle estremità.
+Invece di utilizzare la conducibilità (come nella cromatografia a fase inversa) è possibile utilizzare un opportuno soppressore, come nella cromatografia ionica
+
+\paragraph{Cromatografia con fluido supercritico} 
+
+Un fluido supercritico è un fluido che si trova oltre il suo punto critico e si ha l'indistinguibilità tra la fase liquida e la fase vapore. Presentano caratteristiche ibride tra un liquido e un gas come la mobilità (simile a quella dei gas) e il potere di estrazione (simile a quello dei liquidi). 
+
+\marginpicture{02_055}{Diagramma di fase}{}
+
+Solitamente si utilizza come fluido supercritico il pentano ($p_c$ = 33.3 atm, $T_c$ = 166.5 \degree C) che viene portato in questo stato tramite innalzamento della pressione e della temperatura. Per separare il solvente all'uscita della colonna semplicemente si abbassa la temperatura e la pressione.
+
+Aumentando P aumenta la densità e il potere solvatante nei confronti di sostanze ad elevato P.M.
+Per modulare le separazioni è possibile lavorare in gradiente di P, in modo da variate K' e quindi i Tempi di Ritenzione.
+
+\paragraph{Cromatografia su strato sottile}
+La cromatografia su strato sottile è a che chiamata TLC.
+Un vetrino con del gel di silice deposto viene messo in un becker dove c'è già del solvente. Sulla lastra sono state depositate le soluzioni da analizzare.
+Il solvente per capillarità sale e trascina i componenti.
+Si confrontano le distanze percorse e si calcola il fattore di ritardo
+\[
+R_f = \frac{d_r}{d_m}
+\]
+
+\marginpicture{02_056}{Analisi TLC}{}
+Si può anche ricorrere al fattore di capacità, tramite i tempi di ritenzione
+\[
+k' = \frac{t_r - t_m}{t_m}
+\]
+
+\paragraph{Elettroforesi}
+L'elettroforesi è un altro tipo di cromatografia dove, assieme alle fasi, si utilizzano anche degli elettrodi, ai quali viene applicata una differenza di potenziale.
+
+\marginpicture{02_057}{Schema per l'esperimento di elettroforesi}{}
+
+Sono presenti due vasche contenenti delle soluzioni tampone, che fungono anche da elettroliti.
+Le due vasche sono collegate tramite un ponte, che permette la migrazione di specie da una parte all'altra.
+Applicando una differenza di potenziale, le molecole cariche si sposteranno verso l'anodo o il catodo, a seconda della vasca.
+Le molecole si possono separare sulla base della carica, ma anche sulla base della tipologia del materiale utilizzato per la fase stazionaria, all'interno del ponte.
+
+Si ottiene comunque un cromatogramma, che è ottenuto partendo dal gradiente di concentrazione dopo la corsa cromatografica.
+
+\section{Sistemi di iniezione}
+Nella cromatografia liquida, per effettuare l'iniezione, si utilizza una valvola a sei vie. La figura \ref{fig:seivie} è una raffigurazione di una valvola a sei vie.
+
+
+La quantità di liquido iniettata è selezionata da un tubicino posto a ponte nella valvola, chiamato \emph{loop}. Cambiando la lunghezza del loop, cambia anche il volume iniettato.
+Il loop inoltre è intercambiabile, con volumi da 5 a 500 $\mu L$. Per scaricare e caricare il loop, si fa girare il rotore della valvola
+
+\fullpicturelab{02_058}{Sistema di iniezione}{}{seivie}
+
+Inizialmente:
+\begin{itemize}
+\item Si connette l'iniezione allo scarico
+\item Si connette il carrier con l'inizio del loop
+\item Si connette la fine del loop con la colonna
+\end{itemize}
+
+In seguito, spostando il rotore, si ottiene la seguente configurazione:
+\begin{itemize}
+\item Il campione è collegato all'inizio del loop
+\item La fine del loop è collegata agli scarti
+\item Il carrier è collegato alla colonna
+\end{itemize}
+
+\section{Rivelatori}
+La cromatografia liquida utilizza dei rivelatori differenti rispetto alla gas-cromatografia. Si può anche utilizzare un rivelatore a spettrometria di massa, che verrà discusso in seguito.
+
+
+La cromatografia ionica, come già visto, utilizza un conduttimetro come rivelatore.
+Lo schema del conduttimetro è esposto nella figura \ref{fig:conduttimetro}
+
+\fullpicturelab{02_059}{Schema di un conduttimetro}{}{conduttimetro}
+
+La cella è la cella di misura, con due elettrodi, che vengono alimentati a corrente alternata. Si misura la conducibilità attraverso gli elettrodi, con un ponte di 
+Kohlraush, che permette di determinare la resistenza incognita.
+
+
+\paragraph{Rivelatore spettrofotometrico}
+Il rivelatore spettrofotometrico è in grado di vedere specie nell'UV-Vis, come specie organiche contenenti gruppi aromatici, oppure gruppi cromofori.
+Questo tipo di rivelatore è molto utilizzato.
+
+Un rivelatore spettrofotometrico è uno spettrofotometro che legge la perdita di intensità di un fascio li luce, che passa attraverso la soluzione.
+Si misura quindi la differenza tra la luce incidente e la luce trasmessa. La legge che governa questo rivelatore è la \emph{legge di Lambert-Beer}
+\[
+A = \epsilon \cdot b \cdot C
+\]
+
+\halfpicture{02_060}{Rivelatori spettrofotometrici}{In basso si vede il rivelatore a array}
+
+Le sorgenti per l'UV-Vis sono le lampade a mercurio (Hg), le lampade a deuterio (D) e le lampade a tungsteno (W).
+La fenditura in ingresso permette di assottigliare il fascio luminoso emesso. In seguito, il reticolo di diffrazione scompone gli elementi della luce bianca, a seconda dell'orientazione del reticolo.
+La seconda fenditura serve per scegliere la lunghezza d'onda appropriata
+
+Ci sono delle situazioni dove si può acquistare direttamente tutto lo spettro, ad esempio se si utilizzano delgli array di diodi. Un diodo è un semiconduttore che è cotruito per ricevere luce
+Inizialmente, la luce bianca colpisce il campione, che assorbe. In seguito, le componenti scomposte passano attraverso un array di diodi e quindi una determinata lunghezza a a colpire un diodo specifico.
+Si noti che lo spettro normalmente analizzato va da 200 a 800 nm, quindi un array di diodi con 1024 diodi può misurare una frazione di nanometro.
+
+\paragraph{Rivelatore a indice di rifrazione}
+Questo tipo di rivelatore è universale, o quasi. Questo tipo di rivelatore è molto sensibile alla temperatura, che deve essere controllata al millesimo di grado centigrado e 
+viene spesso utilizzato accoppiato alla cromatografia a esclusione dimensionale, e viene utilizzato per determinare il peso molecolare de polimeri
+
+\marginpicture{02_061}{Fenomeno della rifrazione}{}
+
+Questo rivelatore utilizza la legge di Snell, che descrive il fenomeno della rifrazione della luce. Se il mezzo è differente, cambia l'angolo di rifrazione, quindi
+misurando l'angolo si può ottenere quanto materiale sta passando da una fase all'altra
+
+\fullpicture{02_062}{Rivelatore a indice di rifrazione}{}
+
+L'apparato è diviso in due parti, uno dove passa il solvente e l'altro, dove arriva la colonna.
+Se passa solo eluenete, l'angolo di incidenza è zero, in quanto le due fasi hanno lo stesso indice di rifrazione. Se invece passa l'analita, l'indice di rifrazione cambia.
+La luce riflessa tende ad allontanarsi, quindi si utilizza un sistema mobile che riporta la luce dove dovrebbe essere. Dallo spostamento del prisma, si ottiene l'angolo di incidenza e quindi l'indice di rifrazione.
+
+Al posto del prisma, è possibile utilizzare anche due lenti di Fresnel accoppiate. L'eluente entra dentro le due lenti e, se c'è l'analita, la luce va al rivelatore con un angolo di incidenza maggiore.
+
+\marginpicture{02_063}{Rifrattometro differenziale a deflessione}{}
+
+Questi rivelatori sono poco sensibile, quindi la variazione di segnale per unità di concentrazione è molto piccola; si usa quindi per concentrazioni elevate, come nella cromatografia a esclusione dimensionale
+
+\paragraph{Rivelatore a fluorescenza}
+Questo tipo di rivelatore può essere utilizzato se le molecole analizzate fluorescono.
+La luce incidente eccita l'analita, che emette in tutte le direzioni; si campiona la luce emessa a 90 \degree dall'asse della luce di eccitazione
+
+\marginpicture{02_064}{Rivelatore a fluorescenza}{}
+
+Questi rivelatori sono molto sensibili e possono dare limiti di rivelabilità molto bassi. Essi sono utilizzati principalmente per fare analisi qualitativa a bassissime concentrazioni
+
+\paragraph{Rivelatore amperometrico}
+Questo tipo di rivelatore può essere di tipo coloumbmetrico o amperometrico (normale o pulsato) ed è specifico per le sostanze che possono ossidarsi/ridursi.
+Serve avere una coppia di elettrodi, uno di lavoro e un controelettrodo. L'elettrodo di riferimento serve per avere un potenziale costante.
+
+\marginpicture{02_065}{Rivelatore amperometrico}{}
+
+Nel momento in cui passa il fluido cromatografico, il potenziale segnalato è quantificabile con le sostanze che reagiscono. Quindi il passaggio di corrente indica la presenza di analita.
+
+\paragraph{Rivelatore a luce diffusa in evaporazione}
+Questo tipo di rivelatore ha una certa importanza, poiché è un rivelatore praticamente universale per le specie ioniche.
+Le sue applicazioni sono più estese del rivelatore a indice di rifrazione.
+
+\marginpicture{02_066}{Rivelatore a luce diffusa in evaporazione}{}
+
+La colonna cromatografica viene collegata all'ingresso. Il flusso viene nebulizzato e viene fatto evaporare per riscaldamento; ciò che rimane all'uscita del tubo è l'analita, che condensa a prescindere che sia liquido o solido
+Si fa passare della luce monocromatica, prodotta da un laser, all'interno dei microcristalli/microgoccie di analita. La luce viene quindi diffusa a 360 \degree.
+Per raccogliere la luce dispersa, si utilizza un array di diodi. A seconda di quanta luce viene diffusa, si può conoscere quanto materiale è presente.
+
+\paragraph{Rivelatore ad aerosol caricato}
+Questa tecnica di rivelazione è l'evoluzione dell'ELSD; è sempre un rivelatore universale, però più performante.
+
+\fullpicture{02_067}{Rivelatore ad aerosol caricato}{}
+
+Ci sono tre passaggi che portano alla rivelazione:
+\begin{enumerate}
+\item Il rivelatore converte le molecole di analita, in particolare anidre. Il numero di particelle è proporzionale alla quantità di analita
+\item Un flusso di gas caricato positivamente entra in collisione con le particelle di analita e la carica viene trasferita alle particelle,
+in modo proporzionale alla loro grandezza. Più grandi sono, più carica assorbono.
+\item Le particelle vengono trasferite ad un collettore, dove la carica viene misurata da un elettrometro molto sensibile. Si genera un segnale proporzionale all'analita presente
+\end{enumerate}
+
+Il fattore di risposta (ovvero la pendenza della retta di calibrazione) è praticamente uguale per tutti gli analiti; quindi si può calibrare lo strumento utilizzando un analita differente da quello da analizzare
+
+

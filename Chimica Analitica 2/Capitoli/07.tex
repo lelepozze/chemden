@@ -1,0 +1,508 @@
+\chapterpicture{header_09}
+
+\chapter{Statistica} 
+
+L'esecuzione di un'analisi chimica porta all'ottenimento di un risultato sperimentale $x_i$, che può essere la concentrazione o la quantità di analita in un campione. Dovrebbe essere scontato, ma è fondamentale rimarcare, che tale risultato non coincide praticamente mai col valore vero, \mu, a causa dell'inevitabile presenza di errori che si verificano durante la procedura sperimentale:
+\begin{equation} \label{eq:statistica:1}
+x_i = \mu\ + e
+\end{equation}
+
+Il termine e rappresenta l'errore della misura, ed è dato da due contributi, l'errore sistematico (in inglese bias) e l'errore casuale (o accidentale, in inglese random error), ed entrambi possono essere dovuti a più cause. Se si esegue un numero di misure ripetute n tendente ad infinito, il contributo degli errori casuali tende ad annullarsi, mentre quello degli errori sistematici permane.
+
+Se gli errori sistematici fossero nulli o comunque trascurabili rispetto agli errori casuali, come spesso accade per metodi analitici consolidati e validati, la media di infinite misure tenderebbe a \mu:
+\begin{equation} \label{eq:statistica:2}
+\lim_{n\to\infty} \bar{x} = \mu
+\end{equation}
+
+dove la media aritmetica è definita rispetto alle misure i-esime come:
+\begin{equation} \label{eq:statistica:3}
+\bar{x} = \frac{\sum_{i=1}^n x_i}{n}
+\end{equation}
+
+Se invece gli errori sistematici non fossero trascurabili, nella seconda equazione \mu\ non sarebbe il valore vero ma il valore atteso, cioè il valore vero più il contributo degli errori sistematici. Il valore atteso è anche detto \dvirg{media di popolazione}, in quanto sarebbe la media che si otterrebbe se si facessero infinite misure (cioè se si ottenesse tutta la \dvirg{popolazione} possibile di misure); sempre in questa definizione, la media data dall'equazione (\ref{eq:statistica:3}) per valori di n non infiniti è anche detta \dvirg{media campionaria}, in quanto è stata ottenuta da un (non infinito) gruppo (campione) di misure effettuate.
+
+Si può dimostrare che la media (\ref{eq:statistica:3}) è la miglior stima di \mu\ anche se $n$ è piccolo, in quanto il contributo degli errori casuali tende comunque a ridursi se si conducono anche solo poche misure ripetute. Ciò significa che, laddove possibile, è sempre opportuno eseguire più misure ripetute di una stessa analisi e calcolarne la media.
+
+La deviazione standard dei dati (o scarto tipo) è la radice quadrata della media dei quadrati degli scarti tra i singoli risultati e \mu, e indica quanto i risultati sperimentali di un'analisi sono dispersi, cioè differiscono tra loro:
+\begin{equation} \label{eq:statistica:4}
+\sigma\ = \sqrt{\frac{\sum_{i=1}^n (x_i - \mu)^2}{n}}
+\end{equation}
+
+Il quadrato della deviazione standard dà la varianza (\sigma\ap{2}). La grandezza definita dall'equazione (\ref{eq:statistica:4}) non è conoscibile in quanto \mu\ non è sperimentalmente noto, ma può essere stimata dall'equazione (\ref{eq:statistica:5}):
+
+\begin{equation} \label{eq:statistica:5}
+s = \sqrt{\frac{\sum_{i=1}^n (x_i - \hat{x})^2}{n-1}}
+\end{equation}
+
+
+La differenza tra i denominatori nelle definizioni (\ref{eq:statistica:4}) e (\ref{eq:statistica:5}) è dovuta a motivi statistici. Intuitivamente, se n è piccolo la media (\ref{eq:statistica:3}) potrebbe essere apprezzabilmente diversa da \mu, per cui la sommatoria dei quadrati degli scarti (il numeratore), calcolata rispetto a una media sbagliata, potrebbe sottostimare la sommatoria vera. Di conseguenza il denominatore viene a sua volta ridotto in modo da compensare la possibile sottostima del numeratore.
+
+Altre grandezze che si usano spesso per quantificare la dispersione dei risultati sperimentali sono la deviazione standard della media, $s_x$ , detta anche \dvirg{errore standard}, e la deviazione standard relativa (relative standard deviation, $\mathrm{RSD}$), definite rispettivamente come:
+	  
+\begin{equation} \label{eq:statistica:6}
+s_{\hat{x}} = \frac{s}{\sqrt{n}}
+\end{equation}
+
+\begin{equation} \label{eq:statistica:7}
+\mathrm{RDS} = \frac{s}{\hat{x}}
+\end{equation}
+
+Gli errori casuali hanno natura randomica, e si verificano in maniera tale che, ripetendo le misure sperimentali, i risultati ottenuti appaiono secondo una distribuzione Normale, detta anche distribuzione Gaussiana, mostrata in figura \ref{fig:statistica:1}. Questo tipo di distribuzione dei dati è quella più comunemente verificata in ambito sperimentale, anche se esistono eccezioni.
+
+La distribuzione gaussiana è definita da un'equazione che ha due parametri, \mu\ e \sigma. Sperimentalmente è possibile stimare la distribuzione gaussiana di una serie di misure ripetute usando le migliori stime disponibili per \mu\ e \sigma, cioè la media (\ref{eq:statistica:3}) e la deviazione standard (\ref{eq:statistica:5}).
+
+L'intervallo di fiducia (o di confidenza, confidence interval, $\mathrm{CI}$) è un intervallo di valori entro i quali si trova il valore atteso con una certa probabilità; quest'ultima è detta grado di fiducia (o grado di confidenza, o livello di confidenza, confidence level). Se sono noti il valore atteso \mu\ e la deviazione standard \sigma, il $\mathrm{CI}$ è dato da:
+\begin{equation} \label{eq:statistica:8}
+\mathrm{CI} = \mu\ \pm t\cdot \sigma_{\hat{x}}
+\end{equation}
+
+dove $\sigma_{\hat{x}}$ è la deviazione standard della media (definita analogamente alla (\ref{eq:statistica:6}) ma usando \sigma\ al posto di s), e $t$, detto parametro di Student, è un numero adimensionale che dipende dal grado di fiducia scelto. Sarebbe impossibile scegliere un grado di fiducia del 100 \%, poiché ciò implicherebbe che $t$ sia pari ad 8. Nelle misure chimico-analitiche si sceglie generalmente un grado di fiducia del 95 \%, e in tal caso $t = 1.96$. La probabilità residua (5\%) è indicata col simbolo \alpha, detto anche \dvirg{grado di significatività}.
+
+
+\fullpicturelab{07_001}{Distribuzione gaussiana dei risultati sperimentali di un'analisi}{}{statistica:1}
+
+Se \mu\ e \sigma\ e non sono noti ma solo stimati dai dati, il CI è dato da:
+\begin{equation} \label{eq:statistica:9}
+\mathrm{CI} = \bar{x} \pm t\cdot \sigma_{\hat{x}}
+\end{equation}
+
+In tal caso il parametro $t$ dipende, oltre che dal grado di fiducia, anche da n o meglio dai gradi di libertà; tale grandezza è indicata col simbolo \nu\ e, quando si eseguono misure ripetute che danno origine ad una media, è definita da:
+\begin{equation} \label{eq:statistica:10}
+\nu = n - 1
+\end{equation}
+
+In generale, invece, \nu\ è il numero di misure sperimentali meno il numero P di parametri valutati:
+\begin{equation} \label{eq:statistica:11}
+\nu = n - P
+\end{equation}
+
+In particolare, se il metodo analitico prevede una calibrazione, e la funzione di calibrazione è una retta (2 parametri), il numero di gradi di libertà è:
+\begin{equation} \label{eq:statistica:12}
+\nu = n - 2
+\end{equation}
+
+La tabella \ref{tab:statistica:1} riporta numerosi valori di $t$ in funzione dei gradi di libertà e del grado di fiducia scelto.
+
+Il CI è anche chiamato incertezza, poiché rappresenta quanto incerto è il risultato ottenuto: se il CI è ampio, il risultato è molto incerto in quanto il valore vero non è ben localizzato, mentre viceversa se il CI è più stretto il valore vero è meglio localizzato e quindi il risultato è maggiormente \dvirg{certo}.
+
+L'accuratezza è riferita all'equazione (\ref{eq:statistica:1}), cioè quantifica l'accordo tra il singolo risultato sperimentale e il valore vero. L'accuratezza dipende sia dagli errori casuali che da quelli sistematici.
+
+L'esattezza (che si riferisce a un metodo) valuta invece l'accordo tra il valore atteso e il valore vero, e dipende quindi dall'entità dei soli errori sistematici.
+
+
+\begin{table}
+\begin{tabular}{lccccc}
+1 coda a = & 0.1 & 0.05 & 0.025 & 0.01 & 0.005\\
+2 code a = & 0.2 & 0.1 & 0.05 & 0.02 & 0.01\\
+gradi libertà $\nu$ =1 & 3.078 & 6.314 & 12.706 & 31.821 & 63.656\\
+2 & 1.886 & 2.920 & 4.303 & 6.965 & 9.925 \\
+3 & 1.638 & 2.353 & 3.182 & 4.541 & 5.841 \\
+4 & 1.533 & 2.132 & 2.776 & 3.747 & 4.604 \\
+5 & 1.476 & 2.015 & 2.571 & 3.365 & 4.032 \\
+6 & 1.440 & 1.943 & 2.447 & 3.143 & 3.707 \\
+7 & 1.415 & 1.895 & 2.365 & 2.998 & 3.499 \\
+8 & 1.397 & 1.860 & 2.306 & 2.896 & 3.355 \\
+9 & 1.383 & 1.833 & 2.262 & 2.821 & 3.250 \\
+10 & 1.372 & 1.812 & 2.228 & 2.764 & 3.169 \\
+11 & 1.363 & 1.796 & 2.201 & 2.718 & 3.106 \\
+12 & 1.356 & 1.782 & 2.179 & 2.681 & 3.055 \\
+13 & 1.350 & 1.771 & 2.160 & 2.650 & 3.012 \\
+14 & 1.345 & 1.761 & 2.145 & 2.624 & 2.977 \\
+15 & 1.341 & 1.753 & 2.131 & 2.602 & 2.947 \\
+16 & 1.337 & 1.746 & 2.120 & 2.583 & 2.921 \\
+17 & 1.333 & 1.740 & 2.110 & 2.567 & 2.898 \\
+18 & 1.330 & 1.734 & 2.101 & 2.552 & 2.878 \\
+19 & 1.328 & 1.729 & 2.093 & 2.539 & 2.861 \\
+20 & 1.325 & 1.725 & 2.086 & 2.528 & 2.845 \\
+30 & 1.310 & 1.697 & 2.042 & 2.457 & 2.750 \\
+60 & 1.296 & 1.671 & 2.000 & 2.390 & 2.660 \\
+120 & 1.289 & 1.658 & 1.980 & 2.358 & 2.617 \\
+$\infty$ & 1.282 & 1.645 & 1.960 & 2.326 & 2.576 \\
+\end{tabular}
+\caption{Calori di $t$ in funzione dei gradi di libertà e del grado di fiducia scelto. I valori su sfondo grigio corrispondono a quelli relativi al grado di fiducia del 95\% (2 code, \alpha = 0.05), e sono quelli più usati in chimica analitica.}
+\label{tab:statistica:1}
+\end{table}
+
+La precisione (anch'essa riferita al metodo) è l'accordo tra misure indipendenti ottenute con un procedimento in condizioni definite, e dipende dagli errori casuali; la precisione viene quantificata dalla deviazione standard. Si parla più propriamente di ripetibilità se i risultati sono ottenuti sullo stesso campione, con lo stesso strumento, nello stesso laboratorio, dallo stesso operatore, e in un ristretto intervallo di tempo. Si parla invece di riproducibilità se cambia il laboratorio, o l'operatore, o lo strumento, o le misure sono state condotte a notevole distanza di tempo.
+
+
+
+\section{Calibrazione}
+
+Mentre nelle misure chimico-analitiche classiche (per esempio titolazioni e analisi gravimetriche) il segnale misurato (un volume di equivalenza oppure una massa) è direttamente correlabile alla concentrazione di analita presente nel campione, ciò non è vero nelle misure strumentali, dove il segnale sperimentalmente ottenuto (un'area in un picco cromatografico, un'assorbanza in una misura spettroscopica, una f.e.m. in una misura elettrochimica, ecc.) non è direttamente correlabile alla concentrazione di analita. L'operazione che permette di ricavare tale correlazione si chiama calibrazione (o taratura).
+
+In linea di principio, la calibrazione potrebbe essere eseguita una volta per tutte al primo utilizzo dello strumento, ed essere considerata valida per sempre. In realtà, la calibrazione va eseguita periodicamente, solitamente una volta al giorno, poiché la lenta deriva delle proprietà strumentali (per esempio, il degrado della colonna in cromatografia, della sorgente in spettroscopia, dell'elettrodo in elettrochimica, ecc.) comporta una lenta variazione dei parametri di calibrazione nel tempo. Anche con strumenti molto affidabili e procedure ben ripetibili una calibrazione può restare valida al massimo per qualche giorno.
+
+Esistono vari tipi di calibrazione; nel seguito sono descritti la calibrazione esterna e il metodo delle aggiunte standard.
+
+\subsection{Calibrazione esterna}
+
+La calibrazione esterna (anche chiamata semplicemente \emph{calibrazione}) è il metodo di calibrazione più comunemente utilizzato. Essa consiste nella misura del segnale strumentale di soluzioni a concentrazione nota (dette anche \dvirg{a titolo noto} oppure \dvirg{standard}) di analita.
+
+L'aggettivo \dvirg{esterna} si riferisce al fatto che le soluzioni di calibrazione non contengono il campione incognito (sono \dvirg{esterne} alla soluzione incognita), e vengono preparate a parte dall'operatore miscelando solvente (spesso acqua ultrapura) e analita.
+
+Nella calibrazione esterna si misura il segnale strumentale in corrispondenza ad almeno 4-5 valori di concentrazione di analita. Il segnale e la concentrazione sono grandezze correlate, nel senso che ad un aumento di concentrazione di analita corrisponde un aumento di segnale misurato. Se si diagrammano i valori di segnale in funzione della concentrazione, nei casi di interesse analitico più semplici e più comuni i punti sperimentali risultano allineati, cioè la funzione che lega le due variabili è una retta:
+\begin{equation} \label{eq:statistica:13}
+y = a + bx
+\end{equation}
+
+dove $y$ è il segnale strumentale, $x$ è la concentrazione di analita, $a$ è l'intercetta della retta e $b$ è la sua pendenza. La pendenza è detta fattore di risposta o sensibilità. La figura \ref{fig:statistica:2} mostra un esempio di calibrazione esterna con punti sperimentali allineati. Poiché il segnale strumentale dovrebbe essere nullo a concentrazioni nulle di analita, l'intercetta a della retta di calibrazione esterna dovrebbe essere pari a zero. Nei casi reali, la presenza di errori casuali fa sì che il valore di a che si ottiene sperimentalmente sia piccolo ma non nullo.
+
+\fullpicturelab{07_002}{
+Esempio di calibrazione esterna in una misura di assorbanza}{}{statistica:2}
+
+Una volta ottenuta la retta (\ref{eq:statistica:13}) di calibrazione, si procede a misurare il segnale strumentale del campione (o di una soluzione opportunamente diluita di esso). Solitamente si eseguono m misure ripetute, in modo da ottenere un valore medio:
+\begin{equation} \label{eq:statistica:14}
+\hat{y}_{camp} = \frac{\sum_{i=1}^m y_{comp,i}}{m}
+\end{equation}
+dove $\bar{y}_{camp}$,i sono le misure ripetute del segnale strumentale del campione, e $\bar{y}_{camp}$ è la loro media. La concentrazione $\bar{x}_{camp}$ di analita nel campione può quindi essere ricavata a partire dall'equazione (\ref{eq:statistica:13}) della retta di calibrazione, ed è pari a:
+\begin{equation} \label{eq:statistica:15}
+\hat{x}_{camp} = \frac{\hat{y}_{camp} - a}{b}
+\end{equation}
+
+\subsection{Metodo delle aggiunte standard}
+
+Il segnale strumentale non dovrebbe essere modificato dalla matrice, cioè dagli altri componenti del campione escluso l'analita, in quanto si intende che lo strumento usato sia sensibile solo all'analita di interesse, e che ogni altra sostanza non solo dia segnale nullo ma anche non perturbi il segnale dell'analita. In realtà ciò non è vero con certe tecniche, per certi analiti e/o in certi campioni: si parla in questi casi di effetto matrice. Se c'è effetto matrice, la calibrazione esterna fornisce risultati sbagliati in quanto le soluzioni di calibrazione non contengono la matrice mentre il campione sì.
+
+Per risolvere il problema dell'effetto matrice si può utilizzare il metodo delle aggiunte standard al posto della calibrazione esterna. In questo metodo, opportune quantità note di analita sono aggiunte direttamente al campione contenente l'analita a concentrazione incognita. Diagrammando il segnale strumentale misurato in funzione della concentrazione aggiunta, nei casi di interesse analitico più semplici e più comuni i punti sperimentali risultano allineati, e la funzione che lega le due variabili è una retta (equazione \ref{eq:statistica:13}).
+
+A differenza che nella calibrazione esterna, l'intercetta a è significativamente maggiore di zero, poiché anche se non si aggiunge nulla il campione contiene l'analita e dà quindi un segnale diverso da zero per $x = 0$. La figura \ref{fig:statistica:3} mostra un esempio di metodo delle aggiunte standard. Tutte le soluzioni standard contengono anche la matrice, per cui l'effetto matrice, se presente, si annulla.
+
+\fullpicturelab{07_003}{Esempio di metodo delle aggiunte standard in una misura di assorbanza}{}{statistica:3}
+
+La concentrazione $\bar{x}_{camp}$ di analita nel campione si ricava estrapolando la retta dei minimi quadrati ad y = 0:
+\begin{equation} \label{eq:statistica:16}
+\hat{x}_{camp} = \biggl|\frac{a}{b}\biggr|
+\end{equation}
+
+
+
+Intuitivamente, tale estrapolazione rappresenta la concentrazione di analita da togliere al campione affinché il segnale strumentale y si annulli, e quindi corrisponde alla concentrazione presente nel campione.
+
+Il metodo delle aggiunte standard ha un importante svantaggio rispetto a quello della calibrazione esterna. Mentre per quest'ultima ogni soluzione standard viene preparata una volta sola indipendentemente da quanti campioni si devono poi analizzare, nel metodo delle aggiunte standard è necessario preparare delle soluzioni standard diverse ogni volta che si analizza un campione diverso.
+
+Per tale motivo, il metodo delle aggiunte standard viene usato solo laddove si sospetta la presenza di effetti matrice significativi.
+
+\section{Regressione lineare}
+
+Le equazioni (\ref{eq:statistica:15}) e (\ref{eq:statistica:16}), rispettivamente nella calibrazione esterna e nel metodo delle aggiunte standard, permettono di ricavare la concentrazione di analita nel campione se si conoscono i parametri a e b. Tuttavia, i punti sperimentali che si ottengono durante una procedura di calibrazione, pur se teoricamente allineati, non lo saranno mai perfettamente a causa dell'inevitabile presenza di errori casuali, che naturalmente interessano anche le misure di calibrazione e non solo quelle del campione. Si pone quindi il problema di ricavare i valori di a e b che meglio rappresentano la relazione tra y e x, cioè è necessario ricavare la \dvirg{retta più probabile}. Tale retta si ottiene attraverso un'interpolazione (fitting) dei punti sperimentali.
+
+Il metodo di interpolazione più utilizzato è quello dei minimi quadrati. In questo metodo la retta ottenuta è quella per la quale è minima la somma dei quadrati degli scarti, cioè la differenza tra i valori sperimentali di y e i valori corrispondenti sulla retta. Nella sua formulazione più semplice, il metodo dei minimi quadrati richiede che i valori di x, variabile indipendente, abbiano incertezze trascurabili rispetto ai valori di y. Tale requisito è spesso verificato nelle analisi strumentali, in quanto $x$ è ottenuto dalla preparazione di soluzioni usando bilance analitiche e vetreria a volume accurato come pipette e matracci. Inoltre, è richiesto che la distribuzione degli errori sui valori di y sia Gaussiana.
+
+Si abbiano n coppie di dati sperimentali $x_i$, $y_i$, dove $y_i$ è il segnale misurato per la concentrazione $x_i$; $y_i$,retta sia il corrispondente valore di segnale sulla retta interpolante. Il calcolo di a e b può essere fatto ponendo minima la somma dei quadrati degli scarti tra il segnale e la retta:
+\begin{equation} \label{eq:statistica:17}
+\sum_{i=1}^n (y_i - y_{i,retta})^2 = \sum_{i=1}^n (y_i - a -bx_i)^2
+\end{equation}
+
+Tale funzione ha un minimo quando si annullano le derivate prime parziali:
+\begin{align*}
+\Biggl(\frac{\partial \sum_{i=1}^n (y_i - y_{i,retta})^2}{\partial a}\Biggr)_b & = \Biggl(\frac{\partial \sum_{i=1}^n (y_i - y_{i,retta})^2}{\partial b}\Biggr)_a = 0 \\
+\Biggl(\frac{\partial \sum_{i=1}^n (y_i - y_{i,retta})^2}{\partial a}\Biggr)_b & = 2 \sum_{i=1}^n (y_i - y_{i,retta})^2 \Biggl(\frac{\partial \sum_{i=1}^n (y_i - y_{i,retta})^2}{\partial a}\Biggr)_b \\
+& = 2 \sum_{i=1}^n (y_i - a - bx_i) \cdot (-1) = 0\\
+\Biggl(\frac{\partial \sum_{i=1}^n (y_i - y_{i,retta})^2}{\partial b}\Biggr)_a & = 2 \sum_{i=1}^n (y_i - y_{i,retta})^2 \Biggl(\frac{\partial \sum_{i=1}^n (y_i - y_{i,retta})^2}{\partial b}\Biggr)_a \\
+& = 2 \sum_{i=1}^n (y_i - a - bx_i) \cdot (- x_i) = 0\\
+\end{align*}
+
+da cui si ottiene il sistema:
+\[
+\begin{cases}
+na + b\sum_{i=1}^n x_i = \sum_{i=1}^n y_i\\
+a \sum_{i=1}^n x_i + b \sum_{i=1}^n x_i^2 = \sum_{i=1}^n x_i y_i
+\end{cases}
+\]
+
+Le cui soluzioni sono
+\begin{equation} \label{eq:statistica:18}
+b = \dfrac{n \sum_{i=1}^n (x_i y_i) - \sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n \sum_{i=1}^n (x_i - \hat{x})^2} = \dfrac{n \sum_{i=1}^n (x_i y_i - \sum_{i=1}^n x_i \sum_{i=1}^n y_i)}{n \sum_{i=1}^n (x_i^2) - \biggl(\sum_{i=1}^n x_i\biggr)}
+\end{equation}
+
+\begin{equation} \label{eq:statistica:19}
+a = \hat{y} - b \hat{x} = \dfrac{\sum_{i=1}^n x_i^2 \sum_{i=1}^n y_i - \sum_{i=1}^n x_i \sum_{i=1}^n x_i y_i}{n \sum_{i=1}^n (x_i - \hat{x})^2} = \dfrac{\sum_{i=1}^n x_i^2 \sum_{i=1}^n y_i - \sum_{i=1}^n x_i \sum_{i=1}^n x_i y_i}{n \sum_{i=1}^n (x_i^2) - \biggl(\sum_{i=1}^n x_i \biggr)^2}
+\end{equation}
+dove $\bar{x}$ è la media delle $x_i$ e $\bar{y}$ è la media delle $y_i$.
+
+Nelle formule (\ref{eq:statistica:18}) e (\ref{eq:statistica:19}), e anche nelle formule seguenti, si danno due tipi di scrittura: la prima (quella a sinistra) è più compatta, mentre la seconda (a destra) permette il calcolo più agevole con una calcolatrice o con excel. Sono in ogni caso formulazioni identiche tra loro.
+
+Oltre che il loro valore numerico, per i parametri a e b è possibile anche stimare la deviazione standard, che si può dimostrare essere pari a:
+\begin{equation} \label{eq:statistica:20}
+s_b = \frac{s_{x/y}}{\sqrt{\sum_{i=1}^n (x_i - \hat{x})^2}} = \frac{s_{x/y}}{\sqrt{\sum_{i=1}^n x_i^2 - \frac{\biggl(\sum_{i=1}^n x_i \biggr)^2}{n}}}
+\end{equation}
+
+\begin{equation} \label{eq:statistica:21}
+s_a = s_{y/x} \cdot \sqrt{\frac{\sum_{i=1}^n x_i^2}{n \sum_{i=1}^n (x_i - \bar{x})^2}} = s_{y/x} \cdot \sqrt{\frac{\sum_{i=1}^n x_i^2}{n \sum_{i=1}^n x_i^2 - \biggl(\sum_{i=1}^n x_i \biggr)^2}}
+\end{equation}
+
+dove il termine $s_{y/x}$ è la deviazione standard degli scarti tra i punti e la retta:
+\begin{equation} \label{eq:statistica:22}
+s_{y/x} = \sqrt{\frac{\sum_{i=1}^n (y_i - y_{i,retta})^2}{n-2}} = \sqrt{\frac{\sum_{i=1}^n y_i^2 - \frac{\biggl(\sum_{i=1}^n y_i\biggr)^2}{n} - b\cdot \Biggr(\sum_{i=1}^n x_i y_i - \frac{\sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n}\Biggr)}{n-2}}
+\end{equation}
+
+Al denominatore dell'equazione (\ref{eq:statistica:22}) va il termine n - 2 perché i parametri della retta sono due, a e b. La deviazione standard della retta è:
+\begin{equation} \label{eq:statistica:23}
+s_{retta} = s_{y/x} \sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{\sum_{i=1}^n (x_i - \bar{x})^2}} = s_{y/x} \sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{\sum_{i=1}^n x_i^2 - \frac{\biggl(\sum_{i=1}^n x_i\biggr)^2}{n}}}
+\end{equation}
+dove $x_0$ è un ascissa qualsiasi.
+
+La deviazione standard della retta non è costante lungo la retta medesima, in quanto dipende appunto dall'ascissa in cui viene calcolata. Se il calcolo è ripetuto per ogni $x_0$ compresa nell'intervallo calibrato è possibile tracciare le fasce di confidenza della retta per un grado di fiducia scelto (ad es. del 95 \%). Le fasce di confidenza sono pari a $y \pm t\cdot s_{retta}$ e vi è una probabilità del 95\% che al loro interno sia presente la retta \dvirg{vera}. Le fasce di confidenza rappresentano quindi l'incertezza sulla retta. Un esempio di retta con le relative fasce di confidenza è mostrato in figura \ref{fig:statistica:4}.
+
+\fullpicturelab{07_004}{Interpolazione dei punti di una calibrazione esterna con il metodo dei minimi quadrati, con evidenziate le fasce di confidenza della retta per un grado di fiducia del 95 \%}{}{statistica:4}
+
+È possibile (anzi è frequente) che ad una certa $x_i$ indagata in calibrazione corrisponda più di un valore di $y_i$, ad esempio quando una misura di una medesima soluzione standard è ripetuta più volte. In questi casi tutti i valori di $y_i$ ottenuti vanno presi in considerazione per il calcolo della retta dei minimi quadrati e delle relative deviazioni standard, in modo da poter correttamente mantenere sia la numerosità (n) dei punti di calibrazione, sia la loro dispersione ($y_i$ - $y_{i,retta}$). Se si calcolasse un valore medio di y corrispondente ad una certa $x_i$, e si inserisse solo questa media nel calcolo della retta dei minimi quadrati, i valori di a e b sarebbero identici, ma le loro deviazioni standard, così come le fasce di confidenza della retta, sarebbero errate.
+
+\section{Incertezza nelle misure sperimentali}
+
+Come visto con l'equazione (\ref{eq:statistica:9}), l'incertezza (o intervallo di fiducia, CI) su una misura sperimentale rappresenta un intervallo entro il quale è compreso il valore atteso con una probabilità pari al grado di fiducia scelto (di solito il 95\%). Nei casi, molto frequenti per metodi consolidati e validati, in cui gli errori sistematici siano trascurabili rispetto a quelli casuali, il valore atteso coincide col valore vero, per cui è il valore vero ad essere compreso entro l'intervallo di fiducia.
+
+Ogni risultato sperimentale deve essere accompagnato da un'indicazione della sua incertezza, poiché essa determina statisticamente la posizione del valore vero (o atteso) e fa parte del risultato stesso.
+
+\subsection{Legge della propagazione degli errori}
+
+Se un risultato sperimentale è una media di diverse ripetute, e la media di per sé rappresenta il risultato finale voluto (concentrazione di analita nel campione), l'incertezza è calcolabile a partire dalla deviazione standard della media (\ref{eq:statistica:6}) attraverso l'equazione (\ref{eq:statistica:9}). Questo calcolo immediato dell'incertezza non è tuttavia quasi mai possibile in chimica analitica strumentale, poiché il dato sperimentale è la media di misure ripetute di un segnale strumentale, e la concentrazione di analita nel campione si ottiene dal segnale attraverso la conversione con la retta di calibrazione, che a sua volta è affetta da incertezza.
+
+In particolare, nel caso della calibrazione esterna, dove la concentrazione $\bar{x}_{camp}$ di analita nel campione si ottiene dall'equazione (\ref{eq:statistica:15}), l'incertezza su $\bar{x}_{camp}$ dipende dall'incertezza su $\bar{y}_{camp}$ , su a e su
+b, mentre nel caso del metodo delle aggiunte standard, per il quale si applica l'equazione (\ref{eq:statistica:16}), l'incertezza su $\bar{x}_{camp}$ dipende dall'incertezza su a e su b.
+
+Se poi il campione da analizzare era stato preventivamente diluito prima di effettuare la misura, il risultato sperimentale si ottiene moltiplicandolo il risultato dell'equazione (\ref{eq:statistica:15}) o (\ref{eq:statistica:16}) per il fattore di diluizione, che a sua volta è affetto da incertezza.
+
+Il risultato finale dell'analisi (la concentrazione di analita nel campione originario) si ottiene quindi attraverso una formula, ed è intuitivo che l'incertezza del risultato finale debba tenere conto di tutte le fonti di incertezza prima menzionate.
+
+La legge statistica che permette di calcolare l'incertezza sul risultato finale, data l'incertezza dei vari contributi e data una formula che lega tra loro le grandezze di interesse, è la legge della propagazione degli errori (detta anche legge della propagazione delle incertezze). Se f è la grandezza finale, che dipende da p, q, $\dots$ attraverso una formula, e $s_p$, $s_q$, $\dots$ sono le deviazioni standard su p, q, $\dots$, indipendenti tra loro, la deviazione standard su f (sf) si ottiene da:
+\begin{equation} \label{eq:statistica:24}
+s_f = \sqrt{\biggl(\frac{\delta f}{\delta p}\biggr)^2 (s_p)^2 + \biggl(\frac{\delta f}{\delta q}\biggr)^2 (s_q)^2 + \dots}
+\end{equation}
+dove il simbolo \delta indica una derivata parziale. La deviazione standard può poi essere convertita in incertezza attraverso l'equazione (\ref{eq:statistica:9}).
+
+Esempio: si disponga del valore del logaritmo di una concentrazione, $\log C$, e della sua deviazione standard, $s_{\log C}$, e si voglia calcolare il valore di $C$ e della deviazione standard su $C$, $s_C$. La formula che lega $C$ con $\log C$ è:
+\[
+C = 10^{\log C}
+\]
+
+Per ricavare $s_C$ è necessario applicare l'equazione (\ref{eq:statistica:24}). Si ottiene:
+\[
+s_C = \sqrt{\biggl(\frac{\delta 10^{\log C}}{\delta \log C}\biggr)^2 (s_{\log C})^2} = \sqrt{(\ln 10 \cdot 10^{\log C})^2 (s_{\log C})^2} = \ln 10 \cdot C \cdot s_{\log C}
+\]
+
+Se uno dei contributi d'incertezza è molto più piccolo degli altri, l'equazione (\ref{eq:statistica:24}) può essere notevolmente semplificata. Nelle misure chimico-analitiche strumentali il contributo dato dalle diluizioni del campione ha spesso incertezza trascurabile, se queste sono state fatte mediante vetreria tarata (matracci, pipette e/o burette), poiché come già detto l'incertezza volumetrica associata a tale vetreria è molto piccola.
+
+Esempio: se la concentrazione di analita nel campione originario, $C$, si ottiene moltiplicando il dato ottenuto $\bar{x}_{camp}$ per un fattore di diluizione $k$, per cui la formula è:
+\begin{equation} \label{eq:statistica:25}
+C = k \bar{x}_{camp}
+\end{equation}
+
+Applicando l'equazione (\ref{eq:statistica:24}) sulla (\ref{eq:statistica:25}) e considerando trascurabile la deviazione standard su k si ottiene:
+\begin{equation} \label{eq:statistica:26}
+s_C = k s_{\bar{x}_{camp}}
+\end{equation}
+
+\subsection{Incertezza nella calibrazione esterna}
+
+Per ricavare l'incertezza su $\bar{x}_{camp}$ è necessario applicare la legge della propagazione degli errori sull'equazione (\ref{eq:statistica:15}), tenendo quindi conto dell'incertezza su $\bar{y}_{camp}$ , su a e su b. Tuttavia, in questo caso non si può utilizzare la legge espressa nella formulazione (\ref{eq:statistica:24}): tale legge richiede che le incertezze siano tra loro indipendenti, ma ciò non è vero per le incertezze su a e su b, che sono mutualmente dipendenti, in quanto la modifica del parametro a ha un effetto sul valore di b (e analoghe conseguenze si avrebbero per le loro incertezze). In tali casi è necessario utilizzare una formula più complicata per la legge della propagazione degli errori.
+
+In questa sede viene dato direttamente il risultato da utilizzare durante l'elaborazione dei dati, cioè la formula per il calcolo della deviazione standard su $\bar{x}_{camp}$ , noti i parametri di calibrazione e le altre grandezze definite nei paragrafi precedenti:
+\begin{align} \label{eq:statistica:27}
+s_{\bar{x}_{camp}} & = \frac{s_{x/y}}{b} \cdot \sqrt{\frac{1}{m} + \frac{1}{n} + \frac{(\bar{y}_{camp} - \bar{y})^2}{b^2 \cdot \sum_{i=1}^n (x_i - \bar{x})^2}}\\
+& = \frac{s_{x/y}}{b} \cdot \sqrt{\frac{1}{m} + \frac{1}{m} + \frac{(\bar{y}_{camp} - \bar{y})^2}{b^2 \cdot \Biggl(\sum_{i=1}^n x_i \frac{(\sum_{i=1}^n x_i)^2}{n} \Biggr)}}
+\end{align}
+
+Se il campione non ha subito delle diluizioni prima di essere analizzato, allora $\bar{x}_{camp}$ è anche la concentrazione di analita nel campione originario, C, e camp è anche la deviazione standard su C. Se invece il campione ha subito delle diluizioni, tali diluizioni dovranno essere considerate nel calcolo di C e della deviazione standard su C attraverso le equazioni \ref{eq:statistica:25} e \ref{eq:statistica:26}.
+
+L'equazione (\ref{eq:statistica:27}) dimostra che un metodo analitico dovrebbe preferenzialmente avere un'elevata sensibilità, cioè un elevato valore di b, in quanto la deviazione standard su $\bar{x}_{camp}$ è inversamente proporzionale a b: al crescere della sensibilità, a parità degli altri parametri, il metodo analitico risulta più preciso.
+
+L'equazione (\ref{eq:statistica:27}) mostra anche un'altro aspetto analiticamente interessante quando si calibra mediante calibrazione esterna. Il termine $\bar{y}_{camp}$ - $\bar{y}$ è presente come numeratore nella (\ref{eq:statistica:27}), e l'incertezza su $\bar{x}_{camp}$ è proporzionale ad esso. Ciò significa che tanto più $\bar{y}_{camp}$ è vicino ad $\bar{y}$, tanto minore è l'incertezza su $\bar{x}_{camp}$ , e viceversa, cioè che l'errore su $x$ è minimo al centro della retta, ed è tanto maggiore quanto maggiore è la distanza da tale centro. Per minimizzare l'incertezza sul risultato finale è quindi opportuno che il segnale strumentale del campione sia il più vicino possibile al centro dell'intervallo di calibrazione indagato.
+
+Infine, si deve evidenziare che, a prescindere dall'incertezza del risultato finale, è comunque sempre necessario che $\bar{y}_{camp}$ cada all'interno dell'intervallo indagato in fase di calibrazione, in quanto la funzione fittata per la calibrazione esterna è valida rigorosamente solo entro tale intervallo. Infatti, è possibile che al di fuori dell'intervallo indagato la funzione che lega $y$ ad $x$ non sia più una retta per problemi di saturazione strumentale o per altri motivi. Se $\bar{y}_{camp}$ cade al di fuori dell'intervallo di calibrazione, il campione va opportunamente diluito/concentrato, oppure è necessario ottenere altri punti in fase di calibrazione.
+
+\subsection{Incertezza nel metodo delle aggiunte standard}
+Si può dimostrare che la deviazione standard sul valore estrapolato è pari a:
+\begin{equation} \label{eq:statistica:28}
+s_{\bar{x}_{camp}} = \frac{s_{y/x}}{b} \cdot \sqrt{\frac{1}{n} + \frac{\bar{y}^2}{b^2 \cdot \sum_{i=1}^n (x_i - \bar{x})^2}}
+\end{equation}
+
+L'equazione (\ref{eq:statistica:28}) è quasi identica alla (\ref{eq:statistica:27}) ottenuta per la calibrazione esterna. L'unica differenza è che nella (\ref{eq:statistica:28}) il termine 1/m è zero perché $\bar{y}_{camp}$ vale zero per definizione in corrispondenza di $\bar{x}_{camp}$ , e quindi è come se fosse esattamente noto, con $m = \infty$.
+
+Nonostante l'assenza del termine 1/m, le deviazioni standard su $\bar{x}_{camp}$ ottenute col metodo delle aggiunte standard potrebbero comunque essere maggiori (cioè peggiori) di quelle ottenute con la calibrazione esterna, poiché con le aggiunte standard il valore di $\bar{x}_{camp}$ si trova al di fuori dell'intervallo calibrato, cioè dove le fasce di confidenza sono allargate.
+
+Anche col metodo delle aggiunte standard, ovviamente, le eventuali diluizioni eseguite sul campione dovranno essere considerate nel calcolo di C e della sua deviazione standard. E anche con questa calibrazione la deviazione standard su $\bar{x}_{camp}$ è inversamente proporzionale alla sensibilità b e quindi è preferibile che quest'ultima sia la più elevata possibile.
+
+\section{Coefficiente di correlazione}
+
+Il coefficiente di correlazione $R$ misura il grado di correlazione tra le variabili $x$ e $y$, nel senso che una variazione di $x$ produce una variazione prevedibile di $y$. $R$ varia tra +1 e -1. Quanto più $R$ si avvicina ad 1 in valore assoluto tanto maggiore è la correlazione tra i punti sperimentali ottenuta con la funzione scelta (per esempio la retta), mentre quanto più $R$ si avvicina a 0 tanto minore (e al limite nulla) è la correlazione. $R$ è definito da:
+\begin{equation} \label{eq:statistica:29}
+\mathrm{R} = \frac{n \cdot \sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \cdot \sum_{i=1}^n y_i}{\sqrt{\Biggl(n \sum_{i=1}^n (x_i^2) - \biggl(\sum_{i=1}^n x_i \biggr)^2 \Biggr) \cdot \Biggl(n \sum_{i=1}^n (y_i^2) - \biggl(\sum_{i=1}^n y_i \biggr)^2}}
+\end{equation}
+
+Il quadrato di $R$ viene invece definito come coefficiente di determinazione. $R$ (oppure $R^2$) viene talvolta utilizzato per valutare la bontà di un'interpolazione, di solito rettilinea, e per giustificare la scelta della retta come funzione interpolante. Tuttavia tale pratica può portare a conclusioni errate.
+
+Infatti, non necessariamente un valore di $R$ vicino a $+1$ o $-1$ indica che i punti sperimentali siano rappresentati in maniera ottimale da una retta. Ad esempio, il valore di $R$ ottenuto con interpolazione rettilinea dei dati di figura \ref{fig:statistica:5} è prossimo ad 1, ma è visivamente evidente che i punti sperimentali presentano una curvatura. La valutazione della bontà di un'interpolazione rettilinea non può prescindere da un'analisi \dvirg{visiva} dei punti sperimentali.
+
+\fullpicturelab{07_005}{Esempio di interpolazione di punti sperimentali con una retta, e valore di $R$ ottenuto}{}{statistica:5}
+
+\section{Risultati di una misura sperimentale}
+
+Quando si conduce una misura sperimentale con metodo strumentale è necessario fornire tutti i risultati che riguardano sia gli standard di calibrazione che il campione. Nel caso degli standard è necessario riportare in forma tabellare i valori di concentrazione e di segnale strumentale ottenuti, ed evidenziare i punti sperimentali su grafico. Tali punti devono essere fittati con una retta dei minimi quadrati, che permette di ottenere l'intercetta a e la pendenza b con le rispettive deviazioni standard sa e sb, e quindi con le rispettive incertezze.
+
+Su grafico devono inoltre essere visibili le fasce di confidenza della retta (o alternativamente, tali fasce possono essere fornite in forma tabellare per alcuni punti sperimentali, ad esempio gli stessi punti usati nella calibrazione). Infine, dopo i vari calcoli si ottiene la concentrazione di analita $\bar{x}_{camp}$ con la sua incertezza.
+
+Se il campione è stato diluito prima dell'analisi, o se comunque $\bar{x}_{camp}$ non rappresenta la concentrazione di analita nel campione sottoposto ad analisi, vanno riportati anche il valore di C e della sua incertezza. Riassumendo, i dati da fornire sono:
+\begin{align*}
+& b \pm t \cdot s_b\\
+& a \pm t \cdot s_a\\
+& y \pm t \cdot s_{retta}\\
+& \bar{x}_{camp} \pm t \cdot s_{\bar{x}_{camp}}\\
+& C \pm t \cdot s_C \quad (\text{solo se} C \neq \bar{x}_{camp})\\
+\end{align*}
+
+Il valore di $t$ da utilizzare dipende dal numero n dei punti utilizzati per la calibrazione (contando anche le ripetute di ogni soluzione standard), non da quelli utilizzati per mediare il segnale strumentale durante la misura dell'incognito (m). Ciò in quanto è soprattutto l'incertezza della retta di calibrazione che influenza l'incertezza sperimentale su $\bar{x}_{camp}$ .
+
+Per ricavare i gradi di libertà \nu\ ($\nu\ = n - P$), P è pari a 2 se, come di solito accade, la funzione di calibrazione è una retta. I valori di $t$ sono quelli tabulati in Tabella \ref{tab:statistica:1}.
+
+\subsection{Test statistici}
+
+I test statistici (o test di significatività) hanno lo scopo di permettere il confronto tra due risultati sperimentali ottenuti in due esperimenti diversi, oppure tra un risultato sperimentale e il valore vero.
+
+Naturalmente, a causa degli errori casuali, i due risultati posti a confronto sono (quasi sempre) numericamente differenti tra di loro; il test ha lo scopo di verificare se questa differenza numerica è dovuta solo ad errori casuali (per cui in realtà i risultati sono uguali, e solo casualmente sono venuti diversi), o invece è dovuta anche a errori sistematici (per cui i risultati sono effettivamente differenti).
+
+Per eseguire il test si procede come segue:
+\begin{enumerate}
+\item Si formula l'ipotesi nulla, H\ped{0}, per il test: non c'è differenza significativa tra i due risultati posti a confronto;
+\item Si formula l'ipotesi alternativa H\ped{1}, che è l'opposto dell'ipotesi nulla: c'è differenza significativa tra i risultati posti a confronto;
+\item Si calcola una grandezza, detta valore critico, e la si confronta con quella tabulata per il livello di fiducia scelto; se il valore calcolato è maggiore di quello tabulato allora la differenza tra i due risultati è significativa, cioè vale H\ped{1}, altrimenti se è minore la differenza non è significativa cioè vale H\ped{0}. Il calcolo del valore critico viene fatto utilizzando formule differenti a seconda del tipo di confronto che deve essere fatto (come sarà chiarito in seguito).
+\end{enumerate}
+
+Esistono test a una o due code. Un test è a due code quando si vuole valutare se un risultato è diverso dall'altro (maggiore o minore), ed è questo il test che più frequentemente conviene eseguire. Alternativamente, il test è ad una coda quando si vuole valutare se un risultato è maggiore dell'altro.
+
+\subsection{Test statistico di Student}
+
+Il test statistico di Student permette di confrontare un valore sperimentale, quindi una media $\bar{x}$ caratterizzata da una certa deviazione standard $s$, con un valore di riferimento \mu, che come tale è privo di incertezza; ad esempio \mu\ può essere il valore riportato sull'etichetta di un prodotto commerciale, e quindi in linea di principio è il valore vero, oppure è un limite di legge.
+
+Nel test statistico di Student il valore critico da calcolare è la grandezza $t$ così definita:
+\begin{equation} \label{eq:statistica:30}
+t = \frac{|\bar{x}_{camp} - \mu|}{s_{\bar{x}_{camp}}}
+\end{equation}
+
+Il valore assoluto è motivato dal fatto che $t$ deve essere un numero positivo. Tale valore va confrontato col valore tabulato, che viene preso dalla tabella \ref{tab:statistica:1} sulla base del numero di gradi di libertà e del grado di fiducia scelto (di solito 95\%), e del fatto che il test sia a due code (come si fa più spesso) o a una coda. Se il valore calcolato per $t$ è minore del valore tabulato, l'ipotesi nulla viene accettata. In altre parole non ci sono errori sistematici nelle misure eseguite (o, meglio ancora, gli errori sistematici sono trascurabili rispetto a quelli casuali).
+
+La formula (\ref{eq:statistica:30}) suggerisce come il valore critico calcolato risulti grande se la differenza tra il valore sperimentale e quello vero è grande (il numeratore), a meno che anche il denominatore (la deviazione standard) non sia grande. Quindi, se i due valori sono molto diversi, ma anche la deviazione standard è grande, è possibile che la differenza osservata sia attribuibile ad errori casuali, cioè che non ci siano errori sistematici significativi. Viceversa, il valore calcolato può risultare grande anche con un numeratore piccolo, se il denominatore è a sua volta piccolo.
+
+La definizione (\ref{eq:statistica:30}) è quindi una misura della differenza tra i due valori confrontati usando come \dvirg{metro di misura} la deviazione standard sperimentale.
+
+Nella formula (\ref{eq:statistica:30}) i valori di $\bar{x}_{camp}$ e $s_{\bar{x}_{camp}}$ da inserire sono differenti a seconda del tipo di misura effettuata. Sono possibili tre situazioni comuni.
+\begin{enumerate}
+\item $\bar{x}_{camp}$ è una media di misure ripetute (ad esempio ottenute da una serie di titolazioni); in tal caso $s_{\bar{x}_{camp}}$ è la deviazione standard della media (equazione \ref{eq:statistica:6}), mentre i gradi di libertà sono $\nu\ = n - 1$, con $n = \text{numero di misure ripetute}$ per ottenere la media.
+\item $\bar{x}_{camp}$ è stato ottenuto attraverso una retta di calibrazione, esterna o aggiunte standard, rispettivamente con le equazioni (\ref{eq:statistica:15}) o (\ref{eq:statistica:16}); in tal caso $s_{\bar{x}_{camp}}$ è la sua deviazione standard (equazioni \ref{eq:statistica:27} o \ref{eq:statistica:28}).
+\item $\bar{x}_{camp}$ è stato ottenuto attraverso una retta di calibrazione, esterna o aggiunte standard, rispettivamente con le equazioni (\ref{eq:statistica:15}) o (\ref{eq:statistica:16}), ma non rappresenta la concentrazione di analita nel campione perché sono state operate delle diluizioni.In tal caso, invece che $\bar{x}_{camp}$ e $s_{\bar{x}_{camp}}$ nell'equazione (\ref{eq:statistica:30}) bisogna utilizzare le corrispondenti grandezze $C$ e $s_C$ - cfr. equazioni \ref{eq:statistica:25} e \ref{eq:statistica:26}.
+\end{enumerate}
+
+In entrambi i casi 2 e 3 precedenti, il numero di gradi di libertà \nu\ è pari a $n - P$, dove $P = 2$ per dati ottenuti da calibrazioni lineari (una retta ha due parametri), ed n è pari al numero di punti di calibrazione. Nel computare correttamente il valore di $n$ e quindi di \nu\ vanno conteggiate le eventuali ripetute effettuate durante la calibrazione.
+
+
+
+\subsection{t-test di Student}
+
+Tale test permette di confrontare due set di dati A e B, cioè due serie di dati ciascuna caratterizzata da una propria media ed una propria deviazione standard. Ciò risulta utile in svariate situazioni: ad esempio per confrontare tra loro i risultati ottenuti con due diversi metodi (analisi condotte sullo stesso campione e dallo stesso operatore) o due diversi operatori (analisi condotte sullo stesso campione e con lo stesso metodo) o due diversi campioni (analisi condotte dallo stesso operatore e con lo stesso metodo).
+
+Nel t-test di Student il valore critico da calcolare è la grandezza $t$ così definita:
+\begin{equation} \label{eq:statistica:31}
+t = \frac{|\bar{x}_{camp,A} - \bar{x}_{camp,B}|}{\sqrt{s_{\bar{x}_{camp,A}} + \sqrt{s_{\bar{x}_{camp,B}}}}}
+\end{equation}
+
+Tale valore va confrontato col valore tabulato, sempre preso dalla tabella \ref{tab:statistica:1} sulla base del numero di gradi di libertà \nu\ dato dalla formula seguente (è una sorta di media pesata) e del grado di fiducia scelto (di solito 95\%):
+\begin{equation} \label{eq:statistica:32}
+v = \frac{\bigl(s_{\bar{x}_{camp,A}}^2 + s_{\bar{x}_{camp,B}}^2\bigr)^2}{\frac{s_{\bar{x}_{camp,A}}^4}{n_A - P} + \frac{s_{\bar{x}_{camp,B}}^4}{n_B - P}}
+\end{equation}
+
+Il valore ottenuto con l'equazione (\ref{eq:statistica:32}) spesso non è intero. Sebbene in tabella \ref{tab:statistica:1} si possano inserire valori di $t$ anche per gradi di libertà non interi, si preferisce arrotondare il risultato della (\ref{eq:statistica:32}) a un intero.
+
+ Prudenzialmente è meglio troncare \nu\ sull'intero più basso (per esempio 13.973 diviene 13), in modo da ottenere un valore critico $t$ più grande (t cresce al decrescere di \nu, vedi tabella \ref{tab:statistica:1}). Questa scelta permette di concludere meno frequentemente che due dati differiscono tra loro (appunto perché il valore critico è più grande), evenienza che di solito può comportare delle decisioni con pesanti conseguenze pratiche (si pensi ad esempio al superamento di un limite di legge).
+
+Se il valore critico calcolato con l'equazione (\ref{eq:statistica:31}) è minore del valore tabulato di $t$, l'ipotesi nulla viene accettata. In altre parole non ci sono differenze di origine sistematica tra le misure eseguite (o, meglio ancora, le differenze di origine sistematica sono trascurabili rispetto a quelle di origine casuale).
+
+Come nel caso del test statistico di Student, anche in questo caso i valori da inserire nelle equazioni (\ref{eq:statistica:31}) e (\ref{eq:statistica:32}) sono differenti a seconda del tipo di misura effettuata. Si danno i medesimi tre casi visti in precedenza.
+\begin{itemize}
+\item Se i risultati posti a confronto sono delle medie di misure ripetute, le rispettive deviazioni standard sono quelle della medie (equazione \ref{eq:statistica:6}), $n_A$ e $n_B$ sono il numero di misure ripetute eseguite per ricavare rispettivamente le medie di A e B, e $P = 1$.
+\item Se i risultati posti a confronto sono stati ottenuti da rette di calibrazione (esterna o aggiunte standard) con le equazioni (\ref{eq:statistica:15}) o (\ref{eq:statistica:16}), le deviazioni standard sono quelle ricavate dalle equazioni \ref{eq:statistica:27} o \ref{eq:statistica:28}
+\item Se i risultati posti a confronto sono stati ottenuti da rette di calibrazione (esterna o aggiunte standard) con le equazioni (\ref{eq:statistica:15}) o (\ref{eq:statistica:16}), ma sono state operate delle diluizioni, vanno posti a confronto i dati corretti con le equazioni \ref{eq:statistica:25} e \ref{eq:statistica:26}.
+\end{itemize}
+
+In entrambi i casi 2) e 3) precedenti, $P = 2$, ed $n_A$ e $n_B$ sono il numero di punti di calibrazione raccolti per ottenere i valori di A e B, conteggiando le eventuali ripetute in ciascuna calibrazione.
+
+\section{Il limite di rivelabilità}
+
+Il limite di rivelabilità (limit of detection, LOD) rappresenta la minima concentrazione di analita che si può ragionevolmente sempre determinare col metodo in esame. Un metodo analitico, soprattutto se volto all'analisi di sostanze presenti a bassa concentrazione nei campioni considerati, dovrebbe avere un LOD basso.
+
+Se si fanno delle misure ripetute di un campione, sia che esso contenga sia che non contenga l'analita, il segnale strumentale cambia ripetendo la misura, a causa degli inevitabili errori casuali presenti nel metodo. Quindi anche i segnali che si misurano in un campione che non contiene l'analita possono variare entro un certo intervallo secondo una distribuzione Gaussiana come quella mostrata in figura \ref{fig:statistica:6}. Considerando un grado di fiducia del 95\%, vi è quindi una probabilità del 95\% che ogni segnale che cade nel seguente intervallo sia da attribuirsi all'assenza di analita:
+\[
+y_{\text{ottenibili senza analita}} \leq \bar{y}_{\text{senza analita}} + t \cdot s_{\text{senza analita}}
+\]
+dove $\bar{y}_{\text{senza analita}}$ è il segnale medio che si ottiene ripetendo le misure di un campione che non contiene l'analita, ed ssenza analita è la deviazione standard di queste misure.
+
+Poiché qui interessa solo il limite superiore dell'intervallo di fiducia (al di sotto del limite inferiore l'analita è certamente assente), allora il $t$ da scegliere va riferito ad una coda, per cui per un grado di fiducia del 95\% esso vale 1.645, quindi si ha che il massimo segnale misurabile in assenza di analita è pari a:
+\begin{equation} \label{eq:statistica:33}
+y_{critico} = \bar{y}_{\text{senza analita}} + 1.645 \cdot s_{\text{senza analita}}
+\end{equation}
+
+\fullpicturelab{07_006}{Distribuzione gaussiana dei segnali strumentali ottenibili in assenza di analita, limite critico, ed errore di falso positivo}{}{statistica:6}
+
+Tale segnale massimo, detto limite critico, discrimina la presenza dall'assenza dell'analita nel campione. Tuttavia non va dimenticato che la gaussiana ha una coda di area pari al 5\% che è tagliata fuori dal limite, per cui vi è una probabilità del 5\% di misurare un segnale maggiore del limite critico pur in assenza di analita. Questo avrebbe la conseguenza di commettere un errore di falso positivo, cioè di affermare che l'analita è presente quando invece esso è assente (figura \ref{fig:statistica:6}). Una probabilità del 5\% è sufficientemente bassa da poterla considerare accettabile, per cui se il segnale è maggiore del limite critico si può affermare con ragionevole certezza (95\%) che l'analita è presente nel campione.
+
+Dall'altro punto di vista, si consideri un analita presente in concentrazione tale da dare mediamente un segnale pari al limite critico. Tale segnale è a sua volta variabile entro un certo intervallo a causa della presenza di errori casuali (in particolare, anche ad esso è associata una deviazione standard, che in prima approssimazione può essere considerata uguale a ssenza analita). Come mostra la figura \ref{fig:statistica:7}, analizzando un campione con questa concentrazione di analita vi è una probabilità del 50\% di commettere un errore di falso negativo, cioè di affermare che l'analita non è presente quando invece esso lo è, poiché vi è appunto il 50\% di probabilità di ottenere un valore minore del limite critico pur in presenza dell'analita. Tale probabilità è troppo alta e non può essere accettata.
+
+\fullpicturelab{07_007}{Distribuzioni gaussiane dei segnali strumentali ottenibili in assenza di analita (curva di sinistra) e in presenza di una concentrazione di analita che dà mediamente un segnale pari al limite critico (curva di destra), ed errori di falso positivo e di falso negativo.}{}{statistica:7}
+
+Per ridurre la probabilità dell'errore di falso negativo è necessario impostare un limite maggiore del limite critico, ad esempio ponendo $t$ pari al doppio di 1.645 (3.29):
+\begin{equation} \label{eq:statistica:34}
+y_{\mathrm{LOD}} = \bar{y}_{\text{senza analita}} + 3.29 \cdot s_{\text{senza analita}}
+\end{equation}
+
+Considerando questo nuovo limite, l'errore di falso positivo diviene praticamente nullo, mentre quello di falso negativo è pari a 5\%, come mostrato in figura \ref{fig:statistica:8}, ed è quindi di entità accettabile.
+
+Se l'analita ha una concentrazione tale da dare mediamente un segnale pari al limite dato dall'equazione (\ref{eq:statistica:34}), esso sarà ragionevolmente \dvirg{sempre} (al 95\%) diverso dal segnale in assenza di analita, per cui la sua presenza sarà sempre confermata; tale limite rappresenta il segnale strumentale corrispondente al LOD, che è proprio \dvirg{la concentrazione di analita che ragionevolmente sempre sarà determinabile col metodo in esame}. Per comodità e brevità il fattore 3.29 è arrotondato a 3, anche se ciò comporta un leggero aumento dell'errore di falso negativo. Il segnale strumentale corrispondente al LOD è dato da:
+\begin{equation} \label{eq:statistica:35}
+y_{\mathrm{LOD}} = \bar{y}_{\text{senza analita}} + 3 \cdot s_{\text{senza analita}}
+\end{equation}
+
+\fullpicturelab{07_008}{Distribuzioni gaussiane delle concentrazioni di analita ottenibili in assenza di analita (curva di sinistra) e in presenza di una concentrazione di analita pari al limite definito dalla (\ref{eq:statistica:34}) (curva di destra), ed errore di falso negativo.}{}{statistica:8}
+
+Riassumendo, se l'analisi di un campione restituisse un segnale strumentale minore del limite critico (\ref{eq:statistica:33}), l'analita sarebbe \dvirg{sicuramente} assente (al 95\% di probabilità), mentre se restituisse un segnale compreso tra i due limiti (\ref{eq:statistica:33}) e (\ref{eq:statistica:34}), l'analita sarebbe \dvirg{sicuramente} presente, tuttavia la sua presenza potrebbe essere spesso non rivelabile in quanto, ripetendo la misura, il segnale potrebbe cadere al di sotto del limite (\ref{eq:statistica:33}). Solo se il segnale fosse maggiore del limite (\ref{eq:statistica:34}) l'analita verrebbe \dvirg{sempre} rivelato.
+
+Se per la misura in esame si è ottenuta una retta di calibrazione esterna, la retta stessa fornisce tutte le informazioni richieste per convertire il segnale del LOD nella concentrazione di analita (il LOD). Innanzitutto, il valore ysenza analita corrisponde all'intercetta a, poiché questa rappresenta il segnale strumentale mediamente ottenibile in assenza di analita.
+
+La grandezza ssenza analita può invece essere data dalla deviazione standard di a, o meglio, tenendo conto che anche l'incertezza sulla pendenza ha effetto sull'intercetta, dalla deviazione standard degli scarti tra i punti e la retta, cioè $s_{y/x}$:
+\begin{equation} \label{eq:statistica:36}
+y_{\mathrm{LOD}} = a + 3 s_{y/x}
+\end{equation}
+
+Con l'equazione (\ref{eq:statistica:15}) si può relazionare yLOD con il corrispondente valore di $x$ (il LOD):
+\begin{equation} \label{eq:statistica:37}
+y_{\mathrm{LOD}} = a + b \cdot \mathrm{LOD}
+\end{equation}
+
+da cui ottiene:
+\begin{equation} \label{eq:statistica:38}
+\mathrm{LOD} = \frac{3 s_{y/x}}{b}
+\end{equation}
+
+In maniera analoga, anche il limite critico del segnale (equazione \ref{eq:statistica:34}) può essere convertito in concentrazione dando il cosiddetto limite critico di concentrazione:
+\begin{equation} \label{eq:statistica:39}
+\text{limite critico di concentrazione} = \frac{1.645 s_{y/x}}{b}
+\end{equation}
+
+Se per un campione incognito si ottenesse una concentrazione C inferiore al limite critico (\ref{eq:statistica:39}), si dovrebbe scrivere come risultato \dvirg{analita assente}; invece, se C fosse compresa tra il limite critico e il LOD, l'analita sarebbe presente, ma ad una concentrazione tale per cui non sempre potrebbe essere rivelato, per cui si scriverebbe: \dvirg{C < LOD}.
+
+In pratica, molto spesso si scrive \dvirg{C < LOD} a prescindere che C sia solo minore del LOD (\ref{eq:statistica:38}) o anche minore del limite critico (\ref{eq:statistica:39}). In entrambe le convenzioni, se C è minore del LOD il valore numerico non va indicato in quanto esso, per definizione di LOD, non è determinabile come tale dal metodo.
+
+L'equazione (\ref{eq:statistica:38}) mostra un altro motivo (oltre all'effetto sull'incertezza su $\bar{x}_{camp}$ vista nei paragrafi precedenti) per cui la sensibilità b dei metodi analitici dovrebbe essere elevata. Il LOD e b sono infatti grandezze anticorrelate tra loro, per cui un metodo con elevata sensibilità ha solitamente anche un basso (quindi ottimo) LOD (nell'equazione \ref{eq:statistica:38} vi è però il contributo di un numeratore che può far sì che un metodo molto sensibile abbia comunque un LOD non molto basso e viceversa). LOD e sensibilità sono talvolta erroneamente confusi tra loro, pur avendo definizioni differenti.
+
+La definizione (\ref{eq:statistica:38}) del LOD presenta un importante difetto: essa dipende da come è stata condotta la calibrazione esterna, in quanto il valore di $s_{y/x}$ può variare anche considerevolmente in base alle concentrazioni degli standard analizzati e al loro numero; idealmente il LOD dovrebbe invece dipendere solo dal metodo usato e dalla natura del campione e dell'analita. Dato questo difetto, sono state proposte altre definizioni di LOD alternative alla (\ref{eq:statistica:38}). Quest'ultima risulta comunque ancora molto utilizzata in virtù della sua semplicità.
+
+Infine, si noti che valori di concentrazione pari o poco maggiori del LOD presentano un'incertezza relativa molto elevata, e risultano poco informativi dal punto di vista analitico. Si può quindi introdurre il concetto di limite di quantificazione (limit of quantification, LOQ), il quale rappresenta la minima concentrazione di analita che si può quantificare in maniera sufficientemente accurata col metodo in esame. 
+
+Il LOQ deve necessariamente essere maggiore del LOD, e convenzionalmente è definito come \nicefrac{10}{3} il LOD, cioè:
+\begin{equation} \label{eq:statistica:40}
+\mathrm{LOQ} = \frac{10 s_{y/x}}{b}
+\end{equation}
+
+
+
+
+

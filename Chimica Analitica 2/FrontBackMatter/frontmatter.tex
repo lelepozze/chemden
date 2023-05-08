@@ -1,0 +1,92 @@
+\begin{fullpaper}
+%##### Titlepage ###########
+\pagestyle{empty}
+
+\begingroup
+\pdfbookmark[0]{Title Page}{Title Page}
+\vspace*{5cm}
+
+\begin{center}
+{\fontsize{36pt}{43pt}\selectfont \color{Secondary} \sc \printitle}
+
+\vspace{2cm}
+
+\printedition
+
+\vspace{2cm}
+
+{\Large \sc\printauthor}
+\end{center}
+
+\vspace{6cm}
+
+\begin{center}
+\includegraphics[width=30mm]{logo}
+
+\vspace*{1cm}
+
+\it Padova Venezia Treviso
+\end{center}
+\endgroup
+
+\cleardoublepage
+
+%##### Copyright ###########
+\begingroup
+\pagestyle{empty}
+\pdfbookmark[0]{Copyright}{Copyright}
+
+\vspace*{1cm}
+
+
+\begin{raggedright}
+Cover Art: \textit{Pozzebon Daniele}
+\end{raggedright}
+
+\vspace*{1cm}
+
+\begin{raggedright}
+Copyright \copyright\ Chemden \the\year{}
+\end{raggedright}
+
+\vspace*{1cm}
+
+\disclaimer
+
+\vfill
+
+\creativecommons
+
+\cleardoublepage
+\endgroup
+%##### Dedica ###########
+
+\begingroup
+\phantomsection
+\pdfbookmark[0]{Dedica}{Dedica}
+\vspace*{4cm}
+
+\begin{center}
+\it Thank you\\ Redbull, Google, Smirnoff and Wikipedia\\ for making this possible.
+\end{center}
+
+\medskip
+
+\begin{center}
+\it Ringrazio anche\\ Toni Manera, il Merda e il McDonald\\ per i gli spunti di riflessione alle quattro di mattina.
+\end{center}
+\endgroup
+
+\cleardoublepage
+
+%##### Indice ###########
+\begingroup
+\phantomsection
+\setcounter{tocdepth}{1} % L'indice mostra soltanto i capitoli e le sezioni, non le sottosezioni
+\pdfbookmark[0]{\contentsname}{tableofcontents}
+\tableofcontents
+\endgroup
+
+\cleardoublepage
+
+\end{fullpaper}

@@ -1,0 +1,725 @@
+\chapterpicture{header_10}
+
+\chapter{Laboratorio}
+Di seguito sono riportate le dispense di laboratorio.
+
+
+\section{Gas-cromatografia}
+
+I grassi (o lipidi) sono sostanze di origine vegetale o animale, e possono trovarsi allo stato solido o liquido (oli). Sono insolubili in acqua e meno densi di essa. Dal punto di vista chimico sono costituiti quasi esclusivamente da acidi grassi lineari esterificati (R = residuo alchilico) con la glicerina (trigliceridi).
+
+\marginpar{
+\chemfig[atom sep=2em]{H-C(-[2,2]C(-[4]H_2)-O-C(=[2]O)-R_1)(-[6,2]C(-[4]H_2)-O-C(=[2]O)-R_3)-O-C(=[2]O)-R_2}
+\captionof*{figure}{Struttura dei trigliceridi}}
+
+Gli acidi grassi possono essere sia saturi che insaturi e sono generalmente formati da catene lineari con un numero pari di atomi di carbonio (da C4 fino a C26). I saturi più abbondanti sono l'acido palmitico (C16) e l'acido stearico (C18), mentre gli insaturi più importanti sono l'acido oleico (C18:1), l'acido linoleico (C18:2) e l'acido linolenico (C18:3).
+
+Le molecole dei trigliceridi naturali sono di solito formate da due o tre acidi grassi diversi. Quando un acido grasso supera il 60\% del totale si hanno anche gliceridi costituiti da un unico acido, come accade nell'olio di oliva che contiene circa il 50\% di trioleato di glicerina (trioleina). Alcuni acidi occupano posizioni preferenziali nei trigliceridi degli oli vegetali. In particolare, gli acidi palmitico e stearico (entrambi saturi) occupano di preferenza le posizioni 1 e 3. Gli acidi insaturi oleico e linoleico, invece, occupano di preferenza la posizione 2.
+
+Diversamente dai prodotti naturali, nei trigliceridi di sintesi la posizione dei diversi acidi segue una distribuzione di tipo statistico e ciò può evidenziare eventuali frodi. Nel caso dell'olio di oliva si considera normale una percentuale di acido palmitico in posizione 2 che non superi il 2\% nell'olio di sansa e d'oliva, e addirittura l'1.3 \% nell'olio d'oliva vergine.
+
+A seconda della provenienza del grasso la composizione dei trigliceridi è molto variabile. Di conseguenza la determinazione della composizione acidica in campioni di olio, burro, margarina, ed in prodotti contenenti frazioni significative di sostanza grassa (alimenti, cosmetici, farmaci, ecc.) risulta essenziale per una loro caratterizzazione sia in termini di composizione che di qualità del prodotto.
+
+L'analisi degli acidi grassi può essere convenientemente eseguita per via gas-cromatografica, sfruttando la volatilità dei loro esteri metilici che è maggiore sia degli acidi grassi liberi che degli originali trigliceridi. Gli esteri metilici si ottengono per trans-esterificazione catalizzata dei trigliceridi con metanolo, secondo la seguente reazione:
+\begin{center}
+\schemestart
+\chemfig[atom sep=1.5em]{H-C(-[2,2]C(-[4]H_2)-O-C(=[2]O)-R_1)(-[6,2]C(-[4]H_2)-O-C(=[2]O)-R_3)-O-C(=[2]O)-R_2}
+\arrow{->[$\Delta$]}
+\chemfig[atom sep=1.5em]{H-C(-[2,2]C(-[4]H_2)-OH)(-[6,2]C(-[4]H_2)-OH)-OH}
+\+
+\chemfig[atom sep=1.5em]{R_2 (-[:90,,,,draw=none]R_1-COO-R) (-[:-90,,,,draw=none]R_3-COO-R) -COOR}
+\schemestop
+\end{center}
+
+\subsection{Analisi gas-cromatografica}
+
+Impostare o caricare il metodo di analisi (tra cui i valori di Tiniettore, Trivelatore, Tcolonna; i valori normalmente impiegati con una colonna EC-WAX sono: Tiniettore = 230 - 250 °C, Trivelatore = 260 °C, Tcolonna = 180 - 200 °C). Regolare il flusso del gas di trasporto a 14 psi (se necessario), e scegliere i parametri di acquisizione ed integrazione del segnale.
+
+La composizione qualitativa degli acidi grassi presenti nel campione si fa per confronto con una miscela standard a composizione nota di esteri metilici degli acidi grassi; oppure, sulla base delle proprietà della fase stazionaria, si può prevedere il seguente ordine di eluizione.
+\begin{enumerate}
+\item Il tempo di ritenzione aumenta all'aumentare del numero di atomi di carbonio
+\item Gli esteri insaturi escono dopo i corrispondenti esteri saturi
+\item Il tempo di ritenzione degli esteri insaturi aumenta all'aumentare del numero di doppi legami
+\item Gli esteri ramificati escono prima degli esteri lineari con uguale numero di atomi di carbonio
+\end{enumerate}
+
+In realtà con l'invecchiamento delle colonne i tempi di ritenzione possono cambiare e si possono anche verificare delle inversioni nell'ordine di eluizione. L'analisi quantitativa del campione di olio con rivelatore FID può essere eseguita in maniera più semplice rispetto ad una generica analisi cromatografica, evitando la calibrazione esterna. Infatti, l'olio può essere considerato come costituito al 100 \% da trigliceridi, e tali componenti presentano all'incirca lo stesso fattore di risposta strumentale f rispetto alla massa di analita (f è la costante di proporzionalità tra area del picco e concentrazione: A = f·C) utilizzando come rivelatore il FID.
+
+Per rendere più accurata la normalizzazione interna si possono calcolare i fattori di risposta misurando l'area dei picchi di una soluzione di acidi grassi di concentrazione $C_i$:
+\[
+f_i = \frac{A_i}{C_i}
+\]
+
+La concentrazione dell'acido grasso nel campione si ricava nel seguente modo:
+\[
+C_i = \frac{\frac{A_i}{fi}}{\sum \frac{A_i}{f_i}}
+\]
+
+Negli oli alimentari si può attuare una normalizzazione interna e la composizione relativa del campione è ricavata dal rapporto dell'area di ciascun componente e l'area totale:
+\[
+C_i = \frac{A_i}{A_{tot}} = \frac{A_i}{\sum A_i}
+\]
+
+\subsection{Parte sperimentale}
+\subsubsection{Reagenti}
+Le indicazioni di pericolo sono reperibili sulla scheda di sicurezza
+\begin{itemize}
+\item acido solforico al 98 \%
+\item metanolo
+\item n- pentano oppure n-esano oppure etere di petrolio (p. eb.40 - 60 °C)
+\item standard singoli o in miscela dei principali esteri metilici degli acidi grassi
+\item carbonato di sodio
+\item solfato di sodio anidro oppure solfato di magnesio anidro
+\item acqua ultrapura
+\end{itemize}
+
+\subsubsection{Attrezzatura}
+\begin{itemize}
+\item gas-cromatografo (GC) con colonna capillare polare, per esempio EC-WAX (30 m) e rivelatore FID
+\item integratore o computer
+\item bagno riscaldante
+\item fiala da 20 mL munita di setto rivestito in teflon e ghiera in allumino (con cup crimper)
+\item pipetta graduata da 1 mL
+\item pipetta tarata da 2 mL
+\item pipetta tarata da 5 mL
+\item pipetta Pasteur con tettarella
+\item siringa da GC da 5 µL
+\item spatolina in acciaio
+\item 6 matracci da 2 o 5 mL
+\end{itemize}
+
+\subsubsection{Procedimento}
+\begin{enumerate}
+\item Introdurre nella fiala circa 0.5 g di campione di olio;
+\item Aggiungere 2 mL di metanolo e 80 \mu L di acido solforico concentrato (98 \%) utilizzando una pipetta graduata da 1.0 mL. N.B. Seguire questo ordine di aggiunta dei reagenti. L'acido solforico va introdotto con cautela perché la sua solvatazione è fortemente esotermica.
+\item Chiudere con setto e ghiera la fiala;
+\item Indossando occhiali protettivi porre la fiala in un bagno termostatico alla temperatura di 80 °C per 40 minuti;
+\item Nel frattempo preparare una soluzione sciogliendo la minima quantità possibile per ogni estere metilico a disposizione in n-esano, e successivamente una soluzione contenente una miscela di questi, utilizzando dei matracci da 2 o 5 mL od una fiala con tappo, di volume opportuno; se invece è disponibile una miscela standard commerciale, diluirla opportunamente prima di iniettarla;
+\item Raffreddare a temperatura ambiente la fiala con acqua corrente, dopo aver tolto il sostegno metallico;
+\item Aprire la fiala e introdurre 5 mL di n-esano;
+\item Agitare bene in modo da estrarre completamente gli esteri metilici nella fase organica (strato superiore) e poi separare la fase organica (per esempio con una Pasteur) e conservarla a parte; se la soluzione è appena torbida (per la presenza di acido solforico), aggiungere del carbonato di sodio e agitare fino al termine dell'effervescenza; aggiungere poi del solfato di sodio o di magnesio anidro per eliminare l'acqua residua;
+\item Seguendo le istruzioni del personale qualificato, iniettare nel GC-FID i singoli standard, 1 \mu L, e poi la miscela di questi, verificando la sequenza di uscita;
+\item Se tutti i picchi risultano separati procedere col campione, altrimenti modificare le condizioni di separazione (T della colonna od eventuale rampa di temperatura);
+\item Iniettare 1 \mu L di campione (fase organica) nel GC-FID nelle condizioni scelte, e se possibile ripetendo l'analisi 2 volte.
+\end{enumerate}
+
+\subsection{Elaborazione dati}
+Esprimere le concentrazioni come percentuale (\%) di acido grasso. Costruire le tabelle delle calibrazioni per normalizzazione interna, una in assenza dei fattori di risposta ed una in presenza, riportando i dati sperimentali necessari.
+
+Per ogni campione e per ogni acido grasso fornire i risultati finali; se si sono potute condurre almeno due misure ripetute fornire anche l'intervallo di fiducia (vanno forniti due risultati: uno non considerando i fattori di risposta, ed uno considerandoli).
+
+\paragraph{Test statistici}
+Se si dispone di valori di riferimento sulla concentrazione di uno o più acidi grassi nel campione analizzato, e se si dispone degli intervalli di fiducia, effettuare gli opportuni test statistici (usare i risultati ottenuti considerando i fattori di risposta) e trarne le conclusioni.
+
+Nota: nella relazione inserire un cromatogramma degli standard ed uno del campione.
+
+\section{Cromatografia liquida}
+
+La presente esperienza prevede l'uso della cromatografia liquida ad alta pressione (HPLC) per determinare la concentrazione della caffeina in bevande o analgesici, come per esempio nel caffè, nel thè, nella Coca-Cola, ecc..
+
+\marginpar{
+\chemfig[atom sep=2em]{[:-120]*6(([:90]=O)-N([:135]-H_3C)-([:225]=O)-N([:-90]-CH_3)-*5(-N=-N([:45]-CH_3)-)=-)}
+\captionof*{figure}{Caffeina}}
+
+Il metodo tradizionale per la determinazione della caffeina prevede un'estrazione dal campione e determinazione mediante spettrofotometria UV-Vis. L'uso dell'HPLC permette una veloce e facile separazione della caffeina da altre sostanze come acido tannico, acido caffeico e saccarosio, normalmente presenti nei campioni considerati.
+
+La procedura qui suggerita prevede di analizzare direttamente il campione di interesse e di determinare il contenuto di caffeina mediante una calibrazione esterna.
+
+\subsection{Parte sperimentale}
+
+\subsubsection{Reagenti}
+Le indicazioni di pericolo sono reperibili sulla scheda di sicurezza
+\begin{itemize}
+\item caffeina $\geq$ 98\%
+\item metanolo
+\item campioni da analizzare (uno o più): caffè, thè, Coca-Cola, farmaci analgesici contenenti caffeina.
+\item acqua ultrapura
+\end{itemize}
+
+\subsubsection{Strumentazione e attrezzatura}
+\begin{itemize}
+\item cromatografo per HPLC con rivelatore spettrofotometrico UV-VIS
+\item colonna analitica a fase inversa C18, 250x4.6 mm i.d., 5 µm
+\item vetrino da orologio piccolo
+\item spatolina
+\item imbuto
+\item spruzzetta
+\item propipette
+\item 1 matraccio da 50 mL
+\item 7 matracci tarati da 25 mL
+\item micropipette a volume variabile
+\item 2 cilindri da 500 o 1000 mL per preparare l'eluente
+\item una bottiglia di vetro da 1000 mL per l'eluente
+\end{itemize}
+
+\subsubsection{Procedimento}
+
+\begin{enumerate}
+\item Preparare, servendosi di cilindri tarati e di una bottiglia in vetro da litro, una quantità di eluente sufficiente per utilizzarlo sia come eluente che come solvente per le soluzioni standard e del campione (0.5÷1 L). La miscela deve contenere metanolo/acqua 40/60 v/v (solventi per HPLC ad elevata purezza e acqua ultrapura).
+\item Degasare in ultrasuoni l'eluente prima di avviare il cromatografo.
+\item Preparare 50 mL di soluzione madre standard di caffeina da 1000 ppm (mg/L), sciolta in metanolo (sufficiente per 2 gruppi); se si scioglie con difficoltà utilizzare il bagno ad ultrasuoni, ma operare con cautela! (inserire per pochi secondi di seguito, per evitare surriscaldamento del metanolo).
+\item In 5 matracci tarati da 25 mL preparare soluzioni a concentrazione 1.0, 5.0, 10.0, 20.0, 50.0 ppm di caffeina in eluente, utilizzando una micropipetta e relativi puntali, o una pipetta di vetro graduata.
+\item Seguendo le istruzioni del personale qualificato, accendere i vari moduli del cromatografo ed il computer. Impostare una velocità di flusso di 1.0 mL/min (0.6 mL/min per una colonna con particelle da 3 \mu m, strumento verso la finestra) raggiungendo gradualmente tale valore. Accendere il rivelatore e impostare $\lambda = 270 nm$ (massimo di assorbimento della caffeina).
+\item Fare stabilizzare il segnale di fondo lasciando fluire l'eluente per almeno una decina di minuti per l'equilibrazione della colonna e la stabilizzazione della lampada.
+\item Avvinare tre volte la siringa di iniezione con la soluzione da iniettare. Seguendo le istruzioni del personale qualificato, iniettare dapprima il bianco (eluente) e poi procedere con la soluzione standard più diluita e via via con quelle più concentrate.
+\item Analizzare con la stessa procedura i campioni incogniti (trattati e/o diluiti come indicato nella sezione seguente).
+\end{enumerate}
+
+
+\subsubsection{Preparazione dei campioni}
+
+Tutti i campioni incogniti vanno filtrati su filtro da siringa in materiale inerte prima dell'analisi
+
+\begin{itemize}
+\item Per il caffè (bevanda) si suggerisce di diluire il campione 1:100 o 1:200 v/v con l'eluente.
+\item Per il thè si suggerisce di diluire il campione 1:25 v/v.
+\item Per la Coca-Cola si deve prima degassare in bagnetto ad ultrasuoni, e poi si suggerisce di diluire 2:25 la bevanda degassata.
+\item Per i farmaci, l'estrazione della caffeina si ottiene macinando la compressa in mortaio, trasferendo il tutto in beuta e trattando con 50 mL di metanolo (eventualmente portare in bagno ad ultrasuoni per 10 min). Si filtra su carta e si raccogliere la soluzione in matraccio da 100 mL. Si lava il filtro con metanolo e si porta a volume. La soluzione può essere iniettata tal quale o eventualmente diluita con acqua (previa filtrazione).
+\item Le diluizioni suggerite per le bevande sono indicative, dato che i campioni commerciali possono variare da uno all'altro.
+\end{itemize}
+
+\subsection{Elaborazione dati}
+Esprimere le concentrazioni come mg/L di caffeina per le bevande, o come mg/g per i solidi. Costruire la tabella e il grafico della calibrazione esterna, riportando i dati sperimentali necessari e calcolando i parametri richiesti per la retta di calibrazione (cfr. dispense statistica). Per il campione fornire il risultato finale con intervallo di fiducia.
+
+\subsubsection{Test Statistici}
+Se si dispone di valori di riferimento sulla concentrazione di caffeina nel campione analizzato, effettuare l'opportuno test statistico e trarne le conclusioni.
+
+Nota: nella relazione inserire un cromatogramma degli standard ed uno del campione.
+Facoltativo: Calcolare il limite di rivelabilità (LOD) per la caffeina.
+
+\section{Cromatografia ionica}
+
+La cromatografia ionica (IC) riveste oggi un ruolo estremamente importante in quanto con essa è stato possibile determinare specie non facilmente analizzabili per altra via come ad esempio gli ioni solfato, ammonio, fluoruro, e fosfato. La grande versatilità della tecnica è data sia dall'odierna tecnologia delle resine a scambio ionico che dalla possibilità di utilizzare la conduttimetria per la rivelazione degli analiti. Quest'ultima circostanza è dovuta alla possibilità di sopprimere la conducibilità del fondo dovuta all'eluente utilizzato, aumentando nel contempo la conducibilità e quindi il segnale degli analiti.
+
+In questa esperienza la IC viene usata per la quantificazione degli ioni inorganici presenti nell'acqua potabile (o in un'acqua oligominerale o in un'acqua di scarico, in quest'ultimo caso previa filtrazione ed eventuale diluizione) per mezzo di una calibrazione esterna. Gli anioni determinabili sono \ce{Cl-}, \ce{NO3-}, \ce{PO^{3-}} e \ce{SO4^{2-}}, mentre i cationi sono \ce{Na+}, \ce{K+}, \ce{Mg^{2+}} e \ce{Ca^{2+}}. Le acque potabili contengono anche concentrazioni piuttosto elevate di ione bicarbonato (\ce{HCO^{3-}}); tuttavia in tale esperienza non sarà possibile determinare questo ione poiché l'eluente usato per l'analisi cromatografica anionica lo contiene.
+
+\subsection{Determinazione degli anioni}
+
+\subsubsection{Reagenti}
+
+\begin{itemize}
+\item carbonato di sodio
+\item bicarbonato di sodio
+\item acido solforico
+\item cloruro di sodio
+\item nitrato di sodio
+\item fosfato biacido di potassio
+\item solfato di sodio
+\item acqua ultrapura
+\end{itemize}
+
+\subsubsection{Strumentazione e attrezzatura}
+
+\begin{itemize}
+\item cromatografo ionico dotato di rivelatore conduttimetrico
+\item colonna analitica anionica DIONEX AS22 250x4 mm con precolonna AG22 50x4 mm
+\item soppressore anionico a micromembrana DIONEX ASRS ULTRA II 4 mm, o AMMS 300 4mm
+\item 2 spatoline
+\item 2 vetrini da orologio
+\item 4 imbuti
+\item 2 propipette
+\item 1 matraccio tarato da 2000 mL per l'acido solforico usato come soppressore
+\item 1 matraccio tarato da 2000 mL per l'eluente
+\item 4 matracci tarati da 100 mL
+\item 4 matracci tarati da 25 mL
+\item 4 pipette graduate da 1 mL, 4 pipette graduate da 2 mL oppure micropipette a volume variabile e relativi puntali
+\end{itemize}
+
+\subsubsection{Procedimento}
+
+\begin{enumerate}
+\item Utilizzando i matracci tarati da 100 mL preparare quattro soluzioni madre contenenti 1000 ppm (mg/L di anione, non di sale!) rispettivamente di \ce{Cl-}, \ce{NO3-}, \ce{PO4^{3-}} e \ce{SO4^{2-}}; utilizzare i rispettivi sali disponibili come standard primari, e diluire con acqua ultrapura.
+\item Se non disponibile, preparare la soluzione eluente costituita da una miscela di carbonato/bicarbonato di sodio 4.5/1.4 mM in acqua ultrapura.
+\item Se non disponibile, preparare una soluzione di \ce{H2SO4} 25 mM per la rigenerazione della membrana di soppressione.
+
+In 4 matracci tarati da 25 mL preparare le soluzioni standard miste contenenti simultaneamente tutti gli anioni, rispettivamente alle concentrazioni date in tabella, portando a volume con acqua ultrapura.
+
+\begin{table}
+\begin{tabular}{lcccc}
+& Cl- (ppm) & NO3- (ppm) & PO43- (ppm) & SO42- (ppm)\\
+Soluzione 1 & 1 & 1 & 1 & 1\\
+Soluzione 2 & 4 & 4 & 3 & 3\\
+Soluzione 3 & 15 & 15 & 10 & 10\\
+Soluzione 4 & 50 & 50 & 20 & 20\\
+\end{tabular}
+\caption{Preparazione della soluzione mista per gli anioni}
+\label{tab:laboratorio:1}
+\end{table}
+
+\item Seguendo le istruzioni del personale qualificato, accendere il cromatografo e tutti i suoi moduli, innescare la pompa, impostare una velocità di flusso di 1.2 mL/min, ed azionare la pompa stessa; fare stabilizzare il segnale di fondo, lasciando fluire l'eluente per almeno una decina di minuti (conducibilità di fondo minore di 25 \mu S).
+\item Avvinare 3 volte la siringa di iniezione con acqua ultrapura, e sciacquare esternamente il sistema di iniezione (sempre con acqua ultrapura).
+\item Iniettare il bianco (acqua ultrapura) seguendo le istruzioni del personale qualificato. Se il cromatogramma del bianco non mostra alcun picco si può procedere con l'analisi delle soluzioni standard, altrimenti è necessario ripetere il bianco lavando più accuratamente la siringa e il sistema di iniezione.
+\item Iniettare le varie soluzioni standard nel cromatografo ionico, partendo dalla più diluita e proseguendo a concentrazioni crescenti. Prima di ogni iniezione avvinare preventivamente 3 volte la siringa di iniezione con la soluzione da iniettare. Effettuare l'iniezione quando è terminata la corsa cromatografica precedente. Per ogni soluzione standard fare due ripetute (cioè fare due corse cromatografiche).
+\item Analizzare i campioni incogniti con la stessa procedura di cui al punto precedente, preoccupandosi preventivamente di filtrare la soluzione nei casi in cui fosse necessario (ad esempio per acque di scarico o superficiali).
+\end{enumerate}
+
+\subsection{Determinazione dei cationi}
+
+\subsubsection{Reagenti}
+
+\begin{itemize}
+\item acido metansolfonico
+\item idrossido di tetrabutilammonio
+\item cloruro di sodio
+\item nitrato di potassio oppure cloruro di potassio
+\item cloruro di calcio (soluzione standard)
+\item cloruro di magnesio (soluzione standard)
+\item cloruro di ammonio
+\item acqua ultrapura
+\end{itemize}
+
+\subsubsection{Strumentazione e attrezzatura}
+\begin{itemize}
+\item cromatografo ionico dotato di rivelatore conduttimetrico
+\item colonna analitica cationica DIONEX CS12A 250x4 mm con precolonna CG12A 50x4 mm
+\item soppressore cationico a micromembrana DIONEX CCRS 500 4 mm
+\item 2 spatoline
+\item 2 vetrini da orologio
+\item 4 imbuti
+\item 2 propipette
+\item 1 cilindro da 200 mL
+\item 1 matraccio tarato da 2000 mL per l'idrossido di tetrabutilammonio usato come soppressore
+\item 1 matraccio tarato da 2000 mL per l'eluente
+\item 4 matracci tarati da 100 mL
+\item 5 matracci tarati da 25 mL
+\item 1 pipetta graduata da 5 mL
+\item 4 pipette graduate da 1 mL
+\item 4 pipette graduate da 2 mL oppure micropipette a volume variabile e relativi puntali
+\end{itemize}
+
+
+
+\subsubsection{Procedimento}
+
+\begin{enumerate}
+\item Se non disponibile, preparare la soluzione eluente costituita da acido metansolfonico 20 mM (o, in alternativa, \ce{H2SO4} 11 mM) in acqua ultrapura.
+\item Se non disponibile, preparare una soluzione di idrossido di tetrabutilammonio 100 mM per la rigenerazione della membrana di soppressione (attenzione a non sprecarlo: il reagente è molto costoso!).
+\item Utilizzando i matracci tarati da 100 mL preparare quattro soluzioni madre contenenti 1000 ppm (mg/L di ione, non di sale!) di ciascun catione, ottenute da NaCl, KCl, CaCl2, MgCl2 (NH4Cl) per analisi, essiccati in stufa (oppure soluzioni standard commerciali), in acqua ultrapura.
+\item In 5 matracci tarati da 25 mL preparare le soluzioni standard miste contenenti simultaneamente tutti i cationi, aventi la concentrazione data in tabella \ref{tab:laboratorio:2}, portando a volume con acqua ultrapura.
+\begin{table}
+\begin{tabular}{lcccc}
+& \ce{Na+} (ppm) & \ce{K+} (ppm) & \ce{Mg^{2+}} (ppm) & \ce{Ca^{2+}} (ppm)\\
+Soluzione 1 & 0.1 & 0.1 & 1 & 5\\
+Soluzione 2 & 1 & 1 & 5 & 10\\
+Soluzione 3 & 5 & 5 & 10 & 20\\
+Soluzione 4 & 10 & 10 & 20 & 50\\
+Soluzione 5 & 20 & 20 & 50 & 100\\
+\end{tabular}
+\caption{Preparazione della soluzione mista per i cationi}
+\label{tab:laboratorio:2}
+\end{table}
+\item Seguendo le istruzioni del personale qualificato, accendere il cromatografo e tutti i suoi moduli, innescare la pompa, impostare una velocità di flusso di 1.0 mL/min, ed azionare la pompa stessa; fare stabilizzare il segnale di fondo, lasciando fluire l'eluente per almeno una decina di minuti (conducibilità di fondo minore di 2 \mu S).
+\item Avvinare 3 volte la siringa di iniezione con acqua ultrapura, e sciacquare esternamente il sistema di iniezione (sempre con acqua ultrapura).
+\item Iniettare il bianco (acqua ultrapura) seguendo le istruzioni del personale qualificato. Se il cromatogramma del bianco non mostra alcun picco si può procedere con l'analisi delle soluzioni standard, altrimenti è necessario ripetere il bianco lavando più accuratamente la siringa e il sistema di iniezione.
+\item Iniettare le varie soluzioni standard nel cromatografo ionico, partendo dalla più diluita e proseguendo a concentrazioni crescenti. Prima di ogni iniezione avvinare preventivamente 3 volte la siringa di iniezione con la soluzione da iniettare. Effettuare l'iniezione quando è terminata la corsa cromatografica precedente. Per ogni soluzione standard fare due ripetute (cioè fare due corse cromatografiche).
+\item Analizzare i campioni incogniti con la stessa procedura di cui al punto precedente, preoccupandosi preventivamente di filtrare la soluzione nei casi in cui fosse necessario (ad esempio per acque di scarico o superficiali).
+\end{enumerate}
+
+\subsection{Elaborazione dati}
+
+Esprimere le concentrazioni come mg/L di ione. Costruire la tabella e il grafico della calibrazione esterna per ogni ione, riportando i dati sperimentali necessari e calcolando i parametri richiesti per le rette di calibrazione (cfr. dispense statistica). Per il campione e per ogni ione fornire il risultato finale con intervallo di fiducia.
+
+\paragraph{Test statistici}
+Se si dispone di valori di riferimento sulla concentrazione di uno o più ioni nel campione analizzato, effettuare gli opportuni test statistici e trarne le conclusioni (per le acque di rubinetto il valore di riferimento è solitamente disponibile sul sito internet dell'azienda erogatrice del servizio, mentre per le acque minerali in bottiglia è dato in etichetta).
+
+Nota: nella relazione inserire un cromatogramma degli standard ed uno del campione.
+Facoltativo: Calcolare il limite di rivelabilità (LOD) per ogni ione.
+
+\section{Spettrofotometria UV-Vis}
+
+L'acido fosforico (ortofosforico) può essere determinato utilizzando il metodo spettrofotometrico al blu di molibdeno; tale metodo è applicato anche per la determinazione dell'ortofosfato solubile e del fosforo totale nelle acque. Nella determinazione del fosforo totale è necessario trasformare tutto l'elemento in ortofosfato. Ciò viene effettuato con un attacco ossidante per i composti organici e per quelli in cui il fosforo è presente con numero di ossidazione inferiore a +5, e con idrolisi acida per i polifosfati.
+
+Il metodo prevede la reazione degli ioni \ce{PO4^{3-}} con il molibdato di ammonio e il tartrato di ossido di antimonio e potassio in ambiente acido per formare un etero poliacido che viene ridotto a blu di molibdeno con acido ascorbico.
+
+Inizialmente il molibdato di ammonio (sale di \ce{Mo^{VI}}) si discioglie in acqua formando anioni molibdato:
+\begin{center}
+\ce{(NH4)6Mo^{VI}7O24 . H2O -> Mo^{VI}O4^{-2}}
+\end{center}
+
+Il molibdato reagisce col fosfato in ambiente acido (presente quindi come acido fosforico) formando un addotto di molibdeno(VI):
+\begin{center}
+\ce{H3PO4 + 24H+ + 12Mo^{VI}O4^{2-} -> H3PO4 12Mo^{VI}O3 + 12H2O}
+\end{center}
+
+Tale reazione richiede anche la presenza di ione antimonile (\ce{SbO+}) come catalizzatore per poter avvenire. Infine, l'addotto di molibdeno (VI) viene parzialmente ridotto ad un composto misto di molibdeno (VI) e molibdeno (V) ad opera di un opportuno riducente che può essere l'acido ascorbico:
+\begin{center}
+\ce{H3PO4 . 12Mo^{VI}O3 + acido ascorbico -> blu di molibdeno}
+\end{center}
+
+Il composto ottenuto è chiamato blu di molibdeno per la colorazione intensa che assume, e la sua assorbanza è misurata preferibilmente a 885 nm, oppure a 710 nm (a 710 nm si ottengono valori di assorbanza minori del 20 \% circa, e quindi la sensibilità del metodo è minore).
+
+Il metodo è applicabile alle acque naturali (anche di mare) e può essere impiegato in un intervallo di concentrazioni compreso tra 0.03 e 0.3 mg/L di fosforo (come P).
+
+\paragraph{Interferenze}
+
+Il Cu(II) e il Fe(III) non interferiscono se presenti in quantità rispettivamente inferiori a 10 e 50 ppm (mg/L). Gli arseniati interferiscono in quanto danno la stessa reazione dei fosfati. Il Cr(VI) e i nitriti danno interferenza negativa dell'ordine del 3 \% se presenti in concentrazione superiore a 1 mg/L. Solfuri e composti del silicio non interferiscono se presenti in concentrazioni inferiori a 1.0 e 10.0 ppm (rispettivamente mg/L di S e SiO2).
+
+\subsection{Parte sperimentale}
+
+\subsubsection{Reagenti}
+\begin{itemize}
+\item eptamolibdato di esammonio tetraidrato \ce{(NH4)6Mo7O24 . 4H2O}
+\item acido solforico
+\item acido ascorbico \ce{C6H8O6}
+\item tartrato di potassio ed antimonile \ce{K(SbO)C4H4O6 . 1/2 H2O}
+\item diidrogenofosfato di potassio anidro \ce{KH2PO4}, standard primario) seccato a 105°C
+\item acqua ultrapura
+\end{itemize}
+
+
+\subsubsection{Attrezzatura}
+\begin{itemize}
+\item spettrofotometro o colorimetro UV-Visibile
+\item cuvette di vetro o plastica da 1 cm
+\item bilancia analitica
+\item bilancia tecnica
+\item vetrini da orologio
+\item pinza e spatolina
+\item imbuto
+\item 2 bottiglie (vetro o polietilene)
+\item pipetta tarata da 10.0 mL
+\item 12 matracci da 100 mL
+\item 1 matraccio da 250 mL
+\item bicchieri da 100 e 250 mL
+\end{itemize}
+
+Preparare le seguenti soluzioni in bicchiere e poi mescolarle in bottiglia di plastica
+
+\paragraph{Soluzione di molibdato d'ammonio}
+Si sciolgono 0.75 g di eptamolibdato di esammonio tetraidrato in 25 mL di acqua ultrapura (la soluzione, conservata in bottiglie di polietilene al riparo dalla luce, è stabile per molti mesi).
+
+\paragraph{Soluzione di acido solforico}
+Si versano cautamente sotto cappa 10 mL di H2SO4 concentrato e 50 mL circa di acqua ultrapura in bottiglia.
+
+\paragraph{Soluzione di acido ascorbico}
+Si sciolgono 1.35 g di acido ascorbico in 25 mL di acqua ultrapura (la soluzione conservata in frigorifero in bottiglie è stabile per molti mesi, mentre a temperatura ambiente si conserva per due o tre giorni).
+
+\paragraph{Soluzione di tartrato di potassio ed antimonile}
+Si sciolgono 20 mg di tartrato di potassio ed antimonile in 12 mL circa di acqua ultrapura, scaldando se è necessario.
+
+\paragraph{Reagente misto}
+In una bottiglia si mescolano tra loro gli interi volumi delle soluzioni precedentemente preparate: molibdato d'ammonio, acido solforico, acido ascorbico, tartrato di potassio ed antimonile.
+
+Il reagente misto, preparato al momento dell'uso, non può essere conservato per più di circa 6 ore, per cui la parte non utilizzata va eliminata alla fine dell'esperienza.
+
+\paragraph{Soluzione standard di fosforo}
+
+Si sciolgono 0.1075 g di diidrogenofosfato di potassio anidro in acqua ultrapura e si diluisce a 250 mL in matraccio tarato (soluzione contenente 300 ppm (mg/L) di \ce{PO4^{3-}}). Annotare la quantità esatta pesata e calcolare la concentrazione esatta (se si conserva la soluzione bisogna trasferirla in bottiglia scura). Si prepara una soluzione diluita prelevando 10.0 mL della soluzione concentrata e diluendo a 100 mL con acqua ultrapura in matraccio (concentrazione 30 ppm, cioè 30 mg/L di \ce{PO4^{3-}}).
+
+\subsubsection{Procedimento}
+\begin{enumerate}
+\item In 7 matracci da 100 mL si introducono con una pipetta o una micropipetta a volume variabile, rispettivamente 0.0 (per il bianco), 0.3, 0.5, 1.0, 1.5, 2.0, 3.0 mL di soluzione standard diluita di fosfato. Si aggiungono a ciascun matraccio 10.0 mL del reagente misto e, mescolando, si porta a volume con acqua ultrapura.
+\item Azzerare lo strumento con acqua ultrapura.
+\item Misurare l'assorbanza del bianco ad una \dvirg{\lambda fissa} pari a 885 nm. L'assorbanza del bianco non deve superare 0.005. Se il valore fosse più alto si dovranno controllare i reattivi ed in particolare il molibdato di ammonio.
+\item Misurare l'assorbanza di ogni soluzione ad una \dvirg{\lambda fissa} pari a 885 nm. La misura di assorbanza per ogni soluzione va fatta dopo i 10 e non oltre i 15 minuti successivi alla preparazione della soluzione stessa.
+\item Degassare preventivamente il campione di Coca-Cola in bagnetto ad ultrasuoni (o, in alternativa lasciato all'aria per 24 ore).
+\item Preparare il bianco campione: introdurre 100 \mu L di Coca-Cola in un matraccio da 100 mL, e portare a volume con acqua ultrapura.
+\item Leggere l'assorbanza del bianco campione a 885 nm (può essere letta immediatamente dopo la preparazione del bianco campione).
+\item Preparare il campione: introdurre 100 \mu L di Coca-Cola e 10.0 mL di reagente misto in un matraccio da 100 mL, e portare a volume con acqua ultrapura.
+\item Leggere l'assorbanza del campione dopo i 10 e non oltre i 15 minuti successivi alla preparazione del campione. Sottrarre l'assorbanza del bianco campione (punto 8). Se il valore risultante è al di fuori dell'intervallo di assorbanze della retta di calibrazione, ripetere i punti precedenti a partire dal 7 usando una volume differente di Coca Cola.
+\item Per verificare l'effetto dell'interferenza, preparare un altro campione come al punto 9, ma aggiungendo, prima di portare a volume, 2 mL di soluzione di \ce{NaNO2} alla concentrazione di 200 ppm di nitrito (interferenza negativa) oppure 2 mL di soluzione di silice (come metasilicato, \ce{Na2SiO3}) alla concentrazione di 3500 ppm di silicio (interferenza positiva).
+\item Leggere l'assorbanza del campione in presenza di interferente dopo i 10 e non oltre i 15 minuti successivi alla preparazione della miscela. Sottrarre l'assorbanza del bianco campione (punto 8).
+\end{enumerate}
+
+\subsection{Elaborazione dati}
+
+Esprimere le concentrazioni come mg/L di \ce{PO4^{3-}}. Costruire la tabella e il grafico della calibrazione esterna, riportando i dati sperimentali necessari e calcolando i parametri richiesti per la retta di calibrazione (cfr. dispense statistica). Per il campione fornire il risultato finale con intervallo di fiducia.
+
+\paragraph{Test Statistici}
+Effettuare l'opportuno test statistico per confrontare la concentrazione ottenuta con quella di riferimento per l'acido fosforico nella Coca Cola (540 mg/L di \ce{PO4^{3-}}; tenere però presente che il valore di riferimento non è rigorosamente costante nel tempo e nei vari lotti), e trarne le conclusioni.
+
+Effettuare anche l'opportuno test statistico per verificare se vi è stata interferenza da parte del nitrito o della silice.
+
+Facoltativo: Calcolare il limite di rivelabilità (LOD) per il fosfato.
+
+
+\section{Assorbimento Atomico}
+
+I capelli sono costituiti principalmente da cheratina, una proteina che contiene il 14\% di zolfo. Inoltre, nei capelli sono presenti vari elementi in tracce (Mg, Al, Cl, Ca, Cr, Mn, Fe, Co, Cu, Zn, etc.). La quantità di questi elementi varia durante la crescita dei capelli e dipende dal tipo di alimentazione. Lo zinco è presente nel corpo umano in combinazione con enzimi e con diverse proteine. Il suo contenuto normale nei capelli, che è di circa 150-200 ppm (\mu g/g), dipende da diversi fattori quali età, sesso, colore, clima, lunghezza, zona del prelievo, uso di shampoo antiforfora ecc.. Lo zinco assunto con il cibo è normalmente sufficiente al fabbisogno dell'organismo umano. Una sua concentrazione troppo bassa può causare disturbi quali ad esempio stanchezza e difficoltà di apprendimento.
+
+L'esperienza ha come oggetto la determinazione della quantità di zinco nei capelli mediante misure di spettroscopia di assorbimento atomico in fiamma. A tale scopo, i capelli dovranno essere portati in soluzione con acido nitrico (\ce{HNO3}) e acido perclorico (\ce{HClO4}) e la concentrazione di zinco verrà determinata mediante confronto con una retta di calibrazione e con il metodo delle aggiunte standard. L'intervallo di linearità è compreso tra 0.05 e 1.5 ppm.
+
+\subsection{Parte sperimentale}
+
+\subsubsection{Reagenti}
+\begin{itemize}
+\item acido nitrico al 65\%
+\item acido perclorico al 65\%
+\item soluzione standard concentrata di \ce{Zn^{2+}} (circa 1000 ppm di ione - il valore esatto è riportato sull'etichetta)
+\item acqua ultrapura
+\end{itemize}
+
+\subsubsection{Apparecchiature}
+\begin{itemize}
+\item spettrofotometro per assorbimento atomico (AAS)
+\item lampada a catodo cavo per lo Zn
+\item capsula di porcellana
+\item pipetta tarata da 10 mL
+\item micropipetta da 1000 µL
+\item 1 matraccio tarato da 100 mL
+\item 6 matracci tarati da 25 mL
+\item filtro da siringa inerte
+\item siringa di plastica da 5 mL
+\item pipetta graduata da 2 mL o micropipetta a volume variabile
+\end{itemize}
+
+\subsubsection{Procedimento}
+\begin{enumerate}
+\item Preparare in matraccio da 25 mL una soluzione standard diluita da 25 ppm (mg/L) di ione \ce{Zn^{2+}} partendo dalla soluzione standard madre.
+\item Preparare 5 soluzioni standard (per la calibrazione esterna) a concentrazione di 0.25, 0.50, 0.75, 1.00 e 1.50 ppm rispettivamente in 5 matracci tarati da 25 mL per diluizione con acqua ultrapura di volumi appropriati della soluzione a 25 ppm.
+\item Pesare circa 0.3 g di capelli puliti e tagliati alla radice e sminuzzarli.
+\item Trasferire i capelli in una capsula di porcellana e, indossando guanti ed occhiali, aggiungere 10 mL di \ce{HNO3} concentrato, sotto cappa.
+\item Scaldare a potenza massima in bagno a sabbia, fino a dimezzare all'incirca il volume iniziale.
+\item Lasciare raffreddare cinque minuti e aggiungere quindi 2 mL di \ce{HClO4}, sempre sotto cappa.
+\item Scaldare a potenza più blanda fino a disgregazione completa dei capelli e fino ad ottenere un volume finale di circa 2 mL di soluzione.
+\item Raffreddare la soluzione fino ad una temperatura quasi ambiente, e trasferirla quantitativamente in un matraccio tarato da 100 mL. Portare a volume con acqua ultrapura.
+\item Filtrare con estrema cautela il campione con un filtro resistente agli acidi, appoggiando il filtro sulla bocca del matraccio, data la possibilità di schizzi di acido, e dato che bisogna esercitare una certa forza sul pistone della siringa.
+\item Trasferire in 5 matracci tarati da 25 mL, numerati da 1 a 5, 10 mL di soluzione del campione di capelli.
+\item Aggiungere ai matracci 1, 2, 3, 4 e 5 rispettivamente 0, 0.25, 0.5, 0.75 e 1.00 mL di soluzione diluita di zinco (da 25 ppm; soluzioni per le aggiunte standard), e portare a volume con acqua ultrapura.
+\item Seguendo le istruzioni del personale qualificato, accendere l'AAS e ottimizzare le condizioni strumentali alla lunghezza d'onda di lavoro di 213.9 nm.
+\item Azzerare lo strumento con acqua ultrapura prima di ogni misura.
+\item Fare tre letture del valore di assorbanza per ogni soluzione. Iniziare dalle soluzioni standard per la calibrazione esterna (cfr. punto 2, 15 letture in totale), proseguire col campione (cfr. punto 10, 3 letture in totale) e poi concludere con le soluzioni delle aggiunte standard (cfr. punto 12, altre 15 letture in totale). Con gli standard procedere sempre dal più diluito al più concentrato.
+\item Conservare la soluzione campione filtrata (punto 10; serve per l'analisi ICP-OES del giorno successivo).
+\end{enumerate}
+
+\subsection{Elaborazione dati}
+Esprimere le concentrazioni di calibrazione in \mu g/L di \ce{Zn^{2+}}; fornire invece i risultati sul campione in \mu g di zinco per grammo di capelli. Per ciascun metodo di calibrazione (calibrazione esterna e metodo delle aggiunte standard) costruire una tabella e un grafico, riportando i dati sperimentali necessari e calcolando i parametri richiesti per le rette (cfr. dispense statistica). Per il campione fornire il risultato finale con intervallo di fiducia (un risultato con la calibrazione esterna, uno col metodo delle aggiunte standard).
+
+\paragraph{Test statistici}
+1) Usando l'opportuno test statistico, confrontare la concentrazione di zinco ottenuta con i due metodi di calibrazione. 2) Sempre usando l'opportuno test statistico, confrontare la pendenza delle rette ottenute con i due metodi di calibrazione. Dai test precedenti trarre le opportune conclusioni circa la presenza di un effetto matrice.
+Facoltativo: Calcolare il limite di rivelabilità (LOD) per lo zinco.
+
+\section{ICP-OES}
+
+L'ICP-OES è una tecnica estremamente efficiente per l'analisi elementare di campioni di svariato tipo. I vantaggi principali, rispetto all'assorbimento atomico a fiamma (AAS), sono la capacità di eseguire analisi multicomponente con un'unica lettura di emissione, un intervallo dinamico lineare di calibrazione molto più esteso (fino a 4-5 ordini di grandezza, contro gli 1-2 analizzabili con assorbimento atomico), e la possibilità di raggiungere limiti di rivelabilità mediamente 10-100 volte più bassi. Infine, il gas utilizzato per alimentare il plasma (argon) non presenta le caratteristiche di pericolosità dei gas (per esempio acetilene) richiesti in un AAS.
+
+In questa esperienza, l'ICP-OES è utilizzato per quantificare il contenuto di alcuni metalli in tre campioni: capelli (campione filtrato conservato dall'esperienza precedente), un'acqua potabile portata dagli studenti, e un campione incognito fornito in laboratorio. I metalli quantificati in questa esperienza sono: Ca, Co, Cu, Fe, Mg, Mn, Pb, Sn, Zn. 
+
+\begin{table}
+\begin{tabular}{lcc}
+Metallo & Conc. media acque potabili (mg/L) & Limite di legge (mg/L)\\
+Ca & 25 & 15-50 °F (qual.)\\
+Co & 0.001 & -\\
+Cu & 0.01 & 1\\
+Fe & 0.2 & 0.2 (qual.)\\
+Mg & 15 & 15-50 °F (qual.)\\
+Mn & 0.05 & 0.05 (qual.)\\
+Pb & 0.002 & 0.01\\
+Sn & < 0.001 & -\\
+Zn & 0.1 & -\\
+\end{tabular}
+\caption{La tabella riporta il contenuto medio (fonte: WHO) e i limiti di legge o di qualità (se presenti) relativi a tali metalli per le acque potabili. (qual. = parametro indicatore per la qualità dell'acqua)}
+\end{table}
+
+\subsection{Parte sperimentale}
+
+\subsubsection{Reagenti}
+\begin{itemize}
+\item acido nitrico al 65 \%
+\item soluzione multistandard diluita contenente \ce{HNO3} 3.5\% e i seguenti ppm (mg/L) di elemento: Ca 2500, Co 0.1000, Cu 1.000, Fe 20.00, Mg 1500, Mn 5.000, Pb 0.2000, Sn 0.1000, Zn 10.00
+\item acqua ultrapura
+\end{itemize}
+
+\subsubsection{Apparecchiature}
+\begin{itemize}
+\item Spettrometro di emissione atomica al plasma accoppiato induttivamente (ICP-OES).
+\item pipetta graduata da 5 mL o micropipetta a volume variabile.
+\item pipetta tarata da 10 mL.
+\item sette matracci tarati da 25 mL.
+\item nove provette in plastica
+\item contenitore di plastica per il campione incognito
+\end{itemize}
+
+\subsubsection{Procedimento}
+\begin{enumerate}
+\item Preparare circa 1 litro di acqua ultrapura contenente \ce{HNO3} al 3.5\% in peso. Tale soluzione rappresenta il \dvirg{bianco}.
+\item In cinque matracci da 25 mL preparare cinque soluzioni standard diluite, rispettivamente 1:10, 1:30, 1:100, 1:200 e 1:1000, a partire dal multistandard disponibile. In tutti i casi, portare a volume con il bianco.
+\item Diluire la soluzione campione dei capelli, prelevando 10 mL e trasferendo in matraccio da 25 mL; portare a volume con il bianco.
+\item Addizionare il campione di acqua potabile con un piccolo volume di \ce{HNO3} concentrato, calcolato in maniera tale da ottenere una soluzione di \ce{HNO3} al 3.5\% in peso.
+\item Dare al docente un contenitore pulito e asciutto per ricevere il campione incognito; addizionare \ce{HNO3} per arrivare al 3.5\% in peso in base alle istruzioni del docente.
+\item Lavare le provette in plastica da inserire nel portacampione, ed avvinarle una col bianco, cinque con le soluzioni degli standard, e tre con le soluzioni di campione. Aggiungere poi ciascuna soluzione nella rispettiva provetta, riempiendola fino quasi all'orlo.
+\item Seguendo le istruzioni del personale qualificato, accendere l'ICP-OES e ottimizzare le condizioni strumentali. Fare poi partire la sequenza di misura. Con gli standard procedere sempre dal più diluito al più concentrato. Tra l'ultimo standard e il primo campione, e dopo ogni campione di capelli, effettuare una misura del bianco. Le letture dell'emissione sono corrette sulla base dell'emissione dell'argon (standard interno).
+\end{enumerate}
+
+\subsection{Elaborazione dati}
+
+Esprimere le concentrazioni in mg/L o \mu g/L di elemento; nel campione di capelli esprimere i risultati come \mu g di metallo per grammo di capelli. Per ciascun metallo costruire una tabella e un grafico di calibrazione esterna, riportando i dati sperimentali necessari e calcolando i parametri richiesti per le rette (cfr. dispense statistica). Calcolare il limite di rivelabilità (LOD) e il limite di quantificazione (LOQ) per ogni metallo. Per ogni campione e per ogni metallo fornire il risultato finale con intervallo di fiducia. Se la concentrazione è minore del LOD, dare il risultato finale come \dvirg{$C_{\mathrm{metallo}} < LOD$}.
+
+\paragraph{Test statistici}
+Usando i test opportuni, condurre uno o entrambi tra i seguenti confronti, e trarne le opportune conclusioni. 1) la concentrazione di zinco ottenuta nei capelli con ICP-OES e i due valori ottenuti con AAS. 2) il valore trovato per ciascun metallo nel campione di acqua potabile e quello corrispondente tabulato (che per le acque di rubinetto è solitamente disponibile sul sito internet dell'azienda erogatrice del servizio, mentre per le acque minerali in bottiglia è dato in etichetta).
+
+\section{Potenziometria}
+
+Il fluoruro viene aggiunto nei dentifrici tipicamente al livello dello 0.05 \% (da 500 a 1500 \mu g/g), anche se in alcune zone viene addizionato all'acqua potabile (USA). Sono permesse tre diverse fonti di fluoruro (Food and Drug Administration): NaF, SnF2 e Na2PO3F (sodio monofluorofosfato). Nel caso di un colluttorio la quantità di fluoruro (NaF) mediamente è intorno ai 225 ppm (espressi come \mu g/g di F-).
+
+La composizione tipica di un dentifricio è la seguente:
+\begin{itemize}
+\item pirofosfato di calcio	\quad 39\%
+\item acqua	\quad 25\%
+\item sorbitolo (soluzione al 70\%) \quad 20\%
+\item glicerina	\quad 10\%
+\item miscellanea di componenti	\quad 5\%
+\item pirofosfato stannoso	\quad 1\%
+\item fluoruro stannoso	\quad 0.4\%
+\end{itemize}
+
+La parte minerale dei denti è costituita da idrossiapatite che reagendo con il fluoruro forma l'apatite fluorinata e poi la fluoroapatite, molto meno solubile nell'ambiente acido creato dai batteri della bocca in presenza di cibo, in particolare nella digestione dei carboidrati.
+\begin{center}
+\ce{Ca10(PO4)6(OH)2 + F- -> Ca10(PO4)6(OH)F + OH-}\par
+\ce{Ca10(PO4)6(OH)F + F- -> Ca10(PO4)6F2 + OH-}
+\end{center}
+
+La principale applicazione della misura dei fluoruri è relativa alle acque potabili, e quindi di fiumi, di laghi, di sorgenti, di prelevamento dal sottosuolo, in acquedotti (U.S.EPA metodo 340.2). L'importanza dei fluoruri è legata alla limitazione e prevenzione della carie dentale e quindi è importante conoscere la quantità di fluoruri contenuti in acque potabili o destinabili alla potabilizzazione. E' bene che il contenuto di fluoruri sia misurabile ma inferiore a 2 ppm (2 mg/L). Acque con contenuto superiore a 2 ppm presentano invece un aspetto non più benefico, ma dannoso, perché l'eccessiva ingestione di fluoruri nel periodo di formazione della corona dentale (fino agli 8 anni) provoca una malattia, la fluorosi, che comporta una mineralizzazione dei denti che li scurisce ed indebolisce e provoca l'incurvatura della spina dorsale. Del fluoruro ingerito il 60 \% viene escreto con le normali funzioni mentre il rimanente 40 \% si deposita sullo scheletro e sugli altri tessuti calcificati.
+
+La misura viene effettuata anche in acque minerali imbottigliate, dentifrici, colluttori, nonché in campo medico ossa, urina, plasma, ecc.. Altre applicazioni importanti sono la misura dei fluoruri nei minerali e nell'industria del vetro, della ceramica, dell'alluminio e nell'industria alimentare.
+
+\subsection{Elettrodo ionoselettivo al fluoruro}
+
+Uno dei metodi utilizzabili per la misura della concentrazione di fluoruro nei vari campioni è basato sull'utilizzo dell'elettrodo ionoselettivo al fluoruro. Tale elettrodo è a membrana solida, che consiste in un monocristallo di trifluoruro di lantanio (LaF3) drogato con Eu2+ per aumentare la conducibilità. All'interno dell'elettrodo è presente una soluzione contenente KCl ($\sim$ 3 M) ed F- ($\sim$ 0.01 M), un filo metallico d'argento ed una pasta di AgCl depositata sopra. Questo componente elettrodico viene talvolta chiamato \dvirg{riferimento interno}. L'elettrodo a fluoruro è strutturalmente identico ad un elettrodo di vetro, e si differenzia da questo solo per la membrana esterna. Anche il meccanismo con cui l'elettrodo a fluoruro risponde agli ioni F- è analogo a quello con cui un elettrodo di vetro risponde agli ioni H+, ed è analogo a quello con cui qualsiasi elettrodo ionoselettivo (ion selective electrode, ISE) risponde allo ione a cui esso è selettivo.
+
+L'equazione che descrive la risposta di un ISE in funzione dell'attività dello ione per cui è selettivo è l'equazione di Nikolskii-Eisenman:
+\begin{equation} \label{eq:laboratorio:1}
+E = A' + 2.303 \frac{RT}{z_i F}\log \bigl(a_i + k_{ij}a_j^{\nicefrac{z_i}{z_j}}\bigr)
+\end{equation}
+
+con E = forza elettromotrice (f.e.m.), A' = costante, i = ione principale, j = ione interferente, zi e zj = cariche dei due ioni, e kij = coefficiente di selettività che dipende dal tipo di elettrodo. 
+
+L'attività a di ogni ione è uguale al suo coefficiente di attività moltiplicato per la concentrazione (per esempio, per lo ione fluoruro, $a_{\ce{F-}} = \gamma_{\ce{F-}}[F-]$). L'equazione di Nikolskii-Eisenman è di fatto un'equazione di Nernst nella quale è inserito anche il contributo di eventuali ioni interferenti.
+Per l'ISE a fluoruro l'unico ione interferente per questo tipo di membrana è l'OH-. Poiché kF-,OH- $\approx$ 0.01, per eliminarne l'interferenza (se la concentrazione di fluoruro non è troppo bassa) è sufficiente usare l'elettrodo in soluzioni aventi pH $\leq$ 7.
+
+Nella misura del fluoruro possono esserci anche delle interferenze di altro tipo, non dovute all'ISE. In particolare, vi possono essere reazioni che diminuiscono la quantità di fluoruro libero, e il cui equilibrio va per quanto possibile spostato verso sinistra:
+\begin{equation} \label{eq:laboratorio:2}
+\ce{H3O+ + F- -> HF + H2O}
+\end{equation}
+\begin{equation} \label{eq:laboratorio:3}
+\ce{HF + F- -> HF2-}
+\end{equation}
+\begin{equation} \label{eq:laboratorio:4}
+\ce{SiO2 + 4 HF -> SiF4 + H2O}
+\end{equation}
+\begin{equation} \label{eq:laboratorio:5}
+\ce{M3+ + 6 F- -> MF63-}
+\end{equation}
+
+Per spostare la reazione (2) verso sinistra si deve lavorare a pH non troppo acido (pH > 5; la pKa per l'acido fluoridrico è pari a 3.20). Se la concentrazione di fluoruro nel campione non è troppo elevata, la reazione (3) non avviene in maniera significativa. La reazione (4) può aver luogo a carico dei silicati presenti nel vetro; per evitare tale reazione è opportuno conservare le soluzioni di fluoruro in recipienti di plastica anziché di vetro. Infine, le reazioni di complessamento (5) possono aver luogo se il campione esaminato contiene ioni metallici come Al3+ e Fe3+; per impedire tali reazioni è opportuno effettuare la misura del fluoruro in presenza di complessante forte per tali ioni, come ad esempio citrato o CDTA.
+
+Per eliminare l'interferenza dello ione OH-, e per minimizzare le reazioni chimiche dalla (2) alla (5), tutte le misure con elettrodo a fluoruro possono essere effettuate aggiungendo il TISAB (Total Ionic Strength Adjustment Buffer) a tutte le soluzioni (di calibrazione e di campione). Il TISAB è così composto:
+\begin{itemize}
+\item acido acetico 0.25 M + acetato di sodio 0.75 M (per regolare il pH a 5)
+\item citrato di sodio 0.001 M (come complessante per ioni M3+)
+\end{itemize}
+
+Il TISAB ha anche una forza ionica molto elevata (1.75 M, dato dall'aggiunta in esso di NaCl 1.0 M): ciò fa sì che in tutte le soluzioni esaminate la forza ionica resti costante, permettendo quindi di considerare costanti anche i coefficienti di attività.
+
+Campioni e soluzioni standard vanno diluiti 1:1 con il TISAB. Si può anche utilizzare il TISAB III (con CDTA), 8 volte più concentrato del precedente, 1 parte + 9 di campione, riducendo così la diluizione che viene operata sul campione (ciò è utile per campioni con scarso contenuto di F-).
+
+Grazie all'uso del TISAB, l'equazione di Nikolskii-Eisenman (1) si semplifica e diviene:
+
+\begin{equation} \label{eq:laboratorio:6}
+E = A - B\log [\ce{F-}]
+\end{equation}
+dove A è una costante che congloba la A' dell'equazione (1) e il coefficiente di attività del fluoruro, e B è la pendenza di Nernst sperimentale, che può essere un po' diversa da quella teorica (59.16 mV a 25 °C); il segno meno davanti ad B è dovuto alla carica negativa dello ione fluoruro (zi = -1 nell'equazione 1).
+
+A rigore, la concentrazione misurata di \ce{F-} è quella \dvirg{libera} e non quella totale, cioè [\ce{F-}] e non $C_{\ce{F-}}$ = $[\ce{F-}] + [\ce{HF}] + 2[\ce{HF2-}] + 4[\ce{SiF4}] + 6[\ce{MF6^{3-}}]$. Tuttavia, lavorando col TISAB si annulla in pratica la presenza di specie di fluoruro diverse da F-, per cui si può dire che $[\ce{F-}] = C_{\ce{F-}}$, e la misura elettrodica fornisce la concentrazione totale di fluoruro nel campione.
+
+Si noti che la relazione tra la grandezza misurata e la concentrazione di fluoruro nell'equazione (6) è di tipo logaritmico: quindi, per ottenere una relazione lineare la calibrazione esterna richiede come ascissa $\log [C_{\ce{F-}}]$ e non $[C_{\ce{F-}}]$. La pendenza della calibrazione esterna fornisce il valore sperimentale di B. La calibrazione esterna può essere condotta con 2 soluzioni standard, in maniera analoga a come si fa comunemente con l'elettrodo di vetro; per migliorare l'affidabilità dei risultati è tuttavia meglio calibrare con più di due soluzioni standard.
+
+Oltre alla calibrazione esterna, esiste un altro metodo di calibrazione che può essere usato nell'analisi potenziometrica del fluoruro: il metodo delle aggiunte standard, dove la funzione logaritmica viene linearizzata grazie al metodo di Gran. Dall'equazione (6) (ricordando che [F-] = CF-) si ricava:
+\begin{equation} \label{eq:laboratorio:7}
+C_{\ce{F-}} = 10^{\frac{A-E}{B}}
+\end{equation}
+
+Se al campione incognito, di volume noto Vi e concentrazione incognita Ci, si opera un'aggiunta di volume Vs con una soluzione standard di fluoruro a concentrazione Cs, la concentrazione di fluoruro in soluzione è:
+\begin{equation} \label{eq:laboratorio:8}
+[F^-] = \frac{C_i V_i + C_s V_s}{V_i + V_s}
+\end{equation}
+
+
+Unendo le equazioni (7) e (8), si ottiene:
+\begin{equation} \label{eq:laboratorio:9}
+C_i V_i + C_s V_s = (C_i + V_s) \cdot \biggl(10^{-\frac{E}{BB}} 10^{\frac{A}{B}}\biggr)
+\end{equation}
+
+Nell'equazione (9) il termine 10A/B è una costante, mentre il termine (Vi+Vs)·10-E/B è chiamato \dvirg{unzione di Gran} (G). Tale funzione è sperimentalmente calcolabile in quanto i termini di volume sono noti, E è misurato, e B è il valore teorico oppure può essere preventivamente ottenuto con la calibrazione esterna. Come mostra l'equazione (9), diagrammando G in funzione di Vs si ottiene una retta, e quando G si annulla si ha:
+\begin{equation} \label{eq:laboratorio:10}
+C_i = \frac{C_s V_s}{V_i}
+\end{equation}
+da cui si ricava il valore incognito $C_i$ noti gli altri tre.
+
+La figura seguente mostra un esempio di punti sperimentali ottenuti di G in funzione di $V_s$, la retta dei minimi quadrati interpolante i punti sperimentali, e il punto dove G si annulla.
+
+La misura con ISE è una misura potenziometrica, dunque condotta in quasi totale assenza di corrente nel circuito, ed in presenza di un elettrodo di riferimento. Tale riferimento viene talvolta chiamato \dvirg{esterno}, per distinguerlo dal riferimento \dvirg{interno} presente dentro l'ISE. Lo schema sperimentale utilizzato per ogni misura potenziometrica è mostrato nella figura seguente.
+
+\subsection{Parte sperimentale}
+
+\subsubsection{Reagenti}
+\begin{itemize}
+\item Cloruro di sodio
+\item acido acetico
+\item acetato di sodio
+\item citrato di sodio
+\item fluoruro di sodio essiccato in stufa per 2 ore a 110°C
+\item acqua deionizzata
+\end{itemize}
+
+\subsubsection{Vetreria}
+\begin{itemize}
+\item spruzzetta
+\item vetrini da orologio
+\item pinzetta e spatolina
+\item imbuto per buretta e imbuto per matraccio
+\item matracci da 100 mL in plastica
+\item matraccio in vetro da 250 mL
+\item matraccio in plastica da 500 mL
+\item matraccio in plastica da 250 mL
+\item cilindro da 250 mL
+\item bicchieri in plastica alti e stretti da 100, 150 o 250 mL
+\item bicchiere in vetro da 250 mL
+\item pipette tarate da 5, 25 e 50 mL
+\item micropipette e relativi puntali
+\item buretta da 25 mL
+\end{itemize}
+
+\subsubsection{Apparecchiature}
+\begin{itemize}
+\item elettrodo ionoselettivo al fluoruro
+\item elettrodo di riferimento
+\item millivoltmetro
+\item agitatore con ancoretta magnetica
+\end{itemize}
+
+\subsubsection{Procedimento}
+\begin{enumerate}
+\item Preparare 500 mL di TISAB con NaCl, acido acetico, acetato di sodio e citrato di sodio in modo da realizzare le seguenti concentrazioni: NaCl 1.0 M, acido acetico 0.25 M, acetato di sodio 0.75 M e citrato di sodio 0.001 M.
+\item Preparare una soluzione standard da 1000 ppm (mg/L di \ce{F-}, non di sale!) con NaF (100 mL). Preparare poi due soluzioni diluite da 1 e 10 ppm (100 mL) e una da 50 ppm (500 mL); conservare in recipienti di plastica (dove sono stabili per diversi mesi).
+\item \textit{Preparazione del campione di colluttorio} A causa della presenza di tensioattivi, per evitare la formazione di eccessiva schiuma è opportuno diluire il campione nel seguente modo. Porre 125 mL di TISAB in un matraccio di plastica da 250 mL. Aggiungere acqua deionizzata fin quasi a portare a volume, lasciando lo spazio per il colluttorio. Calcolare la quantità di colluttorio da aggiungere (ad esempio 2.5 mL se la concentrazione dichiarata è 225 ppm di F-; se la concentrazione fosse diversa, modificare opportunamente la quantità di colluttorio prelevato). Aggiungere il colluttorio, portare a volume e mescolare. Nel frattempo procedere alla calibrazione dell'elettrodo.\par
+\textit{Preparazione del campione di dentifricio} Pesare con bilancia analitica 500 mg di dentifricio direttamente in bicchiere di vetro da 250 mL. Aggiungere 125 mL di TISAB, disperdere bene con una bacchetta di vetro in modo da facilitare la dissoluzione del fluoruro, e bollire per 2 min. Lasciar raffreddare, trasferire quantitativamente in un matraccio in plastica da 250 mL e diluire portando a volume con acqua deionizzata. Nel frattempo procedere coi successivi punti dal 4 in poi.
+\item Con l'aiuto del docente collegare gli elettrodi al millivoltmetro ed accendere lo strumento.
+\item Calibrazione esterna dell'elettrodo per 2 punti. Trasferire 25 mL di TISAB e 25 mL di soluzione di F- da 1 ppm in un bicchiere in plastica da 100 mL e aggiungere un'ancoretta magnetica. Inserire gli elettrodi puliti in modo che siano sufficientemente immersi.
+\item Dopo che l'elettrodo si è stabilizzato (attendere al massimo 1 minuto) annotare la f.e.m..
+\item Sciacquare e asciugare gli elettrodi, e poi ripetere i punti 5 e 6 con la soluzione da 10 ppm.
+\item Calibrazione esterna dell'elettrodo per più punti. Trasferire 25 mL di TISAB in un bicchiere in plastica da 150 o 250 mL, aggiungere 25 mL di acqua deionizzata e un'ancoretta magnetica. Inserire gli elettrodi puliti in modo che siano sufficientemente immersi.
+\item Aggiungere con una buretta 0.5 mL di soluzione standard di fluoruro da 50 ppm alla soluzione iniziale; attendere circa 30-60 s ed annotare la f.e.m
+\item Ripetere il punto 9 operando altre quattro aggiunte da 1.0, 2.0, 6.0 e 12.0 mL (tali per cui il volume totale erogato di soluzione standard di fluoruro da 50 ppm sarà pari a 21.5 mL).
+\item Ripetere i punti da 8 a 10 per altre due volte, rinnovando ogni volta la soluzione iniziale. Dopo ogni calibrazione, gli elettrodi devono essere risciacquati con acqua deionizzata e asciugati con la carta, senza strofinare.
+\item Metodo delle aggiunte standard (Gran) e campione. Trasferire 50 mL di campione in un bicchiere di plastica da 150 o 250 mL; inserire un'ancoretta magnetica e gli elettrodi puliti in modo che siano sufficientemente immersi.
+\item Dopo che l'elettrodo si è stabilizzato annotare il valore di f.e.m. del campione
+\item Aggiungere con una buretta un volume di soluzione standard di fluoruro da 50 ppm tale da far variare la f.e.m. di almeno circa 20 mV (si suggerisce un'aggiunta minima di 1.0 mL); attendere circa 30-60 s ed annotare la f.e.m..
+\item Effettuare almeno altre due aggiunte come al punto 14 (dopo ogni aggiunta la f.e.m. deve variare di almeno 20 mV).
+\item Ripetere i punti dal 12 al 15 per altre due aliquote di campione. Dopo ogni serie di misure nel campione gli elettrodi devono essere risciacquati con acqua deionizzata e asciugati con la carta, senza strofinare.
+\end{enumerate}
+
+\subsection{Elaborazione dati}
+
+Esprimere le concentrazioni di calibrazione e quelle nel colluttorio in mg/L di F-; fornire invece i valori nel dentifricio in mg di F- per grammo di dentifricio. Per ciascun metodo di calibrazione (calibrazione esterna per 2 punti, calibrazione esterna per più punti, e metodo delle aggiunte standard) costruire una tabella e un grafico, riportando i dati sperimentali necessari e calcolando i parametri richiesti per le rette (cfr. dispense statistica; attenzione ad usare le ascisse e le ordinate corrette nei tre casi). Per il campione fornire il risultato finale con intervallo di fiducia; dare un risultato per ogni metodo di calibrazione. N.B. per la calibrazione per 2 punti non serve tracciare il grafico e non si può dare una stima affidabile per l'intervallo di fiducia del risultato finale.
+
+\paragraph{Test statistici}
+
+Usando i test statistici opportuni, effettuare i seguenti confronti:
+1) la concentrazione ottenuta col metodo della calibrazione esterna per più punti con la concentrazione ottenuta col metodo delle aggiunte standard (Gran).
+2) la concentrazione ottenuta col metodo della calibrazione esterna per più punti con quella dichiarata sull'etichetta del prodotto.
+3) la concentrazione ottenuta col metodo delle aggiunte standard (Gran) con quella dichiarata sull'etichetta del prodotto.
+Dai risultati dei test trarre le opportune conclusioni.
+
+
+

@@ -1,0 +1,148 @@
+\chapterpicture{header_11}
+\chapter{Riassunto di Laboratorio}
+I metodi di analisi chimico-strumentali presentano alcuni vantaggi e svantaggi rispetto alle tecniche di analisi chimiche.
+Il limite di rivelabilità per una sostanza passa da circa 10$^{-4}$ M a valori di anche 10$^{-10}$ M ed è possibile effettuare delle analisi multi-elemento, a discapito però di costi di manutenzione e acquisto degli strumenti più elevati.
+Le fonti di errore per analisi chimiche sono prettamente a carico dell'operatore, della vetreria e dei reagenti, mentre per un'analisi strumentale sono a carico dell'operatore, della vetreria, dei reagenti, della strumentazione e molto spesso anche della procedura.
+Per i metodi strumentali è necessaria la calibrazione prima di poter effettuare la misurazione incognita e non sono metodi assoluti in quanto il dato fornito non è direttamente correlabile alla quantità di analita.
+
+\paragraph{Determinazione degli Acidi Grassi in un olio}
+
+Vengono determinate le frazioni relative a acidi grassi contenuti in un olio tramite gas-cromatografia.
+
+\halfpicture{09_001}{Reazione di transesterificazione}{}
+
+Gli acidi grassi saturi più comuni sono palmitico (C16) e stearico (C18), mentre l'acido grasso insaturo più comune è l'oleico (C18:1).
+Per seguire una GC occorre trans-esterificare gli esteri in modo da trasformarli in esteri metilici più volatili.
+Per l'analisi quantitativa è necessario solamente confrontare i tempi di ritenzione dei picchi associati agli acidi grassi con degli standard, tenendo conto che sussistono le seguenti regole:
+\begin{itemize}
+\item Il tempo di ritenzione aumenta all'aumentare degli atomi di carbonio
+\item Gli esteri insaturi escono dopo dei corrispettivi saturi
+\item Il tempo di ritenzione degli esteri insaturi aumenta all'aumentare del numero di doppi legami.
+\end{itemize}
+
+Per rendere più accurata la normalizzazione interna si possono calcolare i fattori di risposta misurando l'area dei picchi di una soluzione di acidi grassi di concentrazione $C_i$:
+\[
+f_i = \frac{A_i}{C_i}
+\]
+
+La concentrazione dell'acido grasso nel campione si ricava nel seguente modo:
+\[
+C_i = \frac{\frac{A_i}{fi}}{\sum \frac{A_i}{f_i}}
+\]
+
+Negli oli alimentari si può attuare una normalizzazione interna e la composizione relativa del campione è ricavata dal rapporto dell'area di ciascun componente e l'area totale:
+\[
+C_i = \frac{A_i}{A_{tot}} = \frac{A_i}{\sum A_i}
+\]
+
+Questo metodo, per essere valido, richiede due requisiti:
+\begin{itemize}
+\item Tutti i componenti devono essere eluiti
+\item Tutti i componenti devono avere simili fattori di risposta.
+\end{itemize}
+
+\paragraph{Determinazione della caffeina in bevande gassate}
+Si tratta di un'analisi qualitative e quantitativa in quanto viene anche determinato il tempo di ritenzione tramite calibrazione esterna.
+
+\halfpicture{09_002}{Grafico spettrofotometrico della caffeina}{}
+
+Il rivelatore dell'HPLC è uno spettrofotometro UV-Vis impostato su una lunghezza d'onda di 270 nm.
+Per la determinazione della concentrazione si costruisce una retta di calibrazione esterna e si estrapola la concentrazione di caffeina nei campioni.
+
+\paragraph{Determinazione degli anioni nell'acqua potabile}
+Vengono determinati i cloruri, nitrati, solfati e fosfati contenuti in un campione di acqua potabile mediante cromatografia ionica.
+Per la determinazione si esegue una calibrazione esterna con soluzioni a concentrazione nota degli anioni.
+Si utilizza come eluente una miscela CO$_3^{2-}$ / HCO$_3^-$ in modo da rendere rivelabili solo i composti che formano acidi coniugati, nella successiva soppressione, più forti di H$_2$CO$_3$.
+
+\halfpicture{09_003}{Grafico per la cromatografia ionica degli anioni in acqua potabile}{}
+
+La soppressione è effettuata con trattamento in una colonna secondaria con una soluzione di H$_2$SO$_4$.
+All'ingresso della colonna principale è presente una pre-colonna per evitare sporcamenti e preservare la colonna principale.
+La concentrazione degli ioni viene estrapolata dalla retta di calibrazione. I limiti di legge per le sostanze sono:
+
+\paragraph{Determinazione del fosfato nella Coca-Cola}
+Per la determinazione dello ione fosfato (PO$_4^{3-}$) nella Coca-Cola si utilizza il metodo al blu di molibdeno, applicabile per concentrazioni di fosfato comprese tra 0.03 e 0.3 mg/L e gli interferenti possibili sono As (V), NO$_2^-$, S$^{2-}$, Cr (VI)...
+
+\halfpicture{09_004}{Reazione dello ione fosfato}{}
+
+Viene preparato quindi il cosiddetto 'reattivo misto' contente eptamolibdato di esammonio tetraidrato, acido solforico, acido ascorbico, tartrato di potassio e antimonile.
+Per le soluzioni standard si aggiungono dei volumi di soluzione Standard da 300 ppm di KH$_2$PO$_4$.
+L'assorbanza del blu di molibdeno, misurata a 886.6 nm o 707.6 nm (massimo relativo), va misurata dopo 10 minuti e non oltre 15 minuti dall'aggiunta del reattivo misto in quanto dopo questo intervallo di tempo inizia a calare.
+
+\halfpicture{09_005}{Spettro della soluzione dopo 10 minuti}{}
+
+Prima della misura degli standard è necessario azzerare lo spettrofotometro con dell'acqua MilliQ, leggere il bianco contenente acqua MilliQ e il reattivo misto e prima della misurazione del campione leggere l'assorbanza di un bianco campione contenente il campione diluito senza reattivo misto.
+Per valutare l'effetto dell'interferza negativa di NO$_2^-$ si legge l'Abs del campione contenente questo composto.
+Si costruisce poi una retta di calibrazione ponendo Abs vs C (PO$_4^{3-}$) e per interpolazione si determina la concentrazione di fosfato nel campione.
+
+\paragraph{Determinazione dello zinco nei capelli}
+Si determina la quantità di zinco in un campione di capelli, previa mineralizzazione con HNO$_3$ e HClO$_4$ e calibrazione dello spettrofotometro ad assorbimento atomico con soluzioni standard di zinco.
+Per valutare l'eventuale effetto matrice di opera anche con il metodo della calibrazione interna (aggiunte standard).
+
+La fiamma dell'AA alimentata a acetilene e aria può arrivare a temperature superiori ai $2\,000$ \degree C e l'introduzione delle soluzioni nello strumento avviene dalla più diluita (meno concentrata) alla meno diluita (più concentrata).
+La lettura dell'assorbanza dello Zinco viene fatta alla lunghezza d'onda di lavoro di 213.9 nm.
+
+Si ottiene sia per la calibrazione esterna, sia per quella interna due rette.
+Si estrapolano i valori dello zinco e si vede l'eventuale effetto matrice per confronto delle pendenze delle due rette.
+
+\paragraph{Analisi dell'acqua mediante spettrometro ICP-OES}
+Si determina la quantità di zinco nei capelli e di alcuni ioni metallici (Ca, Co, Cu, Fe, Mn, Mg, Pb, Sn, Zn) nell'acqua potabile.
+Le soluzioni da analizzare contengono un'aliquota di HNO$_3$ al 3.5 $\%$ utile a mantenere pulita la linea dell'ICP.
+Il plasma ad argon dell'ICP arriva anche a temperature di $10\,000$ \degree C e viene utilizzato un auto-campionatore per l'introduzione delle soluzioni nello strumento.
+Le misure di assorbanza vengono corrette in automatico dallo strumento sulla base dell'emissione dell'argon (standard interno).
+
+\paragraph{Determinazione del Fluoruro in un collutorio tramite ISE}
+Viene determinata la concentrazione di Fluoruro in un colluttorio mediante Elettrodo Iono-Selettivo al LaF$_3$, costituito da una membrana selettiva e da un elettrodo.
+Il potenziale generato non è dovuto solo alla reazione redox, bensì al potenziale di membrana che si instaura tra i due lati.
+
+\marginpicture{09_006}{Elettrodo ioniselettivo per il fluoruro}{}
+
+L'elettrodo è costituito da un monocristallo di LaF$_3$ drogato con EuF$_2$ per dare conducibilità e all'interno è presente un elettrodo di 'riferimento interno' di Ag/AgCl in una soluzione di KCl e F$^-$ $\approx$ 0.01 M.
+Per l'ISE al fluoruro il potenziale, analogamente all'elettrodo a vetro con H$_3$O$^+$, dipende dalla concentrazione (attività) di F$^-$ mediante:
+\[
+E_{ISE, F^-} = A + B \cdot pF^-_{est}
+\]
+
+Rispetto all'equazione che regola il potenziale per l'elettrodo a vetro presenta il segno positivo invece che negativo, intuitivamente dovuto al fatto che F$^-$ è uno ione negativo e H$_3$O$^+$ è positivo.
+In realtà, l'ISE al fluoruro non è selettivo solo per F$^-$ e la costante di selettività si ricava dall'equazione di Nikolskii-Eisemann:
+\[
+E = A - B \log \biggl(a_{F^-} + \sum_j k_j a^{\frac{1}{z_j}}\biggl)
+\]
+
+In questo caso l'unico interferente importante è OH$^-$ e $k_{OH^-}$ $\approx$ 0.01 e affinché l'elettrodo possa misurare correttamente l'attività di F$^-$ è necessario rendere il termine additivo trascurabile:
+\[
+E = A - B \log (a_{F^-} + k_{OH^-} \cdot a_{OH^-})
+\]
+
+\halfpicture{09_007}{Schema del voltmetro utilizzato}{}
+
+Mediante calibrazione esterna con soluzioni a concentrazione diversa di fluoruro si determinano A e B.
+Il pH di lavoro deve essere minore di 7 in quanto l'ISE possiede linearità fino a 10$^{-6}$ M di F$^-$ perché poi interferisce la solubilità di LaF$_3$.
+Se il pH di lavoro è minore di 5 possono instaurarsi delle reazioni che diminuiscono la quantità di Fluoruro:
+\begin{align*}
+& F^- + H_2O \rightleftharpoons HF + OH^-\\
+& HF + F^- \rightleftharpoons [HF_2]^-\\
+& 4 F^- + SiO_2 + 2 H_2O \rightleftharpoons SiF_4 + 4 OH^-\\
+& n F^- + M^{3+} \rightleftharpoons MF_n \quad \text{con} \quad M = Al^{3+}, Fe^{3+}\\
+\end{align*}
+
+Le soluzioni di F$^-$ vengono perciò conservate in recipienti di plastica e si aggiungono dei complessanti, come il citrato di sodio, che eliminato i cationi metallici trivalenti.
+Per svincolarsi dai coefficienti di attività, regolare il pH ed eliminare ioni complessanti le misure vengono effettuate con forza ionica costante, mediante aggiunta del TISAB
+(Total Ionic Strenght Adjustment Buffer, a pH 5.0 e forza ionica di 1.75 M) contenente NaCl, acido acetico, acetato di sodio e citrato di sodio.
+
+\halfpicture{09_008}{Calibrazione con il metodo di Gran}{}
+
+Si effettua dapprima la calibrazione su due punti dell'elettrodo, successivamente si effettua la calibrazione esterna e poi si misura la fem del campione.
+Si effettua poi la determinazione della concentrazione di fluoruro mediante aggiunte standard con il \emph{metodo di Gran} che permette di linearizzare risposte strumentali di tipo logaritmico:
+\begin{align*}
+& E = A + B \cdot pF^- \longrightarrow [F^-] = 10^{\frac{A-E}{B}}\\
+& [F^-] = \frac{C_i V_i + C_s V_s}{V_i + V_s}\\
+& C_i V_i + C_s V_s = 10^{\frac{A-E}{B}} \cdot (C_i + V_s)\\
+& C_i V_i + C_s V_s = (C_i + V_s) \cdot \biggl(10^{-\frac{E}{BB}} 10^{\frac{A}{B}}\biggr)\\
+& (C_i V_i + C_s V_s) 10^{\frac{A}{B}} = (C_i + V_s) 10^{-\frac{E}{BB}} = G
+\end{align*}
+
+$G$ è detta Funzione di Gran e restituisce il seguente grafico $G$ vs $V_s$ e per $G=0$ si può ricavare:
+\[
+C_i = \frac{C_s V_s}{V_i}
+\]

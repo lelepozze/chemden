@@ -1,0 +1,356 @@
+\chapterpicture{header_02}
+\chapter{Equilibri di ripartizione}
+
+Uno dei più importanti metodi di separazione di un soluto impiega coppie di fasi. In un tal sistema, il componente in esame si trasferisce da una fase all'altra più delle sostanze interferenti.
+
+L'estrazione con solventi è una delle tecniche più utilizzate per la sua semplicità strumentale e operazionale. È sufficiente un imbuto separatore e l'operazione, che richiede generalmente pochi minuti, può essere applicata sia a impurezze presenti in tracce che ai costituenti principali. Mediante tale tecnica è possibile:
+\begin{itemize}
+\item L'identificazione di una sostanza sulla base di un parametro P chiamato coefficiente di ripartizione
+\item L'arricchimento di un componente
+\item Separazione
+\item Lo studio di equilibri in soluzione.
+\end{itemize}
+
+\section{Principi}
+Siano date due fasi immiscibili 1 e 2 nelle quali un soluto A possa distribuirsi. All'equilibrio i potenziali chimici del soluto A nelle due fasi saranno uguali pertanto:
+
+\marginpicture{01_001}{Equilibrio di fase}{}
+\[
+\mu_{A_{1}} = \mu_{A_{2}}
+\]
+I potenziali sono definiti come
+\begin{align*}
+\mu_{A_{1}} & = \mu_{A_{1}}^0 + RT \ln a_1 0 = \mu_{A_{1}}^0 + RT \ln [a_1]\gamma_1\\
+\mu_{A_{2}} & = \mu_{A_{2}}^0 + RT \ln a_2 0 = \mu_{A_{2}}^0 + RT \ln [a_2]\gamma_2\\
+\end{align*}
+Dall'uguaglianza dei potenziali si ottiene la costante di ripartizione, K ed il coefficiente di ripartizione, P:
+\[
+\mu_{A_{1}}^0 + RT \ln [a_1]\gamma_1 = \mu_{A_{2}}^0 + RT \ln [a_2]\gamma_2
+\]
+Si può quindi ricavare la costante di equilibrio $K$
+\[
+\exp{\biggl(\frac{\mu_{A_{1}}^0 - \mu_{A_{2}}^0}{RT}\biggr)} = \frac{a_2}{a_1} = K \Rightarrow K = \frac{[A]_2 \gamma_2}{[A]_1 \gamma_1}
+\]
+Per semplificare l'equazione, si possono raggruppare i coefficienti di attività nel coefficiente di ripartizione $P$.
+\[
+P = K\frac{\gamma_1}{\gamma_2} = \frac{[A]_2}{[A]_2}
+\]
+Tale equazione è valida solo quando il soluto è presente nella stessa forma in entrambe le fasi. Nel caso di presenza nelle due fasi di equilibri a carico della specie che si ripartisce, è più conveniente utilizzare la grandezza $D$, chiamata \emph{rapporto di distribuzione}, definita come:
+\[
+D = \frac{\sum_i (n_i c_i)_2}{\sum_j (n_j c_j)_1}
+\]
+dove $n$ e $c$ sono rispettivamente i coefficienti stechiometrici e le concentrazioni dell'analita presente sotto qualunque forma nelle due fasi. È evidente che, qualora non si verifichino reazioni parallele al processo di ripartizione, $D$ coincide con $P$. Nel seguito vengono illustrati vari esempi.
+
+\subsection{Ripartizione in presenza di un equilibrio di dimerizzazione}
+
+Gli equilibri da considerare sono i seguenti
+\begin{align*}
+A_{(aq)} & \rightleftharpoons A_{(o)}\\
+2 A_{(o)} & \rightleftharpoons A_2
+\end{align*}
+
+Il primo equilibrio è espresso dal coefficiente di ripartizione $P$
+\[
+P = \frac{[A]_{(o)}}{[A]_{(aq)}}
+\]
+Il secondo equilibrio è espresso dalla costante di dimerizzazione $K_{dim}$
+\[
+K_{dim} = \frac{[A_2]_{(o)}}{[A]_{(o)}^2}
+\]
+\marginpicture{01_001}{Equilibrio di fase di una sostanza che dismuta}{}
+Per un tale sistema, il rapporto di distribuzione D è dato dalla relazione :
+\[
+D = \frac{[A]_{(o)} + 2 [A_2]_{(o)}}{[A]_{(aq)}}
+\]
+Dalle equazioni si ricava facilmente $D$ in funzione di $P$ e $[A]_{(aq)}$.
+\begin{equation} \label{eq:ripartizione:1}
+D = P + 2K_{dim} \frac{[A]_{(o)}^2}{[A]_{(aq)}} \quad \Rightarrow \quad D = P + 2K_{dim} P^2 [A]_{(aq)}
+\end{equation}
+dall'equazione \ref{eq:ripartizione:1} si nota che il rapporto di distribuzione è in questo caso lineare con la concentrazione all'equilibrio di A in fase acquosa.
+
+
+
+\fullpicture{01_003}{$D$ in funzione di {$[A]_{aq}$}}{Il grafico illustra la variazione di D al variare di $K_{dim}$, con $P$ uguale a 1}
+
+Si noti come all'aumentare del valore di $K_{dim}$ aumenti la quantità di analita presente nella fase organica. Il valore di $D$ per una concentrazione di soluto nella fase acquosa uguale a zero è un punto di discontinuità e varrebbe zero.
+
+Più significativa a livello operativo è la dipendenza di $D$ dalla concentrazione analitica iniziale, che si ottiene prendendo in considerazione il bilancio di massa dell'analita A
+\[
+C_A = [A]_{(aq)} + [A]_{(o)} + 2 [A_2]_{(o)}
+\]
+Per sostituzione si ottiene il bilancio di materia in funzione della concentrazione di soluto in fase acquosa
+\[
+C_A = [A]_{(aq)} + P [A]_{(aq)} + 2K_{dim} P^2 [A]_{(aq)}^2
+\]
+Da questa si può ricavare la concentrazione di analita in fase acquosa mediante la risoluzione dell'equazione di secondo grado
+\begin{equation} \label{eq:ripartizione:2}
+[A]_{(aq)} = \frac{-(1+P) + \sqrt{(1+P)^2 + 8 K_{dim P^2 C_A}}}{4 K_{dim} P^2}
+\end{equation}
+Sostituendo l'equazione \ref{eq:ripartizione:2} nella \ref{eq:ripartizione:1} si ottiene la relazione attesa
+\[
+D = P + 2K_{dim} P^2 \frac{-(1+P) + \sqrt{(1+P)^2 + 8 K_{dim P^2 C_A}}}{4 K_{dim} P^2}
+\]
+
+Semplificando, si ottiene
+\[
+D = P + \frac{-(1+P) + \sqrt{(1+P)^2 + 8 K_{dim P^2 C_A}}}{2}
+\]
+\fullpicture{01_004}{$D$ in funzione di $C_A$}{Il grafico illustra la variazione di $D$ al variare della concentrazione totale $C_A$, al variare di $K_{dim}$ con $P$ costante uguale a 1}
+
+Il punto per $C_A$ = 0 è un punto di discontinuità, in quanto il valore di $D$ in tale punto è uguale a zero. Si può notare come $D$ aumenti all'aumentare del valore di $K_{dim}$.
+
+\subsection{Ripartizione in presenza di dissociazione acida}
+
+\marginpicture{01_005}{Equilibrio di fase di una sostanza con un equilibrio acido-base}{}
+
+Gli equilibri da considerare sono i seguenti
+\begin{align*}
+HA_{(aq)} & \rightleftharpoons H^+ + A^-\\
+HA_{(aq)} & \rightleftharpoons HA_{(o)}
+\end{align*}
+Tali equilibri sono governati rispettivamente dalla costante di dissociazione acida $K_a$ e dal coefficiente di ripartizione $P$
+\[
+K_a = \frac{[H^+] [A^-]}{[HA]} \qquad P = \frac{[HA]_o}{[HA]_aq}
+\]
+Il rapporto di distribuzione è dato dalla relazione
+\[
+D = \frac{[HA]_o}{[A^-] + [HA]_{aq}}
+\]
+Dividendo numeratore e denominatore di $D$ per $[HA]_{aq}$ e usando $K_a$ e $P$, si ottiene la relazione che lega $D$ a $P$, $K_a$ e $pH$.
+\[
+D = \frac{P}{\frac{[A^-]}{[HA]_{aq}} + 1} = \frac{P}{\frac{K_a}{[H^+]} + 1}
+\]
+Si può osservare come la capacità estrattiva per una dato $P$ (nel caso della figura P=1) e un dato $pH$ aumenti all'aumentare del valore di $pK_a$, ossia quanto meno forte è l'acido. Inoltre, per una dato $pK_a$, la capacità estrattiva è massima e uguale a $P$ per valori di $pH$ molto minori di $pK_a$, dove l'acido è presente quasi totalmente nella sua forma indissociata, e minima per valori di $pH$ molto maggiori di $pK_a$, dove l'acido si può considerare totalmente dissociato. In quest'ultimo caso il $\log D$ decresce linearmente con l'aumentare del $pH$.
+\begin{align*}
+\log D & = \log P \quad \text{per} \quad pH << pk_a\\
+\log D & = \log P - \log K_a - pH \text{per} \quad pH >> pk_a\\
+\end{align*}
+\fullpicture{01_006}{$D$ in funzione di $pK_a$}{Il grafico illustra come sia possibile, almeno a livello teorico, separare acidi a diversa forza e con uguale rapporto di ripartizione $P$ tra la fase organica e fase acquosa, operando sul parametro $pH$}
+
+
+\subsection{Ripartizione in presenza di equilibri multipli}
+Si abbia dell'acido benzoico distribuito tra acqua e benzene. Si determini l'equazione del rapporto di distribuzione $D$ sapendo che esiste un equilibrio di dimerizzazione in benzene con costante $K_{dim}$ e uno di dissociazione acida in acqua con costante $K_a$.
+
+Il rapporto di distribuzione è dato dalla seguente relazione, facilmente ottenibile mediante le equazioni sviluppate nei precedenti esempi.
+\[
+D = \frac{[HB]_o + 2 [(HB)_2]_o}{[HB]_{aq} + [B^-]_{aq}}
+\]
+
+Facendo uso delle costanti $P$, $K_{dim}$ e $K_a$
+\[
+P = \frac{[HB]_o}{[HB]_{aq}} \qquad K_{dim} = \frac{[(HB)_2]}{[HB]_o^2} \qquad K_a = \frac{[H^+] [B^-]}{[HB]}
+\]
+si ottiene la relazione finale
+\[
+D = \frac{P + 2 K P^2 [HB]_{aq}}{1 + \frac{K_a}{[H^+]}}
+\]
+
+\marginpicture{01_007}{Equilibrio di fase di una sostanza con più equilibri}{}
+
+Da questa espressione, si nota come $D$ dipenda dal $pH$ e dalla concentrazione di acido indissociato HB in fase acquosa.
+
+Per ottenere la dipendenza di $D$ dalla concentrazione analitica di acido $C_{HB}$ e dal $pH$, si procede come nel caso del primo esempio, partendo dal bilancio di materia.
+\[
+C_{HB} = [HB]_{(aq)} + [B^-]_{(aq)} + [HB]_{(o)} + 2 [(HB)_2]_{(o)}
+\]
+
+Da questo, ricordando le relazioni che legano le specie a $K_{dim}$, $K_a$ e $P$, si ottiene, tramite le equazioni \ref{eq:ripartizione:3} e \ref{eq:ripartizione:4} l'equazione risolutiva \ref{eq:ripartizione:5}, che esprime la variazione di $D$ in funzione di $P$, $K$, $K_a$ e $pH$.
+\begin{equation} \label{eq:ripartizione:3}
+C_{HB} = [HB]_{(aq)} + \frac{K_a [HB]_{(aq)}}{[H^+]_{(aq)}} + P [HB]_{(aq)} + 2 K_{dim} P^2 [HB]_{(aq)}^2 
+\end{equation}
+
+Risolvendo l'equazione di secondo grado, si ricava la concentrazione di acido indissociato in fase acquosa, da introdurre nell'espressione del rapporto di distribuzione (equazione \ref{eq:ripartizione:5}).
+\begin{equation} \label{eq:ripartizione:4}
+[HB]_{(aq)} = \frac{-\biggl(1+P+\frac{K_a}{[H^+]}\biggr) + \sqrt{\biggl(1+P+\frac{K_a}{[H^+]}\biggr)^2 + 8K_{dim} P^2 C_{HB}}}{4 K_{dim} P^2}
+\end{equation}
+
+Si può quindi sostituire $[HB]_{(aq)}$ nell'espressione per $D$
+\begin{equation} \label{eq:ripartizione:5}
+D = \dfrac{P+2 K_{dim} P^2\frac{-\biggl(1 + P + \dfrac{K_a}{[H^+]}\biggr) + \sqrt{\biggl(1 + P + \dfrac{K_a}{[H^+]}\biggr)^2 + 8 K_{dim} P^2 C_{HB}}}{4K_{dim}P^2}}{1+\dfrac{K_a}{[H^+]}}
+\end{equation}
+
+
+\fullpicture{01_008}{Analisi logaritmica di P in funzione al $pH$}{Si noti che per valori di $pH$ maggiori di 9, le tre curve sono sovrapposte, e pertanto l'aspetto acido-base prevale sull'equilibrio di dimerizzazione indipendentemente dal valore della relativa costante.}
+
+
+
+\subsection{Ripartizione in presenza di più equilibri acido-basse}
+
+\marginpicture{01_009}{8-ossichinolina}{}
+
+Si valuti l'equazione del rapporto di distribuzione $D$ tra acqua e benzene, sapendo che la specie Ox$^-$ può subire due successivi equilibri di protonazione in acqua.
+\begin{align*}
+Ox^- + H^+ & \rightleftharpoons HO_x\\
+HOx + H^+ & \rightleftharpoons H_2Ox^+
+\end{align*}
+L'acido H$_2$Ox$^+$ è un acido diprotico, le cui $pK_{a_1}$ e $pK_{a_2}$ valgono rispettivamente 4 e 10. Il sistema è rappresentato dallo schema a lato.
+
+Noto
+\[
+P = \frac{[HOx]_o}{[HOx]_{aq}} \qquad K_{a_1} = \frac{[H^+] [HOx]}{[H_2Ox^+]} \qquad \frac{[H^+] [Ox^-]}{[HOx]}
+\]
+è possibile ricavare il rapporto di distribuzione $D$ in funzione di costanti, concentrazione e pH
+\[
+D = \frac{[HOx]_o}{[HOx]_{aq} + [Ox^-]_{aq} + [H_2Ox^+]_{aq}}
+\]
+Esprimendo le concentrazioni di $[Ox^-]_{aq}$ e $[H_2Ox^+]_{aq}$ in funzione di $[HOx]_{aq}$, si ottiene
+\marginpicture{01_010}{Equilibrio di fase di una sostanza con più equilibri acido-base}{}
+\[
+D = \dfrac{[HOx]_o}{[HOx]_{aq} \dfrac{K_2}{[H^+]} + [HOx]_{aq} + [HOx]_{aq} \dfrac{[H^+]}{K_1}}
+\]
+Si può quindi determinare $D$ in funzione di $P$
+\[
+D = \dfrac{P}{\dfrac{K_2}{[H^+]} + 1 + \dfrac{[H^+]}{K_1}}
+\]
+
+Come si può vedere, la massima efficienza estrattiva si ha nell'intervallo di pH compreso tra 6 e 8 (le p$K_a$ usate nella figura sono 4 e 10), dove è presente quasi esclusivamente la sola specie non carica HOx.
+
+Il grafico, nelle sue linee essenziali, è ricavabile dalle seguenti linee guida:
+\halfpicture{01_011}{Analisi logaritmica di $D$, in funzione del $pH$}{Nella prima parte, $\log D$ aumenta linearmente con il $pH$, nella terza parte decresce linearmente con il $pH$}
+
+\begin{align*}
+\log D &= \log P + \log K_1 + pH \quad \text{per} \quad pH << pK_1\\
+\log D &= \log P \quad \text{per} \quad pK_1 < pH < pK_2\\
+\log D &= \log P - \log K_2 - pH \quad \text{per} \quad pH >> pK_2\\
+\end{align*}
+
+
+\subsection{Ripartizione di complessi chelati}
+I chelati sono dei complessi molto stabili, formati da uno ione metallico e un legante, che per le sue caratteristiche di avere più di un sito legante, è in grado di coordinare più efficacemente il centro metallico. Nella figura sottostante, viene riporta la molecola del ditizone (difeniltiocarbazone).
+
+\marginpicture{01_012}{Ditizone}{}
+
+Il legante ditizone è un acido diprotico, ma la sua seconda costante di dissociazione acida è talmente piccola ($pK_2 \approx 15$), che negli equilibri di estrazione ai fini dei calcoli si può considerare come un acido monoprotico HDz con $pK_1$ uguale a 4.5. Nella sua forma ionica dissociata Dz$^-$ è una base di Lewis capace di complessate ioni metallici. La costante di complessamento con il rame vale 10$^5$. Il sistema di equilibri operanti è rappresentato dal seguente schema
+
+La risoluzione del problema si ottiene considerando le costanti dei vari equilibri in gioco.
+\begin{align} \label{eq:ripartizione:7}
+& P_{HDz} = \frac{[HDz]_o}{[HDz]_{aq}}\\
+& P_{Cu(Dz_2)} = \frac{[CuDz_2]_o}{[CuDz]_{aq}}\\
+& \beta = \frac{[CuDz_2]}{[Cu^{2+}][Dz^-]^2}\\
+& K_a = \frac{[H^+][Dz^-]}{[HDz]}\\
+& D = \frac{[CuDz_2]_o}{[Cu^{2+}]_{aq} + [CuDz_2]_{aq}}\\
+\end{align}
+
+Dopo semplici sostituzioni si ottiene l'equazione risolutiva
+\begin{equation} \label{eq:ripartizione:6}
+D = \dfrac{P_{CuDz_2}}{\dfrac{1}{\beta [Dz^-]_{aq}} + 1}
+\end{equation}
+da cui si vede che $D$ dipende dalla quantità di legante in soluzione acquosa, $[Dz^-]_{aq}$. 
+
+\fullpicture{01_014}{Variazione del logaritmo di $D$ in funzione del prodotto {$[Dz^-]^2_{aq}$}}{}
+
+Poiché la quantità $[Dz^-]^2_{aq}$ è funzione di $\beta$, $P_{CuDz_2}$, $P_{HDz}$, $C_{Cu}$, $C_{HDz}$ ed $H^+$, fissato il $pH$ della fase acquosa, viene fissato anche il valore di $[Dz^-]_{aq}$. In queste condizioni, per una serie di ioni metallici, il valore del $\log D$ dipende dalla sola costante di formazione di complessamento del metallolegante
+
+\marginpicture{01_013}{Equilibrio di fase di un chelante e del suo complesso}{}
+
+Volendo risolvere in funzione del $pH$ e delle concentrazioni analitiche, si ricorre ai bilanci di materia per il rame e per il legante.
+
+Per il rame
+\begin{align*}
+& C_{Cu} = [Cu^{2+}] + [CuDz_2]_{(aq)} + [CuDz_2]_{(o)}\\
+& C_{Cu} = \frac{[Cuz_2]_{(aq)}}{\beta [Dz^-]^2} + [CuDz_2]_{(aq)} + P_{CuDz_2} [CuDz_2]_{(aq)}\\
+& [CuDz_2]_{(aq)} = \dfrac{C_{Cu}}{\dfrac{1}{\beta [Dz^-]^2} + 1 + P_{CuDz_2}}\\
+\end{align*}
+Per il legante
+\begin{align*}
+& C_{Dz} = [HDz]_{(aq)} + [Dz^-] + [HDz]_{(o)} + 2[CuDz_2]_{(aq)} + 2 [CuDz_2]_{(o)}\\
+& C_{Dz} = [HDz]_{(aq)} + [HDz]_{(aq)} \dfrac{K_a}{[H^+]} + P_{HDz} [HDz]_{(aq)} + 2(1 + P_{CuDz_2})[CuDz]_{(aq)}\\
+& [CuDz_2]_{(aq)} = \dfrac{C_{Dz} - [HDz]_{(aq)} \biggl(1 + \dfrac{K_a}{[H^+] + P_{HDz} + P_{HDz}}\biggr)}{2(1 + P_{CuDz_2}}\\
+\end{align*}
+
+Sostituendo l'equazione di $[CuDz_2]_{(aq)}$ per il rame nell'espressione di $[CuDz_2]_{(aq)}$ del legante, si ottiene
+\[
+\frac{C_{Cu}}{\dfrac{1}{\beta [Dz^-]^2} + 1 + P_{CuDz_2}} = \frac{C_{Dz} - [HDz]_{aq} \biggl(1 + \dfrac{K_a}{[H^+] + P_{HDz}}\biggr)}{2 (1 + P_{CuDz_2})}
+\]
+
+Rielaborando si giunge alla equazione cubica della concentrazione di $Dz^-$ nella fase acquosa in funzione del $pH$.
+\[
+\begin{split}
+&[Dz^-]^3 - \frac{C_{Dz}}{1 + \dfrac{K_a}{[H^+]} + P_{HDz} \dfrac{K_a}{[H^+]}} [Dz^-]^2 + \frac{1}{\beta (1 - P_{CuDz_2})} [Dz^-] + \\
+& + \frac{-C_{Dz} + 2(1 + P_{CuDz_2}C_{Cu})}{\beta (1 - P_{CuDz_2}) \biggl(1 + \dfrac{K_a}{[H^+]} + P_{HDz} \dfrac{K_a}{[H^+]}\biggr)} = 0\\
+\end{split}
+\]
+Risolvendo la cubica in funzione del pH e introducendola nell'equazione \ref{eq:ripartizione:6} di $D$ si ottiene la soluzione cercata.
+
+Una soluzione approssimata della relazione si ottiene ammettendo che si usi una quantità molto alta di legante, che il rapporto di ripartizione sia molto alto e che la solubilità del complesso in acqua sia estremamente bassa. In tale ipotesi, si possono fare alcune approssimazioni, salvo poi eseguire la verifica. La prima approssimazione riguarda il rapporto di distribuzione $D$.
+\[
+D = \frac{[CuDz_2]_o}{[Cu^{2+}] + [CuDz_2]_{aq}} \approx \frac{[CuDz_2]_o}{[Cu^{2+}]_{aq}}
+\]
+La seconda approssimazione riguarda il bilancio di materia del legante, per cui
+\[
+C_{Dz} \approx [HDz]_{(o)}
+\]
+Ricordando le equazioni \ref{eq:ripartizione:7}
+\begin{align*}
+& D \approx \frac{[CuDz_2]}{[Cu^{2+}]}_{(aq)} = P_{CuDz_2} \frac{[CuDz_2]_{aq}}{[Cu^{2+}]_{aq}} = P_{CuDz_2} \beta [Dz]^2_{(aq)}\\
+&[Dz]^2_{aq} = \biggl(\frac{[HDz]_{aq}}{[H^+]}\biggr)^2 = \biggl(K_a \frac{[HDz]_o}{P_{HDz} [H^+]}\biggr)^2 \approx \frac{K_a^2}{P_{HDz}^2} \frac{C_{Dz}^2}{[H^+]^2}
+\end{align*}
+Sostituendo si ottiene la formula risolutiva approssimata
+\[
+D = \frac{P_{CuDz_2 \beta K_a^2}}{P_{HDz}^2} \frac{C_{Dz}}{[H^+]^2}
+\]
+dove $K_{ex}$ rappresenta la costante di estrazione del processo.
+La figura sottostante riporta il diagramma di estrazione di vari metalli con ditizone in funzione del pH.
+
+\fullpicture{01_015}{Percentuale di estrazione di vari metalli con ditizone 10$^{-4}$ M, in funzione del pH}{}
+
+Si può notare come non sempre sia possibile separare quantitativamente i singoli metalli, però, come nel caso della figura, è possibile effettuare una separazione per gruppi di metalli agendo sul pH della fase acquosa.
+
+\section{Efficienza delle estrazioni}
+Il processo di estrazione viene normalmente effettuato operando con piccoli volumi di fase estraente.
+Ad ogni estrazione corrisponde una certa quantità di soluto che passa dalla fase acquosa a quella organica. Si può calcolare, mediante il seguente processo matematico, la frazione estratta ed inestratta durante ogni stadio.
+
+Sia $C_A$ la concentrazione iniziale di un analita A nella fase 1 di volume $V_1$. Si ponga un volume $V_2$ di una fase 2 non miscibile in contatto con la fase 1 e si lasci ripartire A tra le due fasi.
+All'equilibrio, $[A]_1$ è la concentrazione totale di A nella fase 1 e $[A]_2$ quella nella fase 2.
+La frazione molare di analita A inestratto nella fase 1 alla prima estrazione, $F_{i,1,1}$, è data dalla relazione
+\begin{equation} \label{eq:ripartizione:8}
+F_{i,1,1} = \frac{[A]_{1,1} V_1}{n_{tot}} = \frac{[A]_{1,1} V_1}{[A]_{1,1} V_1 + [A]_{2,1} V_2} = \dfrac{1}{1 + P \dfrac{V_2}{V_1}}
+\end{equation}
+Dove $[A]_{1,1} V_1$ è il numero di moli inestratte e quindi rimaste nella fase 1. Raccogliendo $V_1$ e ricordando la definizione di $P$, si ottiene l'equazione \ref{eq:ripartizione:8}.
+
+Dopo una seconda estrazione con un altro volume $V_2$ di fase 2, la frazione inestratta $F_{i,1,2}$, rimasta nella fase 1 è data dalla relazione
+\begin{equation} \label{eq:ripartizione:9}
+F_{i,1,2} = \frac{[A]_{1,2} V_1}{[A]_{1,2} V_1 + [A]_{2,2} V_2} = \frac{[A]_{1,2} V_1}{[A]_{1,1} V_1} = \dfrac{1}{1 + P \dfrac{V_2}{V_1}}
+\end{equation}
+
+Sostituendo il valore di $[A]_{1,1} V_1$ (moli di analita rimaste nella fase 1 dopo la prima estrazione $[A]_{1,1} V_1 = \dfrac{n_{tot}}{1 + P \dfrac{V_2}{V_1}}$ ricavato dalla equazione \ref{eq:ripartizione:8}, si ottiene
+\[
+\frac{[A]_{1,2} V_1}{\dfrac{n_{tot}}{1 + P \dfrac{V_2}{V_1}}} = \frac{[A]_{1,2} V_1}{n_{tot}} \biggl(1 + P \frac{V_2}{V_1}\biggr)
+\]
+Dove il prodotto $[A]_{1,2} V_1$ sono le moli rimaste nella fase 1 dopo la seconda estrazione.
+
+Indicando con $F_{1,2}$ la frazione di inestratto nella fase 1 rispetto alle moli totali iniziali:
+\[
+F_{1,2} = \frac{[A]_{1,2} V_1}{n_{tot}}
+\]
+per semplice sostituzione, ricordando la \ref{eq:ripartizione:8} e \ref{eq:ripartizione:9} $F_{i,1,1} = F_{i,1,2}$ si ottiene
+\[
+F_{1,2} = \frac{[A]_{1,2} V_1}{n_{tot}} = \frac{F_{i,1,1} [A]_{1,1} V_1}{n_{tot}}
+\]
+essendo $F$ il valore di $[A]_{1,1} V_1/n_{tot}$, si ottiene la relazione attesa
+\[
+F_{1,2} = \dfrac{1}{\biggl(1 + P \dfrac{V_2}{V_1}\biggr)}
+\]
+
+È facilmente intuibile, che la frazione di inestratto nella fase 1 dopo la n-esima estrazione si ottiene mediante la relazione
+\[
+F_{1,n} = \dfrac{1}{\biggl(1 + P \dfrac{V_2}{V_1}\biggr)^n} = \biggl(\frac{V_1}{V_1 + P V_2}\biggr)
+\]
+La frazione estratta è $F_{2,n}$ data da:
+\[
+F_{2,n} = 1 - F_{1,n}
+\]
+\paragraph{Esempi di estrazioni multiple}
+Si voglia confrontare la frazione estratta di un analita contenuto nel volume $V_1$ di fase 1 dopo una singola estrazione con un volume $V_2$ di fase 
+\[
+F_{1,1} = \dfrac{1}{\biggl(1 + \dfrac{V_2}{V_1}\biggr)^1} = \biggl(\frac{V_1}{V_1 + V_2}\biggr) = \frac{V_1}{2 V_1} = 0.5
+\]
+Se invece si vuole trovare il contenuto di A dopo $n$ estrazioni, nell'ipotesi che $V_1 = V_2$ e $P = 1$, bisogna applicare la formula
+\[
+F_{1,n} = \dfrac{1}{\biggl(1 + \dfrac{V_2 / n}{V_1}\biggr)^n} = \biggl(\frac{n V_1}{n V_1 + V_2}\biggr)^n = \biggl(\frac{n}{n+1}\biggr)^n
+\]
+
+
+
+
+

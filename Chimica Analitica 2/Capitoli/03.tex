@@ -1,0 +1,220 @@
+\chapterpicture{header_04}
+\chapter{Metodi di calibrazione}
+
+L'analisi qualitativa, nel caso della cromatografia è effettuata in base al tempo di ritenzione e l'analisi quantitativa è fatta attraverso le aree dei picchi
+Nel caso della spettrofotometria, invece, l'analisi qualitativa è fatta in base allo spettro e l'analisi quantitativa è fatta con la legge di Lamber-Beer
+
+Di seguito vi è una descrizione dei rivelatori e delle leggi che la governano. Quest'analisi è fatta sulla base della cromatografia, ma può essere estesa ad altri contesti
+
+\paragraph{Rivelatori sensibili alla massa}
+Il segnale dipende dalla massa (in funzione del tempo) e da una costante di proporzionalità
+\[
+y(t) = k \cdot \frac{dm}{dt} \rightarrow y(t) \cdot dt = k \cdot dm
+\]
+
+Integrando, si ottiene
+\[
+\int_{t_1}^{t_2} y(t) dt = k \int_0^m dm \rightarrow A = k \cdot m
+\]
+
+Quindi, nella cromatografia, si vede che l'area è proporzionale alla massa e alla costante $k$.
+Questa costante viene definita \emph{sensibilità}.
+
+L'equazione appena ricavata è l'equazione di riferimento per la quantificazione, anche detta \emph{equazione di calibrazione}.
+Il grafico che si ottiene mettendo l'area $A$ contro la massa si chiama diagramma di calibrazione
+Quindi si vede che la sensibilità non è altro che la pendenza di questa curva.
+Per una concentrazione incognita, si può usufruire del diagramma di calibrazione per trovare una concentrazione (o massa) incognita
+
+\paragraph{Rivelatori sensibili alla concentrazione}
+Se il segnale dipende dal flusso della fase mobile, le equazioni sono differenti
+\[
+y(t) = k \cdot \frac{d C(t)}{dt} \rightarrow y(t) = k \cdot \frac{dm}{V \cdot dt} = k \cdot \frac{dm}{F t \cdot dt}
+\]
+Si vede quindi che il flusso $F \cdot t$ è dipende dal volume $V$ e dal tempo $t$.
+
+Separando e integrando, si ottiene
+\[
+\int_{t_1}^{t_2} y(t) \cdot t dt = \frac{k}{F} \int_0^m dm \rightarrow A = k \cdot \frac{m}{F}
+\]
+
+In questo caso, l'area $A$ è inversamente proporzionale dal flusso $F$.
+
+Le procedure per l'analisi quantitativa sono basate su metodi di calibrazione e ne esistono quattro:
+\begin{itemize}
+\item Metodo di calibrazione esterna
+\item Metodo delle aggiunte standard (o tarate)
+\item Metodo dello standard interno
+\item Medoro della normalizzazione interna
+\end{itemize}
+Se si utilizza un rivelatore sensibile al flusso, è necessario fissare il flusso su un valore.
+
+\section{Calibrazione esterna}
+Questo metodo è il metodo più semplice ed è quello di preferenza. La procedura è la seguente
+\begin{enumerate}
+\item Si preparano diverse soluzioni contenenti quantità note di analita, con concentrazione $C_{s_i}$. I campioni così preparati si chiamano standard
+\item Si sottopone ciascun standard ad una misura strumentale, da cui si otterrà un segnale $S_i$
+\item Si riportano i segnali ottenuti in funzione delle concentrazioni. Sul grafico, si ottiene una dispersione di punti e si fa il fitting dei punti
+\end{enumerate}
+
+Se i punti sono sufficientemente allineati, si ottiene una retta, detta \emph{retta di calibrazione}.
+Analizzando il campione incognito, si ottiene un segnale che viene messo all'interno della retta di calibrazione, ottenendo così la concentrazione corrispondente
+
+\fullpicture{03_001}{Retta di calibrazione}{}
+
+Si noti che la retta può anche non passare per zero, tuttavia, se le bande di confidenza della retta passano comprendono lo zero, allora la retta di calibrazione è utilizzabile;
+se invece le bande non passano per lo zero, si è in presenza di un errore sistematico associato alla retta. In questo caso, si scarta direttamente la retta.
+Se si forza la retta a passare per lo zero, si commette un errore concettuale, in quanto si sta unendo un dato artificiale con una serie di dati sperimentali
+
+Si vede anche che alla fine della retta, i punti sono più bassi di quanto ci si aspetterebbe.
+Se si verifica questa situazione, la concentrazione analizzata è troppo elevata e il rivelatore non riesce a dare un segnale lineare
+
+\section{Calibrazione con aggiunte standard}
+Se la matrice dell'incognito è complessa, il segnale del campione incognito può non rispecchiare la concentrazione. Si utilizza pertanto il metodo delle aggiunte standard.
+Questo metodo consiste nell'aggiunta di una quantità nota di analita nella soluzione da analizzare e si fanno diversi standard; il volume di soluzione incognita è sempre lo stesso.
+Al primo standard, non viene aggiunto l'analita.
+
+In seguito alla misura, si ottiene una retta con un intercetta elevata.
+Il fitting dei valori si fa proseguire fino a valori negativi e il punto in cui la retta incontra l'asse x determina la concentrazione incognita.
+
+\fullpicture{03_002}{Differenze tra le rette di calibrazione}{}
+
+Pur non conoscendo la composizione della matrice, questa tecnica permette di ottenere la concentrazione incognita.
+La retta ottenuta è meno pendente rispetto alla retta ottenuta con la calibrazione esterna, quindi il metodo è meno sensibile
+Questo avviene poiché è presente anche il segnale dovuto alla matrice.
+Lo svantaggio di questa tecnica è che, per ogni determinazione di un incognito, è necessario preparare degli standard e costruire la curva di calibrazione.
+La quantità di soluzione incognita deve essere sufficiente per poter preparare un numero elevato di standard
+
+\section{Calibrazione esterna con standard interno}
+Questa calibrazione si usa quando non si può conoscere l'esatto volume di standard e quindi non si può utilizzare la calibrazione esterna perché non c'è riproducibilità.
+Per una serie di standard, si aggiunge la stessa quantità di standard interno, con diversi volumi di analita con il complementare volume di solvente. Gli standard hanno tutti lo stesso volume.
+Lo standard interno non deve essere presente nella matrice della sostanza da analizzare, il suo segnale non deve essere sovrapposto ad altri segnali e, inoltre, deve essere chimicamente simile all'analita
+
+\fullpicture{03_003}{Preparazione della calibrazione esterna con standard interno}{}
+
+Il segnale dell'incognito viene quindi messo in relazione al segnale dello standard interno, la cui concentrazione è nota. Facendo il rapporto tra i segnali, si ottiene la concentrazione dell'incognito.
+Con questa calibrazione, si può costruire una retta di calibrazione mettendo in grafico il rapporto dei due segnali contro il rapporto delle due concentrazioni.
+Questo metodo permette di risolvere il problema della non riproducibilità del dato nelle iniezioni multiple.
+
+\halfpicture{03_004}{Grafico ottenuto con la calibrazione esterna con standard interno}{}
+
+\section{Calibrazione per normalizzazione interna}
+
+Questo metodo viene utilizzato per quantificare i campioni in una miscela, la cui somma corrisponde alla totalità (o quasi) del campione ed è utilizzata quando non sono facilmente reperibili gli standard
+
+Se la risposta del rivelatore è la stessa per tutti gli analiti, ovvero gli analiti hanno lo stesso fattore di risposta, la concentrazione dei singoli incogniti può
+essere determinata per il semplice rapporto fra le aree.
+
+Se invece gli analiti hanno fattori di risposta diverso, la determinazione della percentuale deve essere preceduta dalla determinazione dei fattori di risposta per tutti gli analiti.
+Questo si può realizzare, ad esempio, determinando i fattori di risposta in un cromatogramma di una soluzione nota.
+Il fattore di risposta di un analita scelto viene posto pari a uno e gli altri fattori di risposta saranno messi in relazione con questo.
+Si ottiene quindi un'equazione dove sono presenti tutti i fattori di risposta per ogni analita e quindi è possibile determinare la percentuale di ogni analita sul totale.
+
+\chapterpicture{header_05}
+
+\chapter{Preparazione del campione}
+La determinazione accurata di analita presente in un campione è possibile solo se il campionamento, il pre-trattamento e la concentrazione dei campioni sono effettuate adeguatamente.
+Infatti, si vede che è necessario portare il campione nella forma più opportuna per essere analizzato.
+I metodi più utilizzati sono:
+\begin{itemize}
+\item  Mineralizzazione (o digestione) umida, con reattivi di solubilizzazione e/o ossidazione
+\item Estrazione
+\item Separazione tramite membrane
+\item Liofilizzazione
+\end{itemize}
+
+\paragraph{Digestione per via umida}
+Questa tecnica è utilizzata per la determinazione di analiti inorganici.
+Si utilizzano acidi, sia ossidanti che minerali, per disintegrare il campione ed avere i suoi elementi fondamentali
+
+\paragraph{Digestione con microonde}
+Questa tecnica è una variante della digestione umida con acido; è molto efficace in quanto le microonde riescono a scaldare il sistema in poco tempo e quindi i tempi di mineralizzazione sono più bassi.
+La digestione avviene in contenitori inerti e trasparenti alle microonde (Teflon).
+Se il sistema contiene molte sostanze organiche, queste verranno trasformate in CO$_2$ 
+
+\paragraph{Osmosi e osmosi inversa}
+L'osmosi è un processo naturale, mentre l'osmosi inversa è forzata.
+Nell'osmosi, la soluzione con meno sali disciolti cede acqua alla soluzione più concentrata.
+La differenza di altezza è dovuta alla pressione osmotica; il processo è in equilibrio con la pressione atmosferica.
+
+Nell'osmosi inversa, invece, è necessario mettere sotto pressione una soluzione affinché l'acqua passi dalla soluzione più concentrata a quella meno concentrata.
+Si ottiene una soluzione a maggiore concentrazione, pertanto questo è un metodo di preconcentrazione. Si può anche utilizzare per purificare l'acqua
+
+\paragraph{Filtrazione}
+La filtrazione è associata all'osmosi inversa. Ci sono diversi tipi di filtrazione:
+\begin{itemize}
+\item \textit{Microfiltrazione}: si filtrano batteri, olio, macromolecole e sedimenti
+\item \textit{Ultrafiltrazione}: si filtrano virus e proteine
+\item \textit{Nanofiltrazione}: si filtrano particelle di metalli pesanti (o aggregati molecolari)
+\end{itemize}
+L'osmosi inversa filtra invece i sali minerali
+
+\halfpicture{03_005}{Varie tipologie di filtrazione}{}
+
+La filtrazione non usa propriamente delle membrane osmotiche. Si utilizzano piuttosto dei filtri.
+
+\paragraph{Liofilizzazione}
+La liofilizzazione è un processo che può essere utilizzato per preparare campioni. Esso prevede il congelamento, l'essiccazione primaria e l'essiccazione secondaria.
+
+\halfpicture{03_009}{Diagramma di stato}{Le frecce sono i passaggi per liofilizzare un composto}
+
+L'essiccazione primaria viene fatta a pressione più bassa, in modo tale da far sublimare il ghiaccio interstiziale, mentre l'essiccazione secondaria consiste nell'eliminazione dell'acqua adsorbita con un riscaldamento fino a 50 \degree C.
+La differenza con gli altri metodi è che consente di rimuovere il solvente senza alterare il campione
+
+\section{Estrazioni}
+Le estrazioni con solvente sono già state trattate all'inizio del corso; esistono altre tipologia di estrazione
+
+\paragraph{Estrazione con Soxhlet}
+Il soxhlet è un distillatore e viene utilizzato come metodo di riferimento per l'estrazione di alcune sostanze. Il soxhlet consente un'estrazione efficiente ed efficace, tuttavia l'estrazione con questo strumento è lenta
+
+\marginpicture{03_006}{Soxhlet}{}
+
+Il solvente evapora nel pallone, per poi ricondensare nel condensatore a bolle e in seguito il solvente bagna il campione.
+Quando il livello del solvente supera il sifone, ricade nel pallone estraendo l'analita.
+
+\paragraph{Estrazione accelerata con solvente}
+Il campione viene posto all'interno di un recipiente chiuso e la pressione viene innalzata; questo garantisce un aumento consistente dell'efficienza dell'estrazione.
+La pressione interna è di circa 100 - 140 bar e la temperatura è circa 100 - 150 \degree C. 
+Questo metodo viene utilizzato per la determinazione cromatografica di pesticidi fosforati, per gli IPA e per i composti organici contenenti arsenico
+
+\paragraph{Estrazione in fase supercritica}
+Al posto di utilizzare i fluidi supercritici come fase mobile, possono essere utilizzati come solventi. Si ha come vantaggi l'elevata capacità di estrazione di un liquido,
+e l'elevata diffusività di un gas.
+Uno dei soluti più utilizzati è la CO$_2$ supercritica
+
+\subsection{Estrazione in fase solida (SPE)}
+In questa tipologia di estrazione, si utilizza il concetto della cromatografia per estrarre.
+
+La prima fase è l'attivazione del materiale, attraverso il passaggio di solvente sulla fase stazionaria. Questo serve per garantire il contatto intimo tra fase stazionaria e fase mobile
+Si aggiunge il campione, che contiene alcune specie indesiderate insieme all'analita. L'affinità dell'analita deve essere molto superiore per la fase stazionaria rispetto alla fase mobile.
+
+\halfpicture{03_007}{Sequenza dell'estrazione in fase solida}{}
+
+Le specie indesiderate vengono rimosse con lo scorrere del solvente, che invece lascia l'analita nella fase mobile.
+Utilizzando un solvente opportuno, l'analita purificato viene rimosso dalla colonna.
+
+Con questa tecnica si è in grado di separare classi di composti. La sua resa è molto vicina al 100\%.
+
+\subsection{Microestrazione in fase solida(SPME)}
+Il dispositivo SPME è formato da una siringa e all'interno dell'ago è posizionata una fibra di silice ricoperta della fase estraente.
+L'analita presente nel campione viene quindi estratto  direttamente su un rivestimento esterno della fibra mediante adsorbimento.
+Il campionamento può essere fatto sia esponendo la fibra all'interno della soluzione, sia esponendo la allo spazio di testa.
+
+Successivamente, la fibra viene esposta al calore all'interno della colonna cromatografica; l'analita viene rimosso.
+Questo consente di avere un cromatogramma dove non è presente il picco della solvente, in quanto non è stato raccolto nella fase stazionaria.
+
+\subsection{Purge and Trap}
+Questo metodo non è un vero e proprio metodo di estrazione, ma più un sistema di campionamento per la GC.
+
+Un pesca il campione dal fondo della provetta. Il vapore viene spinto da un gas, che pulisce l'analita e lo spinge all'interno di un materiale adsorbente, che cattura l'analita
+In questo modo, gli analiti vengono pre-concentrati. Il tubo con il materiale adsorbente può essere attaccato direttamente in colonna
+
+\halfpicture{03_008}{Strumento per il Purge \& Trap}{}
+
+L'analita può essere desorbito in due modi:
+\begin{itemize}
+\item Attraverso un solvente opportuno, che lava via l'analita dal materiale adsorbente
+\item Attraverso il calore l'analita viene liberato e con una portata di gas si può far entrare l'analita in colonna
+\end{itemize}
+
+Il trapping può essere fatto con una cartuccia, oppure con un vaso di Dewar riempito di azoto liquido.
+In questo caso l'analita viene bloccato criogenicamente e l'azoto liquido viene liberato una volta fatto il purging a temperatura ambiente
