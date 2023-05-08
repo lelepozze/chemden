@@ -1,0 +1,54 @@
+\documentclass{chemden}
+
+%###########################################
+
+\author{Pozzebon Daniele}
+\title{Chimica Organica 3}
+\edition{Prima Edizione}
+
+%###########################################
+%\usepackage[backend=biber,style=verbose,sorting=ynt,citestyle=alphabetic]{biblatex}
+%	\addbibresource{Bibliografia.bib}
+\usepackage{chemden-indice}
+
+
+
+%###########################################
+\begin{document}
+
+\ifinput{cover} % copertina
+
+\frontmatter\ifinput{frontmatter}
+
+\mainmatter
+
+\part{Metodi Fisici}
+
+\chapterpicture{header_02} \ifinput{Capitoli/01}
+\chapterpicture{header_03} \ifinput{Capitoli/02}
+\chapterpicture{header_04} \ifinput{Capitoli/03}
+\chapterpicture{header_05} \ifinput{Capitoli/04}
+
+%\part{Reattività}
+\ifinput{Capitoli/05}
+\ifinput{Capitoli/06}
+\ifinput{Capitoli/07}
+\ifinput{Capitoli/08}
+\ifinput{Capitoli/09}
+\ifinput{Capitoli/10}
+\ifinput{Capitoli/11}
+\ifinput{Capitoli/12}
+\ifinput{Capitoli/13}
+\ifinput{Capitoli/14}
+\ifinput{Capitoli/15}
+\ifinput{Capitoli/16}
+\ifinput{Capitoli/17}
+\ifinput{Capitoli/18}
+\ifinput{Capitoli/19}
+\ifinput{Capitoli/20}
+
+
+\backmatter \chapterpicture{header_06} \ifinput{backmatter} % backmatter
+
+
+\end{document}
