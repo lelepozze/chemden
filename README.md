@@ -4,7 +4,7 @@ This space is used to store my notes from university. I study chemistry at [Univ
 I'm developing a new way to take notes, with LaTeX.
 My main goal is to finish the remaining notes using LaTeX, and to rewrite my already taken notes, also using LaTeX.
 
-For now I complete one course, the remaining are below
+For now I completed two courses, the remaining are below
 - [x] Chimica Analitica 2
 - [ ] Chimica Biologica
 - [ ] Chimica Fisica 1
