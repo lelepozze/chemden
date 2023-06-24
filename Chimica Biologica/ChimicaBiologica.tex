@@ -1,0 +1,54 @@
+\documentclass{chemden}
+
+%###########################################
+
+\author{Pozzebon Daniele}
+\title{Chimica Biologica}
+\edition{Prima Edizione}
+
+%###########################################
+\usepackage[backend=biber,style=verbose,sorting=ynt,citestyle=alphabetic]{biblatex}
+	\addbibresource{Bibliografia.bib}
+\usepackage{chemden-indice}
+
+\newcommand{\toffo}{\par \begingroup\footnotesize Sotto gentile concessione di \textcopyright{} Federico Toffoletti \endgroup}
+
+\usepackage{tabularx}
+
+%###########################################
+\begin{document}
+
+\ifinput{cover} % copertina
+
+\frontmatter{}\chapterpicture{header_01}
+\ifinput{frontmatter}
+\ifinput{Capitoli/00}
+
+\mainmatter{}
+\ifinput{Capitoli/01}
+\ifinput{Capitoli/02}
+\ifinput{Capitoli/03}
+\ifinput{Capitoli/04}
+\ifinput{Capitoli/05}
+\ifinput{Capitoli/06}
+\ifinput{Capitoli/07}
+\ifinput{Capitoli/08}
+\ifinput{Capitoli/09}
+\ifinput{Capitoli/10}
+\ifinput{Capitoli/11}
+\ifinput{Capitoli/12}
+\ifinput{Capitoli/13}
+\ifinput{Capitoli/14}
+\ifinput{Capitoli/15}
+\ifinput{Capitoli/16}
+
+\chapterpicture{header_06}
+
+%\ifinput{Capitoli/17}
+%\ifinput{Capitoli/18}
+%\ifinput{Capitoli/19}
+%\ifinput{Capitoli/20}
+\backmatter{}
+\include{backmatter} % backmatter
+
+\end{document}

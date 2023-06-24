@@ -1,0 +1,804 @@
+\chapter{Enzimi}
+
+\ChangePicturesFolder{10}
+
+Praticamente tutte le reazioni biochimiche sono catalizzate da enzimi. Gli enzimi sono proteine che consentono di aumentare la velocità di reazione da $10^6$ a $10^{12}$ ordini di grandezza.
+
+Gli enzimi operano in condizioni fisiologiche e hanno un elevatissimo grado di specificità. L'attività degli enzimi è regolata.
+
+Operano con meccanismi altamente specifici in modo da rendere l'energia termica sufficiente al superamento delle barriere energetiche.
+
+Gli enzimi si possono regolare, attivare o disattivare. Questo perché sono proteine e quindi sono soggetti a tutti gli equilibri riguardanti le proteine, come ad esempio il cambio di conformazione.
+
+Hanno un sito attivo e hanno delle regioni imputate alla regolazione dell'enzima stesso.
+
+In biologia non si sfrutta l'aumento di temperatura per accelerare le reazioni, quindi gli enzimi abbassano l'energia di attivazione delle reazioni
+
+Si può quindi distinguere:
+\begin{itemize}
+\item \emph{Intermedio:} specie chimica identificabile e isolabile
+\item \emph{Stato di transizione:} non è una vera e propria specie chimica, ma è più un'astrazione. Gli enzimi diminuiscono $\Delta G^{\ddagger}$ di transizione. Se la velocità di reazione supera quella di diffusione dei reagenti, si dice ``perfezione cinetica''; in questo caso la diffusione è lo step lento. Alcuni enzimi richiedono ioni metallici o coenzimi, che vengono detti cofattori. Gli enzimi sono regolati da attivatori e disattivatori.
+\end{itemize}
+
+Gli enzimi sono proteine (E) che si legano al substrato (S), formando il complesso enzima-substrato
+\[
+\ce{E+S <=> ES}
+\]
+
+In seguito, il complesso enzima-substrato evolve verso il prodotto
+\[
+\ce{ES <=> P+E}
+\]
+
+Enzima e substrato non devono stare bene assieme, l'enzima deve avere affinità verso lo stato di transizione, con il substrato deve essere solo debolmente affine, in quanto lo stato di transizione rimarrebbe così come e andrebbe in conflitto con altre reazioni.
+
+Gli enzimi sono classificati in base al tipo di reazione che promuovono:
+\begin{itemize}
+\item \emph{Ossidoreduttasi:} catalizzano reazioni redox
+\item \emph{Transferasi:} catalizzano il trasferimento di gruppi funzionali
+\item \emph{Idrolasi:} catalizzano le reazioni di idrolisi
+\item \emph{Liasi:} catalizzano le reazioni di eliminazione, per generare doppi legami
+\item \emph{Isomerasi:} catalizzano reazioni di isomerizzazione
+\item \emph{Ligasi:} catalizzano la formazione di legami accoppiata all'idrolisi di ATP
+\end{itemize}
+
+Il $\Delta G$ di una reazione dipende solo dallo stato iniziale e dallo stato finale, e quindi non dà informazioni riguardo la velocità di reazione
+\[
+\Delta G = \Delta G^0 + RT \ln K \quad
+K_{eq} = \Delta G^0 = \exp(\frac{-\Delta G^0}{RT})
+\]
+
+\section{Teoria dello stato di transizione}
+I reagenti \ce{A} e \ce{B} devono incontrarsi, collidere e avere sufficiente energia per raggiungere lo stato di transizione $\ce{X^{\ddagger}}$. {}\ce{A} e \ce{B} devono essere orientati correttamente.
+
+Nello stato di transizione $\ce{X^{\ddagger}}$, gli angoli di legame e le lunghezze di legame sono distorti verso quelli caratteristici dei prodotti.
+
+La velocità di reazione è
+\[
+v_{\text{reazione}} = K = A \cdot e^{- \nicefrac{\Delta G^{\ddagger}}{RT}}
+\]
+
+Quindi se il $\Delta G^{\ddagger}$ è basso, la velocità di reazione è elevata.
+
+Il termine esponenziale indica la quantità di molecole che hanno $E > \Delta G^{\ddagger}$, oppure anche la probabilità che una molecola abbia $E > \Delta G^{\ddagger}$. Nel caso di reazioni a più step, la velocità è determinata dallo step più lento, ovvero quello con $\Delta G^{\ddagger}$ maggiore. Il termine $A$, invece, indica la relativa frequenza degli urti.
+
+\marginbox*{Non confondere gli stati intermedi con gli stati di transizione}
+
+I catalizzatori agiscono generando un nuovo percorso per la reazione, contraddistinto da uno stato di transizione la cui energia libera è minore.
+È da tenere conto che abbassando $\Delta G^{\ddagger}$, anche la reazione inversa diventa più veloce, quindi il fatto che la reazione proceda da una parte o dall'altra dipende solo dal $\Delta G_{\text{reazione}}$.
+
+\autofullpicture*{Grafico dell'energia libera in funzione della coordinata di reazione. A destra si è in presenza di un catalizzatore. }
+
+\autofullpicture*{Grafico dell'energia libera. In questo caso è presente un intermedio, ovvero una specie chimica identificabile e isolabile.\\ In questo caso la reazione può essere scritta come $\ce{A} + \ce{B} \ce{->[K_1]} \ce{I} \ce{->[K_2]} \ce{P}$}
+
+\marginbox*{$\Delta \Delta G^{\ddagger}_{\text{cat}}$ è un buon indice per determinare l'efficienza di un catalizzatore}
+
+Un catalizzatore è presente in piccole quantità, non viene alterato dalla reazione. Aumenta la velocità di reazione, ma non sposta l'equilibrio, facilità la reazione in entrambi i sensi ed è molto specifico per la reazione.
+
+Le reazioni non catalizzato possono essere lente in quanto:
+\begin{itemize}
+\item Coinvolgono la formazione di cariche positive e/o negative nello stato di transizione
+\item Richiedono spesso che le molecole vengano a contatto con concomitante perdita di entropia
+\end{itemize}
+
+Queste difficoltà vengono superate con gli enzimi, in quanto:
+\begin{itemize}
+\item Le cariche vengono stabilizzate posizionando acidi, basi, ioni metallici o dipoli che fanno parte della struttura dell'enzima nel sito attivo
+\item In alcuni casi, viene utilizzata la \emph{catalisi covalente} per percorrere cammini di reazione a bassa energia
+\item Le perdite di entropia sono minimizzate in quanto i gruppi catalitici sono parte della struttura dell'enzima
+\end{itemize}
+
+I cofattori sono particolarmente utili nella catalisi di reazioni redox o reazioni che coinvolgono trasferimenti di gruppi funzionali. I cofattori possono essere ioni metallici, come \ce{Cu^{2+}}, \ce{Fe^{2+}} e \ce{Zn^{2+}}, o molecole organiche, dette coenzimi. I co-substrati si associano in via transitoria ad una molecola, mentre i gruppi prostetici sono legati in modo permanente alla proteina, spesso con legami covalenti.
+
+Alcune definizioni importanti:
+\begin{itemize}
+\item \emph{Sito attivo:} porzione di molecola direttamente implicata nel processo di catalisi
+\item \emph{Substrato:} molecola su cui agisce l'enzima, quindi è la molecola di partenza nelle reazioni.
+\item \emph{Cofattore:} piccola molecola di natura non proteica che si associa all'enzima e ne rende possibile l'attività catalitica
+\item \emph{Attivatore:} molecola in grado di legarsi all'enzima aumentando l'efficienza
+\item \emph{Inibitore:} molecola in grado di legarsi all'enzima, diminuendone l'efficienza.
+\end{itemize}
+
+I substrati si legano all'enzima mediante complementarietà di interazioni deboli, come ad esempio, i legami ad idrogeno, le forze di van der Waals, e le forze elettrostatiche
+Gli enzimi non si limitano a posizionare e/o distorcere i substrati abbassando $\Delta G^{\ddagger}$, ma promuovono l'evento catalitico utilizzando residui ``opportunamente posti''.
+
+\autoherepicture{1}
+
+Il modello chiave serratura, ovvero il caso B non va bene. Se l'enzima fosse affine al substrato, il complesso enzima-substrato sarebbe troppo stabile e $\Delta G^{\ddagger}$ aumenterebbe.
+
+\clearpage
+
+\section{Adattamento indotto}
+
+L'enzima forza il substrato ad assumere una conformazione simile allo stato di transizione
+
+\autoherepicture{0.8}
+
+L'energia per raggiungere lo stato attivato è minore nel sito attivo perché:
+\begin{itemize}
+\item Stabilizza lo stato di transizione
+\item Espelle acqua
+\item I gruppi diventano più reattivi
+\item Aiuto da parte di coenzimi
+\end{itemize}
+Inoltre, protegge il reagente da reazioni parassite e lo posiziona con l'orientazione giusta. Alcuni cofattori possono rendere accentuare il carattere elettrofilo o nucleofilo di una molecola, dando quindi una spinta in più.
+
+I siti attivi includono generalmente residui anche lontani nella sequenza primaria. I siti attivi occupano una parte più piccola, ci sono anche siti regolatori di interazione, canali, etc \ldots{}
+Gli enzimi sono stereospecifici.
+
+I diversi tipi di catalisi sono:
+\begin{itemize}
+\item \emph{Catalisi acido/base,} per trasferimento di protoni
+\item \emph{Catalisi di ioni metallici,} ovvero con presenza di elettrofili
+\item \emph{Catalisi per prossimità,} con reazioni a più substrati
+\item \emph{Catalisi covalente}
+\end{itemize}
+
+Si analizza l'enzima \emph{trioso-fosfato isomerasi}, che catalizza la seguente regolazione
+\autoherepicture{0.8}
+
+L'enzima TPI è un dimero e i monomeri hanno la tipica struttura TIM a barile. Si vede come l'enzima stabilizza lo stato di transizione, in particolare Glu-165 e His-95. Poi c'è la Lys-12 che stabilizza il substrato e c'è un ansa protettiva, che protegge da eventuali reazioni indesiderate.
+Si vede come una mutazione in prossimità dell'ansa protettiva renda l'enzima meno efficiente di un fattore di $10^{5}$. Questo è un enzima \emph{cineticamente perfetto}.
+
+Un altro esempio sono le \emph{proteasi serinische}, che sono un gruppo ampio di enzimi. Hanno lo stesso tipo di processo catalitico che coinvolge un residuo di serina particolarmente reattivo (sono presenti anche Asp e His nel sito attivo). Sono enzimi digestivi, ovvero servono a rompere i legami peptidici.
+
+La reazione consiste nell'idrolisi di legami peptidici dal lato carbossilico di particolari amminoacidi. Questi enzimi sono specifici per diversi amminoacidi; ogni enzima taglia vicino ad un ben determinato amminoacido.
+Un residuo di serina, come già detto svolge un ruolo importante.
+I polipeptidi sarebbero già instabili da soli in acqua, però la cinetica di idrolisi è lenta. Questi enzimi favoriscono l'idrolisi.
+
+La tasca di legame vicino alla serina determina la specificità del substrato delle diverse proteasi. In quasi tutte le strutture, i residui His-57 e Ser-195, cataliticamente essenziali, sono localizzati nel sito dell'enzima che lega il substrato, mentre Asp-102 (conservato in tutte le proteasi seriniche) è immerso in una tasca adiacente inammissibile al solvente. Questi tre residui costituiscono la \emph{triade catalitica}.
+
+La \emph{chimotripsina} è specifica per un gruppo voluminoso e idrofobico, che precede il legame da scontare; in particolare gli aminoacidi coinvolti sono Phe, Trp o Tyr. Il gruppo voluminoso si inserisce in una tasca idrofobica simile ad una fenditura situata vicino ai gruppi catalitici.
+Si vede che la tasca è idrofobica ed è molto spaziosa. Una volta che la proteina si appoggia lì, l'enzima taglia il legame successivo.
+
+\automarginpicture*{Chimotripsina}
+
+La \emph{tripsina} invece richiede una catena laterale carica positivamente, come quella dell'Arg e della Lys, che si inserisce in una tasca carica negativamente e voluminosa.
+Si vede che al posto della Ser-189 della chimotripsina, è presente un Asp-189 che ha una carica negativa, che quindi aiuta l'inserimento di residui carichi.
+
+L'\emph{elastasi} è specifica di una catena laterale piccola e neutra. La tasca laterale dell'elastina è occlusa dalle catene laterali dei residui di Val e di Thr, che sostituiscono la Gly della chimotripsina e della tripsina. Per questo nella tasca si possono inserire degli amminoacidi piccoli e neutri, come l'Ala. Le altre due idrolizzano con difficoltà i legami peptidici formati da amminoacidi piccoli perché non riescono a tenerli fermi bene.
+
+\subsection{Meccanismo della chimotripsina}
+
+Questo è l'enzima libero dove è messa in evidenza la triade catalitica, che partecipa attivamente al meccanismo. Quindi si vede il sito attivo, la tasca idrofobica e il buco ossanionico (una zona che stabilizza l'ossigeno carbonilico anionico).
+Prendendo un substrato, si vede che l'interazione tra la Ser-195 e l'His-57 rende la Ser-195 un forte nucleofilo, che quindi attacca il gruppo carbonilico del gruppo suscettibile, formando un intermedio tetraedrico.
+
+\autoherepicture{0.8}
+
+La Ser-195 si trova in una posizione ideale per fare questo tipo di attacco, in quanto sono presenti gli effetti di prossimità e di orientamento. His-57 prende un protone; questo processo è agevolato dalla polarizzazione del gruppo \ce{COO-} di Asp-102.
+L'intermedio tetraedrico decompone in un intermedio acil-enzima favorito dalla donazione di un protone dall'azoto dell'His-57 (catalisi acida) facilitata dall'effetto polarizzante dell'Asp-102 (catalisi elettrostatica). Quindi si riforma il doppio legame dell'ossigeno, si rompe il legame peptidico e viene liberato il primo prodotto.
+
+\autoherepicture{0.8}
+
+Il gruppo amminico uscente viene sostituito da una molecola d'acqua che viene deprotonata da His-57, generando un forte nucleofilo. Questo nucleofilo attacca il carbonio carico negativamente posizionato nel buco ossoanionico.
+L'intermedio tetraedrico collassa, formando il secondo prodotto e riforma l'enzima iniziale, infine il prodotto viene espulso via.
+
+\autoherepicture{0.8}
+
+Dal meccanismo si vede come la specificità dell'enzima è data dalla tasca di alloggiamento, inoltre l'enzima ha partecipato in modo covalente alla reazione.
+Tutte queste cose funzionano solo in un determinato range di pH. A pH bassi, l'His sarebbe completamente protonata mentre a pH alti sarebbe completamente deprotonata. L'istidina ha la particolarità di avere una $pK_a$ vicina a 7, quindi è sempre un po' acida o un po' basica.
+
+\autofullpicture*{Il pH influenza l'attività della chimotripsina, che lavora bene a pH acidi.}
+
+Le molecole che sono in grado di legarsi ad uno degli amminoacidi della triade catalitica in maniera irreversibile possono compromettere il funzionamento dell'enzima, che quindi viene inattivato. Un esempio è il diisopropil-fluorofosfato, che si lega in maniera irreversibile alla Ser-195.
+Se non ci fosse il buco ossoanionico, la reazione sarebbe impossibile perché non ci sarebbe spazio, in quanto il carbonio passa da sp\ap{2} a sp\ap{3}.
+
+\autofullpicture*{Stabilizzazione dell'intermedio tetraedrico all'interno del buco ossoanionico}
+
+\autofullpicture*{Le tasche di alloggiamento del susbtrato rendono selettivo il taglio proteolitico}
+
+\paragraph{Proteasi non seriniche}
+
+Non sono importanti come quelle seriniche. Basta sapere che esistono e che il sito attivo presenta caratteristiche per l'attivazione di un nucleofilo per l'attacco al carbonile e una stabilizzazione dell'intermedio tetraedrico. Alcuni esempi di queste proteasi sono: la cisteina proteasi, l'aspartil proteasi e la metalloproteasi.
+
+\paragraph{HIV (Human Immunodeficiency Virus)}
+
+È un RNA virus, cioè ha il suo RNA, ma non è in grado di autoreplicarsi, quindi è costretto ad occupare una cellula ospite dove trascrivere il suo RNA, causando quindi la sintesi delle proteine da parte della cellula ospite.
+
+\marginbox*{Esistono anche i DNA virus, che possiedono il DNA al posto dell'RNA}
+
+Quando il provirus viene integrato nel DNA genera nuovi virus. Poiché le proteine sintetizzate a partire dall'RNA dell'HIV funzionino, devono essere tagliate specificatamente da una proteina, ovvero l'aspartil proteasi, anch'essa sintetizzata a partire dal RNA virale.
+Senza aspartil proteasi, il virus non è più in grado di riprodursi. La proteasi è diversa da quella umana. Per rallentare la diffusione del virus, è necessario trovare un inibitore di questo enzima. Per inibire un enzima, va trovata una molecola in grado di legarsi al sito attivo covalentemente, in modo da fissarsi.
+
+Le molecole che assomigliano allo stato di transizione agiscono come inibitori. Un esempio è il \emph{Crixivan}, che funge da farmaco per l'HIV non toccando le proteasi umane. Quindi un farmaco per funzionare deve assomigliare allo stato di transizione più della proteina da tagliare.
+I virus però mutano velocemente, quindi diventano resistenti ai farmaci. A fronte di questo c'è il \emph{Tipranavir}, che è un farmaco inibitore della proteasi particolarmente resistente alle mutazioni. Questo perché è molto flessibile.
+I virus possono mutare, però non mutano in modo drastico, cambiando ad esempio la triade catalitica. Il farmaco, legandosi molto bene, funge da inibitore.
+
+\clearpage
+
+\section{Cinetica della catalisi enzimatica}
+
+Le semplici equazioni della velocità descrivono il progredire delle reazioni di primo e di secondo ordine.
+L'equazione di Michaelis-Menten mette in correlazione la velocità iniziale di una reazione con la velocità massima della reazione e la costante di Michaelis per un particolare enzima e un dato substrato.
+L'equazione di Michaelis-Menten è un modello che non rispecchia la realtà, però segue il meccanismo della maggior parte degli enzimi.
+La reazione per la cinetica di Michaelis-Menten è
+\[
+\ce{E} + \ce{S} \ce{<=>[K_1][K_2]} \ce{ES} \ce{->[K_3]} \ce{E} + \ce{P}
+\]
+
+L'efficienza catalitica complessiva di un enzima è espressa come
+\[
+\text{efficienza } = \frac{K_{\text{cat}}}{K_m}
+\]
+
+La reazione inversa che parte dal complesso enzima-substrato e va ai prodotti è trascurabile. Si vede che la concentrazione del complesso enzima-substrato \ce{[ES]} è piccola e si stima sia costante. Si può applicare l'ipotesi di stato stazionario, quindi si può dire che
+\[
+\frac{d \ce{[ES]}}{dt} = 0
+\]
+
+Si vede che
+\[
+\frac{d \ce{[ES]}}{dt} = K_1 \ce{[E][S]} - K_2 \ce{[ES]} - K_3 \ce{[ES]} = 0
+\]
+
+Da cui si può isolare il termine \ce{[ES]}
+\[
+\ce{[ES]} = \frac{K_1 \ce{[E][S]}}{K_2 + K_3} = \frac{1}{K_M} \ce{[E][S]}
+\]
+
+Si può anche semplificare, definendo una $K_M$
+\[
+\ce{[ES]} = \frac{1}{K_M} \ce{[E][S]} \qquad K_M = \frac{K_2 + K_3}{K_1}
+\]
+
+Spostando $K_M$ al primo membro, si ottiene
+\[
+\ce{[ES]} \cdot K_M = \ce{[E][S]}
+\]
+La concentrazione iniziale di enzima rimane costante, ed è pari a
+\[
+\ce{[E]_{0}} = \ce{[E]} + \ce{[ES]}
+\]
+
+Si può sostituire questa equazione con quella precedente, ottenendo quindi
+\[
+K_M \cdot \ce{[ES]} = \ce{[E]_{0}} \ce{[S]} - \ce{[ES]} \ce{[S]}
+\]
+
+Raccogliendo i termini contenenti \ce{[ES]}, si può quindi scrivere
+\[
+\ce{[ES]} \cdot \bigl(K_M + \ce{[S]} \bigr) = \ce{[E]_{0} [S]}
+\]
+
+Si può quindi ottenere un equazione per determinare \ce{[ES]}, ovvero
+\[
+\ce{[ES]} = \frac{\ce{[E]_{0} [S]}}{K_M + \ce{[S]}}
+\]
+
+La velocità per il secondo step di reazione è
+\[
+v = \frac{d \ce{[P]}}{dt} = K_3 \ce{[ES]} = K_3 \cdot \frac{\ce{[E]_{0} [S]}}{K_M + \ce{[S]}}
+\]
+
+La velocità massima si ha per $\ce{[S]} \to \infty$, dove la velocità è pari a
+\[
+v_{\text{max}} = K_3 \cdot \ce{[E]_{0}}
+\]
+
+Per trovare il valore di $K_M$, è necessario sostituire il termine appena trovato nell'equazione precedente.
+\[
+v = \frac{v_{\text{max}} \ce{[S]}}{K_M + \ce{[S]}}
+\]
+
+Da cui si ricava
+\[
+K_M = \frac{v_{\text{max}}\ce{[S]}}{v} - \ce{[S]} = \ce{[S]} \cdot \biggl(\frac{v_{\text{max}}}{v} - 1 \biggr)
+\]
+
+Quindi se $v = \nicefrac{v_{\text{max}}}{2}$, allora $K_M = \ce{[S]}$, quindi
+\[
+K_M = \ce{[S]_{\nicefrac{v_{\text{max}}}{2}}}
+\]
+
+$K_M$ è caratteristica della reazione, quindi dipende dal substrato, dalle condizioni, etc.
+Per misurare $K_M$, si plotta il grafico $v/\ce{[conc]}$ e si vede la concentrazione a $\nicefrac{v_{\text{max}}}{2}$
+
+\autofullpicture*{Per fare queste misure, si usa la $v_0$, perché si ha un errore più basso. Vedendo la velocità iniziale ad ogni concentrazione, si può ottenere il grafico. Si vede che se il grafico della velocità ha andamento a sigmoide, allora l'inizio risulta molto pendente, ovvero la velocità per basse concentrazioni risulta elevata. Quindi, più pendente è una retta e minore è l'errore commesso.}
+
+\autofullpicture*{Si hanno due reazioni catalizzate da due enzimi diversi per le quali viene fatto lo
+studio cinetico delle velocità di reazione in funzione della concentrazione di substrato.\\
+La $V_{\text{max}}$ è la stessa ma quella blu la raggiunge a concentrazioni di substrato minori
+rispetto al secondo enzima.\\ Una $K_M$ elevata riflette una bassa affinità per il substrato, mentre una $K_M$ bassa indica il contrario.}
+
+La $K_M$ è stata definita come rapporto tra la velocità di sparizione di S rispetto alla sua
+velocità di formazione.
+\[
+K_M = \frac{k_2 + k_3}{k_1}
+\]
+Se si mette in relazione il significato di KM in termini di concentrazioni di substrato
+aggiunto:
+\[
+v = \frac{V_{\text{max}} \ce{[S]}}{K_M + \ce{[S]}}
+\]
+\[
+K_M = \frac{V_{\text{max}} \ce{[S]}}{v} - \ce{[S]} = \ce{[S]} \cdot \biggl(\frac{V_{\text{max}}}{v} - 1\biggr)
+\]
+
+Si ottiene che la costante coincide con la concentrazione di substrato per la quale la
+velocità osservata è metà della velocità massima.
+Se $K_M$ è bassa significa che si raggiunge la velocità massima a basse concentrazioni di substrato.
+
+$K_M$ è quindi una misura della concentrazione di substrato necessaria perché avvenga la catalisi ed è una caratteristica della reazione che dipende dal substrato,
+dalle condizioni, ecc.
+\[
+K_M = \ce{[S]}_{\nicefrac{V_{\text{max}}}{2}}
+\]
+
+Esisterà un certo valore di concentrazione di substrato alla quale concentrazione
+si ottiene una velocità di reazione pari alla metà della velocità massima.
+
+Il valore della costante dipende molto dalle costanti macroscopiche della reazione, ovvero $K_1$, $K_2$ e $K_3$.
+\begin{itemize}
+\item Se $k_2 >> k_3$, allora $K_M = k_2/k_1$. Quindi si forma velocemente il complesso, ma lo stato finale è lento e quindi si può trascurare $k_3$ al numeratore e la costante sarà uguale alla costante di dissociazione di \ce{S}
+\item Se $k_3 >> k_2$, allora $K_M = k_3/k_1$. Quindi, appena il complesso si forma, va direttamente al prodotto.
+\item Se $k_2 \approx k_3$, allora $K_M = \nicefrac{k_2}{k_1} + \nicefrac{k_3}{k_1} = K_s + \nicefrac{k_3}{k_1}$ 
+\end{itemize}
+Le dimensioni della costante possono essere date in concentrazioni e solitamente si è
+nell’ordine di micromolare o millimolare.
+
+La \emph{velocità massima} è importante ed è strettamente legata a $k_3$ e alla concentrazione
+totale di enzima, che la cellula può controllare.
+La $k_3$ è lo step determinato dalle caratteristiche molecolari dell’enzima che permette
+di abbassare l’energia di attivazione e formare il prodotto.
+La $k_3$ è chiamata anche costante di catalisi, la quale si riferisce anche a meccanismi più complessi ma che segue comunque l’andamento Michaelis-Menten e il significato intrinseco corrisponde sempre a questo stadio catalitico.
+
+La costante di catalisi viene definita come il numero di turnover al secondo che un
+enzima può fare, ovvero come il numero di molecole di substrato convertite in prodotto al secondo
+in condizioni di $V_{\text{max}}$. Per la maggior parte degli enzimi è tra 1 e 10\ap{4} s\ap{-1}.
+
+$V_{\text{max}}$ e $K_M$ sono i parametri che caratterizzano un enzima se il processo segue l’andamento Michaelis-Menten e possono essere determinate sperimentalmente variando la
+concentrazione di substrato nota la concentrazione di enzima.
+
+Si linearizzano gli andamenti passando ai reciproci e si ottiene il grafico dei doppi reciproci.
+\[
+v_0 = \frac{V_{\text{max}} \ce{[S]}_0}{K_M + \ce{[S]}_0} \rightarrow \frac{1}{v_0} = \frac{1}{V_{\text{max}}}  + \frac{K_M}{V_{\text{max}}} \cdot \frac{1}{\ce{[S]}_0}
+\]
+
+\autofullpicture*{Grafico dei doppi reciproci, chiamato anche \emph{Grafico di Lineweaver-Burk}}
+
+È importante che l’enzima funzioni bene a basse concentrazioni di substrato perché molto spesso lavorano così.
+\[
+v = K_{\text{cat}} \frac{\ce{[E]}_{\text{tot}} \ce{[S]}}{K_M + \ce{[S]}} = \frac{V_{\text{max}} \ce{[S]}}{K_M + \ce{[S]}}
+\]
+
+Quando $\ce{[S]}<< K_M$, allora $\nicefrac{K_{\text{cat}}}{K_M}$ è la costante di velocitò del primo ordine ed è la misura dell'efficienza dell'enzima a bassa concentrazione di substrato. Si trascura \ce{[S]} nella somma e si nota che la velocità è del primo ordine e dipende linearmente da \ce{[S]} (il resto è costante).
+\[
+v = K_{\text{cat}} \frac{\ce{[E]}_{\text{tot}} \ce{[S]}}{K_M} = \frac{K_{\text{cat}}}{K_M} \ce{[E]}_{\text{tot}} \ce{[S]}
+\]
+
+Il rapporto permette di definire quando un enzima è top e si raggiunge la perfezione cinetica nella catalisi enzimatica.
+Nel regime a bassa concentrazione di substrato si vede come lavora l’enzima e in
+questo caso la concentrazione tot di enzima corrisponde alla concentrazione di enzima
+libero.
+
+Si suppone che l’andamento sia descrivibile osservando gli andamenti di $k_3$ e $k_2$.
+Quando $k_3$ è molto più veloce della riscomparsa di S, quindi quando la catalisi è
+molto efficace il rapporto si riduce a $K_1$ e la velocità dipende solo dalla velocità con
+cui si forma S.
+\[
+v = \frac{K_{\text{cat}}}{K_M} \ce{[E]}_{\text{tot}} \ce{[S]} \approx k_1 \ce{[E]} \ce{[S]} \quad \frac{k_3}{k_M} = k_1
+\]
+
+Se $k_1$ è molto veloce può essere ancora limitante uno stadio che nella reazione non compare che è quello in cui E e S arrivano abbastanza vicini da incontrarsi (diffusione).
+
+Di solito questo stadio è molto veloce ma se l’enzima opera a velocità molto elevate
+questo diventa lo stadio lento e l’enzima è limitato quindi per diffusione l’enzima
+lavora in regime di diffusione e si raggiunge la perfezione della catalisi enzimatica.
+In ogni caso arrivare a lavorare con un regime in cui lo stadio lento è quello di
+formazione del complesso è comunque un ottimo risultato.
+
+\marginbox*{Un esempio di un enzima che segue un regime di perfezione cinetica è la
+trioso-fosfato isomerasi.}
+
+Se si fa uno studio cinetico è necessario riportare i rapporti $K_{\text{cat}}/K_M$ per la caratterizzazione di un enzima.
+Il rapporto, oltre ad essere significativo per la velocità della catalisi dà anche informazioni sulla specificità della reazione.
+
+Nelle proteasi per esempio si ha un taglio selettivo per alcune porzioni di aa e la
+selettività dipende molto dall’alloggiamento nella tasca deputata al posizionamento
+del peptide dove si vuole fare il taglio.
+
+La selettività è fatta su diverse caratteristiche
+delle proprietà dell’enzima che non escludono a priori altri tagli ma li rendono meno
+probabili dal punto di vista probabilistico.
+
+Se si guarda il rapporto si vede che le prime 2 hanno un rapporto di costanti cinetiche
+a parità di concentrazioni di enzima hanno ordini di grandezza diversi.
+
+Si vede la selettività perché si vede di quanto viene velocizzata la catalisi e più viene
+velocizzata più è specifica.
+L’evoluzione degli enzimi per dare la massima efficienza di velocità catalitica, può essere divisa in due steps ipotetici:
+\begin{itemize}
+\item Il valore di $K_{\text{cat}}/K_M$ è massimizzato avendo un enzima complementare allo
+stato di transizione
+\item La concentrazione di enzima libero \ce{[E]} è massimizzata con elevato $K_M$ cioè
+avendo molto enzima non legato. Mantenendo la concentrazione di enzima libero elevata rispetto al substrato si ha velocità maggiore.
+\end{itemize}
+
+\clearpage
+
+\subsection{Reazioni a più substrati}
+
+Se si hanno due substrati e si tiene costante la concentrazione di uno dei due si nota
+che la maggior parte dei meccanismi segue l’andamento di Michaelis-Menten.
+
+I meccanismi possono essere anche molto complicati ma relativamente al rate detemining step la velocità di reazione segue la legge di Michaelis-Menten.
+La maggior parte delle reazioni avvengono con questi meccanismi:
+\begin{itemize}
+\item \emph{Meccanismo casuale:} due substrati si devono incontrare per reagire nel sito attivo.
+Può legarsi
+prima uno o poi l’altro senza discriminazioni e per avere la reazione si forma comunque il complesso e non cambia in base a quale si lega prima.
+\autoherepicture{0.8}
+\item \emph{Meccanismo ordinato:} facendo legare il primo substrato l’enzima subisce una modifica e diventa
+in grado di legare il secondo e quindi bisogna andare in ordine.
+\autoherepicture{0.8}
+\item \emph{Meccanismo ping-pong:} il primo substrato si lega e subisce una prima reazione e solo dopo si lega
+il secondo substrato che va a produrre il secondo prodotto. Dopo l’uscita del primo prodotto l’enzima rimane modificato in modo da
+essere in grado di far entrare nel sito attivo il secondo substrato e alla fine
+delle due reazioni si riottiene l’enzima iniziale.
+\autoherepicture{0.8}
+\end{itemize}
+
+\subsection{Cinetica delle reazioni complesse}
+
+Il meccanismo può essere riscritto nella forma di Michaelis-Menten anche se microscopicamente non segue il meccanismo base.
+\[
+\ce{E} + \ce{S} \ce{<=>[K_1][K_2]} \ce{ES} \ce{->[K_2][-A]} \ce{E*B} \ce{->[K_3 [H2O]]} \ce{E} + \ce{B}
+\]
+
+La velocità di reazione è
+\[
+v = \frac{\frac{k_2 k_3}{k_2 + k_3} \ce{[E]}_{\text{tot}} \ce{[S]}}{\ce{[S]} + \frac{K_s k_3}{k_2 + k_3}} = \frac{k_{\text{cat}} \ce{[E]}_{\text{tot}} \ce{[S]}}{\ce{[S]} + K_M}
+\]
+
+Allora
+\[
+K_{\text{cat}} = \frac{k_2 k_3}{k_2 + k_3} \quad K_M = \frac{K_s k_3}{k_2 + k_3} \quad K_s = \frac{k_{-1}}{k_1} 
+\]
+
+Con questi significati si ottiene un’espressione che viene uguale a prima ma le
+costanti cambiano rispetto a quelle precedenti, quindi viene ancora valutato il
+rapporto $K_{\text{cat}}/K_M$ per capire la bontà della catalisi.
+Cambiano i passaggi microscopici ma il significato fenomenologico e il formalismo rimangono uguali.
+
+L’analisi cinetica delle reazioni a più substrati è laboriosa e complessa. Per ottenere informazioni sul tipo di reazione si esegue uno studio cinetico tenendo fissa la concentrazione di uno dei due substrati \ce{[B]} e variando l’altro \ce{[A]}.
+
+Dal tipo di grafico di Lineweaver-Burk ottenuto si può avere una descrizione del
+meccanismo.
+Ogni curva ha una diversa concentrazione di B e questa viene mantenuta
+costante nella curva.
+
+\autofullpicture*{Grafici di Lineweaver-Burk. Le reazioni che non seguono la legge di Michaelis-Menten esistono e sono quelle in
+cui avvengono modifiche allosteriche.
+Le costanti negli enzimi allosterici variano in base alle concentrazioni di substrato e
+sono migliori all’aumentare della \ce{[S]}.}
+
+Si è verificato che l'andamento della velocità di reazione rispetto ad un substrato, mantenendo gli altri parametri costanti segue la relazione di Michaelis-Menten. Un enzima allosterico, a seconda di quanto substrato lega, cambia la sua conformazione e quindi cambia le sue costanti catalitiche. Questi casi non possono essere descritti dall'equazione di Michaelis-Menten e vanno considerati a parte.
+
+\clearpage
+
+\section{Inibizione enzimatica}
+
+Gli inibitori interagiscono reversibilmente o irreversibilmente con un enzima, alterandone i valori di $K_M$ e/o di $v_{\text{max}}$. Un inibitore competitivo si lega al sito attivo dell'enzima e fa aumentare il valore apparente di $K_M$ della reazione.
+Un inibitore enzimatico competitivo influenza l'attività catalitica diminuendo i valori apparenti sia di $K_M$, sia di $v_{\text{max}}$. Un inibitore enzimatico misto altera sia l'attività catalitica, sia il legame del substrato diminuendo il valore apparente di $v_{\text{max}}$ e diminuendo o aumentando quello di $K_M$.
+
+Un inibitore è una sostanza che riduce l'attività di un enzima influenzando il legame del substrato e/o la $K_{\text{cat}}$.
+Molti medicinali non sono altro che inibitori di enzimi
+
+Esistono due tipi di inibizione, ovvero l'\emph{inibizione reversibile} e quella \emph{irreversibile}.
+
+L'inibizione reversibile comporta che il legame inibitore-enzima sia non covalente, quindi l'inibitore è rimovibile.
+Questo tipo di inibizione funge da agente di controllo degli enzimi, in quanto il legame E-I è competitivo con il legame E-S. Le reazioni sono reazioni di competizione, però l'inibizione può essere competitiva o non competitiva. L'inibizione reversibile rallenta solo l'azione dell'enzima.
+
+L'inibizione irreversibile invece comporta un legame inibitore-enzima covalente, quindi l'inibitore viene anche chiamato inattivatore. Questo tipo di inibizione è irreversibile, una volta che l'inibitore è legato, non si rimuove più. Questo comporta un blocco delle attività dell'enzima. Questi inattivatori sono alcune tossine e veleni.
+In genere, buoni inibitori/inattivatori sono i reagenti chimici gruppo specifici e sono solitamente analoghi al substrato.
+In questi appunti verrà presa in considerazione solo l'inibizione reversibile.
+
+\subsection{Inibizione competitiva}
+
+L'inibizione compete con il substrato per il legame del sito attivo. Questi inibitori sono in genere analoghi al substrato, ma non possono andare incontro alla catalisi
+
+\autoherepicture{0.8}
+
+La $K_I$ può essere definita come
+\[
+K_I = \frac{\ce{[E] [I]}}{\ce{[EI]}}
+\]
+che denota che un inibitore competitivo riduce la concentrazione di enzima libero \ce{[E]}
+
+I batteri hanno bisogno di PABA per sintetizzare l'acido folico. Un antibiotico efficace è la soluzione che ha una struttura simile.
+Per l'HIV, l'inibitore funziona solo per l'aspartil proteasi dell'HIV e non per quella umana. Si vede che l'enzima dell'HIV è composto da due monomeri simmetrici (omodimero), mentre quella umana non è simmetrica (eterodimero).
+
+Gli inibitori che sono potenti sono analoghi allo stato di transizione. Questo è un evento aspettato, in quanto il substrato è affine allo stato di transizione, quindi l'inibitore per essere efficace deve essere più affine del substrato
+
+Nello schema cinetico viene aggiunto il cammino di complessazione \ce{E-I} con costante si associazione
+$K_I$. L’enzima nel bilancio di massa si ripartisce anche nella componente \ce{EI}.
+
+\autoherepicture{0.8}
+
+La velocità quindi è pari a
+\[
+  v = \frac{K_{\text{cat}} \ce{[E]}_{\text{tot}} \ce{[S]}}{\ce{[S]} + K_M \cdot \biggl(1 + \frac{\ce{[I]}}{K_I}\biggr)} =  \frac{K_{\text{cat}} \ce{[E]}_{\text{tot}} \ce{[S]}}{\ce{[S]} + K_M^{\text{app}}} = \frac{V_{\text{max}} \ce{[S]}}{\ce{[S]} + K_M^{\text{app}}}
+\]
+
+La definizione di $K_M^{\text{app}}$ è
+\[
+    K_M^{\text{app}} = K_M \biggl(1 + \frac{\ce{[I]}}{K_I}\biggr)
+\]
+
+L’effetto dell’inibitore modifica la $K_M$ dell’equazione di Michaelis e questo scala
+la costante che diventa una $K_M$ apparente, ed è moltiplicata per un fattore maggiore di 1 e quindi avrà un valore maggiore.
+
+L’andamento è una curva che va a saturazione a Vmax e il valore fisico della $K_M$ è quello di corrispondere alla concentrazione di S che mi porta a un valore di velocità
+pari a metà della velocità massima.
+
+L’effetto dell’inibitore competitivo in cui I compete con il legame con l’enzima è quello
+di far apparire l’enzima come avesse una KM > rispetto a quella che in realtà ha (la curva ha pendenza minore e arriva più lentamente all’asintoto), come in regime in cui $\ce{[S]} >> K_M$.
+
+\autofullpicture*{Grafico della velocità in presenza di un inibitore competitivo}
+
+Se \ce{[S]} è molto elevata può arrivare a $V_{\text{max}}$.
+Un inibitore competitivo sequestra parte dell’enzima e solo se la concentrazione
+di S diventa molto maggiore allora è come se I non ci fosse.
+\[
+\frac{1}{v} = \frac{K_M}{V_{\text{max}}} \biggl(1 + \frac{\ce{[I]}}{K_I} \biggr) \frac{1}{\ce{[S]}} + \frac{1}{V_{\text{max}}}
+\]
+
+Nel grafico dei doppi reciproci l’intercetta sull’asse delle y vale $\nicefrac{1}{V_{\text{max}}}$ e sull’asse
+delle x vale $-\nicefrac{1}{K_M}$. Nell’inibizione competitiva l’intercetta sull’asse delle y rimane uguale
+e influisce sulla $K_M$.
+
+\autofullpicture*{Grafico dei doppi reciproci, in presenza di un inibitore competitivo}
+
+L'inibizione competitiva è il principio su cui si basa l'utilizzo dell'etanolo per curare l'avvelenamento da metanolo; l'alcol deidrogenasi epatica converte il metanolo in formaldeide, sostanza altamente tossica che causa cecità e morte.
+
+\clearpage
+
+\subsection{Inibizione non competitiva}
+
+L'inibitore si lega in un sito diverso dal substrato.
+Molti enzimi, essendo macromolecole, hanno molte possibilità di legare substrati.
+
+Le macromolecole possono avere siti in cui possono legarsi degli effettori che, legandosi nel sito diverso dal sito attivo, possono modificarlo alla lontana in modo
+allosterico ed è quello che fanno gli enzimi non competitivi.
+
+\autoherepicture{0.8}
+
+Nel bilancio di massa di E compaiono sia EI che ESI.{}
+\[
+\ce{[E]}_t = \ce{[E]} + \ce{[ES]} + \ce{[EI]} + \ce{[ESI]}
+\]
+
+È possibile le le due costanti siano uguali $K_I = K_I'$.
+Le due costanti possono essere diverse ma in buona approssimazione possono essere anche uguali e si semplifica la trattazione dello schema.
+
+In generale \ce{E} può fare \ce{ES} o \ce{EI} e \ce{EI} può dissociare o può formare \ce{ESI} che non può
+andare direttamente a prodotto e può farlo solamente andando a formare ES.{}
+La velocità di reazione diventa
+\[
+v = \frac{K_{\text{cat}}^{\text{app}} \ce{[E]_t} \ce{[S]}}{\ce{[S]} + K_M} 
+\]
+
+Quindi $K_{\text{cat}}^{\text{app}}$ è
+\[
+K_{\text{cat}}^{\text{app}} = \frac{k_{\text{cat}}}{1 + \frac{\ce{I}}{K_I}} =  \frac{k_{\text{cat}}}{\alpha}
+\]
+
+La velocità massima apparente è
+\[
+V_{\text{cat}}^{\text{app}} = K_{\text{cat}}^{\text{app}} \ce{[E]}_t = \frac{k_{\text{cat}}}{1 + \frac{\ce{I}}{K_I}} \ce{[E]}_t
+\]
+
+L’effetto dell’inibitore non incide sulla $K_M$ come nel caso precedente ma scala la velocità massima, la quale viene diminuita del fattore \alpha.
+
+La velocità massima diminuisce in presenza dell’inibitore.
+La $V_{\text{max}}$ dipende dai parametri dell’inibizione, mentre la $K_M$ (concentrazione
+di S in cui la velocità coincide con $\nicefrac{V_{\text{max}}}{2}$) rimane uguale.
+
+\autofullpicture*{Grafico della velocità in presenza di un inibitore non competitivo}
+
+Nel diagramma dei doppi reciproci, tutte le rette si incontrano su $-\nicefrac{1}{K_M}$ e l’intersezione con l’asse delle y varia.
+Per fare uno studio in vitro, si prende l’enzima e si fa lo studio in assenza dell’inibitore misurando $K_M$ e $V_{\text{max}}$ e poi si vuole stabilire l’effetto se c’è, con che meccanismo, ecc.
+
+Quindi si fa uno studio mantenendo costante la concentrazione di inibitore al variare della
+concentrazione di substrato e verifico il meccanismo e la $K_I$, dato che la $K_M^{\text{app}}$ o la $V_{\text{max}^{\text{app}}}$ contiene la $K_I$. È necessario conoscere il meccanismo
+
+\autofullpicture*{Grafico dei doppi reciproci, in presenza di un inibitore non competitivo}
+
+\subsection{Inibizione incompetitiva}
+
+È una variante dell'inibizione non competitiva, dove \ce{S} e \ce{I} si legano a due siti diversi.
+L’inibitore può legarsi solo quando \ce{E} è già legato a \ce{S}, quindi non può legarsi all’\ce{E} libero.
+
+\autoherepicture{0.8}
+
+In questa caso $K_I'$ è pari a
+\[
+K_I' = \frac{\ce[I] \ce{[ES]}}{\ce{[ESI]}}
+\]
+
+In questo caso, il reciproco della velocità è
+\[
+\frac{1}{V_0} = \biggl(\frac{K_M}{V_{\text{max}}}\biggr) \frac{1}{\ce{[S]}} + \frac{\alpha'}{V_{\text{max}}}
+\]
+Ed $\alpha'$ è pari a
+\[
+\alpha' = 1 + \frac{\ce{I}}{K_I'}
+\]
+
+Il grafico dei doppi reciproci mostra una variazione sia nella $K_M$ che nella $V_{\text{max}}$.
+
+Le rette non si incontrano e sono parallele perché $\alpha'$ è nell’intercetta e la pendenza è la stessa.
+Il rapporto che si ha su $V_{\text{max}}$ e su $K_M$ apparente è lo stesso. Al crescere della concentrazione di \ce{I} aumenta l’intercetta.
+
+\subsection{Inibizione mista}
+
+È la più realistica e le $K_I$ che avevamo messo uguali inizialmente, possono essere diverse.
+L’inibitore ha capacità diverse di legarsi all’enzima libero o al complesso \ce{ES}.
+
+\autoherepicture{0.8}
+
+Il reciproco della velocità diventa
+\[
+\frac{1}{V_0} = \biggl(\frac{\alpha K_M}{V_{\text{max}}} \biggr) \frac{1}{\ce{[S]}} + \frac{\alpha'}{V_{\text{max}}}
+\]
+
+Quindi $\alpha$ e $\alpha'$ sono pari a
+\[
+    \alpha = 1 + \frac{\ce{I}}{K_I} 
+\]
+\[
+    \alpha' = 1 + \frac{\ce{I}}{K_I'}
+\]
+
+Nel grafico dei doppi reciproci si vede che all’aumentare di \ce{I} non si hanno incontri
+sugli assi ma le rette comunque si incrociano quindi diminuisce $V_{\text{max}}$ e aumenta $K_M$
+con fattori \alpha{} diversi che dipendono dalla concentrazione di \ce{I}.
+
+\autofullpicture*{Grafico dei doppi reciproci, in presenza di un'inibizione mista.}
+
+\autofullpicture*{Grafico dei doppi reciproci, in presenza di un inibitore incompetitivo.}
+
+\begin{fullpaper}
+\autofullpicture*{Tabella riassuntiva per i vari tipi di inibizione.}
+\end{fullpaper}
+
+\section{Enzimi allosterici}
+
+Gli enzimi allosterici non seguono la cinetica di Michaelis-Menten. Il legame del substrato all'enzima modifica il legame in altri siti.
+
+Il grafico presenta una curva sigmoide che viene spostata a sinistra o a destra da un attivatore o da un inibitore. Sono solitamente enzimi multimerici che presentano due forme, una T, detta \emph{inattiva} e una R, detta \emph{attiva}. Un inibitore stabilizza la forma T, mentre un attivatore stabilizza la forma R. Si legano in siti diversi e producono effetti allosterici
+
+\autofullpicture*{Effetto di un attivatore e di un inibitore per gli enzimi allosterici.}
+
+Gli enzimi allosterici giocano un ruolo chiave nel metabolismo, grazie alla loro capacità di essere regolati. Uno dei casi più comuni è quando l'attività di un enzima viene inibita dall'accumulo del prodotto della reazione che catalizza.
+
+Guardando l'esempio dell'enzima ATCasi, si vede che questo enzima catalizza la formazione di N-carbamil-aspartato, a partire da carbamil fosfato e aspartato Questo enzima è inibito allostericamente da CTP ed è attivato allostericamente da ATP.
+Tuttavia, il CTP viene prodotto a partire dal prodotto della reazione, quindi è in un certo modo un prodotto della reazione catalizzata dall'enzima. Questo è un esempio di \emph{inibizione retroattiva}, quindi inibisce una delle prime tappe della sua biosintesi. Queste reazioni fanno parte della biosintesi delle pirimidine e sono collegate tra di loro.
+\[
+\ce{A} + \ce{B} \ce{->[ATCasi]} \ce{C} \ce{->} \ce{D} \ce{->} \: \dots \: \ce{->} \ce{CTP} \ce{->} \: \dots \: \ce{->} \text{ Pirimidina}
+\]
+Questo controllo fa sì che le concentrazioni di ATP e CTP siano uguali. Questo è fondamentale per la sintesi di acidi nucleici.
+
+\subsection{Sviluppo di farmaci}
+
+Per sviluppare i farmaci ci sono due approcci differenti:
+\begin{itemize}
+\item La prima strategia parte dal composto e viene verificato che abbia un effetto fisiologico. Da questo si ricava il bersaglio molecolare
+\item La seconda strategia invece individua prima il bersaglio molecolare e in seguito viene sviluppato un composto che presenta un determinato effetto fisiologico.
+\end{itemize}
+Un farmaco è spesso un inibitore, quindi possiede una $K_I$. Si definisce anche l'IC\ped{50}, che è la concentrazione di farmaco che riduce l'attività del 50 \%.
+
+\automarginpicture*{Sildenafil}
+
+Si prenda come esempio il \emph{Sildenafil}, che è un farmaco utilizzato per le disfunzioni erettili maschili. Questo composto è un potente inibitore della fosfodiesterasi-5, che è l'enzima che degrada la molecola cGMP. Questa molecola svolge la funzione di segnalatore, causa il rilassamento della muscolatura liscia e consente al sangue di affluire all'interno dei corpi cavernosi, causando l'erezione. Il farmaco \emph{Viagra}, abbassando l'attività dell'enzima che degrada questo messaggero, ne consente l'accumulo.
+
+Gli inibitori utilizzati in farmacologia servono anche ad inibire gli enzimi necessari alla sopravvivenza dei microrganismi patogeni. Ad esempio, i batteri sono protetti da una spessa parete cellulare formata da peptidoglicano. Molti antibiotici, come la penicillina, inibiscono gli enzimi che li producono. Questo provoca una perdita di resistenza cellulare della parete e quindi la sua conseguente rottura.
+
+La concentrazione di un farmaco nel suo sito bersaglio è funzione della velocità di assorbimento, anche della \emph{biodisponibilità}, della velocità di distribuzione, della velocità di metabolismo e della velocità di escrezione\ft{ADME}. Inoltre, un farmaco deve essere trasportato nel posto giusto, deve essere assorbito dove deve compiere la sua azione e poi deve essere eliminato.
+
+\section{Controllo sugli enzimi}
+
+Il controllo dell'attività enzimatica ha quattro parametri:
+\begin{itemize}
+\item Utilizzo di inibitori
+\item Regolazione allosterica
+\item Modificazione covalente reversibile. Le reazioni chimiche possono essere catalizzate da enzimi reversibili, che quindi controllano l'attività
+\item Attivazione proteolitica. Le proteasi endogene sono proteine sintetizzate inizialmente in forma inattiva e poi vengono tagliate in modo da essere in una forma fisiologicamente attiva.
+\end{itemize}
+
+È però possibile anche agire sulla \emph{disponibilità dell'enzima} oppure anche a livello del substrato, anche se quest'ultimo controllo non è molto utilizzato.
+
+\paragraph{Controllo della disponibilità dell'enzima}
+
+La quantità di un enzima in una cellula dipende dalla velocità di sintesi e da quella di degradazione
+
+\paragraph{Controllo a livello del substrato}
+Si prenda esempio questa reazione
+\[
+\text{D-glucosio } + \text{ ATP } \ce{<=>[\text{enzima}]} \text{ D-glucosio-6-fosfato } + \text{ ADP}
+\]
+Questa reazione è regolata dalle concentrazioni dei substrati.
+
+\paragraph{Controllo dell'attività catalitica}
+
+Il prodotto finale di una reazione è spesso un inibitore del primo enzima della catena; questo controllo si chiama \emph{a feedback negativo}. È anche possibile che il substrato iniziale sia un attivatore dell'enzima dell'ultima reazione e questo controllo viene chiamato \emph{a feedback positivo}. Gli enzimi utilizzati sono solitamente enzimi allosterici.
+
+\subsection{Controllo dell'attività}
+
+Il controllo dell'attività enzimatica ha quattro parametri. Verrà esposto l'utilizzo di \emph{modifiche covalenti reversibili}.
+Alcuni enzimi rimangono inattivi fino a quando vengono trasformati in forme attive, mentre altri vengono inattivati dalle trasformazioni.
+
+\autoherepicture{0.8}
+
+Questi processi catalizzati da enzimi, noti come \emph{chinasi} e \emph{fosfatasi}, sono in grado di modificare covalentemente un enzima, modificando di conseguenza la sua attività. Circa il 30 \% delle proteine negli esseri umani sono soggette al controllo tramite \emph{fosforilazione reversibile}. Oltre alla fosforilazione, ci sono altri tipi di modificazioni covalenti, come ad esempio la \emph{metilazione}, l'\emph{adenilazione} e l'\emph{uridilazione}.
+
+Come esempio, si veda l'azione della \emph{glicogeno fosforilasi}. Il glicogeno è una molecola importante nel metabolismo del glucosio. Questo polisaccaride costituisce una fonte di energia per le attività metaboliche. La reazione di fosfatasi del glicogeno produce glucosio e l'enzima utilizzato è la \emph{glicogeno fosforilasi}..
+\[
+\text{Glicogeno}_n + \text{ P}_i \ce{<=>[\text{Fosforilasi}]} \text{ Glicogeno}_{n-1} + \text{G}_1\text{P}
+\]
+La fosforilasi del glicogeno è la tappa che limita la velocità della via metabolica di demolizione del glicogeno in quanto è uno step lento, quindi controllando questa reazione, si controlla di fatto tutta la via metabolica.
+
+La fosforilasi esiste in due forme, ovvero la fosforilasi B (inattiva) e la fosforilasi A (attiva), che sono intercambiabili tramite fosforilazione da parte di una chinasi
+\[
+\text{Proteina-}\ce{OH} \ce{<=>[\text{chinasi/fosforilazione}]} \text{ Proteina-}\ce{P}
+\]
+
+\paragraph{Controllo mediato da proteasi}
+Molti enzimi sono inattivi, fino a che non arriva un enzima proteolitico, che li attiva. Solitamente gli enzimi attivati in questo modo sono precursori delle proteasi e vengono detti \emph{zimogeni}. Tra gli zimogeni si trovano gli enzimi digestivi, il collagene, gli ormoni, le pro-insuline e altri.
+
+Un zimogene presente nello stomaco è il pepsinogeno, che, una volta attivato, diventa pepsina. Nel pancreas sono presenti invece il chimotripsinogeno e il tripsinogeno, che formano chimotripsina e tripsina una volta attivati.
+A bassi pH, il pepsinogeno autocatalizza la proteolisi e diventa pepsina. Il pH basso aiuta anche la digestione, in quanto denatura le proteine e ne facilita la digestione. Gli altri zimogeni sono localizzati nel pancreas e, quando servono, vengono rilasciati nell'intestino. Vengono attivati da proteasi che sono state attivate in precedenza dal basso pH.
+
+Ci sono delle vescicole di zimogeni che dal pancreas arrivano fino all'intestino e rilasciano questi precursori. Ad esempio, il chimotripsinogeno viene tagliato prima dalla tripsina, poi nuovamente tagliato dalla chimotripsina attiva, ritrovandosi con tre pezzi tenuti insieme da dei ponti disolfuro.
+Il taglio a livello della Ile-16 fà in modo che questo amminoacido, caricato positivamente, si leghi tramite un legame ad idrogeno con Asp-194, carico negativamente. Questa nuova conformazione fà sì che si formi il buco ossoanionico, senza il quale l'enzima non è attivo
+
+\chapter{Metabolismo dei polisaccaridi}
+
+Il metabolismo dei polisaccaridi comporta tre passaggi:
+\begin{itemize}
+\item \emph{Demolizione del glicogeno,} che viene operata da tre enzimi, ovvero la \emph{glicogeno fosforilasi}, un \emph{enzima deramificante} e dalla \emph{fosfoglucomutasi}
+\item \emph{Sintesi del glicogeno,} che viene operata in tre passaggi, ovvero la formazione di \emph{UDP-glucosio}, l'azione della \emph{glicogeno sintasi} e dalla ramificazione del glicogeno.
+\item \emph{Controllo del metabolismo del glicogeno}
+\end{itemize}
+
+Negli animali sono presenti diversi polisaccaridi: l'amido, che viene introdotto dal consumo di alimenti vegetali, e le riserve di glicogeno, che vengono prodotte o sono introdotte con la dieta. Nei vegetali invece è presente l'amido, che viene mobilizzato attraverso l'idrolisi e la fosforolisi.
+
+Il glicogeno è l'analogo dell'amido nelle piante, in quanto serve come riserva energetica. Il glicogeno è un polisaccaride formato da glucosio ed è un polimero ramificato. Essendo un polisaccaride ha un estremità riducente e una non riducente. Per ottenere energia dal glicogeno, questo deve essere demolito in molecole di glucosio, in modo rapido.
+
+Per la demolizione è necessario l'utilizzo di tre enzimi che operano in modo concertato. La glicogeno fosforilasi idrolizza il glicogeno e forma G1P, a partire dalle estremità non riducenti. Il G1P viene convertito in G6P tramite la fosfoglucomutasi. Inoltre, il glucosio endogeno presenta numerose ramificazioni, quindi nei modi di ramificazione è necessario l'utilizzo di un enzima deramificante.
+
+\autoherepicture{0.8}
+
+Questo processo di demolizione viene fatto per avere una riserva di zuccheri e viene operata in particolare dal fegato, in quanto questo organo controlla la glicemia, e dai muscoli, che presentano una riserva interna da mobilizzare velocemente.
+Questi due tessuti sono in grado di conservare una grande quantità di glicogeno
+
+\autofullpicture*{Catena di glicogeno. Si noti che un'estremità è riducente, mentre l'altra non lo è.}
+
+Per una cellula non è vantaggioso avere la glicogeno fosforilasi continuamente attiva, quindi è necessario agire con un controllo a livello ormonale.
+
+\automarginpicture*{Fosforilasi A e fosforilasi B}
+
+La fosforilasi, come già detto, è regolata mediante modificazione covalente, ma può essere controllata anche mediante effettori allosterici. In particolare sono presenti degli inibitori, ovvero il glucosio, l'ATP e il G6P, e degli attivatori, ovvero l'AMP.{}
+La demolizione e la sintesi del glicogeno sono coordinate tra loro, in particolare gli enzimi che attivano la glicogeno fosforilasi inattivano la glicogeno sintasi.
+
+Il fegato, a demolire il glicogeno, lo sintetizza a partire dai carboidrati che vengono assunti. Inoltre può sintetizzare il glucosio a partire da altre molecole, come il lattato, il glicerolo e gli amminoacidi, nel processo chiamato \emph{gluconeogenesi}. Il metabolismo del glucosio è importante per l'organismo.
+
+\autoherepicture{0.8}
+
+La fosforilasi B comunque possiede un'attività catalitica, però opera in modo blando a condizioni basali. La fosforilasi A invece è molto più veloce nel processo di demolizione del glicogeno. La fosforilasi B possiede due forme, ovvero T e R. La forma T è molto inibita, mentre la forma R è inibita. La fosforilasi A possiede anch'essa due forme, la T e la R. La forma T è attivata, mentre la forma R è molto attivata.
+
+L'ATP e il G6P sono degli inibitori della fosforilasi A, l'AMP invece è un attivatore della fosforilasi B. Il glucosio invece è un inibitore della fosforilasi A. Tutti questi processi lavorano a feedback negativo.
+
+La produzione della fosforilasi A è causata da uno stimolo ormonale; questo causa una cascata di eventi che porta alla produzione della fosforilasi A
+
+
+Le cellule epatiche, ma anche quelle muscolari, hanno nella membrana dei recettori degli ormoni, in particolare esiste un recettore per l'adrenalina. Quando c'è bisogno di energia, l'ormone lo segnala al recettore, che è una proteina che cambia conformazione. La proteina G, che è un trimero formato dalle unità \alpha,\beta{} e \gamma, risente questo cambio conformazionale, quindi l'unità \alpha{} si stacca e va ad attivare un enzima chiamato \emph{adenilato ciclasi}. Questo enzima produce cAMP a partire da ATP. Il{} cAMP ha il compito di segnalare che c'è una scarsità di glucosio, quindi è un messaggero. Il cAMP quindi si lega alle unità regolatorie R della chinasi A.
+
+\autofullpicture*{Attivazione della fosforilasi A}
+
+La chinasi A è cAMP dipendente, nel senso che questa proteina rimane inattiva fintanto che non arriva cAMP, che consente il distacco delle unità C da quelle R. Quindi la chinasi A diventa attiva e può attivare l'enzima \emph{fosforilasi chinasi}, che è l'enzima che effettivamente catalizza la reazione di trasformazione della fosforilasi B in fosforilasi A.
+Ad ogni passaggio, il segnale si amplifica.
+
+Ovviamente c'è anche una reazione inversa, catalizzata dalla fosfoproteina \emph{fosfatasi 1}. Questo enzima inibisce la fosforilasi chinasi. La fosfatasi 1 è inibita quando c'è bisogno di fosforilasi A, ed è attivato quando non ce n'è più bisogno
+
+\autofullpicture*{Attivazione della fosforilasi A da parte dell'adrenalina}
