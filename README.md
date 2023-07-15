@@ -6,9 +6,9 @@ My main goal is to finish the remaining notes using LaTeX, and to rewrite my alr
 
 For now I completed two courses, the remaining are below
 - [x] Chimica Analitica 2
-- [ ] Chimica Biologica
+- [x] Chimica Biologica
 - [ ] Chimica Fisica 1
-- [ ] Chimica Farmaceutica
+- [x] Chimica Farmaceutica
 - [ ] Fisica
 - [x] Chimica Organica 3 (partial)
 
