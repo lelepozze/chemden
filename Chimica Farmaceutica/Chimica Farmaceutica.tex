@@ -1,0 +1,106 @@
+\documentclass{chemden}
+
+%###########################################
+
+\author{Pozzebon Daniele}
+\title{Chimica Farmaceutica}
+\edition{Prima Edizione}
+
+%###########################################
+\usepackage[backend=biber,style=verbose,sorting=ynt,citestyle=alphabetic]{biblatex}
+	\addbibresource{Bibliografia.bib}
+\usepackage{chemden-indice}
+
+%###########################################
+\begin{document}
+
+\ifinput{cover} % copertina
+
+\chapterpicture{header_01}
+\frontmatter{}
+\ifinput{frontmatter}
+
+
+\mainmatter{}
+
+% \ifinput{Capitoli/00} % non utilizzato
+
+\ifinput{Capitoli/01} % Introduzione
+\ifinput{Capitoli/02}
+\ifinput{Capitoli/03} % Scoperta e sviluppo del farmaco
+\ifinput{Capitoli/04}
+\ifinput{Capitoli/05}
+
+%\ifinput{Capitoli/06} % non utilizzato
+%\ifinput{Capitoli/07} % non utilizzato
+%\ifinput{Capitoli/08} % non utilizzato
+%\ifinput{Capitoli/09} % non utilizzato
+%\ifinput{Capitoli/10} % non utilizzato
+%\ifinput{Capitoli/11} % non utilizzato
+%\ifinput{Capitoli/12} % non utilizzato
+%\ifinput{Capitoli/13} % non utilizzato
+%\ifinput{Capitoli/14} % non utilizzato
+
+\ifinput{Capitoli/15} % Classi di farmaci 
+\ifinput{Capitoli/16}
+\ifinput{Capitoli/17}
+\ifinput{Capitoli/18}
+\ifinput{Capitoli/19}
+\ifinput{Capitoli/20}
+
+\backmatter{}
+\chapterpicture{header_01}
+\include{backmatter} % backmatter
+
+\end{document}
+
+
+% Organizzazione
+% 
+% ========================================================================
+%  
+% - Risentire le registrazioni.
+%   Se manca qualcosa, partire da lì a copiare.
+% 
+% - Riorganizzare il tutto nei capitoli già predisposti
+%   
+% - Cosa importante: inserire le immagini dopo ogni registrazione,
+%   così da alleggerire il carico di lavoro.
+% 
+% - Le immagini non sono disordinate come quelle di chimica biologica,
+%   però le slides non sono disposte nell'ordine giusto,
+%   o a volte si riprende la medesima slide.
+%   Quindi è necessario non usare la numerazione automatica, ma inserirle a mano.
+% 
+% - Scrivi gli appunti in Markdown, che è più veloce da utilizzare di LaTeX
+% 
+%
+% ==========================================================================
+% 
+% Una bozza dei capitoli può essere:
+%
+% I) Introduzione
+%     Farmaci
+%     Chimica Farmaceutica
+% 
+% II) Scoperta e sviluppo del farmaco
+%         HITS
+%         Ottimizzazione HIT-to-LEAD
+%     Target del farmaco
+%         Recettori
+%     Riconoscimento molecolare
+%         Agonista
+%         Antagonista
+%         Agonista inverso
+%     Rapporto struttura-attività (SAR)
+% 
+% III) Caratteristiche di un farmaco
+%     Farmacocinetica
+%     Farmacodinamica
+% 
+% IV) Classi di farmaci
+%     Farmaci antistaminici
+%     Farmaci antinfiammatori non steroidei (FANS)
+%     Farmaci analgesici oppioidi
+%     Farmaci antitumorali
+%     Farmaci ansiolitici

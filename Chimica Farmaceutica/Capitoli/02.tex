@@ -1,0 +1,228 @@
+\chapterpicture{header_03}
+\chapter{Chimica Farmaceutica}
+
+La chimica farmaceutica è una disciplina interdisciplinare. Ad esempio,
+le piccole molecole vengono sintetizzate da un chimico organico. Servono
+molte competenze che una persona non può avere.
+Ad esempio, durante il covid, è stato fatto un virtual screening di
+tutte le molecole possibili, per estrarre una piccola quantità di
+molecole che potenzialmente possono diventare potenziali farmaci. Il
+virtual screening ha prodotto una quarantina di molecole. Da queste,
+sono state scremate in base alle interazioni con il target.
+
+Sono stati approfonditi alcune molecole tramite tecniche
+spettroscopiche. Quelle molecole più promettenti dal punto di vista del
+binding sono state selezionate. Si è arrivati a tre molecole.
+Poi le molecole potenziali sono state usati per fare i test cellulari.
+Questo è un primo round dello sviluppo accademico. Dopo, con i dati in
+mano, si cambiano i gruppi funzionali, si migliora il farmaco e si riprova a sintetizzarlo.
+
+\marginbox*{
+    Per target si intende la macchina molecolare, che può essere un enzima, un ormone o un acido nucleico.
+}
+
+Il chimico farmaceutico deve saper fare tante cose, è specializzato
+nella chimica farmaceutica, ma deve interagire con altre figure, che sono:
+\begin{itemize}
+    \item Il biologo strutturale che studia la struttura e
+    la funzione del target.
+    \item Il biochimico che studia le interazioni per
+    determinare se il sistema studiato è importante per le patologie
+    \item L'esperto clinico non è proprio un chimico. È il primo interlocutore per
+    determinare se il lavoro fatto può andare avanti 
+    \item Il farmacologo si
+    occupa della tossicologia dei potenziali farmaci
+    \item Il biologo si occupa
+    degli studi in cellula
+    \item Il biologo molecolare/chimico molecolare fa
+    la struttura delle molecole
+    \item Il chimico computazionale fa studi in
+    silico
+\end{itemize}
+
+La chimica farmaceutica è una scienza precisa e che ha bisogno di tanti
+dati. Non si può essere poco precisi per capire come interagisce la
+molecola.
+
+Le figure devono raccogliere tanti dati per convincere le altre figure
+ad andare avanti a studiare il farmaco. Questo si fa anche a partire
+dallo step iniziale. Date tre molecole potenziali è necessario
+convincere il virologo per investire tempo e risorse per testare i
+potenziali farmaci, e successivamente si va a valutare la tossicità, con
+un altra figura di riferimento. Per questo è necessario avere molti
+dati. È molto comune che un farmaco venga respinto, piuttosto che venga
+approvato.
+
+La chimica farmaceutica è un arte. È un mix di conoscenza, di esperienza
+sperimentale (accumulata nel tempo).
+La chimica farmaceutica richiede di essere creativi, a volte provando e
+a volte avendo l'intuizione, giocando con le molecole.
+Serve anche fortuna e casualità. Come ad esempio la penicillina
+
+Il chimico farmaceutico viene associato al chimico organico sintetico;
+non è proprio vero. Il chimico farmaceutico deve comunque parlare con la
+parte del biologo e la parte cellulare (della chimica). Per fare questo
+serve pazienza perché le persone hanno competenze diverse e linguaggi
+diversi.
+
+La definizione IUPAC recita:
+\begin{quoting}
+Medicinal chemistry is a chemistry-based discipline, concerned with the invention, discovery, design, identification and preparation of
+biologically active compounds, the study of their metabolism, the
+interpretation of their mode of action at the molecular level.
+\end{quoting}
+\begin{quoting}
+Emphasis is put on drugs, but the interests of the medicinal chemist are
+not restricted to drugs but include bioactive compounds in general. Med
+Chem is also concerned with the study, identification, and synthesis of
+metabolic products of these drugs and related compounds
+\end{quoting}
+
+Quindi il centro di tutto è una molecola che abbia un'attività
+biologica, per riparare lo stato patologico.
+
+La chimica farmaceutica si occupa dei metaboliti della molecola
+biologicamente attiva. Si occupa dello studio, identificazione e sintesi
+dei metaboliti del composto. Non si studia solo il principio attivo
+fuori dall'organismo, ma anche dopo l'assunzione.
+
+Questo porta anche alla produzione di pro-farmaci. I profarmaci non
+hanno attività biologica in sé, ma diventano farmaci quando raggiungono
+il target, in una forma diversa, ad esempio con un cambio di pH, il
+farmaco perde un protone e diventa biologicamente attivo.
+
+I metaboliti potrebbero essere tossici, quindi bisogna lavorare sulla
+molecola in modo tale che non si rompa in certi punti e non consenta la
+produzione del metabolita tossico.
+
+{\color{Primary} \itshape{} \bfseries{} Cosa succede ad una molecola biologicamente attiva quando viene somministrata?}\\
+La molecola biologicamente attiva può essere somministrata in diversi modi, ma quello preferibile è per via orale, perché è più accessibile e comodo per il paziente. Il biotecnologo comunque sceglierà la formulazione migliore.
+
+Il processo farmaceutico coinvolge la dissoluzione e l'entrata del
+farmaco nel corpo. Il farmaco dovrà essere biodisponibile.
+
+Da qui in poi inizia la fase farmacologica, che mette insieme il primo e
+il secondo processo. Si distinguono due momenti: la fase farmacocinetica e la fase farmacodinamica
+
+\begin{figure}
+    \begin{tikzpicture}
+    \sffamily
+    \node at (0,0) (a) {Drug Administration};
+    \node [below=0.5 of a] (b) {Disintegration from dosage form and Dissolution};
+    \node [below=0.5 of b] (c) {Absorption};
+    \node [below=0.5 of c] (d) {Distribution};
+    \node [below=0.5 of d, fill=white, inner sep=1pt] (e) {};
+    \node [below=0.5 of e] (f) {Pharmacological Effect};
+    \node [below=0.5 of f] (g) {Therapeutic Effect};
+    \node [above right=0.30 of d] (h) {Metabolism};
+    \node [right=0.30 of d] (j) {Excretion};
+    \node [below=0.20 of f] (3) {};
+    \node [left=6 of e] (3a) {};
+    \node [right=6 of e] (3b) {};
+    \draw (3a) -- node[fill=white] (e1) {Site of Action} (3b);
+    \draw[-stealth, thick, red] (a) -- (b);
+    \draw[-stealth, thick, red] (b) -- (c);
+    \draw[-stealth, thick, red] (c) -- (d);
+    \draw[-stealth, thick, red] (d) -- (e1);
+    \draw[-stealth, thick, red] (e1) -- (f);
+    \draw[-stealth, thick, red] (f) -- (g);
+    \draw[stealth-stealth, thick, red] (d) -- (h);
+    \draw[-stealth, thick, red] (d) -- (j);
+    \draw[-stealth, thick, red] (h) -- (j);
+    \node [below=0.20 of b] (1) {};
+    \node [left=6 of 1] (1a) {};
+    \node [right=6 of 1] (1b) {};
+    \draw (1a) -- (1b);
+    \node [below=0.20 of f] (3) {};
+    \node [left=6 of 3] (3a) {};
+    \node [right=6 of 3] (3b) {};
+    \draw (3a) -- (3b);
+    \node [left=2.5 of a] (bb) {};
+    \node [anchor=right,below=0.1 of bb] {\color{Secondary} Pharmaceutical Process};
+    \node [anchor=right,below=2 of bb] {\color{Secondary} Pharmacokinetic Process};
+    \node [anchor=right,below=4 of bb] {\color{Secondary} Pharmacodynamic Process};
+    \node [anchor=right,below=5.5 of bb] {\color{Secondary} Therapeutical Process};
+    \end{tikzpicture}
+    \caption{Schema delle fasi di assunzione di un farmaco}
+\end{figure}
+    
+\paragraph{Fase farmacocinetica}
+
+In base alle proprietà farmacocinetiche si avranno una serie di processi
+dell'organismo. I processi sono effettuati dall'organismo verso il
+farmaco, o meglio ancora, al principio attivo che è stato reso
+disponibile all'organismo.
+
+Si avrà quindi una fase di assorbimento del principio attivo, che poi
+verrà distribuito all'interno dell'organismo. In seguito il farmaco
+verrà metabolizzato; i metaboliti verranno poi eliminati.
+
+Questa fase viene definita ADME, ovvero \textbf{A}ssorbimento, \textbf{D}istribuzione,
+\textbf{M}etabolismo ed \textbf{E}liminazione.
+
+Le fasi di metabolismo e di eliminazione sono fasi che non fanno
+continuare l'attività del farmaco.
+Può essere che il farmaco venga distribuito bene, però viene tutto
+metabolizzato. Quindi non si ha un effetto.
+
+Nella distribuzione del farmaco, si arriva a raggiungere il sito/i siti
+di attivazione. Dopo questo step, si passa alla fase di farmacodinamica.
+
+\paragraph{Fase farmacodinamica}
+
+In questa fase, il farmaco effettua un azione sull'organismo. In questa
+fase avviene l'effetto farmacologico del farmaco, sull'organismo.
+Se il farmaco funziona, si avrà l'effetto terapeutico desiderato.
+
+Queste fasi servono per capire come sviluppare il farmaco. Se il farmaco
+non è disponibile (quindi non è solubile) non funzionerà bene, anche se
+la molecola funziona bene.
+Si può anche discriminare una molecola a monte, se si vede che non
+presenta i requisiti giusti.
+
+Il principio attivo è la parte biologicamente attiva del farmaco. Il
+farmaco è formato anche dagli eccipienti, questi sono essenziali
+all'assunzione del farmaco.
+
+La combinazione tra principi attivi ed eccipienti è competenza del
+tecnologo, che studia e sceglie la formulazione migliore del farmaco.
+Molti farmaci, più che sviluppati, sono stati scoperti, come la
+penicillina. C'è comunque l'intuizione dello scienziato.
+
+Un chimico farmaceutico si occupa di entrambe le cose, sia della
+scoperta, sia dello sviluppo razionale.
+Questo anche è il motivo del perché molti farmaci sono di origine
+naturale, o naturali.
+
+Oltre al lavoro della natura, c'è anche il lavoro dei chimici organici
+di sintesi. Negli anni sono state create delle collezioni di sostanze
+sintetiche analoghe, che si chiamano librerie.
+
+Ogni laboratorio, o ogni industria farmaceutica ha le proprie librerie.
+Le librerie non sono fatte da farmaci, ma fatte da piccole molecole, che
+non hanno una vera e propria attività biologica. Tutto fa parte di un
+background per fare screening su bersagli diversi.
+Le librerie variano da accademia a industrie multinazionali.
+Possono contenere molecole di origine naturale o di origine sintetica.
+
+Le molecole possono interagire con i bersagli molecolari che
+appartengono dello spazio biologico, che sono più di competenza
+biologica.
+Grazie a questa interazione si avrà un effetto terapeutico.
+Il numero di bersagli è in continua crescita, quindi si ha la
+possibilità per intervenire in modo terapeutico su bersagli che non si
+conoscono ora, ma si conosceranno nel futuro
+
+Lo screening può essere randomico o focalizzato; in quello randomico, lo
+screening viene fatto su un numero enorme di molecole, mentre quello
+focalizzato va a guardare l'interazione che ci deve essere con il
+bersaglio e quindi va a scegliere le migliori molecole.
+
+Da uno screening non si ricavano direttamente i farmaci, ma innanzitutto
+si ricavano dei composti detti ``Hit'', che successivamente verranno
+studiati e, se passeranno anche questa fase, verranno chiamati ``Lead''.
+Dal Lead compound, si ricava il candidato farmaco, attraverso una serie
+di step, si ricava il candidato farmaco.
+
+Quando si deve sintetizzare il farmaco, esso deve avere buone
+proprietà.
